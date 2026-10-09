@@ -13,7 +13,7 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  <link rel="stylesheet" href="app.css"><script defer src="storage.js"></script><script defer src="app.js"></script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-secondary-fixed selection:text-on-secondary-fixed"><a class="sr-only skip-nav" href="#main-content">본문 내용으로 바로 가기</a><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.03)]"><div class="h-28 px-margin flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">spa</span><h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight truncate">차근차근</h1><span class="hidden sm:inline-block font-label-sm text-label-sm text-primary-container bg-primary-fixed/60 px-space-xs py-0.5 rounded-full">하루 배움 도우미</span></div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">10월 6일 화요일</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="font-body-md text-body-md text-secondary font-bold truncate">Daily Routine</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="자동 소리 읽기 켜짐" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform" title="자동 읽기" type="button"><span class="material-symbols-outlined text-[24px]">volume_up</span></button><button aria-label="화면 글자 및 대비 맞춤 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="화면 설정" type="button"><span class="material-symbols-outlined text-[24px]">contrast</span></button><button aria-label="선생님 및 보호자 관리 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="선생님 설정" type="button"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-40 px-margin bg-surface max-w-[480px] mx-auto" id="main-content"><div class="flex flex-col w-full pb-6">
+  <link rel="stylesheet" href="app.css"><link rel="stylesheet" href="student-design.css"><script defer src="storage.js"></script><script defer src="settings.js"></script><script defer src="app.js"></script><script defer src="additions.js"></script><script defer src="student-design.js"></script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-secondary-fixed selection:text-on-secondary-fixed"><a class="sr-only skip-nav" href="#main-content">본문 내용으로 바로 가기</a><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.03)]"><div class="h-28 px-margin flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">spa</span><h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight truncate">차근차근</h1><span class="hidden sm:inline-block font-label-sm text-label-sm text-primary-container bg-primary-fixed/60 px-space-xs py-0.5 rounded-full">하루 배움 도우미</span></div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">10월 6일 화요일</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="font-body-md text-body-md text-secondary font-bold truncate">Daily Routine</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="자동 소리 읽기 켜짐" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform" title="자동 읽기" type="button"><span class="material-symbols-outlined text-[24px]">volume_up</span></button><button aria-label="화면 글자 및 대비 맞춤 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="화면 설정" type="button"><span class="material-symbols-outlined text-[24px]">contrast</span></button><button aria-label="선생님 및 보호자 관리 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="선생님 설정" type="button"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-40 px-margin bg-surface max-w-[480px] mx-auto" id="main-content"><div class="flex flex-col w-full pb-6">
 <!-- Top Quick Control Bar -->
 <div class="flex items-center justify-between gap-space-sm mb-space-md">
 <div class="flex items-center gap-space-xs">
@@ -37,7 +37,7 @@
 </div>
 <div class="flex flex-col min-w-0">
 <h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">말로 전하기</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">필요한 그림 카드를 누르면 소리로 또박또박 말해줘요.</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">그림 카드를 고른 뒤 소리로 들려주기를 눌러요.</p>
 </div>
 </div>
 <!-- AAC Sentence Builder Strip -->
@@ -62,7 +62,7 @@
 <span class="material-symbols-outlined text-[24px]">volume_up</span>
 <span class="font-label-lg text-label-lg">소리로 들려주기</span>
 </button>
-<button aria-label="문장 한 글자씩 지우기" class="col-span-1 min-h-[56px] bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-full flex items-center justify-center gap-1 active:scale-95 transition-all" id="clear-sentence-btn" type="button">
+<button aria-label="마지막 카드 지우기" class="col-span-1 min-h-[56px] bg-surface-container-high hover:bg-surface-container-highest text-on-surface rounded-full flex items-center justify-center gap-1 active:scale-95 transition-all" id="clear-sentence-btn" type="button">
 <span class="material-symbols-outlined text-[22px]">backspace</span>
 <span class="font-label-sm text-label-sm hidden sm:inline">지우기</span>
 </button>
@@ -243,12 +243,10 @@
         sentence.forEach((item, index) => {
           const chip = document.createElement('div');
           chip.className = 'flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-highest text-on-surface text-label-md font-label-md animate-scaleIn';
-          chip.innerHTML = `
-            <span>${item}</span>
-            <button type="button" aria-label="${item} 삭제" class="w-5 h-5 rounded-full bg-outline-variant/60 flex items-center justify-center hover:bg-outline text-on-surface ml-0.5">
-              <span class="material-symbols-outlined text-[14px]">close</span>
-            </button>
-          `;
+          const label = document.createElement('span'); label.textContent = item;
+          const remove = document.createElement('button'); remove.type = 'button';
+          remove.className = 'chip-remove'; remove.setAttribute('aria-label', item + ' 삭제');
+          remove.textContent = '×'; chip.append(label, remove);
           chip.querySelector('button').addEventListener('click', (e) => {
             e.stopPropagation();
             removeChip(index);
@@ -268,11 +266,11 @@
     function addChip(phrase) {
       sentence.push(phrase);
       updateSentenceView();
-      speakText(phrase);
+
     }
 
     function speakText(text) {
-      if (!('speechSynthesis' in window)) return;
+      if (!('speechSynthesis' in window) || window.ChageunStore?.get().speech === false) return;
       window.speechSynthesis.cancel();
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.lang = 'ko-KR';

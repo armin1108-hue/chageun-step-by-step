@@ -1,6 +1,11 @@
 (function () {
   'use strict';
   const store = window.ChageunStore;
+  const config = window.ChageunSettings;
+  const routineConfig = JSON.stringify(config.get().routine);
+  const oldRoutineConfig = store.get().routineConfig || JSON.stringify(config.defaults().routine);
+  if (routineConfig !== oldRoutineConfig) store.patch({routine:[],routineConfig});
+  else if (!store.get().routineConfig) store.patch({routineConfig});
   const route = location.pathname.split('/').filter(Boolean).pop() || 'index';
   const page = route.endsWith('.html') ? route : `${route}.html`;
   const today = new Date().toLocaleDateString('ko-KR', {month:'long',day:'numeric',weekday:'long'});
@@ -34,13 +39,16 @@
   document.body.classList.toggle('demo-contrast',store.get().contrast);
   document.querySelectorAll('button[aria-label*="처음 화면"],button[onclick*="history.back"]').forEach(b=>b.onclick=()=>location.href='index.html');
   document.querySelectorAll('button[aria-label*="선생님 및 보호자"]').forEach(b=>b.onclick=()=>location.href='teacher.html');
-  document.querySelectorAll('button[aria-label*="자동 소리 읽기"]').forEach(b=>b.addEventListener('click',()=>{
-    const enabled=!store.get().speech;store.patch({speech:enabled});b.setAttribute('aria-label',enabled?'자동 소리 읽기 켜짐':'자동 소리 읽기 꺼짐');toast(enabled?'음성 안내를 켰어요.':'음성 안내를 껐어요.');
-  }));
+  document.querySelectorAll('button[aria-label*="자동 소리 읽기"]').forEach(b=>{
+    b.setAttribute('aria-label',store.get().speech?'자동 소리 읽기 켜짐':'자동 소리 읽기 꺼짐');
+    b.addEventListener('click',()=>{
+      const enabled=!store.get().speech;store.patch({speech:enabled});if(!enabled){window.speechSynthesis?.cancel();window.dispatchEvent(new Event('chageun:stop-sounds'));}b.setAttribute('aria-label',enabled?'자동 소리 읽기 켜짐':'자동 소리 읽기 꺼짐');toast(enabled?'음성 안내를 켰어요.':'음성 안내를 껐어요.');
+    });
+  });
   document.querySelectorAll('button[aria-label*="대비 맞춤"]').forEach(b=>b.addEventListener('click',()=>{
     const next=!store.get().contrast;store.patch({contrast:next});document.body.classList.toggle('demo-contrast',next);toast(next?'화면 대비를 높였어요.':'기본 화면으로 돌아왔어요.');
   }));
-  document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();toast('이 활동은 디자인 예시입니다. 오늘은 손 씻기 연습을 사용해주세요.');}));
+  document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();toast('이 활동은 디자인 예시입니다. 교사가 편집한 현재 활동을 이용해주세요.');}));
   document.querySelectorAll('button').forEach(b=>{if(b.textContent.includes('쉬어 가기 바로가기'))b.onclick=()=>location.href='rest-space.html';});
   if(page==='index.html'){
     document.querySelectorAll('span').forEach(el=>{
@@ -75,18 +83,19 @@
     const counter=document.getElementById('completedCounter');
     if(counter)counter.textContent=`${store.get().practice}회`;
     document.getElementById('completePracticeBtn')?.addEventListener('click',()=>{store.patch({practice:store.get().practice+1});store.log('생활 연습','손 씻기 연습 완료 표시');if(counter)counter.textContent=`${store.get().practice}회`;});
-    document.querySelectorAll('button').forEach(b=>{if(['양치하기','옷 입기','자리 정리'].some(t=>b.textContent.includes(t)))b.addEventListener('click',()=>toast('이 탭은 디자인 예시입니다. 손 씻기 연습을 이용해주세요.'));});
+    document.querySelectorAll('button').forEach(b=>{if(['양치하기','옷 입기','자리 정리'].some(t=>b.textContent.includes(t)))b.addEventListener('click',()=>toast('이 탭은 디자인 예시입니다. 교사가 편집한 현재 활동을 이용해주세요.'));});
   }
   if(page==='rest-space.html'){
     let audio,source,gain,endTimer,current=null;
     function stop(){source?.stop();source=null;current=null;clearTimeout(endTimer);}
+    window.addEventListener('chageun:stop-sounds',stop);
     document.querySelectorAll('.sound-card').forEach(card=>card.addEventListener('click',()=>{
       const type=card.dataset.sound;if(type===current){stop();return;}stop();
       const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio){toast('이 브라우저는 합성 소리를 지원하지 않습니다.');return;}
       audio=audio||new Audio();audio.resume();const buffer=audio.createBuffer(1,audio.sampleRate*3,audio.sampleRate);const data=buffer.getChannelData(0);for(let i=0;i<data.length;i++)data[i]=(Math.random()*2-1)*0.3;
       source=audio.createBufferSource();source.buffer=buffer;source.loop=true;const filter=audio.createBiquadFilter();filter.type='lowpass';filter.frequency.value={rain:1600,birds:900,wave:400,fire:700}[type]||800;
       gain=audio.createGain();gain.gain.value=Number(document.getElementById('soundVolume')?.value||30)/300;source.connect(filter).connect(gain).connect(audio.destination);source.start();current=type;
-      const selected=document.querySelector('.timer-chip.bg-primary');const mins=Number(selected?.textContent.match(/\d+/)?.[0]||3);endTimer=setTimeout(()=>{stop();document.getElementById('soundPlayingBadge')?.classList.add('hidden');toast('휴식 소리가 끝났어요.');},mins*60000);
+      const selected=document.querySelector('.timer-chip.bg-primary');const mins=Number(selected?.textContent.match(/\d+/)?.[0]||3);endTimer=setTimeout(()=>{window.dispatchEvent(new Event('chageun:stop-sounds'));toast('휴식 소리가 끝났어요.');},mins*60000);
       store.log('휴식 소리','브라우저 합성 소리 재생');
     }));
     document.getElementById('soundVolume')?.addEventListener('input',e=>{if(gain)gain.gain.value=Number(e.target.value)/300;});
