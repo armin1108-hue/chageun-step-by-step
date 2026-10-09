@@ -1,10 +1,16 @@
 (function () {
   'use strict';
-  const settings=window.ChageunSettings.get(), page=location.pathname.split('/').pop();
+  const settings=window.ChageunSettings.get(), route=location.pathname.split('/').filter(Boolean).pop()||'index';
+  const page=route.endsWith('.html')?route:`${route}.html`;
   const el=(tag,text,cls)=>{const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;};
   document.body.classList.toggle('reduce-motion',settings.reducedMotion);
   const banner=document.querySelector('.demo-banner');
-  if(banner){banner.querySelector('a').textContent='교사 편집 · 시연 기록';}
+  if(banner){
+    banner.querySelector('a').textContent='교사 편집 · 시연 기록';
+    banner.querySelector('span').textContent=page==='teacher.html'
+      ?'시험용 · 가상 데이터 · 수업 설정·활동 표시는 브라우저에, 관찰 초안은 현재 탭에서만 유지됩니다.'
+      :'시험용 · 가상 데이터 · 수업 설정·활동 표시만 이 브라우저에 저장됩니다. 실제 학생정보를 입력하지 마세요.';
+  }
   document.querySelectorAll('img:not([alt])').forEach(img=>img.alt='');
   const main=document.querySelector('main');
   const stop=()=>window.speechSynthesis?.cancel();
@@ -22,9 +28,13 @@
     const cards=[...document.querySelectorAll('.task-card')];
     cards.forEach((card,i)=>{
       const data=settings.routine[i];card.querySelector('.task-name').textContent=data.title;
-      const image=card.querySelector('img');if(image)image.hidden=true;
-      const symbol=el('span',window.ChageunSettings.icons[data.icon],'routine-symbol');
-      image?.parentElement.prepend(symbol);
+      const image=card.querySelector('img');
+      const original=window.ChageunSettings.defaults().routine[i];
+      if(image && (data.title!==original.title || data.icon!==original.icon)){
+        image.hidden=true;
+        const symbol=el('span',undefined,'material-symbols-outlined routine-symbol');symbol.textContent=data.icon;
+        image.parentElement.prepend(symbol);
+      }
       const note=card.querySelector('.absolute span:last-child');if(note)note.textContent=data.note;
       card.querySelector('.task-name')?.previousElementSibling && (card.querySelector('.task-name').previousElementSibling.textContent=data.icon);
       card.querySelector('.complete-btn').setAttribute('aria-label',`${i+1}단계 ${data.title} 표시 또는 취소`);
@@ -46,6 +56,8 @@
       const data=settings.aac[i];card.dataset.phrase=data.phrase;card.dataset.category=data.category;
       card.querySelector('.font-headline-md').textContent=data.phrase;
       card.querySelector('.material-symbols-outlined').textContent=data.icon;
+      const badge=card.querySelector('.rounded-full.bg-secondary');
+      if(badge)badge.textContent={help:'도움',health:'건강',school:'교실'}[data.category];
       const small=card.querySelector('.mt-3 .font-label-sm');if(small)small.textContent='선택한 문구 그대로 읽어요';
       card.setAttribute('aria-label',data.phrase);
     });
@@ -53,6 +65,12 @@
   if(page==='daily-skills.html'){
     const oldList=document.getElementById('stepListContainer');
     const title=document.querySelector('section[aria-label="지금 진행 중인 핵심 연습"] h3');if(title)title.textContent=settings.practice.title;
+    document.querySelectorAll('p').forEach(p=>{if(p.textContent==='하나씩 누르며 완료 체크를 해보세요.')p.textContent='이전과 다음을 눌러 한 단계씩 살펴봐요.';});
+    const custom=settings.practice.title!==window.ChageunSettings.defaults().practice.title;
+    if(custom){
+      document.querySelectorAll('[role="tab"]').forEach(tab=>{if(tab.textContent.includes('손 씻기'))tab.querySelector('span').textContent=settings.practice.title;});
+      document.querySelector('section[aria-label="다른 생활 연습 추천"]')?.remove();
+    }
     // Keep the surrounding Stitch screen and replace only the interactive steps.
     oldList.replaceChildren();
     let current=0;

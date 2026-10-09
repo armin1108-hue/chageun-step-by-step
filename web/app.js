@@ -39,13 +39,16 @@
   document.body.classList.toggle('demo-contrast',store.get().contrast);
   document.querySelectorAll('button[aria-label*="처음 화면"],button[onclick*="history.back"]').forEach(b=>b.onclick=()=>location.href='index.html');
   document.querySelectorAll('button[aria-label*="선생님 및 보호자"]').forEach(b=>b.onclick=()=>location.href='teacher.html');
-  document.querySelectorAll('button[aria-label*="자동 소리 읽기"]').forEach(b=>b.addEventListener('click',()=>{
-    const enabled=!store.get().speech;store.patch({speech:enabled});b.setAttribute('aria-label',enabled?'자동 소리 읽기 켜짐':'자동 소리 읽기 꺼짐');toast(enabled?'음성 안내를 켰어요.':'음성 안내를 껐어요.');
-  }));
+  document.querySelectorAll('button[aria-label*="자동 소리 읽기"]').forEach(b=>{
+    b.setAttribute('aria-label',store.get().speech?'자동 소리 읽기 켜짐':'자동 소리 읽기 꺼짐');
+    b.addEventListener('click',()=>{
+      const enabled=!store.get().speech;store.patch({speech:enabled});if(!enabled)window.speechSynthesis?.cancel();b.setAttribute('aria-label',enabled?'자동 소리 읽기 켜짐':'자동 소리 읽기 꺼짐');toast(enabled?'음성 안내를 켰어요.':'음성 안내를 껐어요.');
+    });
+  });
   document.querySelectorAll('button[aria-label*="대비 맞춤"]').forEach(b=>b.addEventListener('click',()=>{
     const next=!store.get().contrast;store.patch({contrast:next});document.body.classList.toggle('demo-contrast',next);toast(next?'화면 대비를 높였어요.':'기본 화면으로 돌아왔어요.');
   }));
-  document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();toast('이 활동은 디자인 예시입니다. 오늘은 손 씻기 연습을 사용해주세요.');}));
+  document.querySelectorAll('a[href="#"]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();toast('이 활동은 디자인 예시입니다. 교사가 편집한 현재 활동을 이용해주세요.');}));
   document.querySelectorAll('button').forEach(b=>{if(b.textContent.includes('쉬어 가기 바로가기'))b.onclick=()=>location.href='rest-space.html';});
   if(page==='index.html'){
     document.querySelectorAll('span').forEach(el=>{
@@ -80,7 +83,7 @@
     const counter=document.getElementById('completedCounter');
     if(counter)counter.textContent=`${store.get().practice}회`;
     document.getElementById('completePracticeBtn')?.addEventListener('click',()=>{store.patch({practice:store.get().practice+1});store.log('생활 연습','손 씻기 연습 완료 표시');if(counter)counter.textContent=`${store.get().practice}회`;});
-    document.querySelectorAll('button').forEach(b=>{if(['양치하기','옷 입기','자리 정리'].some(t=>b.textContent.includes(t)))b.addEventListener('click',()=>toast('이 탭은 디자인 예시입니다. 손 씻기 연습을 이용해주세요.'));});
+    document.querySelectorAll('button').forEach(b=>{if(['양치하기','옷 입기','자리 정리'].some(t=>b.textContent.includes(t)))b.addEventListener('click',()=>toast('이 탭은 디자인 예시입니다. 교사가 편집한 현재 활동을 이용해주세요.'));});
   }
   if(page==='rest-space.html'){
     let audio,source,gain,endTimer,current=null;
