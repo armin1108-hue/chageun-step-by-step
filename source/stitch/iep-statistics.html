@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&family=Plus+Jakarta+Sans:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed": "#ffdbca", "on-secondary-container": "#682c00", "on-primary-fixed": "#001f2a", "on-background": "#1b1c1a", "secondary-container": "#fd8a42", "primary": "#004357", "on-primary": "#ffffff", "outline-variant": "#bfc8cd", "on-secondary-fixed": "#331200", "surface-variant": "#e4e2de", "on-tertiary": "#ffffff", "on-surface": "#1b1c1a", "on-tertiary-fixed": "#002116", "secondary": "#9b4500", "on-secondary": "#ffffff", "tertiary-fixed-dim": "#8cd5b7", "surface-tint": "#1e667f", "primary-fixed": "#bde9ff", "error-container": "#ffdad6", "on-primary-container": "#93d3ef", "on-surface-variant": "#40484c", "on-tertiary-container": "#90d9ba", "surface-container": "#efeeea", "surface-container-highest": "#e4e2de", "surface-bright": "#fbf9f5", "on-error-container": "#93000a", "on-primary-fixed-variant": "#004d64", "surface": "#fbf9f5", "secondary-fixed-dim": "#ffb68e", "background": "#fbf9f5", "inverse-surface": "#30312e", "tertiary-container": "#0e6149", "on-error": "#ffffff", "on-secondary-fixed-variant": "#763300", "surface-container-low": "#f5f3ef", "surface-dim": "#dbdad6", "surface-container-high": "#eae8e4", "surface-container-lowest": "#ffffff", "inverse-primary": "#90cfec", "primary-fixed-dim": "#90cfec", "inverse-on-surface": "#f2f0ed", "tertiary": "#004734", "on-tertiary-fixed-variant": "#00513b", "primary-container": "#0d5c75", "outline": "#70787d", "tertiary-fixed": "#a7f2d2", "error": "#ba1a1a" }, "borderRadius": { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "space-xs": "0.5rem", "gutter": "1rem", "space-lg": "1.5rem", "space-xl": "2.25rem", "margin": "1.25rem", "space-sm": "0.75rem" }, "fontFamily": { "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "body-xl": ["Atkinson Hyperlegible Next"], "label-md": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "body-md": ["Atkinson Hyperlegible Next"], "label-sm": ["Plus Jakarta Sans"], "body-lg": ["Atkinson Hyperlegible Next"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "headline-xl-mobile": ["26px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "800" }], "headline-md": ["20px", { "lineHeight": "30px", "fontWeight": "700" }], "body-xl": ["20px", { "lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "600" }], "label-md": ["16px", { "lineHeight": "22px", "fontWeight": "700" }], "label-lg": ["18px", { "lineHeight": "24px", "fontWeight": "700" }], "headline-lg-mobile": ["22px", { "lineHeight": "32px", "fontWeight": "700" }], "body-md": ["16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "500" }], "label-sm": ["14px", { "lineHeight": "20px", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "500" }], "headline-xl": ["32px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "headline-lg": ["24px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between p-space-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col gap-space-lg"><div class="flex items-center gap-space-xs px-space-xs py-space-xs"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center"><span class="material-symbols-outlined text-on-primary-container text-[24px]">school</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight">차근차근</span><span class="font-label-sm text-label-sm text-on-surface-variant">특수교육 전문가 포털</span></div></div><div class="bg-surface-container rounded-lg p-space-sm flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[20px]">groups</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant">담당 학급</span><span class="font-label-md text-label-md text-on-surface">햇살반 (5명)</span></div></div><button class="w-8 h-8 rounded-full bg-surface hover:bg-surface-variant flex items-center justify-center transition-colors" type="button"><span class="material-symbols-outlined text-on-surface text-[18px]">expand_more</span></button></div><nav class="flex flex-col gap-space-xs" data-active-classes="bg-primary text-on-primary font-label-md"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="realtime-status" href="#"><span class="material-symbols-outlined text-[20px]">grid_view</span>학급 실시간 현황</a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary text-on-primary font-label-md" data-path="growth-trend-analytics" href="#"><span class="material-symbols-outlined text-[20px]">trending_up</span>누적 추이 분석</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="iep-goal-management" href="#"><span class="material-symbols-outlined text-[20px]">flag</span>IEP 목표 관리</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="parent-collaboration-report" href="#"><span class="material-symbols-outlined text-[20px]">family_restroom</span>학부모 연계 리포트</a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md" data-path="classroom-settings" href="#"><span class="material-symbols-outlined text-[20px]">tune</span>교실 환경 설정</a></nav></div><div class="bg-surface rounded-lg p-space-sm flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-tertiary text-[18px]">verified</span><span class="font-label-sm text-label-sm text-tertiary">데이터 보증 가이드 준수</span></div><p class="font-body-md text-body-md text-on-surface-variant">특수교육 진단평가 및 IEP 누적 통계 표준 양식에 따라 암호화 처리됩니다.</p></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-lg"><div class="flex items-center gap-space-md"><span class="font-label-lg text-label-lg text-primary">주간·월간 누적 데이터 대시보드</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">2025학년도 1학기</span></div><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs"><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[18px]">print</span>인쇄</button><button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors font-label-sm text-label-sm" type="button"><span class="material-symbols-outlined text-[18px]">file_download</span>내보내기</button></div><div class="h-6 w-px bg-surface-variant"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right"><span class="font-label-md text-label-md text-on-surface">이선우 특수교사</span><span class="font-label-sm text-label-sm text-on-surface-variant">햇살반 담임</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 flex-1 bg-surface px-space-lg py-space-lg"><div class="flex flex-col w-full gap-space-lg">
+<!-- TOP FILTER & METRICS BAR (BESPOKE SURFACE CARD) -->
+<section class="w-full bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<!-- Left: Student Selector & Clinical Profile Badge -->
+<div class="flex flex-wrap items-center gap-space-md">
+<!-- Student Dropdown Trigger -->
+<div class="relative">
+<button class="flex items-center gap-space-sm bg-surface-container-low hover:bg-surface-container px-space-md py-space-xs rounded-full transition-colors" id="studentSelectorBtn" type="button">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary font-headline-md text-headline-md">
+            민
+          </div>
+<div class="flex flex-col text-left">
+<div class="flex items-center gap-1.5">
+<span class="font-headline-md text-headline-md text-primary">김민우</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">초등 3학년</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">햇살반 · 발달장애(자폐스펙트럼 경향)</span>
+</div>
+<span class="material-symbols-outlined text-primary text-[20px] ml-1">arrow_drop_down</span>
+</button>
+<!-- Dropdown Menu (Hidden by default, toggleable) -->
+<div class="hidden absolute top-full left-0 mt-2 w-72 bg-surface-container-lowest rounded-lg shadow-xl p-space-xs z-50" id="studentDropdown">
+<div class="p-space-xs font-label-sm text-label-sm text-on-surface-variant">햇살반 학생 목록</div>
+<button class="w-full flex items-center gap-space-sm p-space-xs rounded-md bg-surface-container text-primary font-label-md text-label-md" type="button">
+<span class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center text-xs">민</span>
+<span>김민우 (초3) - 선택됨</span>
+</button>
+<button class="w-full flex items-center gap-space-sm p-space-xs rounded-md hover:bg-surface-container-low text-on-surface font-label-md text-label-md" type="button">
+<span class="w-7 h-7 rounded-full bg-surface-variant text-on-surface flex items-center justify-center text-xs">지</span>
+<span>이지호 (초2)</span>
+</button>
+<button class="w-full flex items-center gap-space-sm p-space-xs rounded-md hover:bg-surface-container-low text-on-surface font-label-md text-label-md" type="button">
+<span class="w-7 h-7 rounded-full bg-surface-variant text-on-surface flex items-center justify-center text-xs">서</span>
+<span>박서윤 (초4)</span>
+</button>
+</div>
+</div>
+<div class="h-8 w-px bg-surface-variant hidden md:block"></div>
+<!-- Time Frame Tabs -->
+<div class="flex items-center p-1 bg-surface-container-low rounded-full">
+<button class="px-space-md py-1.5 rounded-full bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm transition-all" type="button">
+          최근 1주일 (10.02 ~ 10.06)
+        </button>
+<button class="px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" type="button">
+          최근 1개월 (9월~10월)
+        </button>
+<button class="px-space-md py-1.5 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-all" type="button">
+          2025-2학기 전체
+        </button>
+</div>
+</div>
+<!-- Right: Quick Export & IEP Compliance Stamp -->
+<div class="flex flex-wrap items-center gap-space-sm mt-space-sm xl:mt-0">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary" style="font-variation-settings: 'FILL' 1;">security</span>
+<span>특수교육법 제22조 보안검증</span>
+</div>
+<button class="flex items-center gap-1.5 px-space-md py-space-xs rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">table_view</span>
+<span>원시 CSV</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-space-xs rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm shadow-sm transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">assignment_turned_in</span>
+<span>IEP 협의회 종합 리포트 출력</span>
+</button>
+</div>
+</section>
+<!-- KEY CLINICAL KPI METRIC CARDS -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- KPI Card 1: 일과 자립 수행률 -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wide uppercase">일과 자립 수행률</span>
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">82%</span>
+<span class="flex items-center font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+          +14%p 향상
+        </span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+<span>신체적 촉진: 12%로 급감</span>
+<span class="text-tertiary font-bold">목표 초과 달성</span>
+</div>
+<!-- Subtle Visual bar indicator -->
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+<!-- KPI Card 2: 자발적 AAC 의사소통 -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wide uppercase">자발적 AAC 표현 빈도</span>
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[18px]">chat_bubble</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-secondary font-extrabold tracking-tight">42회</span>
+<span class="flex items-center font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">arrow_upward</span>
+          +35% (주간)
+        </span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+<span>문제 행동 대체율 88%</span>
+<span class="text-secondary font-semibold">도움요청 20%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 76%;"></div>
+</div>
+</div>
+<!-- KPI Card 3: 감각 쉼터 체류 시간 -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wide uppercase">감각 쉼터 평균 체류</span>
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed-dim flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[18px]">spa</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-tertiary font-extrabold tracking-tight">6.5분</span>
+<span class="flex items-center font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">trending_down</span>
+          -4.2분 단축
+        </span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+<span>스스로 쉼터 카드 제출</span>
+<span class="text-tertiary font-semibold">자가진정 속도 향상</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 32%;"></div>
+</div>
+</div>
+<!-- KPI Card 4: 긍정 정서 반응 비율 -->
+<div class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wide uppercase">안정·긍정 정서 비율</span>
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">mood</span>
+</div>
+</div>
+<div class="mt-space-md flex items-baseline gap-space-sm">
+<span class="font-headline-xl text-headline-xl text-primary font-extrabold tracking-tight">78%</span>
+<span class="flex items-center font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+          +19%p (안정)
+        </span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-body-md text-body-md">
+<span>위기 행동 발생 0건</span>
+<span class="text-primary font-semibold">일상 유지 우수</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+</section>
+<!-- DATA VISUALIZATION GRID (4 BESPOKE CARDS) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- CHART A: 주간 일과 자립도 추이 선 그래프 (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">주간 일과 자립도 누적 추이</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">9월 1주(52%)에서 10월 1주(82%)까지의 연속 자립 수행 곡선</p>
+</div>
+<div class="flex items-center gap-3 text-label-sm font-label-sm">
+<span class="flex items-center gap-1 text-primary"><span class="w-2.5 h-2.5 rounded-full bg-primary inline-block"></span> 실제 달성률</span>
+<span class="flex items-center gap-1 text-on-surface-variant"><span class="w-2.5 h-2.5 rounded-full bg-surface-variant inline-block"></span> IEP 기준선(70%)</span>
+</div>
+</div>
+<!-- Vector Line Chart SVG -->
+<div class="w-full h-64 relative flex items-end">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 600 240">
+<defs>
+<lineargradient id="primaryAreaGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#004357" stop-opacity="0.22"></stop>
+<stop offset="100%" stop-color="#004357" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Grid Lines -->
+<line stroke="#eae8e4" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="600" y1="40" y2="40"></line>
+<line stroke="#eae8e4" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="600" y1="100" y2="100"></line>
+<line stroke="#eae8e4" stroke-dasharray="4 4" stroke-width="1" x1="0" x2="600" y1="160" y2="160"></line>
+<line stroke="#eae8e4" stroke-width="1" x1="0" x2="600" y1="220" y2="220"></line>
+<!-- Target IEP Goal Benchmark Line (70% = Y:92) -->
+<line stroke="#fd8a42" stroke-dasharray="5 3" stroke-width="1.8" x1="20" x2="580" y1="92" y2="92"></line>
+<text fill="#9b4500" font-size="11" font-weight="700" x="525" y="85">목표 기준선 (70%)</text>
+<!-- Area Gradient -->
+<path d="M 40,165 L 170,140 L 300,110 L 430,76 L 560,42 L 560,220 L 40,220 Z" fill="url(#primaryAreaGrad)"></path>
+<!-- Primary Growth Line -->
+<path d="M 40,165 L 170,140 L 300,110 L 430,76 L 560,42" fill="none" stroke="#004357" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"></path>
+<!-- Data Points -->
+<!-- 9월 1주: 52% (y:165) -->
+<circle cx="40" cy="165" fill="#fbf9f5" r="5" stroke="#004357" stroke-width="3"></circle>
+<text fill="#004357" font-size="12" font-weight="bold" text-anchor="middle" x="40" y="152">52%</text>
+<!-- 9월 2주: 58% (y:140) -->
+<circle cx="170" cy="140" fill="#fbf9f5" r="5" stroke="#004357" stroke-width="3"></circle>
+<text fill="#004357" font-size="12" font-weight="bold" text-anchor="middle" x="170" y="127">58%</text>
+<!-- 9월 3주: 68% (y:110) -->
+<circle cx="300" cy="110" fill="#fbf9f5" r="5" stroke="#004357" stroke-width="3"></circle>
+<text fill="#004357" font-size="12" font-weight="bold" text-anchor="middle" x="300" y="97">68%</text>
+<!-- 9월 4주: 75% (y:76) -->
+<circle cx="430" cy="76" fill="#fbf9f5" r="5" stroke="#004357" stroke-width="3"></circle>
+<text fill="#004357" font-size="12" font-weight="bold" text-anchor="middle" x="430" y="63">75%</text>
+<!-- 10월 1주: 82% (y:42) -->
+<circle cx="560" cy="42" fill="#004357" r="7" stroke="#bde9ff" stroke-width="3"></circle>
+<text fill="#004357" font-size="13" font-weight="800" text-anchor="middle" x="560" y="28">82% ⭐</text>
+</svg>
+</div>
+<!-- X-Axis Labels -->
+<div class="flex justify-between px-6 pt-3 text-on-surface-variant font-label-sm text-label-sm">
+<span>9월 1주차</span>
+<span>9월 2주차</span>
+<span>9월 3주차</span>
+<span>9월 4주차</span>
+<span class="text-primary font-bold">10월 1주차 (현재)</span>
+</div>
+</div>
+<!-- CHART B: AAC 의사소통 유형 도넛 차트 (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-xs">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">의사소통 AAC 표현 비중</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">자발적 발화 및 태블릿 카드 선택 통계</p>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">총 42회</span>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-space-lg my-auto py-space-sm">
+<!-- Donut Visual SVG -->
+<div class="relative w-40 h-40 shrink-0">
+<svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<!-- Background Ring -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#efeeea" stroke-width="14"></circle>
+<!-- 요구하기 45% (dasharray: 238.7 -> 107.4) -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#004357" stroke-dasharray="107.4 238.7" stroke-dashoffset="0" stroke-width="14"></circle>
+<!-- 감정표현 30% (dasharray: 71.6) offset: -107.4 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#fd8a42" stroke-dasharray="71.6 238.7" stroke-dashoffset="-107.4" stroke-width="14"></circle>
+<!-- 도움요청 20% (dasharray: 47.7) offset: -179 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#004734" stroke-dasharray="47.7 238.7" stroke-dashoffset="-179" stroke-width="14"></circle>
+<!-- 거절하기 5% (dasharray: 12) offset: -226.7 -->
+<circle cx="50" cy="50" fill="transparent" r="38" stroke="#70787d" stroke-dasharray="12 238.7" stroke-dashoffset="-226.7" stroke-width="14"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-md text-headline-md text-primary font-extrabold leading-none">42</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">자발 표현</span>
+</div>
+</div>
+<!-- Legend breakdown with clear contrast -->
+<div class="flex flex-col gap-2 w-full max-w-xs">
+<div class="flex items-center justify-between p-1.5 rounded-md bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">요구하기 ("더 주세요")</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-primary">45% (19회)</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-md bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-label-sm text-label-sm text-on-surface">감정표현 ("재밌어요")</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-secondary">30% (13회)</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-md bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">도움요청 ("도와주세요")</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-tertiary">20% (8회)</span>
+</div>
+<div class="flex items-center justify-between p-1.5 rounded-md bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-outline"></span>
+<span class="font-label-sm text-label-sm text-on-surface">거절하기 ("잠깐만요")</span>
+</div>
+<span class="font-label-sm text-label-sm font-bold text-outline">5% (2회)</span>
+</div>
+</div>
+</div>
+<div class="bg-secondary-fixed/50 rounded-md p-space-xs flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">lightbulb</span>
+<span class="font-body-md text-body-md text-on-secondary-fixed text-xs sm:text-sm">
+<strong>진전 사항:</strong> 거절/회피 대신 '잠깐만요' 카드를 사용하는 사회적 스킬이 처음 관찰됨.
+        </span>
+</div>
+</div>
+<!-- CHART C: 시간대별 정서 상태 히트맵 (6 cols) -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">일과 시간대별 정서 안정 히트맵</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">교실 환경 소음 및 활동 전환 시 정서 상태 관찰</p>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant">schedule</span>
+</div>
+<!-- Heatmap Grid -->
+<div class="flex flex-col gap-2 my-2">
+<!-- 09:00 등교 & 아침 준비 -->
+<div class="flex items-center gap-2">
+<div class="w-24 shrink-0 font-label-sm text-label-sm text-on-surface">09:00 등교</div>
+<div class="flex-1 grid grid-cols-5 gap-1.5 h-8">
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold" title="월요일: 차분">차분</div>
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">안정</div>
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">차분</div>
+<div class="bg-tertiary-fixed-dim rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">안정</div>
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">즐거움</div>
+</div>
+</div>
+<!-- 10:10 2교시 (복도 소음 빈발) -->
+<div class="flex items-center gap-2">
+<div class="w-24 shrink-0 font-label-sm text-label-sm text-on-surface">10:10 소음전환</div>
+<div class="flex-1 grid grid-cols-5 gap-1.5 h-8">
+<div class="bg-secondary-fixed rounded flex items-center justify-center text-xs text-on-secondary-fixed font-bold">긴장</div>
+<div class="bg-error-container rounded flex items-center justify-center text-xs text-on-error-container font-bold">불안감</div>
+<div class="bg-secondary-fixed rounded flex items-center justify-center text-xs text-on-secondary-fixed font-bold">긴장</div>
+<div class="bg-tertiary-fixed-dim rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">진정</div>
+<div class="bg-secondary-fixed rounded flex items-center justify-center text-xs text-on-secondary-fixed font-bold">주의</div>
+</div>
+</div>
+<!-- 11:30 급식 & 자율활동 -->
+<div class="flex items-center gap-2">
+<div class="w-24 shrink-0 font-label-sm text-label-sm text-on-surface">11:30 점심/급식</div>
+<div class="flex-1 grid grid-cols-5 gap-1.5 h-8">
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">안정</div>
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">안정</div>
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">즐거움</div>
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">즐거움</div>
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">안정</div>
+</div>
+</div>
+<!-- 13:20 통합학급 수업 -->
+<div class="flex items-center gap-2">
+<div class="w-24 shrink-0 font-label-sm text-label-sm text-on-surface">13:20 통합활동</div>
+<div class="flex-1 grid grid-cols-5 gap-1.5 h-8">
+<div class="bg-secondary-fixed rounded flex items-center justify-center text-xs text-on-secondary-fixed font-bold">주의</div>
+<div class="bg-tertiary-fixed-dim rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">안정</div>
+<div class="bg-tertiary-fixed-dim rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">안정</div>
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">즐거움</div>
+<div class="bg-tertiary-fixed rounded flex items-center justify-center text-xs text-on-tertiary-fixed font-bold">안정</div>
+</div>
+</div>
+<!-- Day markers -->
+<div class="flex items-center gap-2 text-xs font-label-sm text-on-surface-variant">
+<div class="w-24 shrink-0"></div>
+<div class="flex-1 grid grid-cols-5 text-center">
+<span>월(10.02)</span>
+<span>화(10.03)</span>
+<span>수(10.04)</span>
+<span>목(10.05)</span>
+<span>금(10.06)</span>
+</div>
+</div>
+</div>
+<!-- Action insight badge -->
+<div class="mt-2 text-on-surface-variant font-body-md text-body-md bg-surface-container rounded-md p-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px]">info</span>
+<span>10:10 쉬는 시간 소음 차단용 노이즈캔슬링 헤드폰 착용 시 불안 지속시간 85% 감소 확인.</span>
+</div>
+</div>
+<!-- CHART D: 촉진(Prompting) 레벨 변화 추이 (6 cols) -->
+<div class="lg:col-span-6 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">촉진(Prompting) 강도 변화 분석</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">교사의 직접 개입 수준이 감소하고 독립 수행 비중 확대</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-label-sm text-label-sm text-on-surface">자립/시각단서</span>
+</div>
+</div>
+<!-- Stacked Bar Visual Comparison -->
+<div class="space-y-4 my-auto">
+<!-- 9월 초 (Baseline) -->
+<div>
+<div class="flex justify-between text-xs font-label-sm text-on-surface mb-1">
+<span>9월 1주 (중재 초기)</span>
+<span class="text-error font-bold">신체적 촉진 45%</span>
+</div>
+<div class="w-full h-7 rounded-lg overflow-hidden flex text-[11px] font-bold text-on-primary text-center leading-7">
+<div class="bg-primary" style="width: 25%;" title="독립 수행: 25%">자립 25%</div>
+<div class="bg-primary-container" style="width: 30%;" title="시각/언어적 촉진: 30%">시각 30%</div>
+<div class="bg-secondary-container text-on-surface" style="width: 45%;" title="직접 신체 촉진: 45%">신체개입 45%</div>
+</div>
+</div>
+<!-- 9월 말 (Mid-term) -->
+<div>
+<div class="flex justify-between text-xs font-label-sm text-on-surface mb-1">
+<span>9월 3주 (중재 3주차)</span>
+<span class="text-secondary font-bold">신체적 촉진 25%</span>
+</div>
+<div class="w-full h-7 rounded-lg overflow-hidden flex text-[11px] font-bold text-on-primary text-center leading-7">
+<div class="bg-primary" style="width: 45%;" title="독립 수행: 45%">자립 45%</div>
+<div class="bg-primary-container" style="width: 30%;" title="시각/언어적 촉진: 30%">시각 30%</div>
+<div class="bg-secondary-container text-on-surface" style="width: 25%;" title="직접 신체 촉진: 25%">신체 25%</div>
+</div>
+</div>
+<!-- 10월 현재 (Current) -->
+<div>
+<div class="flex justify-between text-xs font-label-sm text-on-surface mb-1">
+<span class="font-bold text-primary">10월 1주 (현재 상태)</span>
+<span class="text-tertiary font-bold">독립 수행 65% 달성!</span>
+</div>
+<div class="w-full h-8 rounded-lg overflow-hidden flex text-[12px] font-bold text-on-primary text-center leading-8 shadow-inner">
+<div class="bg-primary flex items-center justify-center gap-1" style="width: 65%;" title="독립 수행: 65%">
+<span class="material-symbols-outlined text-[14px]">check</span> 완전 자립 65%
+            </div>
+<div class="bg-primary-container text-on-primary-container" style="width: 23%;" title="시각적 단서: 23%">시각단서 23%</div>
+<div class="bg-secondary-fixed text-on-secondary-fixed" style="width: 12%;" title="신체 보조: 12%">신체 12%</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs font-label-sm text-on-surface-variant pt-2">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-primary"></span> 완전 독립(Self-directed)</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-primary-container"></span> 시각적/구어적 단서</span>
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded bg-secondary-fixed"></span> 신체적 직접 개입</span>
+</div>
+</div>
+</section>
+<!-- IEP GOAL MATRIX & ACHIEVEMENT TRACKER (COMPREHENSIVE TABLE) -->
+<section class="bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm">2025학년도 2학기</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-extrabold">IEP(개별화교육계획) 목표 달성 현황 매트릭스</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          특수교육법 기준 장단기 교육목표에 따른 관찰 기록 및 도달 평가
+        </p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">tune</span>
+          필터: 전체 목표(3)
+        </button>
+<button class="px-3 py-1.5 rounded-full bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">add</span>
+          신규 하위목표 추가
+        </button>
+</div>
+</div>
+<!-- Matrix Rows -->
+<div class="flex flex-col gap-space-sm">
+<!-- Goal Row 1: 일상생활 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm max-w-2xl">
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center shrink-0 text-on-primary font-headline-md text-headline-md shadow-sm">
+            1
+          </div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">일상생활 적응</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">일과 시각 스케줄 독립 완수</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">star</span> 목표 도달 완료 (80% 이상)
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              시각 스케줄 표를 확인한 후 교사의 신체적 촉진 없이 5가지 연속 일과(등교 정리, 사물함 정돈, 착석, 수업 준비, 쉼표 카드) 중 4가지 이상을 스스로 완수할 수 있다.
+            </p>
+</div>
+</div>
+<!-- Progress & Actions -->
+<div class="flex flex-wrap items-center gap-space-lg w-full xl:w-auto justify-between xl:justify-end">
+<div class="flex flex-col w-48">
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">달성 진행률</span>
+<span class="text-primary font-extrabold text-base">82% <span class="text-xs text-on-surface-variant font-normal">/ 기준 80%</span></span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 82%;"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              관찰로그 (24건)
+            </button>
+<button class="px-3 py-1.5 rounded-full bg-primary hover:bg-primary-container text-on-primary font-label-sm text-label-sm flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">upgrade</span>
+              다음 목표 상향 제안
+            </button>
+</div>
+</div>
+</div>
+<!-- Goal Row 2: 의사소통 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm max-w-2xl">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center shrink-0 text-on-surface font-headline-md text-headline-md shadow-sm">
+            2
+          </div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">의사소통 AAC</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">곤란 상황 시 '도와주세요' 자발적 카드 제시</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm">
+                진행 중 (목표 80%)
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              과제 수행 중 막히거나 좌절 상황 발생 시 비언어적 억압·울음 대신 태블릿 내 '도와주세요' AAC 카드를 5초 이내에 자발적으로 눌러 교사에게 표현할 수 있다.
+            </p>
+</div>
+</div>
+<!-- Progress & Actions -->
+<div class="flex flex-wrap items-center gap-space-lg w-full xl:w-auto justify-between xl:justify-end">
+<div class="flex flex-col w-48">
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">달성 진행률</span>
+<span class="text-secondary font-extrabold text-base">75% <span class="text-xs text-on-surface-variant font-normal">/ 기준 80%</span></span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 75%;"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              관찰로그 (18건)
+            </button>
+<button class="px-3 py-1.5 rounded-full bg-surface-container-high hover:bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+              촉진방식 수정
+            </button>
+</div>
+</div>
+</div>
+<!-- Goal Row 3: 사회·정서 -->
+<div class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-all flex flex-col xl:flex-row items-start xl:items-center justify-between gap-space-md">
+<div class="flex items-start gap-space-sm max-w-2xl">
+<div class="w-12 h-12 rounded-full bg-tertiary flex items-center justify-center shrink-0 text-on-tertiary font-headline-md text-headline-md shadow-sm">
+            3
+          </div>
+<div class="flex flex-col">
+<div class="flex flex-wrap items-center gap-2 mb-1">
+<span class="px-2 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">사회·정서 적응</span>
+<span class="font-headline-md text-headline-md text-on-surface font-bold">감각 과부하 시 자가진정 쉼터 이용 및 회복</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">check_circle</span> 우수 도달 (90%)
+              </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+              강한 청각·촉각 자극이 발생했을 때 타인에게 신체적 거부 반응을 보이지 않고, 스스로 '쉼터 카드'를 제시한 후 5분 이내 호흡 루틴을 통해 교실로 복귀한다.
+            </p>
+</div>
+</div>
+<!-- Progress & Actions -->
+<div class="flex flex-wrap items-center gap-space-lg w-full xl:w-auto justify-between xl:justify-end">
+<div class="flex flex-col w-48">
+<div class="flex justify-between font-label-sm text-label-sm mb-1">
+<span class="text-on-surface-variant">달성 진행률</span>
+<span class="text-tertiary font-extrabold text-base">90% <span class="text-xs text-on-surface-variant font-normal">/ 기준 80%</span></span>
+</div>
+<div class="w-full bg-surface-container-highest h-2.5 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 90%;"></div>
+</div>
+</div>
+<div class="flex items-center gap-2 shrink-0">
+<button class="px-3 py-1.5 rounded-full bg-surface-container-lowest hover:bg-surface-variant text-on-surface font-label-sm text-label-sm flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              관찰로그 (31건)
+            </button>
+<button class="px-3 py-1.5 rounded-full bg-tertiary hover:bg-tertiary-container text-on-tertiary font-label-sm text-label-sm flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+              목표 도달 확정
+            </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- EXPERT CLINICAL EVALUATION & AI INTERVENTION ADVISOR -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-md">
+<!-- Left: AI Special Education Clinical Insight (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">차근차근 특수교육 AI 분석 및 차기 중재 제언</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">누적 184개 관찰 행동 데이터 기반 모델 분석</span>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+          신뢰도 98.4%
+        </span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-space-md flex flex-col gap-space-sm text-on-surface">
+<div class="flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary shrink-0 mt-0.5">verified_user</span>
+<p class="font-body-lg text-body-lg text-on-surface">
+<strong>"촉각 및 소음 환경에서의 자가조절력이 지난 4주간 통계적으로 매우 유의미하게 성장했습니다."</strong>
+</p>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed pl-7">
+          민우 학생은 신체적 촉진 의존도가 45%에서 12%로 대폭 축소되었으며, 돌발 소음 발생 시 쉼터 이동 소요시간이 6.5분으로 안정화되었습니다. 
+          따라서 <strong>10월 3주차부터는 '특수학급 내 안정적 일상'에서 나아가 체육관 이동, 급식실 배식 대기 등 다인원 통합 환경으로 자립 수행 영역을 단계적으로 확장</strong>하는 IEP 수정안을 권고합니다.
+        </p>
+<!-- Recommended Action Checklist for Teachers -->
+<div class="pl-7 pt-2 flex flex-col gap-1.5 font-label-sm text-label-sm">
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>추천 1: 복도 이동 시 사용하는 휴대용 미니 시각 스케줄 루틴 카드 도입</span>
+</div>
+<div class="flex items-center gap-2 text-primary font-semibold">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span>추천 2: 통합교사(3학년 2반)와 10:10 쉬는 시간 소음 모니터링 체크리스트 공유</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm text-xs font-label-sm text-on-surface-variant">
+<span>* 본 제언은 특수교사 및 치료 전문가 협의회의 임상적 최종 판단을 대체하지 않습니다.</span>
+<button class="text-primary hover:underline font-bold" type="button">전체 근거 데이터 셋 보기 →</button>
+</div>
+</div>
+<!-- Right: Multidisciplinary Team Sign-off & Collaboration Notes (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-lg p-space-lg shadow-sm flex flex-col justify-between">
+<div class="flex items-center justify-between mb-space-sm">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">전문가 다학제 협의회 서명 및 코멘트</h3>
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-label-sm">검토 완료</span>
+</div>
+<div class="flex flex-col gap-space-sm">
+<!-- Specialist 1: Special Ed Teacher -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary font-bold text-xs">
+                선우
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">이선우 특수교사</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">햇살반 담임</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">draw</span>
+<span>전자서명 완료 (10.06)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+            "스스로 가방을 열고 알림장을 꺼내는 동작이 완벽히 자립화되었습니다. 학부모님께 가정 내 가방 정리 루틴도 통일해달라고 요청드렸습니다."
+          </p>
+</div>
+<!-- Specialist 2: Speech-Language Pathologist -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-xs">
+                혜진
+              </div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">박혜진 언어치료사</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">순회 언어재활전문가</span>
+</div>
+</div>
+<div class="flex items-center gap-1 text-tertiary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">draw</span>
+<span>전자서명 완료 (10.06)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">
+            "AAC 2단계 문장 결합('선생님 + 도와주세요') 연습을 10월 2주부터 개시할 준비가 되었습니다. 음성 합성 피드백 속도를 최적화했습니다."
+          </p>
+</div>
+</div>
+<div class="mt-space-sm flex items-center gap-2 pt-2">
+<button class="w-full py-2.5 rounded-full bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">add_comment</span>
+<span>새 전문가 의견 추가 기록</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+<script>
+  // Simple micro-interaction for student switcher dropdown
+  (function() {
+    const btn = document.getElementById('studentSelectorBtn');
+    const dropdown = document.getElementById('studentDropdown');
+
+    if (btn && dropdown) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('hidden');
+      });
+
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target) && !btn.contains(e.target)) {
+          dropdown.classList.add('hidden');
+        }
+      });
+    }
+  })();
+</script></main><footer class="w-full bg-surface-container-low py-space-md px-space-lg shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col md:flex-row items-center justify-between gap-space-xs text-on-surface-variant font-label-sm text-label-sm"><span>© 2025 차근차근(Step by Step) 특수교육지원 플랫폼. 교육과정 연계 보장.</span><div class="flex items-center gap-space-md"><span>개인정보처리방침</span><span>IEP 기록보관 규정</span><span>교원 원격지원센터</span></div></div></footer></div>
+</body></html>

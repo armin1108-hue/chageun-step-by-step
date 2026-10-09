@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>차근차근: 나의 하루 배움 도우미</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#40484c","secondary-fixed":"#ffdbca","on-primary-container":"#93d3ef","surface-container-low":"#f5f3ef","on-secondary-container":"#682c00","surface-variant":"#e4e2de","inverse-surface":"#30312e","inverse-on-surface":"#f2f0ed","on-background":"#1b1c1a","surface-container":"#efeeea","on-secondary":"#ffffff","primary":"#004357","on-secondary-fixed":"#331200","on-tertiary-fixed":"#002116","on-primary-fixed":"#001f2a","on-surface":"#1b1c1a","surface":"#fbf9f5","on-error-container":"#93000a","on-tertiary":"#ffffff","surface-bright":"#fbf9f5","primary-fixed":"#bde9ff","inverse-primary":"#90cfec","on-primary":"#ffffff","secondary-fixed-dim":"#ffb68e","primary-container":"#0d5c75","secondary-container":"#fd8a42","on-tertiary-container":"#90d9ba","on-error":"#ffffff","surface-container-lowest":"#ffffff","primary-fixed-dim":"#90cfec","surface-container-high":"#eae8e4","background":"#fbf9f5","on-tertiary-fixed-variant":"#00513b","tertiary-fixed-dim":"#8cd5b7","surface-dim":"#dbdad6","tertiary-fixed":"#a7f2d2","on-secondary-fixed-variant":"#763300","tertiary-container":"#0e6149","error":"#ba1a1a","outline-variant":"#bfc8cd","surface-tint":"#1e667f","outline":"#70787d","error-container":"#ffdad6","tertiary":"#004734","surface-container-highest":"#e4e2de","on-primary-fixed-variant":"#004d64","secondary":"#9b4500"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-xs":"0.5rem","space-lg":"1.5rem","space-md":"1rem","margin":"1.25rem","gutter":"1rem","space-xl":"2.25rem","space-sm":"0.75rem"},"fontFamily":{"body-md":["Atkinson Hyperlegible Next"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Atkinson Hyperlegible Next"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-xl":["Atkinson Hyperlegible Next"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-md":["16px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"500"}],"label-sm":["14px",{"lineHeight":"20px","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"30px","letterSpacing":"0.01em","fontWeight":"500"}],"label-md":["16px",{"lineHeight":"22px","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"30px","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"800"}],"label-lg":["18px",{"lineHeight":"24px","fontWeight":"700"}],"body-xl":["20px",{"lineHeight":"32px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["24px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"32px","fontWeight":"700"}]}}}};</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.skip-nav:focus{position:fixed;top:1rem;left:1rem;z-index:100;background-color:#0d5c75;color:#ffffff;padding:0.75rem 1.25rem;border-radius:9999px;font-weight:700;box-shadow:0 10px 25px -5px rgba(0,0,0,0.3);}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link rel="stylesheet" href="app.css"><script defer src="storage.js"></script><script defer src="app.js"></script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-secondary-fixed selection:text-on-secondary-fixed"><a class="sr-only skip-nav" href="#main-content">본문 내용으로 바로 가기</a><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.03)]"><div class="h-28 px-margin flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">spa</span><h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight truncate">차근차근</h1><span class="hidden sm:inline-block font-label-sm text-label-sm text-primary-container bg-primary-fixed/60 px-space-xs py-0.5 rounded-full">하루 배움 도우미</span></div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">10월 6일 화요일</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="font-body-md text-body-md text-secondary font-bold truncate">생활 연습</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="자동 소리 읽기 켜짐" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform" title="자동 읽기" type="button"><span class="material-symbols-outlined text-[24px]">volume_up</span></button><button aria-label="화면 글자 및 대비 맞춤 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="화면 설정" type="button"><span class="material-symbols-outlined text-[24px]">contrast</span></button><button aria-label="선생님 및 보호자 관리 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="선생님 설정" type="button"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-40 px-margin bg-surface max-w-[480px] mx-auto" id="main-content"><div class="flex flex-col w-full gap-space-lg">
+<!-- Quick Action & Audio Bar -->
+<div class="flex items-center justify-between gap-space-sm">
+<a class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low hover:bg-surface-container active:scale-95 transition-all text-on-surface" href="index.html">
+<span class="material-symbols-outlined text-primary text-[22px]">arrow_back</span>
+<span class="font-label-md text-label-md">처음으로</span>
+</a>
+<button aria-label="이 화면 전체 음성으로 차근차근 듣기" class="inline-flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed shadow-sm active:scale-95 transition-all" id="ttsPlayAllBtn" type="button">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+<span class="font-label-md text-label-md">음성 안내 켜기</span>
+</button>
+</div>
+<!-- Hero Title Card (Soft Reassuring Board) -->
+<div class="relative overflow-hidden rounded-lg bg-surface-container-low p-space-lg shadow-sm">
+<div class="flex items-start gap-space-md relative z-10">
+<div class="w-16 h-16 shrink-0 rounded-2xl bg-secondary-container text-on-secondary-container flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[36px]" style="font-variation-settings: 'FILL' 1;">checklist</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="inline-flex items-center gap-1.5 self-start px-space-xs py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm mb-1">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+          스스로 할 수 있어요
+        </div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">생활 연습 도우미</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          스스로 해보는 일상생활 훈련이에요. 그림과 순서를 보며 한 단계씩 천천히 따라해봐요.
+        </p>
+</div>
+</div>
+<!-- Tactile Visual Strip Indicator -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between text-on-surface-variant">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified</span>
+<span class="font-label-sm text-label-sm">오늘 완료한 연습: <strong class="text-tertiary font-bold" id="completedCounter">2개</strong></span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">칭찬 도장 🌟</span>
+</div>
+</div>
+<!-- Category Filter Chips (Horizontal Scrollable, Minimum 56px touch friendly) -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant px-1">배우고 싶은 연습 고르기</span>
+<div aria-label="생활 연습 주제 선택" class="flex items-center gap-space-xs overflow-x-auto pb-1 -mx-margin px-margin no-scrollbar" role="tablist">
+<button aria-selected="true" class="shrink-0 h-14 px-space-lg rounded-full font-label-md text-label-md bg-primary text-on-primary shadow-sm flex items-center gap-2 active:scale-95 transition-transform" role="tab" type="button">
+<span>전체</span>
+</button>
+<button aria-selected="false" class="shrink-0 h-14 px-space-lg rounded-full font-label-md text-label-md bg-secondary-fixed text-on-secondary-fixed flex items-center gap-2 active:scale-95 transition-transform" role="tab" type="button">
+<span>손 씻기</span>
+<span class="text-lg">🧼</span>
+</button>
+<button aria-selected="false" class="shrink-0 h-14 px-space-lg rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface flex items-center gap-2 active:scale-95 transition-transform hover:bg-surface-variant" role="tab" type="button">
+<span>양치하기</span>
+<span class="text-lg">🪥</span>
+</button>
+<button aria-selected="false" class="shrink-0 h-14 px-space-lg rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface flex items-center gap-2 active:scale-95 transition-transform hover:bg-surface-variant" role="tab" type="button">
+<span>옷 입기</span>
+<span class="text-lg">👕</span>
+</button>
+<button aria-selected="false" class="shrink-0 h-14 px-space-lg rounded-full font-label-md text-label-md bg-surface-container-high text-on-surface flex items-center gap-2 active:scale-95 transition-transform hover:bg-surface-variant" role="tab" type="button">
+<span>자리 정리</span>
+<span class="text-lg">🧹</span>
+</button>
+</div>
+</div>
+<!-- Main Active Routine Card -->
+<section aria-label="지금 진행 중인 핵심 연습" class="flex flex-col gap-space-md">
+<div class="rounded-lg bg-surface-container-lowest p-space-lg shadow-md flex flex-col gap-space-md">
+<!-- Routine Header Block -->
+<div class="flex items-center justify-between gap-space-sm pb-space-sm bg-surface-container-low -mx-space-lg -mt-space-lg p-space-lg rounded-t-lg">
+<div class="flex items-center gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center text-primary text-[26px]">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">water_drop</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">지금 연습하기</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">총 5단계</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-0.5">깨끗하게 손 씻기 순서</h3>
+</div>
+</div>
+<button aria-label="손 씻기 순서 전체 소리로 듣기" class="w-12 h-12 rounded-full bg-surface-container-highest hover:bg-surface-dim active:scale-95 transition-transform flex items-center justify-center text-primary" id="masterTtsBtn" type="button">
+<span class="material-symbols-outlined text-[24px]">volume_up</span>
+</button>
+</div>
+<!-- Instruction Banner -->
+<div class="flex items-center gap-3 p-space-sm rounded-2xl bg-primary-fixed/40 text-on-primary-fixed">
+<span class="material-symbols-outlined text-primary text-[22px]">touch_app</span>
+<p class="font-body-md text-body-md text-on-surface font-medium">하나씩 누르며 완료 체크를 해보세요.</p>
+</div>
+<!-- Step List (Large Tactile 56px+ Touch Area Cards) -->
+<div class="flex flex-col gap-space-sm" id="stepListContainer">
+<!-- Step 1 (Current Active Task) -->
+<article class="step-card group relative p-space-md rounded-2xl bg-secondary-fixed/40 transition-all flex flex-col gap-space-xs shadow-sm">
+<div class="flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-headline-md text-headline-md shrink-0 shadow-sm">
+                1
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-secondary font-bold">1단계 · 준비</span>
+<span class="font-body-lg text-body-lg text-on-surface font-bold leading-tight">물 묻히고 비누 거품 내기</span>
+</div>
+</div>
+<!-- Checkbox Toggle -->
+<button aria-label="1단계 완료 표시" class="step-check-btn w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-outline-variant hover:text-primary active:scale-90 transition-transform shrink-0" data-step="1" type="button">
+<span class="material-symbols-outlined text-[32px] step-check-icon">radio_button_unchecked</span>
+</button>
+</div>
+<!-- Step Micro Helper: 10s Timer Button -->
+<div class="mt-2 pt-2 flex items-center justify-between gap-2 bg-surface-container-lowest/80 p-space-sm rounded-xl">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">soap</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">거품을 뽀글뽀글 10초 동안 내요</span>
+</div>
+<button class="timer-btn px-space-md h-11 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1 active:scale-95 transition-all shadow-sm" data-seconds="10" type="button">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+<span class="timer-text">10초 세기</span>
+</button>
+</div>
+</article>
+<!-- Step 2 -->
+<article class="step-card group relative p-space-md rounded-2xl bg-surface-container-low transition-all flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-headline-md text-headline-md shrink-0">
+              2
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">2단계 · 손바닥과 손등</span>
+<span class="font-body-lg text-body-lg text-on-surface font-bold leading-tight">손바닥과 손등 싹싹 문지르기</span>
+</div>
+</div>
+<button aria-label="2단계 완료 표시" class="step-check-btn w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-outline-variant hover:text-primary active:scale-90 transition-transform shrink-0" data-step="2" type="button">
+<span class="material-symbols-outlined text-[32px] step-check-icon">radio_button_unchecked</span>
+</button>
+</article>
+<!-- Step 3 -->
+<article class="step-card group relative p-space-md rounded-2xl bg-surface-container-low transition-all flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-headline-md text-headline-md shrink-0">
+              3
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">3단계 · 손가락 깍지</span>
+<span class="font-body-lg text-body-lg text-on-surface font-bold leading-tight">손가락 사이와 엄지 돌려 닦기</span>
+</div>
+</div>
+<button aria-label="3단계 완료 표시" class="step-check-btn w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-outline-variant hover:text-primary active:scale-90 transition-transform shrink-0" data-step="3" type="button">
+<span class="material-symbols-outlined text-[32px] step-check-icon">radio_button_unchecked</span>
+</button>
+</article>
+<!-- Step 4 -->
+<article class="step-card group relative p-space-md rounded-2xl bg-surface-container-low transition-all flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-headline-md text-headline-md shrink-0">
+              4
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">4단계 · 물 헹굼</span>
+<span class="font-body-lg text-body-lg text-on-surface font-bold leading-tight">흐르는 물에 거품 씻어내기</span>
+</div>
+</div>
+<button aria-label="4단계 완료 표시" class="step-check-btn w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-outline-variant hover:text-primary active:scale-90 transition-transform shrink-0" data-step="4" type="button">
+<span class="material-symbols-outlined text-[32px] step-check-icon">radio_button_unchecked</span>
+</button>
+</article>
+<!-- Step 5 -->
+<article class="step-card group relative p-space-md rounded-2xl bg-surface-container-low transition-all flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center font-headline-md text-headline-md shrink-0">
+              5
+            </div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-bold">5단계 · 물기 말리기</span>
+<span class="font-body-lg text-body-lg text-on-surface font-bold leading-tight">깨끗한 수건이나 종이로 닦기</span>
+</div>
+</div>
+<button aria-label="5단계 완료 표시" class="step-check-btn w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-outline-variant hover:text-primary active:scale-90 transition-transform shrink-0" data-step="5" type="button">
+<span class="material-symbols-outlined text-[32px] step-check-icon">radio_button_unchecked</span>
+</button>
+</article>
+</div>
+<!-- Action Buttons Area -->
+<div class="flex flex-col gap-space-sm pt-space-xs">
+<button class="w-full h-16 rounded-full bg-primary-fixed hover:bg-primary-fixed-dim text-on-primary-fixed flex items-center justify-center gap-space-xs font-label-lg text-label-lg active:scale-98 transition-transform shadow-sm" id="stepVoiceBtn" type="button">
+<span class="material-symbols-outlined text-[24px]">record_voice_over</span>
+<span>1단계부터 소리로 설명 듣기</span>
+</button>
+<button class="w-full h-16 rounded-full bg-primary text-on-primary flex items-center justify-center gap-space-xs font-label-lg text-label-lg shadow-md active:scale-98 transition-transform" id="completePracticeBtn" type="button">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+<span>선생님과 함께 연습 완료하기</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Visual Activity Showcase (Rich photo/illustration placeholders) -->
+<section aria-label="실제 연습 모습 사진" class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-[24px]">photo_camera</span>
+<span>손 씻는 모습 보기</span>
+</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">사진 2장</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col rounded-2xl overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-32 object-cover" data-alt="A warm, bright, close-up photograph of a child's hands gently lathering soap bubbles under gentle water in an accessible classroom sink, soft pastel teal and creamy beige tones, natural sunlight, highly legible and comforting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbtIjfJuE46PyQk-cyCF21mN_aDzmsr8NT_x3r4klxv6_3oK8qjEC6j1tlRwS8WnnmMKfBt9me0sL-GdQhuJaAWKH48FQCv-MW6vqVEQtBPx8HeETqqNrIRNM4ErcdcPUFmMcV0E1u7SkQpgVm8ZRUoB1nDK5Nq4Dn-wggEwyWcx0gtUvWWN0nfDLJBIoSnNpWS4_XRGb2LzONDizS6HnwLdJiIeBdyLeP7nsS4gGFxFcwIjMHgJosaA"/>
+<div class="p-2.5 bg-surface-container-lowest">
+<p class="font-label-sm text-label-sm text-on-surface font-bold">1. 비누 거품 만들기</p>
+<span class="font-body-md text-body-md text-on-surface-variant text-[13px]">보글보글 손바닥</span>
+</div>
+</div>
+<div class="flex flex-col rounded-2xl overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-32 object-cover" data-alt="A crisp, clean photograph of hands being gently dried with a soft light green towel in a modern, inclusive Korean elementary school washroom, warm natural lighting, peaceful ambiance, high tactile clarity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2AZ3OnLk_eC3ssOE1jAzwRsv8OTfbQzJiEtUobf3aZWiE6rloDojy0Gwz5z1mYjWbov70faNwO6juXTkPBvc6WaQE3pkjBsdIhk24fIroVrTllu2vxAuGNudQDVbU4RYtDkQNs-k-YGsJEKW7B-ZQ7zIHr6DLHS34kxbnywzoa1hGmvADMzzTGZDNgx0M5ibBjYF7QRa0NkIfOlRUNJIPaOUK_gm_Y3NU99yVt65xSBfRi5hqbHUV5A"/>
+<div class="p-2.5 bg-surface-container-lowest">
+<p class="font-label-sm text-label-sm text-on-surface font-bold">2. 수건으로 톡톡</p>
+<span class="font-body-md text-body-md text-on-surface-variant text-[13px]">보송보송 닦아내기</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Other Life Skill Practice Recommendations -->
+<section aria-label="다른 생활 연습 추천" class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h3 class="font-headline-md text-headline-md text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[24px]">star</span>
+<span>다음에는 어떤 연습을 할까요?</span>
+</h3>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Skill Recommendation 1 -->
+<a class="flex items-center justify-between p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container active:scale-98 transition-all shadow-sm" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">checkroom</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-xl text-body-xl text-on-surface font-bold">외투 단추 채우기</span>
+<span class="font-body-md text-body-md text-on-surface-variant">위에서부터 차례차례 구멍에 쏙!</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</div>
+</a>
+<!-- Skill Recommendation 2 -->
+<a class="flex items-center justify-between p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container active:scale-98 transition-all shadow-sm" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">dry_cleaning</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-xl text-body-xl text-on-surface font-bold">사물함 신발 정리하기</span>
+<span class="font-body-md text-body-md text-on-surface-variant">앞코를 나란히 맞추어 넣어요</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</div>
+</a>
+<!-- Skill Recommendation 3 -->
+<a class="flex items-center justify-between p-space-md rounded-2xl bg-surface-container-low hover:bg-surface-container active:scale-98 transition-all shadow-sm" href="#">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed text-on-primary-fixed flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[30px]" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-xl text-body-xl text-on-surface font-bold">식사 후 식판 반납하기</span>
+<span class="font-body-md text-body-md text-on-surface-variant">숟가락 젓가락 통에 쏙 넣고 반납대 가기</span>
+</div>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</div>
+</a>
+</div>
+</section>
+<!-- Affirmation & Classroom Guidance Banner -->
+<div class="p-space-lg rounded-lg bg-tertiary-fixed/30 flex items-start gap-space-md shadow-sm">
+<div class="w-12 h-12 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[26px]">favorite</span>
+</div>
+<div class="flex flex-col">
+<h4 class="font-headline-md text-headline-md text-tertiary">실수해도 괜찮아요!</h4>
+<p class="font-body-md text-body-md text-on-surface mt-1">
+        천천히 여러 번 반복하면 스스로 할 수 있어요. 어려울 때는 언제든 손을 들고 선생님이나 친구에게 도움을 청해요.
+      </p>
+</div>
+</div>
+<!-- Trust & Reliability Footer Badge -->
+<div class="flex flex-col items-center justify-center py-space-md text-center gap-1.5 opacity-80">
+<div class="inline-flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock_open</span>
+<span>로그인·계정 없이 바로 이용하는 안심 배움터</span>
+</div>
+<p class="font-label-sm text-label-sm text-outline">
+      한국교육연구소 KERI v1.0 · 특수교육 디지털 교육과정 표준 지원
+    </p>
+</div>
+</div>
+<!-- Client-side Micro Interactions -->
+<script>
+  (function() {
+    // Step checklist toggles with instant auditory & visual affirmation
+    const checkButtons = document.querySelectorAll('.step-check-btn');
+    const completedCounter = document.getElementById('completedCounter');
+    let completedSteps = 0;
+
+    checkButtons.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const icon = btn.querySelector('.step-check-icon');
+        const parentCard = btn.closest('.step-card');
+        const isChecked = btn.getAttribute('data-checked') === 'true';
+
+        if (!isChecked) {
+          btn.setAttribute('data-checked', 'true');
+          btn.classList.remove('bg-surface-container', 'text-outline-variant');
+          btn.classList.add('bg-tertiary', 'text-on-tertiary');
+          icon.textContent = 'check_circle';
+          icon.style.fontVariationSettings = "'FILL' 1";
+          parentCard.classList.remove('bg-surface-container-low', 'bg-secondary-fixed/40');
+          parentCard.classList.add('bg-tertiary-fixed/30');
+          completedSteps++;
+        } else {
+          btn.setAttribute('data-checked', 'false');
+          btn.classList.remove('bg-tertiary', 'text-on-tertiary');
+          btn.classList.add('bg-surface-container', 'text-outline-variant');
+          icon.textContent = 'radio_button_unchecked';
+          icon.style.fontVariationSettings = "'FILL' 0";
+          parentCard.classList.remove('bg-tertiary-fixed/30');
+          parentCard.classList.add('bg-surface-container-low');
+          completedSteps = Math.max(0, completedSteps - 1);
+        }
+
+        if (completedCounter) {
+          completedCounter.textContent = (2 + completedSteps) + '개';
+        }
+
+        // Haptic feedback if available
+        if (navigator.vibrate) {
+          navigator.vibrate(50);
+        }
+      });
+    });
+
+    // Simple 10-Second Soap Timer
+    const timerBtn = document.querySelector('.timer-btn');
+    if (timerBtn) {
+      let countdown = null;
+      let secondsLeft = 10;
+      const textSpan = timerBtn.querySelector('.timer-text');
+
+      timerBtn.addEventListener('click', () => {
+        if (countdown) return; // Already running
+
+        secondsLeft = 10;
+        timerBtn.classList.add('bg-secondary-container', 'text-on-secondary-container');
+        timerBtn.classList.remove('bg-secondary', 'text-on-secondary');
+
+        countdown = setInterval(() => {
+          secondsLeft--;
+          textSpan.textContent = secondsLeft + '초 남음!';
+          if (secondsLeft <= 0) {
+            clearInterval(countdown);
+            countdown = null;
+            textSpan.textContent = '참 잘했어요! 👏';
+            timerBtn.classList.remove('bg-secondary-container', 'text-on-secondary-container');
+            timerBtn.classList.add('bg-tertiary', 'text-on-tertiary');
+            setTimeout(() => {
+              textSpan.textContent = '10초 다시 세기';
+            }, 2500);
+          }
+        }, 1000);
+      });
+    }
+
+    // Gentle speech synthesis mock / accessibility trigger
+    const ttsBtn = document.getElementById('masterTtsBtn');
+    const ttsGlobalBtn = document.getElementById('ttsPlayAllBtn');
+    const stepVoiceBtn = document.getElementById('stepVoiceBtn');
+
+    function speakGentle(text) {
+      if ('speechSynthesis' in window && window.ChageunStore?.get().speech !== false) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ko-KR';
+        utterance.rate = 0.85; // slower, clearer pacing for learners
+        utterance.pitch = 1.05;
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    if (ttsBtn) {
+      ttsBtn.addEventListener('click', () => {
+        speakGentle('깨끗하게 손 씻기 순서입니다. 1단계, 물을 묻히고 비누 거품을 내보세요.');
+      });
+    }
+
+    if (ttsGlobalBtn) {
+      ttsGlobalBtn.addEventListener('click', () => {
+        speakGentle('생활 연습 도우미 화면입니다. 천천히 화면의 버튼을 누르며 연습해보세요.');
+      });
+    }
+
+    if (stepVoiceBtn) {
+      stepVoiceBtn.addEventListener('click', () => {
+        speakGentle('1단계, 물을 손에 적시고 비누를 비벼 거품을 뽀글뽀글 내요.');
+      });
+    }
+
+    const completeBtn = document.getElementById('completePracticeBtn');
+    if (completeBtn) {
+      completeBtn.addEventListener('click', () => {
+        speakGentle('와, 참 잘했어요! 손 씻기 연습을 멋지게 완료했습니다.');
+        completeBtn.textContent = '참 잘했어요! 🌟 도장 획득';
+        completeBtn.classList.remove('bg-primary');
+        completeBtn.classList.add('bg-tertiary');
+        setTimeout(() => {
+          completeBtn.innerHTML = '<span class="material-symbols-outlined text-[24px]">task_alt</span><span>선생님과 함께 연습 완료하기</span>';
+          completeBtn.classList.remove('bg-tertiary');
+          completeBtn.classList.add('bg-primary');
+        }, 3000);
+      });
+    }
+  })();
+</script></main><nav aria-label="내가 고르는 배움 메뉴" class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold bg-primary-fixed/40"><div class="max-w-[480px] mx-auto h-24 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="intro" href="index.html"><span class="material-symbols-outlined text-[26px]">home</span><span class="font-label-sm text-label-sm mt-0.5">처음</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="daily-routine" href="routine.html"><span class="material-symbols-outlined text-[26px]">event_available</span><span class="font-label-sm text-label-sm mt-0.5">나의 하루</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="express-feelings" href="emotion.html"><span class="material-symbols-outlined text-[26px]">mood</span><span class="font-label-sm text-label-sm mt-0.5">마음 전하기</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="voice-communication" href="aac.html"><span class="material-symbols-outlined text-[26px]">record_voice_over</span><span class="font-label-sm text-label-sm mt-0.5">말로 전하기</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="daily-skills" href="daily-skills.html"><span class="material-symbols-outlined text-[26px]">checklist</span><span class="font-label-sm text-label-sm mt-0.5">생활 연습</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="rest-and-play" href="rest-space.html"><span class="material-symbols-outlined text-[26px]">self_improvement</span><span class="font-label-sm text-label-sm mt-0.5">쉬어 가기</span></a></div></nav>
+</body></html>

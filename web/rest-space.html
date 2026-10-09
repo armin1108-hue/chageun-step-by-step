@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>차근차근: 나의 하루 배움 도우미</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#40484c","secondary-fixed":"#ffdbca","on-primary-container":"#93d3ef","surface-container-low":"#f5f3ef","on-secondary-container":"#682c00","surface-variant":"#e4e2de","inverse-surface":"#30312e","inverse-on-surface":"#f2f0ed","on-background":"#1b1c1a","surface-container":"#efeeea","on-secondary":"#ffffff","primary":"#004357","on-secondary-fixed":"#331200","on-tertiary-fixed":"#002116","on-primary-fixed":"#001f2a","on-surface":"#1b1c1a","surface":"#fbf9f5","on-error-container":"#93000a","on-tertiary":"#ffffff","surface-bright":"#fbf9f5","primary-fixed":"#bde9ff","inverse-primary":"#90cfec","on-primary":"#ffffff","secondary-fixed-dim":"#ffb68e","primary-container":"#0d5c75","secondary-container":"#fd8a42","on-tertiary-container":"#90d9ba","on-error":"#ffffff","surface-container-lowest":"#ffffff","primary-fixed-dim":"#90cfec","surface-container-high":"#eae8e4","background":"#fbf9f5","on-tertiary-fixed-variant":"#00513b","tertiary-fixed-dim":"#8cd5b7","surface-dim":"#dbdad6","tertiary-fixed":"#a7f2d2","on-secondary-fixed-variant":"#763300","tertiary-container":"#0e6149","error":"#ba1a1a","outline-variant":"#bfc8cd","surface-tint":"#1e667f","outline":"#70787d","error-container":"#ffdad6","tertiary":"#004734","surface-container-highest":"#e4e2de","on-primary-fixed-variant":"#004d64","secondary":"#9b4500"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-xs":"0.5rem","space-lg":"1.5rem","space-md":"1rem","margin":"1.25rem","gutter":"1rem","space-xl":"2.25rem","space-sm":"0.75rem"},"fontFamily":{"body-md":["Atkinson Hyperlegible Next"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Atkinson Hyperlegible Next"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-xl":["Atkinson Hyperlegible Next"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-md":["16px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"500"}],"label-sm":["14px",{"lineHeight":"20px","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"30px","letterSpacing":"0.01em","fontWeight":"500"}],"label-md":["16px",{"lineHeight":"22px","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"30px","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"800"}],"label-lg":["18px",{"lineHeight":"24px","fontWeight":"700"}],"body-xl":["20px",{"lineHeight":"32px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["24px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"32px","fontWeight":"700"}]}}}};</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.skip-nav:focus{position:fixed;top:1rem;left:1rem;z-index:100;background-color:#0d5c75;color:#ffffff;padding:0.75rem 1.25rem;border-radius:9999px;font-weight:700;box-shadow:0 10px 25px -5px rgba(0,0,0,0.3);}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  <link rel="stylesheet" href="app.css"><script defer src="storage.js"></script><script defer src="app.js"></script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-secondary-fixed selection:text-on-secondary-fixed"><a class="sr-only skip-nav" href="#main-content">본문 내용으로 바로 가기</a><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.03)]"><div class="h-28 px-margin flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">spa</span><h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight truncate">차근차근</h1><span class="hidden sm:inline-block font-label-sm text-label-sm text-primary-container bg-primary-fixed/60 px-space-xs py-0.5 rounded-full">하루 배움 도우미</span></div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">10월 6일 화요일</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="font-body-md text-body-md text-secondary font-bold truncate">쉬어 가기</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="자동 소리 읽기 켜짐" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform" title="자동 읽기" type="button"><span class="material-symbols-outlined text-[24px]">volume_up</span></button><button aria-label="화면 글자 및 대비 맞춤 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="화면 설정" type="button"><span class="material-symbols-outlined text-[24px]">contrast</span></button><button aria-label="선생님 및 보호자 관리 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="선생님 설정" type="button"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-40 px-margin bg-surface max-w-[480px] mx-auto" id="main-content"><div class="flex flex-col w-full gap-space-lg select-none">
+<!-- 상단 컨트롤 내비게이션 바 -->
+<div class="flex items-center justify-between gap-space-xs">
+<button aria-label="이전 화면으로 돌아가기" class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-transform" onclick="location.href='index.html'" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span class="font-label-md text-label-md">처음으로</span>
+</button>
+<button aria-label="화면 전체 차분하게 소리내어 읽기" class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-tertiary-fixed text-on-tertiary-fixed hover:bg-tertiary-fixed-dim active:scale-95 transition-all shadow-sm" id="ttsVoiceBtn" type="button">
+<span class="material-symbols-outlined text-[20px]">record_voice_over</span>
+<span class="font-label-md text-label-md">음성으로 듣기</span>
+</button>
+</div>
+<!-- 평온한 타이틀 영역 -->
+<section class="flex flex-col items-center text-center px-space-sm py-space-md rounded-lg bg-surface-container-low">
+<div class="w-14 h-14 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed mb-space-xs shadow-sm">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">spa</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-space-sm py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm mb-space-xs">
+<span>감각 쉼터</span>
+<span class="w-1 h-1 rounded-full bg-outline"></span>
+<span>스스로 진정하기</span>
+</div>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile text-tertiary font-bold tracking-tight">쉬어 가기</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-xs max-w-[340px] leading-relaxed">
+      지금 마음이 복잡하거나 지쳤다면<br/>
+      여기서 편안하게 숨을 골라보세요.
+    </p>
+</section>
+<!-- 1. 차근차근 4초 숨쉬기 (심호흡 가이드) -->
+<section aria-labelledby="breathing-heading" class="flex flex-col p-space-lg rounded-lg bg-surface-container-lowest shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">air</span>
+<h3 class="font-headline-md text-headline-md text-primary font-bold" id="breathing-heading">차근차근 4초 숨쉬기</h3>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed">심호흡</span>
+</div>
+<!-- 호흡 인터랙티브 비주얼 -->
+<div class="flex flex-col items-center justify-center py-space-lg bg-surface-container-low rounded-lg relative overflow-hidden min-h-[220px]">
+<!-- 호흡 원형 애니메이션 요소 -->
+<div class="w-32 h-32 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary transition-all duration-1000 ease-in-out shadow-md" id="breathCircle">
+<span class="material-symbols-outlined text-[44px]" style="font-variation-settings: 'FILL' 1;">cloud</span>
+</div>
+<!-- 상태 텍스트 안내 -->
+<div class="mt-space-md text-center">
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-extrabold" id="breathStateText">준비</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5" id="breathStepText">시작 버튼을 누르면 천천히 안내해요</p>
+</div>
+</div>
+<!-- 3단계 시간 박스 -->
+<div class="grid grid-cols-3 gap-space-xs text-center">
+<div class="p-space-xs rounded-DEFAULT bg-surface-container-high text-on-surface-variant transition-colors" id="stepInhale">
+<span class="block font-label-sm text-label-sm">1. 들이마시기</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">4초</span>
+</div>
+<div class="p-space-xs rounded-DEFAULT bg-surface-container-high text-on-surface-variant transition-colors" id="stepHold">
+<span class="block font-label-sm text-label-sm">2. 멈추기</span>
+<span class="font-headline-md text-headline-md font-bold text-secondary">2초</span>
+</div>
+<div class="p-space-xs rounded-DEFAULT bg-surface-container-high text-on-surface-variant transition-colors" id="stepExhale">
+<span class="block font-label-sm text-label-sm">3. 내쉬기</span>
+<span class="font-headline-md text-headline-md font-bold text-tertiary">4초</span>
+</div>
+</div>
+<!-- 호흡 시작/정지 버튼 (64px 규격) -->
+<button class="w-full h-16 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs active:scale-95 transition-all shadow-md" id="breathBtn" type="button">
+<span class="material-symbols-outlined text-[26px]">play_circle</span>
+<span id="breathBtnLabel">호흡 시작하기</span>
+</button>
+</section>
+<!-- 2. 마음이 편해지는 소리 (백색소음/자연의 소리) -->
+<section aria-labelledby="sound-heading" class="flex flex-col p-space-lg rounded-lg bg-surface-container-lowest shadow-sm gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[24px]">nature</span>
+<h3 class="font-headline-md text-headline-md text-secondary font-bold" id="sound-heading">마음이 편해지는 소리</h3>
+</div>
+<span class="hidden font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed" id="soundPlayingBadge">재생 중</span>
+</div>
+<!-- 소리 선택 2x2 카드 그리드 -->
+<div aria-label="자연 소리 선택" class="grid grid-cols-2 gap-space-sm" role="radiogroup">
+<!-- 빗소리 -->
+<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="rain" type="button">
+<span class="text-3xl mb-1">🌧️</span>
+<span class="font-headline-md text-headline-md">합성 빗소리</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">토닥토닥 빗방울</span>
+</button>
+<!-- 새소리 -->
+<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="birds" type="button">
+<span class="text-3xl mb-1">🌿</span>
+<span class="font-headline-md text-headline-md">합성 숲 소리</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">초록빛 바람과 새</span>
+</button>
+<!-- 파도소리 -->
+<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="wave" type="button">
+<span class="text-3xl mb-1">🌊</span>
+<span class="font-headline-md text-headline-md">합성 파도 소리</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">밀려오는 잔잔한 물결</span>
+</button>
+<!-- 장작소리 -->
+<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="fire" type="button">
+<span class="text-3xl mb-1">🔥</span>
+<span class="font-headline-md text-headline-md">합성 장작 소리</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">포근하고 따뜻한 불씨</span>
+</button>
+</div>
+<!-- 볼륨 조절 슬라이더 영역 -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<div class="flex items-center justify-between text-on-surface-variant font-label-md text-label-md">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">volume_down</span>
+          소리 크기
+        </span>
+<span class="font-bold text-on-surface" id="volumeValueText">50%</span>
+</div>
+<input aria-label="자연 소리 크기 조절" class="w-full h-3 rounded-full bg-surface-container-high appearance-none cursor-pointer accent-primary" id="soundVolume" max="100" min="0" type="range" value="50"/>
+</div>
+<!-- 타이머 선택 칩 -->
+<div class="flex items-center justify-between pt-space-xs">
+<span class="font-label-md text-label-md text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">timer</span>
+        끄는 시간
+      </span>
+<div aria-label="소리 타이머" class="flex items-center gap-space-xs" role="radiogroup">
+<button class="timer-chip px-space-md py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm active:scale-95 transition-all" data-timer="3" type="button">3분</button>
+<button class="timer-chip px-space-md py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm active:scale-95 transition-all font-bold" data-timer="5" type="button">5분</button>
+<button class="timer-chip px-space-md py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm active:scale-95 transition-all" data-timer="10" type="button">10분</button>
+</div>
+</div>
+</section>
+<!-- 3. 선생님께 알리기 카드 (대형 안심 알림 화면 모달 연계) -->
+<section aria-labelledby="rest-card-heading" class="flex flex-col p-space-lg rounded-lg bg-secondary-fixed text-on-secondary-fixed shadow-sm gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[28px]">notifications_paused</span>
+</div>
+<div class="flex-1">
+<h3 class="font-headline-md text-headline-md font-bold" id="rest-card-heading">선생님께 잠시 쉬겠다고 알리기</h3>
+<p class="font-body-md text-body-md text-on-secondary-fixed-variant mt-1 leading-snug">
+          말하기 어려울 때는 이 화면을 켜서 선생님께 편안하게 보여주세요.
+        </p>
+</div>
+</div>
+<!-- 보여주기 버튼 (최소 64px 높이) -->
+<button class="w-full h-16 rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg flex items-center justify-center gap-space-xs active:scale-95 transition-all shadow-md mt-space-xs" id="openRestCardBtn" type="button">
+<span class="material-symbols-outlined text-[26px]">visibility</span>
+<span>"쉬는 중이에요" 화면 크게 보여주기</span>
+</button>
+</section>
+<!-- 쉬어 가기 따뜻한 포토/일러스트 카드 -->
+<div class="w-full rounded-lg overflow-hidden bg-surface-container-low shadow-sm">
+<img class="w-full h-44 object-cover" data-alt="A tranquil, soft pastel watercolor painting of a gentle green forest clearing with warm dappled sunlight, fluffy white clouds, peaceful resting deer, and delicate wildflowers. Warm tones of sage green, creamy beige, and light sky blue create an atmosphere of quiet restfulness, psychological safety, and deep calm for special education students." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADksiDZB1oDP2HXHnAn6q3BL0gSg7wlFArGv3ikcn8ub7fBrZYqrfOk-WJmmSweWtjBkrzVCHgB8VGniEfZuDAqf6CSlZpdIOrZWhf-E-ohNHFFkQywWT7vtIG7XO3-fMNxDDWesJRgZuOXAZWzlc8XlNPi9MyoT03z-mPMTHEZWBmfrgkDqRPa_5HvW3oFw8fqoIIEat8-3bKWJrs0xzdVQllDHzAlcrc-ni38W5resB7bJUaH8IshQ"/>
+<div class="p-space-md bg-surface-container-low text-center">
+<p class="font-headline-md text-headline-md text-tertiary font-bold">마음의 속도대로 쉬어가도 좋아요</p>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">내 몸과 마음에 온전히 귀 기울여 보세요.</p>
+</div>
+</div>
+<!-- 하단 안심 메시지 -->
+<div class="flex items-center gap-space-sm p-space-lg rounded-lg bg-tertiary-fixed text-on-tertiary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[36px] text-tertiary shrink-0" style="font-variation-settings: 'FILL' 1;">volunteer_activism</span>
+<p class="font-body-lg text-body-lg text-on-tertiary-fixed font-semibold leading-relaxed">
+      아무것도 하지 않고 가만히 있어도 괜찮아요.<br/>
+<span class="font-bold underline decoration-tertiary">쉬는 것도 소중한 배움</span>입니다.
+    </p>
+</div>
+<!-- 신뢰 배지 및 정보 푸터 -->
+<footer class="flex flex-col items-center justify-center text-center gap-1 py-space-md text-on-surface-variant opacity-80">
+<div class="flex items-center gap-1 font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px] text-tertiary">verified</span>
+<span>계정 없이 바로 이용 · 언제든 쉬어가기</span>
+</div>
+<span class="font-label-sm text-label-sm">한국특수교육 연구협력 실천 프로젝트 v1.0</span>
+</footer>
+<!-- [대형 안심 알림 카드 모달] (교사에게 화면 들어 보여주기) -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/80 backdrop-blur-md flex items-center justify-center p-margin" id="restModal">
+<div class="w-full max-w-[420px] rounded-xl bg-surface p-space-xl flex flex-col items-center text-center gap-space-md shadow-2xl relative">
+<!-- 닫기 버튼 -->
+<button aria-label="알림 카드 닫기" class="absolute top-4 right-4 w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high active:scale-95 transition-all" id="closeRestCardBtn" type="button">
+<span class="material-symbols-outlined text-[28px]">close</span>
+</button>
+<!-- 쉼터 아이콘 -->
+<div class="w-24 h-24 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary mb-space-xs animate-pulse">
+<span class="material-symbols-outlined text-[54px]" style="font-variation-settings: 'FILL' 1;">bedtime</span>
+</div>
+<!-- 선생님을 위한 큼직한 메시지 -->
+<div class="space-y-space-xs">
+<span class="px-space-md py-1 rounded-full bg-secondary text-on-secondary font-label-md text-label-md font-bold">선생님, 읽어주세요!</span>
+<h2 class="font-headline-xl-mobile text-headline-xl-mobile text-on-surface font-extrabold tracking-tight mt-space-sm leading-tight">
+          지금 잠시<br/><span class="text-secondary">쉬는 중</span>이에요
+        </h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant font-medium mt-space-xs">
+          마음을 가라앉히고 있어요.<br/>
+          조금 쉬고 나면 다시 힘내서 시작할게요!
+        </p>
+</div>
+<!-- 확인 닫기 버튼 (64px 규격) -->
+<button class="w-full h-16 rounded-full bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-xs active:scale-95 transition-all shadow-md mt-space-sm" id="confirmRestCardBtn" type="button">
+<span class="material-symbols-outlined text-[24px]">check</span>
+<span>확인했어요 (화면 닫기)</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  // 1. 호흡 가이드 인터랙션 스크립트
+  (function initBreathingGuide() {
+    let timer = null;
+    let isRunning = false;
+    let cycleStep = 0; // 0: 들숨(4s), 1: 멈춤(2s), 2: 날숨(4s)
+    let countdown = 4;
+
+    const breathBtn = document.getElementById('breathBtn');
+    const breathBtnLabel = document.getElementById('breathBtnLabel');
+    const breathCircle = document.getElementById('breathCircle');
+    const breathStateText = document.getElementById('breathStateText');
+    const breathStepText = document.getElementById('breathStepText');
+
+    const stepInhale = document.getElementById('stepInhale');
+    const stepHold = document.getElementById('stepHold');
+    const stepExhale = document.getElementById('stepExhale');
+
+    function resetStepsUI() {
+      stepInhale.className = "p-space-xs rounded-DEFAULT bg-surface-container-high text-on-surface-variant transition-colors";
+      stepHold.className = "p-space-xs rounded-DEFAULT bg-surface-container-high text-on-surface-variant transition-colors";
+      stepExhale.className = "p-space-xs rounded-DEFAULT bg-surface-container-high text-on-surface-variant transition-colors";
+    }
+
+    function runCycle() {
+      if (!isRunning) return;
+
+      if (cycleStep === 0) {
+        // 들숨 4초
+        breathCircle.style.transform = "scale(1.35)";
+        breathCircle.className = "w-32 h-32 rounded-full bg-primary-fixed flex items-center justify-center text-primary transition-all duration-1000 ease-in-out shadow-md";
+        breathStateText.textContent = `들이마시기... (${countdown}초)`;
+        breathStepText.textContent = "코로 맑고 시원한 공기를 가득 채워요";
+        resetStepsUI();
+        stepInhale.className = "p-space-xs rounded-DEFAULT bg-primary-fixed text-on-primary-fixed font-bold transition-colors";
+
+        countdown--;
+        if (countdown === 0) {
+          cycleStep = 1;
+          countdown = 2;
+        }
+      } else if (cycleStep === 1) {
+        // 멈춤 2초
+        breathCircle.style.transform = "scale(1.35)";
+        breathCircle.className = "w-32 h-32 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary transition-all duration-500 ease-in-out shadow-md";
+        breathStateText.textContent = `가만히 멈추기... (${countdown}초)`;
+        breathStepText.textContent = "숨을 편안하게 품고 잠시 기다려요";
+        resetStepsUI();
+        stepHold.className = "p-space-xs rounded-DEFAULT bg-secondary-fixed text-on-secondary-fixed font-bold transition-colors";
+
+        countdown--;
+        if (countdown === 0) {
+          cycleStep = 2;
+          countdown = 4;
+        }
+      } else if (cycleStep === 2) {
+        // 날숨 4초
+        breathCircle.style.transform = "scale(1.0)";
+        breathCircle.className = "w-32 h-32 rounded-full bg-tertiary-fixed flex items-center justify-center text-tertiary transition-all duration-1000 ease-in-out shadow-md";
+        breathStateText.textContent = `천천히 내쉬기... (${countdown}초)`;
+        breathStepText.textContent = "입으로 힘든 마음을 후- 하고 내보내요";
+        resetStepsUI();
+        stepExhale.className = "p-space-xs rounded-DEFAULT bg-tertiary-fixed text-on-tertiary-fixed font-bold transition-colors";
+
+        countdown--;
+        if (countdown === 0) {
+          cycleStep = 0;
+          countdown = 4;
+        }
+      }
+    }
+
+    breathBtn.addEventListener('click', () => {
+      isRunning = !isRunning;
+      if (isRunning) {
+        breathBtn.classList.replace('bg-primary-container', 'bg-tertiary');
+        breathBtnLabel.textContent = "호흡 멈추기";
+        cycleStep = 0;
+        countdown = 4;
+        runCycle();
+        timer = setInterval(runCycle, 1000);
+      } else {
+        clearInterval(timer);
+        breathBtn.classList.replace('bg-tertiary', 'bg-primary-container');
+        breathBtnLabel.textContent = "호흡 시작하기";
+        breathCircle.style.transform = "scale(1.0)";
+        breathStateText.textContent = "휴식 완료";
+        breathStepText.textContent = "참 잘했어요. 몸과 마음이 한결 가벼워졌어요.";
+        resetStepsUI();
+      }
+    });
+  })();
+
+  // 2. 마음이 편해지는 소리 선택 인터랙션
+  (function initSoundSection() {
+    const soundCards = document.querySelectorAll('.sound-card');
+    const badge = document.getElementById('soundPlayingBadge');
+    const volInput = document.getElementById('soundVolume');
+    const volText = document.getElementById('volumeValueText');
+    const timerChips = document.querySelectorAll('.timer-chip');
+
+    let currentSound = null;
+
+    soundCards.forEach(card => {
+      card.addEventListener('click', () => {
+        const soundType = card.getAttribute('data-sound');
+        
+        if (currentSound === soundType) {
+          // 토글 해제
+          card.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-bold');
+          card.classList.add('bg-surface-container-low', 'text-on-surface');
+          currentSound = null;
+          badge.classList.add('hidden');
+        } else {
+          // 전체 초기화 후 선택
+          soundCards.forEach(c => {
+            c.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-bold');
+            c.classList.add('bg-surface-container-low', 'text-on-surface');
+          });
+          card.classList.remove('bg-surface-container-low', 'text-on-surface');
+          card.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-bold');
+          currentSound = soundType;
+          badge.classList.remove('hidden');
+        }
+      });
+    });
+
+    volInput.addEventListener('input', (e) => {
+      volText.textContent = e.target.value + '%';
+    });
+
+    timerChips.forEach(chip => {
+      chip.addEventListener('click', () => {
+        timerChips.forEach(c => {
+          c.classList.remove('bg-primary', 'text-on-primary', 'font-bold');
+          c.classList.add('bg-surface-container-high', 'text-on-surface');
+        });
+        chip.classList.remove('bg-surface-container-high', 'text-on-surface');
+        chip.classList.add('bg-primary', 'text-on-primary', 'font-bold');
+      });
+    });
+  })();
+
+  // 3. 선생님께 알리기 모달 인터랙션
+  (function initRestModal() {
+    const openBtn = document.getElementById('openRestCardBtn');
+    const closeBtn = document.getElementById('closeRestCardBtn');
+    const confirmBtn = document.getElementById('confirmRestCardBtn');
+    const modal = document.getElementById('restModal');
+
+    function openModal() {
+      modal.classList.remove('hidden');
+    }
+    function closeModal() {
+      modal.classList.add('hidden');
+    }
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+    confirmBtn.addEventListener('click', closeModal);
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  })();
+
+  // 4. 차분한 낭독 음성 버튼 피드백
+  document.getElementById('ttsVoiceBtn').addEventListener('click', function() {
+    const isSpeaking = this.getAttribute('data-speaking') === 'true';
+    if (!isSpeaking) {
+      this.setAttribute('data-speaking', 'true');
+      this.classList.add('ring-2', 'ring-tertiary');
+      if ('speechSynthesis' in window && window.ChageunStore?.get().speech !== false) {
+        window.speechSynthesis.cancel();
+        const utter = new SpeechSynthesisUtterance("쉬어 가기 화면입니다. 지금 마음이 복잡하거나 지쳤다면 여기서 편안하게 숨을 골라보세요.");
+        utter.lang = 'ko-KR';
+        utter.rate = 0.85; // 천천히 차분하게
+        utter.onend = () => {
+          this.setAttribute('data-speaking', 'false');
+          this.classList.remove('ring-2', 'ring-tertiary');
+        };
+        window.speechSynthesis.speak(utter);
+      }
+    } else {
+      this.setAttribute('data-speaking', 'false');
+      this.classList.remove('ring-2', 'ring-tertiary');
+      if ('speechSynthesis' in window && window.ChageunStore?.get().speech !== false) {
+        window.speechSynthesis.cancel();
+      }
+    }
+  });
+</script></main><nav aria-label="내가 고르는 배움 메뉴" class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold bg-primary-fixed/40"><div class="max-w-[480px] mx-auto h-24 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="intro" href="index.html"><span class="material-symbols-outlined text-[26px]">home</span><span class="font-label-sm text-label-sm mt-0.5">처음</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="daily-routine" href="routine.html"><span class="material-symbols-outlined text-[26px]">event_available</span><span class="font-label-sm text-label-sm mt-0.5">나의 하루</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="express-feelings" href="emotion.html"><span class="material-symbols-outlined text-[26px]">mood</span><span class="font-label-sm text-label-sm mt-0.5">마음 전하기</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="voice-communication" href="aac.html"><span class="material-symbols-outlined text-[26px]">record_voice_over</span><span class="font-label-sm text-label-sm mt-0.5">말로 전하기</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="daily-skills" href="daily-skills.html"><span class="material-symbols-outlined text-[26px]">checklist</span><span class="font-label-sm text-label-sm mt-0.5">생활 연습</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="rest-and-play" href="rest-space.html"><span class="material-symbols-outlined text-[26px]">self_improvement</span><span class="font-label-sm text-label-sm mt-0.5">쉬어 가기</span></a></div></nav>
+</body></html>

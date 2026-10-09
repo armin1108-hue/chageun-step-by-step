@@ -1,0 +1,67 @@
+{
+  "project": "https://stitch.withgoogle.com/projects/11878761854160808095?pli=1",
+  "collected": "2026-10-09",
+  "screens": [
+    {
+      "screen": "parent-notice",
+      "stitch_node": "rf__node-00e8264c89004c42ad3fa1054dcab21b",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "home",
+      "stitch_node": "rf__node-0f5571e2cf384628b9788d1f86bc067e",
+      "source": "Copy code"
+    },
+    {
+      "screen": "aac",
+      "stitch_node": "rf__node-29bbbfe982f74083b26dcdcf4d67c43d",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "emotion",
+      "stitch_node": "rf__node-355f667a312d46c4b4531fd0cb4e6cc3",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "routine",
+      "stitch_node": "rf__node-47a70f3777054e92aac9f2ab90ecc982",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "parent-report",
+      "stitch_node": "rf__node-9f92d5b2b7f24930bb679d0db9da31f3",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "iep-statistics",
+      "stitch_node": "rf__node-a66eee223d1a431fb2c7795452873996",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "daily-skills",
+      "stitch_node": "rf__node-b5f785b52b364ba792a25dd91592fd16",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "portal",
+      "stitch_node": "rf__node-d10935adc7574f6d87614e33a62172dc",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "rest-space",
+      "stitch_node": "rf__node-e759e03e30364932ba07d897ebeee360",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "student-detail",
+      "stitch_node": "rf__node-f382646316cb418ea96997dff2f41e2a",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    },
+    {
+      "screen": "teacher-dashboard",
+      "stitch_node": "rf__node-f9136ef4a4434e5b96c08332bf90fadf",
+      "source": "Rendered DOM srcdoc; editor-only injection removed"
+    }
+  ],
+  "note": "Source designs contain fictional demonstration text and unverified claims. Only web/ is published. ZIP export did not return a download."
+}

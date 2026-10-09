@@ -1,0 +1,1 @@
+{"name":"chageun-step-by-step","version":"0.1.0","private":true,"description":"KERI Stitch-based classroom demo","scripts":{"build":"node scripts/build.mjs","test":"node --test tests/storage.test.mjs"},"engines":{"node":">=22"}}

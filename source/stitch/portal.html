@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"on-secondary-container":"#682c00","on-primary-fixed-variant":"#004d64","on-tertiary-fixed-variant":"#00513b","on-error":"#ffffff","tertiary-container":"#0e6149","on-surface-variant":"#40484c","secondary-container":"#fd8a42","secondary-fixed":"#ffdbca","outline":"#70787d","on-secondary-fixed-variant":"#763300","surface-dim":"#dbdad6","surface-container":"#efeeea","on-error-container":"#93000a","inverse-surface":"#30312e","on-secondary":"#ffffff","error-container":"#ffdad6","primary-container":"#0d5c75","surface-container-low":"#f5f3ef","on-primary-container":"#93d3ef","surface-variant":"#e4e2de","background":"#fbf9f5","on-background":"#1b1c1a","surface-bright":"#fbf9f5","on-surface":"#1b1c1a","surface":"#fbf9f5","on-primary-fixed":"#001f2a","on-primary":"#ffffff","on-tertiary":"#ffffff","on-secondary-fixed":"#331200","tertiary-fixed":"#a7f2d2","tertiary":"#004734","tertiary-fixed-dim":"#8cd5b7","outline-variant":"#bfc8cd","primary-fixed":"#bde9ff","surface-container-high":"#eae8e4","surface-tint":"#1e667f","inverse-primary":"#90cfec","surface-container-highest":"#e4e2de","primary-fixed-dim":"#90cfec","on-tertiary-container":"#90d9ba","error":"#ba1a1a","primary":"#004357","on-tertiary-fixed":"#002116","secondary-fixed-dim":"#ffb68e","inverse-on-surface":"#f2f0ed","surface-container-lowest":"#ffffff","secondary":"#9b4500"},borderRadius:{DEFAULT:"1rem",lg:"2rem",xl:"3rem",full:"9999px"},spacing:{"space-sm":"0.75rem","space-xs":"0.5rem","space-md":"1rem",margin:"1.25rem","space-xl":"2.25rem","space-lg":"1.5rem",gutter:"1rem"},fontFamily:{"headline-xl":["Plus Jakarta Sans"],"body-xl":["Atkinson Hyperlegible Next"],"headline-lg":["Plus Jakarta Sans"],"body-lg":["Atkinson Hyperlegible Next"],"headline-md":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"label-md":["Plus Jakarta Sans"],"label-sm":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-md":["Atkinson Hyperlegible Next"]},fontSize:{"headline-xl":["32px",{lineHeight:"42px",letterSpacing:"-0.02em",fontWeight:"800"}],"body-xl":["20px",{lineHeight:"32px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-lg":["24px",{lineHeight:"34px",letterSpacing:"-0.01em",fontWeight:"700"}],"body-lg":["18px",{lineHeight:"30px",letterSpacing:"0.01em",fontWeight:"500"}],"headline-md":["20px",{lineHeight:"30px",fontWeight:"700"}],"label-lg":["18px",{lineHeight:"24px",fontWeight:"700"}],"label-md":["16px",{lineHeight:"22px",fontWeight:"700"}],"label-sm":["14px",{lineHeight:"20px",fontWeight:"700"}],"headline-xl-mobile":["26px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"800"}],"headline-lg-mobile":["22px",{lineHeight:"32px",fontWeight:"700"}],"body-md":["16px",{lineHeight:"26px",letterSpacing:"0.01em",fontWeight:"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between"><a class="flex items-center gap-space-sm text-left group" data-path="overview" href="#"><div class="w-11 h-11 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">school</span></div><div class="flex flex-col"><span class="font-headline-md text-headline-md text-primary tracking-tight">차근차근</span><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">배포 &amp; 데모 포털</span></div></a><nav class="hidden xl:flex items-center gap-space-xs p-1 bg-surface-container rounded-full" data-active-classes="bg-primary-container text-on-primary font-label-md rounded-full"><a aria-current="page" class="px-space-md py-space-xs transition-colors bg-primary-container text-on-primary font-label-md rounded-full" data-path="overview" href="#">전체 화면 둘러보기</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="student-mode" href="#">학생용 모드</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="teacher-admin" href="#">선생님 관리자</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="parent-safety" href="#">학부모 안심</a><a class="px-space-md py-space-xs text-on-surface-variant hover:text-on-surface font-label-md text-label-md transition-colors" data-path="iep-analytics" href="#">IEP 통계 &amp; 서식</a></nav><div class="flex items-center gap-space-md"><a class="hidden md:inline-flex items-center gap-space-xs px-space-lg py-space-xs rounded-full bg-secondary text-on-secondary font-label-md text-label-md shadow-[0_3px_0_0_#682c00] active:translate-y-0.5 active:shadow-none transition-all" data-path="experience-guide" href="#"><span class="material-symbols-outlined text-[20px]">menu_book</span><span>체험 안내 가이드</span></a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-16rem)]"><div class="flex flex-col w-full">
+<!-- Top Announce / System Release Tag -->
+<section class="w-full px-6 lg:px-12 pt-8 pb-4">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-center justify-between gap-space-sm bg-surface-container-low p-space-md rounded-2xl shadow-sm">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="inline-flex items-center gap-1.5 px-space-md py-1 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm shadow-sm">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+          공식 배포판 v1.0
+        </span>
+<span class="font-label-md text-label-md text-primary font-bold">
+          한국교육연구소(KERI) 특수교육 에듀테크 시범 지원 사업 표준 플랫폼
+        </span>
+</div>
+<div class="flex items-center gap-space-md text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-1"><span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span> 실시간 데모 서버 정상 가동</span>
+<span class="hidden sm:inline text-outline-variant">|</span>
+<span class="hidden sm:inline">WCAG 2.1 AAA 무장애 인증</span>
+</div>
+</div>
+</section>
+<!-- Hero Header Section with High Emotional Resonance & Tactile Cues -->
+<section class="w-full px-6 lg:px-12 py-space-xl">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="inline-flex items-center gap-2 self-start px-space-md py-space-xs rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+<span>모든 아이가 자신만의 속도로 빛나는 디지털 교실</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary tracking-tight font-extrabold">
+          특수교육 학생, 교사, 학부모가<br class="hidden sm:inline"/>
+          함께 걸어가는 따뜻한 배움의 길 —<br/>
+<span class="text-secondary underline decoration-secondary-fixed decoration-wavy decoration-2">차근차근(Step by Step)</span> 통합 포털
+        </h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant leading-relaxed">
+          학생 스스로 해내는 일상 루틴과 AAC 의사소통부터 교실 실시간 안전 관찰 대시보드, 
+          학부모 모바일 안심 알림장, 교육청 표준 IEP 서식 인쇄까지 총 11개 스크린으로 완결된 
+          특수교육 풀패키지 솔루션입니다.
+        </p>
+<!-- Primary Action Bevel Buttons -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-sm px-space-xl py-space-md rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-[0_4px_0_0_#002834] active:translate-y-1 active:shadow-none transition-all" href="#interactive-catalog">
+<span class="material-symbols-outlined text-[24px]">play_circle</span>
+<span>11개 화면 즉시 시연 (Live Demo)</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-sm px-space-lg py-space-md rounded-full bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-all" href="#deployment-section">
+<span class="material-symbols-outlined text-[22px] text-primary">download</span>
+<span>배포 패키지 &amp; 매뉴얼 (PDF)</span>
+</a>
+<button class="inline-flex items-center justify-center gap-space-xs px-space-md py-space-md rounded-full text-secondary font-label-md text-label-md hover:underline" onclick="document.getElementById('quick-apply-modal').classList.remove('hidden')">
+<span>현장 무료 도입 신청</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<!-- 3 Quick KPI Stat Blocks -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md pt-space-md">
+<div class="p-space-md rounded-2xl bg-surface-container flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">총 구축 화면</span>
+<span class="material-symbols-outlined text-primary text-[20px]">layers</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-primary">11개 스크린</span>
+<span class="font-body-md text-body-md text-on-surface-variant">모바일 9종 + 데스크톱 2종</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">핵심 연계 주체</span>
+<span class="material-symbols-outlined text-secondary text-[20px]">diversity_3</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-secondary">3대 주체 연결</span>
+<span class="font-body-md text-body-md text-on-surface-variant">학생 · 특수교사 · 학부모</span>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container flex flex-col gap-1 shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">무장애 &amp; 보안</span>
+<span class="material-symbols-outlined text-tertiary text-[20px]">verified_user</span>
+</div>
+<span class="font-headline-lg text-headline-lg text-tertiary">AAA 등급</span>
+<span class="font-body-md text-body-md text-on-surface-variant">온디바이스 안심 암호화</span>
+</div>
+</div>
+</div>
+<!-- Hero Visual Art / Classroom Vignette Display -->
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-3xl overflow-hidden bg-surface-container-high p-3 shadow-xl">
+<img class="w-full h-[440px] object-cover rounded-2xl" data-alt="Warm watercolor and gentle storybook digital illustration of an inclusive special education classroom in South Korea. A caring female teacher sitting at a round wooden desk with a cheerful smiling student using an AAC communication board. In the softly lit pastel room, a child in a wheelchair explores sensory puzzle blocks, another child plays safely in a swing, colorful routine cards on the walls, calming pastel rainbow rug, natural sunlight through large garden windows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASef4dSBYwPW5KtMCvRHYbaWtq6-CuUMZ7AqLmkOuy9Jq8aTKm2J3gpAam1arGvzs-HJVidNq-NL-h2BYkbW8hhn13bqoyVS9wDYCrwHD8a2TkoOnjRzdg2qCqVeI8YuuX4KOXzY8a7Q5MefS__PbtZKk1EjmINbAth6-yF8mZHMl7fP29GPS5rSAWb2Yz2lWfM2sg1YrML42zOQXVo1m5T0GXZFn2IxJXfmX-d1jpCbXMLAmjbG-mZw"/>
+<!-- Tactile floating pill badge -->
+<div class="absolute bottom-6 left-6 right-6 bg-surface/95 backdrop-blur-md p-space-md rounded-2xl shadow-md flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed shrink-0">
+<span class="material-symbols-outlined text-[26px]">chat_bubble</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">"선생님, 저 혼자 물 마시기 성공했어요!"</span>
+<span class="font-body-md text-body-md text-on-surface-variant text-xs truncate">오늘 실시간 교실 완수 카드 피드백 자동 전송 중</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive 11 Screens Catalog & Live Demo Showcase -->
+<section class="w-full px-6 lg:px-12 py-space-xl bg-surface-container-low" id="interactive-catalog">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs max-w-2xl">
+<span class="font-label-lg text-label-lg text-secondary font-bold tracking-wide">SCREEN ARCHITECTURE &amp; DEMO</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold">4대 사용자 그룹별 11개 스크린 카탈로그</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            상황과 역할에 최적화된 인터페이스를 즉시 둘러보고 직접 인터랙션을 체험해보세요.
+          </p>
+</div>
+<!-- Filter Tab Buttons -->
+<div class="flex flex-wrap items-center gap-2 p-1.5 bg-surface-container rounded-full self-start md:self-auto">
+<button class="tab-btn active px-space-md py-space-xs rounded-full font-label-md text-label-md bg-primary text-on-primary transition-all" onclick="filterScreens('all')">전체 (11)</button>
+<button class="tab-btn px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="filterScreens('student')">학생 자립 (6)</button>
+<button class="tab-btn px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="filterScreens('teacher')">교사 관찰 (2)</button>
+<button class="tab-btn px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="filterScreens('parent')">학부모 안심 (1)</button>
+<button class="tab-btn px-space-md py-space-xs rounded-full font-label-md text-label-md text-on-surface-variant hover:text-on-surface transition-all" onclick="filterScreens('iep')">IEP &amp; 서식 (2)</button>
+</div>
+</div>
+<!-- Interactive 11 Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="screens-grid">
+<!-- Screen 01: 학생 홈 허브 -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="student">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Mobile · 스크린 01</span>
+<span class="inline-flex items-center gap-1 font-label-sm text-label-sm text-tertiary font-bold">
+<span class="material-symbols-outlined text-[16px]">volume_up</span> 음성안내 지원
+            </span>
+</div>
+<div class="h-44 rounded-2xl bg-surface-container-high overflow-hidden relative mb-space-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Tablet digital communication board interface for special education. Large rounded yellow and green friendly buttons reading 'I Need Help', 'I Want Water', and 'I Feel Happy' with playful icons, resting on a bright wooden school table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDL6F53JneoJ_D819i6vPZpZSLXwe3eSBYGpgFUaDJaQn9LHKEyD1yAPeUW-qbSgsa_AQlL2qebdQCQ0LI-g_2odRHvr_qlj8oIkLaIwx2iAMN-7C6dcFcNrfLsFFR-c73XiOT74-FSJyfgxjLojhVXuee7qE_0QF_ulXbl2O3e9O-EIs0gMsWEXnjxU1qi3ikjGEejjH4mBFoWhbSCB_gm4m3V9vM274jRcrvXHcEgxc4inefhb5OA-g"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent flex items-end p-space-md">
+<span class="text-on-primary font-headline-md text-headline-md font-bold">01. 처음 (홈 허브)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            따뜻한 교실 삽화 배경, 날씨 및 시간 인지 배너, 큰 글씨와 명확한 상징으로 구성된 직관적 진입 허브.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">자립 배움 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 01: 처음 (홈 허브)', '학생이 등교 직후 스스로 태블릿을 켜고 반갑게 맞이하는 공간입니다. 복잡한 메뉴 대신 오늘 해야 할 4대 핵심 활동을 큼직한 카드로 제시합니다.', 'student_hub')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 02: 나의 하루 -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="student">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Mobile · 스크린 02</span>
+<span class="px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">핵심 루틴</span>
+</div>
+<div class="h-44 rounded-2xl bg-secondary-fixed/30 overflow-hidden relative mb-space-md p-space-md flex flex-col justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold">2</span>
+<span class="font-headline-md text-headline-md text-on-secondary-container">나의 하루 (루틴)</span>
+</div>
+<!-- Mini interactive mock -->
+<div class="p-space-sm rounded-xl bg-surface shadow-sm flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">오전 가방 정리하기</span>
+<span class="px-2 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">했어요!</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            작은 체크박스 대신 큼직한 '했어요!' 원터치 카드. 실패에 대한 두려움 없이 즉각적인 시각 칭찬 피드백을 제공합니다.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">자립 배움 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 02: 나의 하루', '일과 순서를 시각화하여 순서대로 누르면 따뜻한 사운드와 함께 별 스티커가 채워집니다. 마감 스트레스 타이머를 배제했습니다.', 'routine')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 03: 마음 전하기 -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="student">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Mobile · 스크린 03</span>
+<span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">정서 조절</span>
+</div>
+<div class="h-44 rounded-2xl bg-surface-container-high overflow-hidden relative mb-space-md">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A gentle special educator smiling encouragingly as a young elementary student shows an emotion expression picture card reading HAPPY with a bright yellow smiley face illustration. Cozy classroom background with sensory toys and pastel curtains." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVbyFAGl6zThM6E0uIcwP4HZ25FCvVtw_cr5-wjnu3TWPRlhmXzwr_DEXuUXigE7XrMdrOJ8VB6t5AZ_uej-wp7iYWcepxBSgvQCQi5ZoawLSLfvvhOgiU01M1TI4ploVFxZXNs-paTu3kTfKJL4F0GQthrrUr1oPeGRi27FO_LZsjCYGqJANB_nwrmW7n0TuzGBLEgFYMwFiEyUIYQbZXFCpXWMy3nlK-XWoVOnuGAHaObCFrkiaNmA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent flex items-end p-space-md">
+<span class="text-on-primary font-headline-md text-headline-md font-bold">03. 마음 전하기</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            기쁨, 불안, 답답함 등 6가지 표준 감정 상징 카드. 선택 시 '선생님께 크게 보여주기' 풀스크린 모드가 실행됩니다.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">자립 배움 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 03: 마음 전하기', '언어 표현이 어려운 학생이 본인의 내면 감정을 타인에게 온전히 전달할 수 있도록 돕는 고대비 감정 카드입니다.', 'emotion')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 04: 말로 전하기 (AAC) -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="student">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Mobile · 스크린 04</span>
+<span class="px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">AAC 상징</span>
+</div>
+<div class="h-44 rounded-2xl bg-surface-container p-space-md flex flex-col justify-between mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary">말로 전하기 (AAC)</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">record_voice_over</span>
+</div>
+<div class="grid grid-cols-3 gap-2">
+<div class="p-2 rounded-xl bg-surface shadow-xs text-center font-label-sm text-label-sm text-primary">도와주세요</div>
+<div class="p-2 rounded-xl bg-surface shadow-xs text-center font-label-sm text-label-sm text-primary">물 주세요</div>
+<div class="p-2 rounded-xl bg-surface shadow-xs text-center font-label-sm text-label-sm text-primary">화장실</div>
+</div>
+<div class="text-right font-label-sm text-label-sm text-secondary font-bold">2구~4구 문장 조합</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            한국 특수교육 표준 AAC 심볼 기반. 원하는 단어를 연속 탭하여 완전한 의사표현 문장을 만들고 음성 출력합니다.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">자립 배움 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 04: 말로 전하기 (AAC)', '다빈도 필수 상징 카드 그리드를 지원하며, 학생 맞춤형 실사 사진 업로드 및 음성 녹음 기능이 내장되어 있습니다.', 'aac')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 05: 생활 연습 -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="student">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Mobile · 스크린 05</span>
+<span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">시각적 과제분석</span>
+</div>
+<div class="h-44 rounded-2xl bg-tertiary-fixed/20 p-space-md flex flex-col justify-between mb-space-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-[22px]">self_improvement</span>
+<span class="font-headline-md text-headline-md text-tertiary">생활 연습 가이드</span>
+</div>
+<div class="flex items-center justify-around">
+<div class="flex flex-col items-center gap-1">
+<span class="w-8 h-8 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center font-bold">1</span>
+<span class="font-label-sm text-label-sm text-on-surface">물 틀기</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<div class="flex flex-col items-center gap-1">
+<span class="w-8 h-8 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold">2</span>
+<span class="font-label-sm text-label-sm text-on-surface">비누 거품</span>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[18px]">arrow_forward</span>
+<div class="flex flex-col items-center gap-1">
+<span class="w-8 h-8 rounded-full bg-surface text-on-surface flex items-center justify-center font-bold shadow-xs">3</span>
+<span class="font-label-sm text-label-sm text-on-surface">손 닦기</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold text-center">단계별 행동 모델링</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            손 씻기, 가방 정리, 급식 식판 반납 등 일상 과제를 3~5단계의 직관적인 사진과 행동 카드로 나누어 안내합니다.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">자립 배움 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 05: 생활 연습', '복잡한 행동을 세분화하여 과제 부하를 줄여주는 시각적 지원 과제 분석(Task Analysis) 모듈입니다.', 'life_skills')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 06: 쉬어 가기 (감각 쉼터) -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="student">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Mobile · 스크린 06</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">감각 안정화</span>
+</div>
+<div class="h-44 rounded-2xl bg-primary-fixed/20 p-space-md flex flex-col justify-between mb-space-md relative overflow-hidden">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary font-bold">쉬어 가기 (쉼터)</span>
+<span class="material-symbols-outlined text-primary text-[24px]">spa</span>
+</div>
+<!-- Calming Breathing Circle Mini Animation -->
+<div class="flex items-center justify-center gap-3">
+<div class="w-16 h-16 rounded-full bg-primary/20 flex items-center justify-center animate-pulse">
+<span class="font-label-sm text-label-sm text-primary font-bold">4초 호흡</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-label-md text-label-md text-primary font-bold">백색소음 선택</span>
+<span class="font-body-md text-body-md text-xs text-on-surface-variant">부드러운 빗소리 · 파도소리</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-medium">감각 과부하 긴급 진정 기능</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            소음이나 자극으로 감각 과부하가 올 때 즉시 쉴 수 있는 힐링 룸. 4초 팽창 호흡 애니메이션과 차분한 사운드를 지원합니다.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">자립 배움 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 06: 쉬어 가기 (감각 쉼터)', '학생이 불안해질 때 교사에게 알림이 전달되며 학생 태블릿은 즉시 저자극 쉼터 화면으로 전환됩니다.', 'sensory_room')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 07: 차근차근 관리자 모드 -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="teacher">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Mobile · 스크린 07</span>
+<span class="px-space-sm py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm">실시간 모니터링</span>
+</div>
+<div class="h-44 rounded-2xl bg-surface-container p-space-md flex flex-col justify-between mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary font-bold">교사용 관리자 모드</span>
+<span class="w-3 h-3 rounded-full bg-tertiary animate-ping"></span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-xs">
+<div class="p-2 rounded-xl bg-surface shadow-xs">
+<span class="font-bold text-primary">김민우 (특수 2반)</span>
+<p class="text-tertiary">현재: 3단계 완료</p>
+</div>
+<div class="p-2 rounded-xl bg-error-container/40 shadow-xs">
+<span class="font-bold text-on-error-container">박지호 (도움 호출)</span>
+<p class="text-error">쉬어가기 요청</p>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">학급 전체 학생 동시 접속 현황</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            특수교사가 학급 학생들의 태블릿 진도와 도움 요청(호출)을 한 화면에서 즉시 파악하고 긴급 상황에 대응합니다.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">선생님 관리 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 07: 차근차근 관리자 모드', '교실 내 이동 중 스마트폰으로 학생들의 과제 수행 및 도움 호출을 무소음 햅틱 진동으로 실시간 수신합니다.', 'teacher_dashboard')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 08: 학생 개별 상세 & IEP 관찰일지 -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="teacher">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">Mobile · 스크린 08</span>
+<span class="px-space-sm py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">AI 관찰 보조</span>
+</div>
+<div class="h-44 rounded-2xl bg-surface-container p-space-md flex flex-col justify-between mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">IEP 관찰일지 생성</span>
+<span class="material-symbols-outlined text-primary text-[22px]">auto_awesome</span>
+</div>
+<div class="p-2 rounded-xl bg-surface text-xs text-on-surface-variant font-mono">
+              [로그 추출] AAC '도와주세요' 3회, 자립 손씻기 100% 달성 -&gt; 관찰문 초안 자동 생성 완료
+            </div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">교사 업무 70% 경감</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            학생의 하루 터치 로그를 분석해 교육청 서식에 맞는 객관적 행동 관찰문 초안을 3초 만에 생성하고 수정·저장합니다.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">선생님 관리 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 08: 학생 개별 상세 &amp; IEP 관찰일지', '김민우 학생의 시간대별 촉진 단계(독립, 언어적 촉진, 신체적 촉진)를 타임라인으로 기록하는 상세 뷰입니다.', 'teacher_detail')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 09: 학부모 안심 모바일 알림장 -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="parent">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">Mobile · 스크린 09</span>
+<span class="px-space-sm py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">가정 연계</span>
+</div>
+<div class="h-44 rounded-2xl bg-secondary-fixed/30 p-space-md flex flex-col justify-between mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-secondary font-bold">안심 모바일 알림장</span>
+<span class="material-symbols-outlined text-secondary text-[24px]">family_restroom</span>
+</div>
+<div class="p-2 rounded-xl bg-surface flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold">민우</div>
+<div class="flex flex-col text-xs">
+<span class="font-bold text-on-surface">오늘의 자립 성취도: 85%</span>
+<span class="text-tertiary">담임선생님 음성 칭찬 도착!</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-secondary-container">부모님 응원 답장 기능 지원</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            점수와 지적 대신 '오늘 아이가 스스로 해낸 성취의 순간'과 선생님의 따뜻한 한마디를 카드 뉴스로 전달합니다.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">학부모 안심 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 09: 학부모 안심 모바일 알림장', '오후 4시 자동 발송되는 알림장으로 학생의 학교 생활 정서와 성취 항목을 카드 형태로 조회하고 답장할 수 있습니다.', 'parent_app')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 10: 누적 IEP 통계 대시보드 -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="iep">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Desktop · 스크린 10</span>
+<span class="px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm">종합 통계</span>
+</div>
+<div class="h-44 rounded-2xl bg-surface-container-high p-space-md flex flex-col justify-between mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-primary font-bold">누적 IEP 통계 대시보드</span>
+<span class="material-symbols-outlined text-primary text-[24px]">analytics</span>
+</div>
+<!-- Mini SVG Sparkline -->
+<div class="w-full flex items-end justify-between h-14 pt-2">
+<div class="w-4 bg-primary/30 rounded-t h-6"></div>
+<div class="w-4 bg-primary/40 rounded-t h-8"></div>
+<div class="w-4 bg-primary/60 rounded-t h-10"></div>
+<div class="w-4 bg-primary/80 rounded-t h-12"></div>
+<div class="w-4 bg-secondary rounded-t h-14"></div>
+</div>
+<span class="font-label-sm text-label-sm text-primary font-bold">주간 자립도 42% -&gt; 78% 성장 추이</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            월별·학기별 IEP 목표 달성률, 촉진 강도(신체·언어·독립) 변화, 요일별 감정 히트맵 등 전문가 심층 분석 포털.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">전문가 포털 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 10: 누적 IEP 통계 대시보드', '특수교사 및 치료지원 전문가가 학생의 다각적 성장을 객관적 지표와 시각화 차트로 진단하는 데스크톱 전용 포털입니다.', 'iep_dashboard')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+<!-- Screen 11: 학부모 안심 개별학생 보고서 (A4 인쇄용) -->
+<div class="screen-card flex flex-col bg-surface rounded-3xl p-space-lg shadow-sm hover:shadow-md transition-all group" data-category="iep">
+<div class="flex items-center justify-between mb-space-md">
+<span class="px-space-md py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm">Desktop · 스크린 11</span>
+<span class="px-space-sm py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">교육청 표준 서식</span>
+</div>
+<div class="h-44 rounded-2xl bg-surface-container-high p-space-md flex flex-col justify-between mb-space-md">
+<div class="flex items-center justify-between">
+<span class="font-headline-md text-headline-md text-on-surface font-bold">개별학생 A4 공공 인쇄</span>
+<span class="material-symbols-outlined text-primary text-[24px]">print</span>
+</div>
+<div class="p-2 rounded bg-surface shadow-xs text-xs font-mono border-l-4 border-primary">
+              [공식 서식] 개별화교육지원팀 심의 및 발송용 원클릭 인쇄 (Ctrl+P 최적화 레이아웃)
+            </div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">인쇄 시 여백 및 글꼴 자동 보정</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-space-md flex-1">
+            개별화교육협의회 및 학기말 통지표로 즉시 출력 가능한 표준 문서 포맷. 전문 관인 및 교사 전자 서명을 지원합니다.
+          </p>
+<div class="pt-space-sm flex items-center justify-between border-t border-surface-container">
+<span class="font-label-sm text-label-sm text-on-surface-variant">전문가 포털 모드</span>
+<button class="inline-flex items-center gap-1 text-primary font-label-md text-label-md font-bold hover:underline" onclick="openDemoModal('스크린 11: 학부모 안심 개별학생 보고서 (A4 인쇄용)', '인쇄 시 불필요한 브라우저 인터페이스가 숨겨지고 표준 공문 규격으로 1초 만에 인쇄 및 PDF 저장이 가능합니다.', 'print_report')">
+<span>화면 시연</span>
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Live Demo Sandbox Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-center justify-center p-4" id="demo-modal">
+<div class="bg-surface w-full max-w-2xl rounded-3xl p-space-xl shadow-2xl flex flex-col gap-space-lg max-h-[921px] overflow-y-auto">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">devices</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold" id="modal-title">화면 시연</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">차근차근 실시간 인터랙션 샌드박스</span>
+</div>
+</div>
+<button class="w-9 h-9 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="closeDemoModal()">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant" id="modal-desc">
+        화면 설명 내용이 표시됩니다.
+      </p>
+<!-- Interactive Mock Canvas Box inside Modal -->
+<div class="w-full bg-surface-container-low rounded-2xl p-space-lg flex flex-col gap-space-md min-h-[220px]" id="modal-interactive-box">
+<!-- Dynamic Content injected via JS -->
+</div>
+<div class="flex items-center justify-end gap-space-md pt-space-xs">
+<button class="px-space-lg py-space-sm rounded-full bg-surface-container text-on-surface font-label-md text-label-md" onclick="closeDemoModal()">
+          닫기
+        </button>
+<button class="px-space-xl py-space-sm rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm" onclick="alert('전체 실환경 배포 데모 환경으로 이동합니다.');">
+          전체 화면으로 전환
+        </button>
+</div>
+</div>
+</div>
+<!-- Inclusive Special Ed Core Values (4-Card Bento Grid) -->
+<section class="w-full px-6 lg:px-12 py-space-xl">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-secondary font-bold">PEDAGOGICAL PHILOSOPHY</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold">특수교육 현장이 먼저 검증한 4대 핵심 가치</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+          행정적 편의성보다 아이의 자기결정권과 정서적 안정, 그리고 선생님의 여유를 최우선으로 설계했습니다.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+<!-- Value Card 1 -->
+<div class="p-space-lg rounded-3xl bg-surface-container flex flex-col gap-space-md hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed">
+<span class="material-symbols-outlined text-[32px]">waving_hand</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">① 억압 대신 자율</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            강제적 통제 대신 스스로 AAC로 도움을 청하고, 감각 쉼터에서 스스로 마음을 가라앉히는 자기조절(Self-Regulation)을 훈련합니다.
+          </p>
+</div>
+<!-- Value Card 2 -->
+<div class="p-space-lg rounded-3xl bg-surface-container flex flex-col gap-space-md hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-2xl bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[32px]">edit_note</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">② 교사의 행정 경감</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            수기 메모의 번거로움 없이 클릭 로그를 바탕으로 IEP 관찰 문장을 자동 초안화하여, 교사가 오직 학생과의 눈맞춤에 집중할 시간을 돌려줍니다.
+          </p>
+</div>
+<!-- Value Card 3 -->
+<div class="p-space-lg rounded-3xl bg-surface-container flex flex-col gap-space-md hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-2xl bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[32px]">volunteer_activism</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">③ 학부모와의 신뢰 형성</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            차가운 결함 중심 보고서가 아니라 아이가 스스로 성취한 오늘의 작은 기적들을 생생한 카드뉴스로 전하여 가정과 학교가 하나가 됩니다.
+          </p>
+</div>
+<!-- Value Card 4 -->
+<div class="p-space-lg rounded-3xl bg-surface-container flex flex-col gap-space-md hover:bg-surface-container-high transition-all">
+<div class="w-14 h-14 rounded-2xl bg-surface-container-highest flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-[32px]">shield_lock</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary font-bold">④ 철저한 데이터 프라이버시</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            불필요한 주민번호 등 개인 식별자를 배제하고 온디바이스 및 교육청 인트라넷 보안 규정을 준수하여 학생의 민감 정보를 철통 보호합니다.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Live Experience Flow Showcase (Interactive Step by Step Walkthrough) -->
+<section class="w-full px-6 lg:px-12 py-space-xl bg-surface-container-low">
+<div class="max-w-7xl mx-auto flex flex-col gap-space-xl">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div>
+<span class="font-label-lg text-label-lg text-secondary font-bold">SEAMLESS DAY CYCLE</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold">하루의 시작부터 귀가까지 — 차근차근 연결 동선</h2>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">check_circle</span>
+          실제 학급 운영 시뮬레이션
+        </span>
+</div>
+<!-- 4 Stages Timeline Cards -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-space-md relative">
+<!-- Step 1 -->
+<div class="p-space-lg rounded-3xl bg-surface flex flex-col gap-space-sm shadow-sm relative">
+<div class="flex items-center justify-between">
+<span class="px-space-md py-0.5 rounded-full bg-secondary text-on-secondary font-label-sm text-label-sm font-bold">08:40 등교</span>
+<span class="material-symbols-outlined text-secondary">wb_sunny</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary font-bold">등교 및 아침 루틴</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            학생은 홈 허브에서 기분 이모티콘을 선택하고 '가방 정리, 신발 갈아신기' 카드를 탭하여 하루를 엽니다.
+          </p>
+</div>
+<!-- Step 2 -->
+<div class="p-space-lg rounded-3xl bg-surface flex flex-col gap-space-sm shadow-sm relative">
+<div class="flex items-center justify-between">
+<span class="px-space-md py-0.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-bold">10:20 수업</span>
+<span class="material-symbols-outlined text-primary">menu_book</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary font-bold">AAC 수업 &amp; 과제</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            교실 발표나 질문 시 태블릿 AAC로 의사소통. 교사는 이동형 관리자 모니터로 도움 필요 학생을 살핍니다.
+          </p>
+</div>
+<!-- Step 3 -->
+<div class="p-space-lg rounded-3xl bg-surface flex flex-col gap-space-sm shadow-sm relative">
+<div class="flex items-center justify-between">
+<span class="px-space-md py-0.5 rounded-full bg-tertiary text-on-tertiary font-label-sm text-label-sm font-bold">12:30 급식</span>
+<span class="material-symbols-outlined text-tertiary">restaurant</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary font-bold">식사 및 생활 연습</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            손 씻기와 식판 반납 단계 가이드를 보며 친구들과 차례를 지키며 성취 스티커를 스스로 획득합니다.
+          </p>
+</div>
+<!-- Step 4 -->
+<div class="p-space-lg rounded-3xl bg-surface flex flex-col gap-space-sm shadow-sm relative">
+<div class="flex items-center justify-between">
+<span class="px-space-md py-0.5 rounded-full bg-on-secondary-container text-on-secondary font-label-sm text-label-sm font-bold">15:30 하교</span>
+<span class="material-symbols-outlined text-on-secondary-container">mark_email_read</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary font-bold">안심 알림장 &amp; 통계</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+            하루 동안 누적된 데이터가 모바일 알림장으로 부모님 스마트폰에 도착하고, 교사용 IEP 초안이 자동 완성됩니다.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Deployment, Specifications & Download Section -->
+<section class="w-full px-6 lg:px-12 py-space-xl" id="deployment-section">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Tech specs & Deploy options -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-lg text-label-lg text-secondary font-bold">TECHNICAL DEPLOYMENT</span>
+<h2 class="font-headline-xl text-headline-xl text-primary font-extrabold">현장 설치가 간편한 반응형 웹 아키텍처</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            앱스토어 승인 대기나 까다로운 인스톨 없이, 전국의 모든 학교 기기(크롬북, 갤럭시탭, 아이패드, 스마트TV)의 웹 브라우저에서 즉시 실행됩니다.
+          </p>
+</div>
+<div class="space-y-space-sm">
+<div class="p-space-md rounded-2xl bg-surface-container flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">devices_other</span>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-primary font-bold">브라우저 크로스 플랫폼 최적화</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                Chrome, Whale, Safari, Edge 전 규격 지원. PWA(프로그레시브 웹 앱) 기술 적용으로 홈 화면에 추가하면 전용 앱처럼 전체화면 구동.
+              </p>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">wifi_off</span>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-tertiary font-bold">학교 내부망(오프라인) 로컬 구동 지원</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                인터넷 장애나 보안 방화벽이 엄격한 특수학교를 위해 교실 내 로컬 인트라넷 서버 패키지 및 온디바이스 캐싱을 완벽 지원합니다.
+              </p>
+</div>
+</div>
+<div class="p-space-md rounded-2xl bg-surface-container flex items-start gap-space-md">
+<div class="w-10 h-10 rounded-full bg-secondary/10 text-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">card_membership</span>
+</div>
+<div>
+<h5 class="font-headline-md text-headline-md text-secondary font-bold">교재 키트 &amp; 인쇄용 AAC 카드 번들 제공</h5>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                디지털 화면 적응이 어려운 중도·중복 장애 학생을 위해 포털 내 모든 디지털 상징을 실물 코팅 카드 규격으로 인쇄할 수 있는 PDF 키트를 무료 배포합니다.
+              </p>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<button class="inline-flex items-center gap-space-sm px-space-lg py-space-md rounded-full bg-primary text-on-primary font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-all" onclick="downloadManualModal()">
+<span class="material-symbols-outlined text-[22px]">picture_as_pdf</span>
+<span>교사용 현장 활용 매뉴얼 (PDF)</span>
+</button>
+<button class="inline-flex items-center gap-space-sm px-space-lg py-space-md rounded-full bg-surface-container-high text-on-surface font-label-lg text-label-lg hover:bg-surface-container-highest transition-all" onclick="downloadAACBundle()">
+<span class="material-symbols-outlined text-[22px] text-secondary">grid_view</span>
+<span>AAC 표준 상징 카드 인쇄 키트</span>
+</button>
+</div>
+</div>
+<!-- Quick Pilot Application Form Card -->
+<div class="lg:col-span-5 bg-surface-container rounded-3xl p-space-xl flex flex-col gap-space-md shadow-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[26px]">school</span>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">무료 시범 학급 도입 신청</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          2025학년도 1학기 전국 특수학교 및 일반학교 특수학급을 대상으로 무상 계정 및 상징 카드 실물 교구 세트를 지원합니다.
+        </p>
+<form class="flex flex-col gap-space-sm pt-space-xs" onsubmit="handleApplySubmit(event)">
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">학교명 및 학급 구분</label>
+<input class="w-full px-space-md py-space-sm rounded-xl bg-surface border-0 focus:outline-none focus:ring-2 focus:ring-primary text-on-surface font-body-md text-body-md" placeholder="예: 서울누리학교 초등 특수 2반" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">신청 교사 성함 및 연락처</label>
+<input class="w-full px-space-md py-space-sm rounded-xl bg-surface border-0 focus:outline-none focus:ring-2 focus:ring-primary text-on-surface font-body-md text-body-md" placeholder="예: 홍길동 교사 (010-0000-0000)" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-sm text-label-sm text-on-surface mb-1">지원 희망 기기 형태</label>
+<select class="w-full px-space-md py-space-sm rounded-xl bg-surface border-0 focus:outline-none focus:ring-2 focus:ring-primary text-on-surface font-body-md text-body-md">
+<option>태블릿 PC (아이패드 / 갤럭시탭 계열)</option>
+<option>크롬북 / 윈도우 노트북</option>
+<option>대형 스마트 전자칠판 (TV 연동)</option>
+<option>기타 스마트 기기 혼용</option>
+</select>
+</div>
+<button class="mt-space-sm w-full py-space-md rounded-full bg-secondary text-on-secondary font-label-lg text-label-lg shadow-[0_4px_0_0_#682c00] active:translate-y-1 active:shadow-none transition-all" type="submit">
+            시범 지원 신청서 접수하기
+          </button>
+<span class="text-center font-label-sm text-label-sm text-on-surface-variant">개인정보는 지원 심사 및 교구 배송 외 목적으로 사용되지 않습니다.</span>
+</form>
+</div>
+</div>
+</section>
+<!-- Reassuring Final Affirmation Banner -->
+<section class="w-full px-6 lg:px-12 py-space-xl">
+<div class="max-w-7xl mx-auto rounded-3xl bg-tertiary-fixed/30 p-space-xl flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-lg">
+<div class="w-16 h-16 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[36px]">nature_people</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-lg text-headline-lg text-tertiary font-bold">아이들의 걸음걸음마다 진심 어린 응원을 보냅니다.</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            서두르지 않아도 괜찮습니다. 차근차근(Step by Step)과 함께라면 작은 성취도 위대한 배움이 됩니다.
+          </p>
+</div>
+</div>
+<a class="px-space-xl py-space-md rounded-full bg-tertiary text-on-tertiary font-label-lg text-label-lg shadow-[0_3px_0_0_#002116] active:translate-y-0.5 active:shadow-none shrink-0 transition-all" href="#interactive-catalog">
+        지금 바로 체험하기
+      </a>
+</div>
+</section>
+<!-- Application Success Modal (Hidden by Default) -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm hidden flex items-center justify-center p-4" id="quick-apply-modal">
+<div class="bg-surface w-full max-w-md rounded-3xl p-space-xl shadow-2xl flex flex-col items-center text-center gap-space-md">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-[36px]">volunteer_activism</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-primary font-bold">차근차근 시범 학급 안내</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        연구소 사업팀 담당자가 24시간 이내에 기재해주신 연락처로 배포 매뉴얼과 학급 전용 시범 계정 발급을 안내해 드립니다.
+      </p>
+<button class="w-full py-space-sm rounded-full bg-primary text-on-primary font-label-md text-label-md mt-space-sm" onclick="document.getElementById('quick-apply-modal').classList.add('hidden')">
+        확인했습니다
+      </button>
+</div>
+</div>
+</div>
+<script>
+  // Tab Filter for 11 Screens
+  function filterScreens(category) {
+    const tabs = document.querySelectorAll('.tab-btn');
+    tabs.forEach(tab => {
+      tab.classList.remove('bg-primary', 'text-on-primary');
+      tab.classList.add('text-on-surface-variant');
+    });
+    event.target.classList.add('bg-primary', 'text-on-primary');
+    event.target.classList.remove('text-on-surface-variant');
+
+    const cards = document.querySelectorAll('.screen-card');
+    cards.forEach(card => {
+      if (category === 'all' || card.getAttribute('data-category') === category) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Interactive Live Demo Sandbox Modal Controller
+  function openDemoModal(title, desc, type) {
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-desc').innerText = desc;
+    const box = document.getElementById('modal-interactive-box');
+    box.innerHTML = '';
+
+    if (type === 'aac') {
+      box.innerHTML = `
+        <div class="flex flex-col gap-3">
+          <div class="flex items-center justify-between">
+            <span class="font-label-sm text-label-sm text-primary font-bold">상징 카드를 터치하여 문장을 만들어보세요:</span>
+            <span id="aac-preview-bar" class="px-3 py-1 bg-surface rounded-full text-secondary font-label-md text-label-md min-h-[30px] flex items-center">선택된 단어 없음</span>
+          </div>
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+            <button onclick="appendAac('선생님')" class="p-3 rounded-2xl bg-surface text-center hover:bg-primary-fixed transition-all shadow-xs">
+              <span class="material-symbols-outlined text-primary block text-[26px]">school</span>
+              <span class="font-label-sm text-label-sm text-on-surface">선생님</span>
+            </button>
+            <button onclick="appendAac('도와주세요')" class="p-3 rounded-2xl bg-surface text-center hover:bg-primary-fixed transition-all shadow-xs">
+              <span class="material-symbols-outlined text-secondary block text-[26px]">front_hand</span>
+              <span class="font-label-sm text-label-sm text-on-surface">도와주세요</span>
+            </button>
+            <button onclick="appendAac('물 마시고 싶어요')" class="p-3 rounded-2xl bg-surface text-center hover:bg-primary-fixed transition-all shadow-xs">
+              <span class="material-symbols-outlined text-tertiary block text-[26px]">local_drink</span>
+              <span class="font-label-sm text-label-sm text-on-surface">물</span>
+            </button>
+            <button onclick="appendAac('화장실 가고 싶어요')" class="p-3 rounded-2xl bg-surface text-center hover:bg-primary-fixed transition-all shadow-xs">
+              <span class="material-symbols-outlined text-primary-container block text-[26px]">wc</span>
+              <span class="font-label-sm text-label-sm text-on-surface">화장실</span>
+            </button>
+          </div>
+          <div class="flex gap-2">
+            <button onclick="speakAac()" class="flex-1 py-2.5 rounded-full bg-secondary text-on-secondary font-label-md text-label-md flex items-center justify-center gap-1 shadow-sm">
+              <span class="material-symbols-outlined text-[20px]">volume_up</span> 문장 읽어주기 (TTS)
+            </button>
+            <button onclick="clearAac()" class="px-4 py-2.5 rounded-full bg-surface-container-high text-on-surface font-label-md text-label-md">
+              지우기
+            </button>
+          </div>
+        </div>
+      `;
+    } else if (type === 'routine') {
+      box.innerHTML = `
+        <div class="flex flex-col gap-3">
+          <span class="font-label-sm text-label-sm text-primary font-bold">터치하여 성취 완료 피드백을 경험해보세요:</span>
+          <div id="routine-step-1" onclick="completeRoutine(this)" class="p-4 rounded-2xl bg-surface shadow-xs flex items-center justify-between cursor-pointer border-2 border-transparent hover:border-primary transition-all">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary">1</span>
+              <span class="font-label-lg text-label-lg text-on-surface">내 사물함에 가방 넣기</span>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm state-chip">터치해서 완료</span>
+          </div>
+          <div id="routine-step-2" onclick="completeRoutine(this)" class="p-4 rounded-2xl bg-surface shadow-xs flex items-center justify-between cursor-pointer border-2 border-transparent hover:border-primary transition-all">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center font-bold text-primary">2</span>
+              <span class="font-label-lg text-label-lg text-on-surface">실내화로 갈아신기</span>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm state-chip">터치해서 완료</span>
+          </div>
+          <div id="routine-feedback" class="text-center font-label-md text-label-md text-tertiary font-bold hidden">
+            🎉 참 잘했어요! 첫 번째 루틴을 멋지게 마쳤습니다!
+          </div>
+        </div>
+      `;
+    } else {
+      box.innerHTML = `
+        <div class="flex flex-col items-center justify-center py-6 text-center gap-2">
+          <span class="material-symbols-outlined text-primary text-[48px]">touch_app</span>
+          <span class="font-label-lg text-label-lg text-primary font-bold">인터랙티브 데모 로더 준비 완료</span>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+            해당 스크린은 터치 보완 인터페이스와 온디바이스 데이터 파이프라인이 즉시 연동됩니다.
+          </p>
+        </div>
+      `;
+    }
+
+    document.getElementById('demo-modal').classList.remove('hidden');
+  }
+
+  function closeDemoModal() {
+    document.getElementById('demo-modal').classList.add('hidden');
+  }
+
+  // AAC interactive micro helpers
+  let aacWords = [];
+  function appendAac(word) {
+    aacWords.push(word);
+    document.getElementById('aac-preview-bar').innerText = aacWords.join(' ');
+  }
+  function clearAac() {
+    aacWords = [];
+    document.getElementById('aac-preview-bar').innerText = '선택된 단어 없음';
+  }
+  function speakAac() {
+    if (aacWords.length === 0) {
+      alert('먼저 상징 카드를 선택해 주세요.');
+      return;
+    }
+    const utterance = new SpeechSynthesisUtterance(aacWords.join(' '));
+    utterance.lang = 'ko-KR';
+    window.speechSynthesis.speak(utterance);
+  }
+
+  // Routine Interactive Helper
+  function completeRoutine(elem) {
+    const chip = elem.querySelector('.state-chip');
+    chip.innerText = '✓ 완료!';
+    chip.classList.remove('bg-surface-container', 'text-on-surface-variant');
+    chip.classList.add('bg-tertiary-fixed', 'text-on-tertiary-fixed');
+    elem.classList.add('bg-tertiary-fixed/20');
+    document.getElementById('routine-feedback').classList.remove('hidden');
+  }
+
+  // Application Handlers
+  function handleApplySubmit(e) {
+    e.preventDefault();
+    document.getElementById('quick-apply-modal').classList.remove('hidden');
+  }
+
+  function downloadManualModal() {
+    alert('차근차근_교사용_현장적용_매뉴얼_v1.0.pdf 다운로드를 시작합니다.');
+  }
+
+  function downloadAACBundle() {
+    alert('한국특수교육_표준_AAC_인쇄용_상징키트_A4_300dpi.pdf 패키지를 다운로드합니다.');
+  }
+</script></main><footer class="w-full bg-surface-container-low py-12"><div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-space-lg"><div class="flex flex-col gap-space-xs"><div class="flex items-center gap-space-sm"><span class="font-headline-md text-headline-md text-primary">차근차근 특수교육 포털</span><span class="px-space-sm py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">KERI 한국교육연구소 인증</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-xl">신경다양성 학습자와 특수교사를 위한 직관적·포용적 인터랙티브 학습 환경 가이드라인(WCAG 2.2 AAA &amp; K-WAH 준수)</p></div><div class="flex flex-wrap items-center gap-space-md"><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container border border-outline-variant/50 text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-tertiary text-[18px]">verified_user</span><span>256-bit 데이터 암호화 안심 보호</span></div><div class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container border border-outline-variant/50 text-on-surface font-label-sm text-label-sm"><span class="material-symbols-outlined text-primary text-[18px]">accessibility_new</span><span>무장애 배리어프리 UI 지원</span></div></div></div><div class="max-w-7xl mx-auto px-6 lg:px-12 mt-space-lg pt-space-md border-t border-outline-variant/40 flex flex-col sm:flex-row items-center justify-between gap-space-sm text-on-surface-variant font-label-sm text-label-sm"><span>© 2025 KERI 한국교육연구소. 차근차근(Step by Step) 포괄적 교육 복지 컨소시엄. All rights reserved.</span><div class="flex items-center gap-space-md"><a class="hover:text-on-surface transition-colors" href="#">개인정보 처리방침</a><a class="hover:text-on-surface transition-colors" href="#">웹 접근성 정책</a><a class="hover:text-on-surface transition-colors" href="#">교사 교재 라이선스</a></div></div></footer>window.__STITCH_CONFIG__={"screenId":"d10935adc7574f6d87614e33a62172dc","targetOrigin":"https://app-companion-430619.appspot.com","disableAnimations":false};(function(){var S={PING:"direct_edit_ping",PONG:"direct_edit_pong",READY:"direct_edit_ready",EDIT:{ACTIVATE:"direct_edit_activate",EXIT:"direct_edit_exit",DESELECT:"direct_edit_deselect",ESCAPE:"direct_edit_escape",TOOL_SWITCH:"direct_edit_tool_switch",SCAN:"direct_edit_scan",FOCUS_AT:"direct_edit_focus_at",FOCUS_ELEMENT:"direct_edit_focus_element",ENTRY_FOCUS:"direct_edit_entry_focus",ELEMENT_CLICKED:"direct_edit_element_clicked",PANEL_DISMISS:"direct_edit_panel_dismiss",SELECTED_RECT:"direct_edit_selected_rect",IMAGE_RECTS:"direct_edit_image_rects",QUERY_SELECTOR:"direct_edit_query_selector",QUERY_RESULT:"direct_edit_query_result",SELECTOR_SANITIZED:"direct_edit_selector_sanitized",SHOW_ACTIVE_INDICATOR:"direct_edit_show_active_indicator",BIND_ACTIVE_INDICATORS:"direct_edit_bind_active_indicators",HIDE_ACTIVE_INDICATORS:"direct_edit_hide_active_indicators",APPLY_DOM_OPERATIONS:"apply_dom_operations",APPLY_HTML_SNAPSHOT:"apply_html_snapshot",DELETE_ELEMENT:"direct_edit_delete_element",REPLACE_IMAGE:"direct_edit_replace",TEXT_CHANGED:"direct_edit_text_changed",ZOOM_LEVEL:"direct_edit_zoom_level",ZOOM:"direct_edit_zoom",CTRL_HELD:"direct_edit_ctrl_held",PINCH_ZOOM:"direct_edit_pinch_zoom",KEYBOARD_SHORTCUT:"direct_edit_keyboard_shortcut",EVENT_FAILED:"direct_edit_event_failed",ERROR:"direct_edit_error"},STREAM:{UPDATE:"stitch-html-update",END:"stitch-stream-end",REWRITE:"stitch-html-full-rewrite"},SCREENSHOT:{REQUEST:"capture_screenshot",SUCCESS:"screenshot_captured",ERROR:"screenshot_error"},HIGHLIGHT:{REQUEST:"stitch:highlight-element",RESPONSE:"stitch:highlight-element-rect"},DIMENSIONS:{REQUEST:"stitch:request-dimensions",RESPONSE:"stitch:content-dimensions"},INTERACTIVE:{CLICK:"interactive_click",DOUBLE_CLICK:"interactive_double_click",REQUEST_EDIT:"interactive_request_edit",WHEEL_PASSTHROUGH:"interactive_wheel_passthrough",MIDDLE_PAN:"iframe_middle_pan",CONTEXT_MENU:"iframe_contextmenu",SPACE_HELD:"iframe_space_held",NODE_DRAG_START:"interactive_node_drag_start",NODE_DRAG_MOVE:"interactive_node_drag_move",NODE_DRAG_END:"interactive_node_drag_end"},PROTOTYPE:{SET_MODE:"setMode",SET_STATE:"setState",UPDATE_LINKS:"updateLinks",SHOW_HOTSPOTS:"showHotspots",CLEAR_SELECTION:"clearSelection",SELECT_ELEMENT:"selectElement",ENABLE_TEXT_EDIT:"enableTextEdit",DISABLE_TEXT_EDIT:"disableTextEdit",REPLACE_IMAGE:"replaceImage",SET_INTERACTIVE:"setInteractive",GO_BACK:"goBack",GO_FORWARD:"goForward",HEARTBEAT:"iframe_heartbeat",LEGACY_HEARTBEAT:"prototype_heartbeat",ELEMENT_CLICKED:"elementClicked",ELEMENT_DESELECTED:"elementDeselected",TEXT_CHANGED:"textChanged",TEXT_EDIT_ENDED:"textEditEnded",TEXT_EDIT_REQUESTED:"textEditRequested",NAVIGATE:"navigate",CLICKED:"iframeClicked",CURRENT_PAGE_CHANGED:"currentPageChanged"},SET_MODE:"stitch_set_mode"},Mg=new Set([S.READY,S.PONG,S.EDIT.TEXT_CHANGED,S.EDIT.ELEMENT_CLICKED,S.EDIT.SELECTED_RECT,S.EDIT.IMAGE_RECTS,S.EDIT.QUERY_RESULT,S.EDIT.SELECTOR_SANITIZED,S.EDIT.ENTRY_FOCUS,S.EDIT.TOOL_SWITCH,S.EDIT.CTRL_HELD,S.EDIT.PINCH_ZOOM,S.EDIT.KEYBOARD_SHORTCUT,S.EDIT.ESCAPE,S.EDIT.ZOOM,S.EDIT.PANEL_DISMISS,S.EDIT.EVENT_FAILED,S.EDIT.ERROR]),fe="",pe="";function ao(e,o){fe=e,pe=o}function so(e){e&&(fe=e)}function I(e,o){try{window.parent.postMessage({type:e,screenId:fe,...o},pe)}catch(g){console.error("[DirectEdit] postMsg failed",g)}}function C(e,o,g){I(S.EDIT.ERROR,{message:e,error:o!=null?String(o):void 0,...g})}function _o(e){return!(e.source!==window.parent||e.origin!==pe&&e.origin!=="null")}var n={INJECTED:"data-stitch-injected",CURSOR:"data-stitch-cursor",SCROLL_LOCK:"data-stitch-scroll-lock",CSS_VH:"data-stitch-css-vh",VH:"data-stitch-vh",ADDED_CLASSES:"data-stitch-added-classes",SWAPPABLE:"data-stitch-swappable",SWAP_KIND:"data-stitch-swap-kind",SWAP_ACTIVE:"data-stitch-swap-active",SWAP_HOVER:"data-stitch-swap-hover",EDITABLE_IDX:"data-stitch-editable-idx",ANIM_OPACITY:"data-stitch-anim-opacity",ORIG_OPACITY:"data-stitch-orig-opacity",PENDING_SRC:"data-stitch-pending-src",INDICATOR:"data-stitch-indicator",INDICATOR_SELECTOR:"data-stitch-indicator-selector"},h={INJECTED:`[${n.INJECTED}]`,CURSOR:`[${n.CURSOR}]`,SCROLL_LOCK:`[${n.SCROLL_LOCK}]`,VH:`[${n.VH}]`,CSS_VH:`[${n.CSS_VH}]`,SWAPPABLE:`[${n.SWAPPABLE}]`,SWAP_ACTIVE:`[${n.SWAP_ACTIVE}]`,SWAP_HOVER:`[${n.SWAP_HOVER}]`,EDITABLE_IDX:`[${n.EDITABLE_IDX}]`,ANIM_OPACITY:`[${n.ANIM_OPACITY}]`,ORIG_OPACITY:`[${n.ORIG_OPACITY}]`,PENDING_SRC:`[${n.PENDING_SRC}]`,INDICATOR:`[${n.INDICATOR}]`,INDICATOR_SELECTOR:`[${n.INDICATOR_SELECTOR}]`},qe="cursor-text",x="stitch-scan-entry",$="stitch-scan-entry-img",w="stitch-anim-fade-in",Ze="stitch-anim-draw-overlay",le="stitch-anim-img-dimming",de="stitch-anim-img-revealing",io=".material-icons,.material-icons-outlined,.material-icons-round,.material-icons-sharp,.material-icons-two-tone,.material-symbols-outlined,.material-symbols-rounded,.material-symbols-sharp",q='[contenteditable="true"]',D=h.SWAPPABLE,Eo=new Set(["HTML","HEAD","BODY","MAIN"]),Qe=`h1,h2,h3,h4,h5,h6,p,a,button,li,td,th,label,blockquote,figcaption,details,summary,legend,caption,${io}`,ze=`[contenteditable], ${D}, ${h.EDITABLE_IDX}, .${x}, .${$}, ${h.ANIM_OPACITY}, .${le}, .${de}, .${w}`,no=class{PLACEHOLDER_IMG="data:image/svg+xml;base64,"+btoa('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="400" height="300" rx="8" fill="#e8eaed"/><path d="M170 130 l30 40 l20-15 l40 55 H140z" fill="#bdc1c6"/><circle cx="250" cy="120" r="18" fill="#bdc1c6"/></svg>');agentCursor=null;cursorMoved=!1;elementsToFadeIn=[];imagesToReveal=[];imageRevealRunning=!1;failedSrcs={};elementDrawRunning=!1;headComplete=!1;fontsReady=!1;disableAnimations=!1;isStreaming=!1;elementAnimationCounts=new Map;intervalId=null;onError;clearAnimationCounts(){this.elementAnimationCounts.clear()}constructor(e=!1,o){this.disableAnimations=e,this.onError=o,this.intervalId=setInterval(()=>this.processFadeIn(),50)}stopAnimationLoop(){this.intervalId&&(clearInterval(this.intervalId),this.intervalId=null)}moveCursor(e,o){if(this.agentCursor||(this.agentCursor=document.getElementById("stitch-agent-cursor")),!this.agentCursor||!e)return;const g=e.getBoundingClientRect(),r=g.width;let a=g.height;if(e===document.body&&a===0&&(a=500),r===0||a===0)return;const i=g.left+12,_=g.top+12;this.agentCursor.style.left=i+"px",this.agentCursor.style.top=_+"px",this.agentCursor.style.opacity="1",this.agentCursor.style.display="",this.agentCursor.classList.add("working"),this.agentCursor.classList.remove("text-mode","paint-mode"),o==="text"&&this.agentCursor.classList.add("text-mode"),o==="paint"&&this.agentCursor.classList.add("paint-mode")}hideCursorIfIdle(){this.isStreaming||(this.agentCursor||(this.agentCursor=document.getElementById("stitch-agent-cursor")),this.agentCursor&&this.elementsToFadeIn.length===0&&this.imagesToReveal.length===0&&!this.imageRevealRunning&&!this.elementDrawRunning&&(this.agentCursor.style.display="none",this.agentCursor.classList.remove("working","drawing","text-mode","paint-mode")))}processFadeIn(){const e=Date.now();for(let o=this.elementsToFadeIn.length-1;o>=0;o--){const g=this.elementsToFadeIn[o];if(e>=g.time){let r=!0;if(g.hl&&!this.imageRevealRunning&&!this.elementDrawRunning){this.elementDrawRunning=!0,this.moveCursor(g.el,"pointer");const a=g.el.getBoundingClientRect();if(a.width===0||a.height===0){g.el.style.opacity="",g.el.removeAttribute(n.ANIM_OPACITY),g.el.classList.add(w),this.elementsToFadeIn.splice(o,1),this.elementDrawRunning=!1;continue}const i=document.createElement("div");if(i.className=Ze,i.setAttribute(n.INJECTED,""),i.style.left=a.left-3+"px",i.style.top=a.top-3+"px",i.style.width=a.width+6+"px",i.style.height=a.height+6+"px",document.body.appendChild(i),this.agentCursor||(this.agentCursor=document.getElementById("stitch-agent-cursor")),this.agentCursor){this.agentCursor.classList.add("drawing"),this.agentCursor.classList.remove("working");const _=6;setTimeout(()=>{this.agentCursor&&(this.agentCursor.style.left=a.right-_+"px",this.agentCursor.style.top=a.top+_+"px")},100),setTimeout(()=>{this.agentCursor&&(this.agentCursor.style.left=a.right-_+"px",this.agentCursor.style.top=a.bottom-_+"px")},200),setTimeout(()=>{this.agentCursor&&(this.agentCursor.style.left=a.left+_+"px",this.agentCursor.style.top=a.bottom-_+"px")},300)}setTimeout(()=>{g.el.style.opacity="",g.el.removeAttribute(n.ANIM_OPACITY),g.el.classList.add(w),this.agentCursor&&(this.agentCursor.classList.remove("drawing"),this.agentCursor.classList.add("working")),i.classList.add("fading"),setTimeout(()=>{i.remove()},500),this.elementDrawRunning=!1},400)}else g.hl&&(this.imageRevealRunning||this.elementDrawRunning)?r=!1:(g.el.style.opacity="",g.el.removeAttribute(n.ANIM_OPACITY),g.el.classList.add(w));r&&this.elementsToFadeIn.splice(o,1)}}this.elementsToFadeIn.length===0&&this.hideCursorIfIdle()}processNextImage(){let e=!1;try{if(!this.fontsReady)return;if(this.imageRevealRunning||this.imagesToReveal.length===0){this.imagesToReveal.length===0&&!this.imageRevealRunning&&this.hideCursorIfIdle();return}this.imageRevealRunning=!0;const o=this.imagesToReveal.shift();e=!0,this.moveCursor(o.el,"pointer"),setTimeout(()=>{let g;try{const r=o.el.getBoundingClientRect();if(r.width===0||r.height===0){o.el.setAttribute("src",o.newSrc),o.el.removeAttribute(n.PENDING_SRC),o.el.src=o.newSrc,this.imageRevealRunning=!1,this.processNextImage();return}if(g=document.createElement("div"),g.className=Ze,g.setAttribute(n.INJECTED,""),g.style.left=r.left-3+"px",g.style.top=r.top-3+"px",g.style.width=r.width+6+"px",g.style.height=r.height+6+"px",document.body.appendChild(g),this.agentCursor||(this.agentCursor=document.getElementById("stitch-agent-cursor")),this.agentCursor){this.agentCursor.classList.add("drawing","paint-mode"),this.agentCursor.classList.remove("working");const a=6;setTimeout(()=>{this.agentCursor&&(this.agentCursor.style.left=r.right-a+"px",this.agentCursor.style.top=r.top+a+"px")},100),setTimeout(()=>{this.agentCursor&&(this.agentCursor.style.left=r.right-a+"px",this.agentCursor.style.top=r.bottom-a+"px")},200),setTimeout(()=>{this.agentCursor&&(this.agentCursor.style.left=r.left+a+"px",this.agentCursor.style.top=r.bottom-a+"px")},300)}setTimeout(()=>{try{o.el.classList.add(le),setTimeout(()=>{try{o.el.setAttribute("src",o.newSrc),o.el.removeAttribute(n.PENDING_SRC),o.el.src=o.newSrc;let a=!1;const i=()=>{try{if(a)return;a=!0,o.el.classList.remove(le),o.el.classList.add(de),setTimeout(()=>{o.el.classList.remove(de)},400)}catch(_){this.onError?.("processNextImage async revealImg failed",_)}};o.el.onload=i,setTimeout(i,800)}catch(a){this.onError?.("processNextImage async setAttribute failed",a)}},250),this.agentCursor&&(this.agentCursor.classList.remove("drawing","paint-mode"),this.agentCursor.classList.add("working")),g?.classList.add("fading"),setTimeout(()=>{g?.remove()},500),setTimeout(()=>{this.imageRevealRunning=!1,this.processNextImage()},700)}catch(a){this.onError?.("processNextImage nested async failed",a),this.imageRevealRunning=!1,g?.remove(),this.processNextImage()}},400)}catch(r){this.onError?.("processNextImage async failed",r),this.imageRevealRunning=!1,g?.remove(),this.processNextImage()}},300)}catch(o){this.onError?.("processNextImage failed",o),this.imageRevealRunning=!1,e&&this.processNextImage()}}applyOperationToElement(e,o,g,r,a,i=!0){const _=(t,s,E=!0)=>{if(!i||this.disableAnimations||t.nodeType!==1)return;const T=this.elementAnimationCounts.get(t)??0;if(T>=2||this.elementsToFadeIn.some(c=>c.el===t&&c.actionGroup===s))return;this.elementAnimationCounts.set(t,T+1);const M=t.style.opacity;M&&t.setAttribute(n.ORIG_OPACITY,M),t.style.opacity="0",t.setAttribute(n.ANIM_OPACITY,"true"),this.isStreaming||t.classList.remove(w),this.elementsToFadeIn.push({el:t,time:Date.now()+300,hl:E,actionGroup:s}),this.cursorMoved||(this.moveCursor(t,"pointer"),this.cursorMoved=!0)};switch(o){case"replace_content":typeof g=="string"&&(e.innerHTML=g,i&&(e.children.length>0?Array.from(e.children).forEach(t=>_(t,"content",!0)):_(e,"content",!0)));break;case"replace_text":typeof g=="string"&&(e.textContent=g,i&&_(e,"content",!0));break;case"replace_element":if(typeof g=="string"){const t=document.createElement("template");t.innerHTML=g;const s=Array.from(t.content.childNodes);s.length>0?(e.replaceWith(...s),s.forEach(E=>{E.nodeType===1&&_(E,"content",!0)})):e.outerHTML=g}else g instanceof Node&&(e.replaceWith(g),g.nodeType===1&&_(g,"content",!0));break;case"insert_before":typeof g=="string"?(e.insertAdjacentHTML("beforebegin",g),i&&e.previousElementSibling&&_(e.previousElementSibling,"content",!0)):g instanceof Node&&(e.parentNode?.insertBefore(g,e),i&&g.nodeType===1&&_(g,"content",!0));break;case"insert_after":typeof g=="string"?(e.insertAdjacentHTML("afterend",g),i&&e.nextElementSibling&&_(e.nextElementSibling,"content",!0)):g instanceof Node&&(e.parentNode?.insertBefore(g,e.nextSibling),i&&g.nodeType===1&&_(g,"content",!0));break;case"append_child":typeof g=="string"?(e.insertAdjacentHTML("beforeend",g),i&&e.lastElementChild&&_(e.lastElementChild,"content",!0)):g instanceof Node&&(e.appendChild(g),i&&g.nodeType===1&&_(g,"content",!0));break;case"prepend_child":typeof g=="string"?(e.insertAdjacentHTML("afterbegin",g),i&&e.firstElementChild&&_(e.firstElementChild,"content",!0)):g instanceof Node&&(e.insertBefore(g,e.firstChild),i&&g.nodeType===1&&_(g,"content",!0));break;case"remove_element":e.remove();break;case"set_attribute":if(r&&a!==void 0){if(e.tagName==="IMG"&&r==="src"&&a!==this.PLACEHOLDER_IMG&&i&&!this.disableAnimations){const t=e.getAttribute("src")||"";if(t===this.PLACEHOLDER_IMG||!t||t==="about:srcdoc"||t==="about:blank"){if(this.failedSrcs[a])return;let s=!1;for(let E=0;E<this.imagesToReveal.length;E++)if(this.imagesToReveal[E].el===e){this.imagesToReveal[E].newSrc=a,e.setAttribute(n.PENDING_SRC,a),s=!0;break}s||(this.imagesToReveal.push({el:e,newSrc:a}),e.setAttribute(n.PENDING_SRC,a));return}}e.setAttribute(r,a),i&&_(e,"style",!0)}break;case"remove_attribute":r&&(e.removeAttribute(r),i&&_(e,"style",!0));break;case"set_style":r&&a!==void 0&&(e.style[r]=a,i&&_(e,"style",!0));break;case"add_class":{const t=a||(typeof g=="string"?g:void 0);t&&(e.classList.add(...t.split(" ").filter(Boolean)),i&&_(e,"style",!0));break}case"remove_class":{const t=a||(typeof g=="string"?g:void 0);t&&(e.classList.remove(...t.split(" ").filter(Boolean)),i&&_(e,"style",!0));break}}}syncNodes(e,o){try{const g=new Set([n.ANIM_OPACITY,n.ORIG_OPACITY,"data-original-icon",n.PENDING_SRC]),r=w;e.nodeType===1&&(Array.from(e.attributes).forEach(_=>{if(g.has(_.name))return;const t=o.getAttribute(_.name);let s=_.value,E=t;if(_.name==="class"&&(s=s.split(" ").filter(T=>T&&T!==r).join(" "),E=(t||"").split(" ").filter(T=>T&&T!==r).join(" ")),E!==s){const T=o.tagName==="IMG"&&_.name==="src";this.applyOperationToElement(o,"set_attribute",void 0,_.name,_.value,T)}}),Array.from(o.attributes).forEach(_=>{if(!g.has(_.name)&&!e.hasAttribute(_.name)&&_.name!=="data-stream"&&_.name!=="id"){if(_.name==="src"&&_.value===this.PLACEHOLDER_IMG)return;this.applyOperationToElement(o,"remove_attribute",void 0,_.name,void 0,!1)}}));const a=e.childNodes,i=[];Array.from(o.childNodes).forEach(_=>{if(_.nodeType===1){const t=_;if(t.id==="stitch-agent-cursor"||t.hasAttribute(n.INJECTED))return}i.push(_)});for(let _=0;_<a.length;_++){const t=a[_],s=i[_];if(s)if(t.nodeType===s.nodeType&&t.tagName===s.tagName)t.nodeType===3?t.textContent!==s.textContent&&(s.textContent=t.textContent):t.nodeType===1&&this.syncNodes(t,s);else{const E=t.cloneNode(!0);this.applyOperationToElement(s,"replace_element",E,void 0,void 0,!0)}else{const E=t.cloneNode(!0);this.applyOperationToElement(o,"append_child",E,void 0,void 0,!0)}}for(let _=a.length;_<i.length;_++){const t=i[_];t.nodeType===1?this.applyOperationToElement(t,"remove_element",void 0,void 0,void 0,!0):t.parentNode?.removeChild(t)}}catch(g){this.onError?.("syncNodes failed",g)}}fixImages(){document.querySelectorAll("img").forEach(e=>{try{const o=e.getAttribute("src");(!o||o==="about:srcdoc"||o==="about:blank"||o===this.PLACEHOLDER_IMG)&&(e.setAttribute("src",this.PLACEHOLDER_IMG),e.src=this.PLACEHOLDER_IMG),e.onerror=()=>{if(e.getAttribute("src")!==this.PLACEHOLDER_IMG){const g=e.getAttribute("src");g&&(this.failedSrcs[g]=!0),e.setAttribute("src",this.PLACEHOLDER_IMG),e.src=this.PLACEHOLDER_IMG}}}catch(o){this.onError?.("fixImages failed on element",o)}})}ICON_FALLBACK="circle";iconCheckCtx=null;singleGlyphWidth=0;initIconCheck(){this.iconCheckCtx=document.createElement("canvas").getContext("2d"),this.iconCheckCtx&&(this.iconCheckCtx.font='24px "Material Symbols Outlined"',this.singleGlyphWidth=this.iconCheckCtx.measureText("search").width)}isValidIcon(e){return!this.iconCheckCtx||!this.singleGlyphWidth?!0:this.iconCheckCtx.measureText(e).width<=this.singleGlyphWidth*1.5}fixBrokenIcons(){this.fontsReady&&(this.iconCheckCtx||this.initIconCheck(),document.querySelectorAll(".material-symbols-outlined").forEach(e=>{try{const o=(e.textContent||"").trim();o&&o!==this.ICON_FALLBACK&&!this.isValidIcon(o)&&(e.setAttribute("data-original-icon",o),e.textContent=this.ICON_FALLBACK)}catch(o){this.onError?.("fixBrokenIcons failed on element",o)}}))}},So=class{injScripts={};injLinks={};injMeta={};sq=[];sqRunning=!1;prevBodyHtml="";pendingBodyDoc=null;pendingBodyHtml=null;constructor(e,o){this.animationEngine=e,this.targetOrigin=o}get scriptsReady(){return this.sq.length===0&&!this.sqRunning}runSQ(){if(this.sqRunning||this.sq.length===0){this.scriptsReady&&this.flushPendingBody();return}this.sqRunning=!0;const e=this.sq.shift(),o=document.createElement("script");e.src?(o.src=e.src,o.onload=()=>{this.sqRunning=!1,this.runSQ()},o.onerror=()=>{this.sqRunning=!1,this.runSQ()}):o.textContent=e.text,e.id&&(o.id=e.id),document.head.appendChild(o),e.src||(this.sqRunning=!1,this.runSQ())}flushPendingBody(){if(!this.pendingBodyDoc||!this.pendingBodyHtml)return;const e=this.pendingBodyDoc,o=this.pendingBodyHtml;if(this.pendingBodyDoc=null,this.pendingBodyHtml=null,document.getElementById("tailwind-config")&&window.tailwind){const g=this.injScripts["tailwind-config"];if(typeof g=="string")try{new Function(g)()}catch{}}this.renderBody(e,o)}handleHtmlUpdate(e,o=!0){const g=this.animationEngine.isStreaming,r=this.animationEngine.disableAnimations;o?this.animationEngine.isStreaming=!0:(this.animationEngine.isStreaming=!1,this.animationEngine.disableAnimations=!0);const a=new DOMParser().parseFromString(e,"text/html"),i=Array.from(a.head.children),_=a.body?a.body.innerHTML:"";if(!document.getElementById("stitch-icon-hide")&&!this.animationEngine.fontsReady){const M=document.createElement("style");M.id="stitch-icon-hide",M.setAttribute("data-stitch-injected",""),M.textContent='[class*="material-symbols"],[class*="material-icons"] { visibility: hidden !important; }',document.head.appendChild(M)}if(!this.animationEngine.headComplete&&(e.indexOf("</head>")!==-1||e.indexOf("<body")!==-1)){this.animationEngine.headComplete=!0;const M=()=>{this.animationEngine.fontsReady=!0;const c=document.getElementById("stitch-icon-hide");c&&c.remove()};document.fonts&&document.fonts.status==="loaded"?M():document.fonts?document.fonts.ready.then(M):M()}i.forEach(M=>{if(M.tagName==="SCRIPT"){const c=M.getAttribute("src")||"";if(c)this.injScripts[c]||(this.injScripts[c]=!0,this.sq.push({src:c,text:"",id:M.id||""}));else if(M.id){const d=M.textContent||"";if(this.animationEngine.headComplete&&d!==this.injScripts[M.id]){let A=!1;try{new Function(d),A=!0}catch{}if(A){this.injScripts[M.id]=d;const b=document.getElementById(M.id);b&&b.remove();const Ae=document.createElement("script");Ae.id=M.id,Ae.textContent="try{"+d+"}catch(_e){}";try{document.head.appendChild(Ae)}catch{}}}}}else if(M.tagName==="LINK"){let c=M.getAttribute("href")||"";if((c.indexOf("Material+Symbols")!==-1||c.indexOf("Material+Icons")!==-1)&&(c=c.replace("display=swap","display=block")),c&&!this.injLinks[c]){this.injLinks[c]=!0;const d=document.importNode(M,!0);d.setAttribute("href",c),document.head.appendChild(d)}}else if(M.tagName==="META"){const c=M.getAttribute("name")||M.getAttribute("charset")||M.getAttribute("http-equiv")||"";c&&!this.injMeta[c]&&(this.injMeta[c]=!0,document.head.appendChild(document.importNode(M,!0)))}}),this.runSQ();const t=[];a.head.querySelectorAll("style").forEach(M=>{t.push(M.textContent||"")});const s=t.join("\\n---\\n"),E=document.querySelectorAll("style[data-stream]"),T=[];E.forEach(M=>{T.push(M.textContent||"")}),s!==T.join("\\n---\\n")&&(E.forEach(M=>M.remove()),t.forEach(M=>{const c=document.createElement("style");c.setAttribute("data-stream",""),c.setAttribute("data-stitch-injected",""),c.textContent=M,document.head.appendChild(c)})),this.animationEngine.headComplete&&a.body&&Array.from(a.body.attributes).forEach(M=>{document.body.getAttribute(M.name)!==M.value&&document.body.setAttribute(M.name,M.value)}),this.animationEngine.headComplete&&a.body&&_.length>0&&_!==this.prevBodyHtml&&(this.scriptsReady?this.renderBody(a,_):(this.pendingBodyDoc=a,this.pendingBodyHtml=_)),Array.from(a.documentElement.attributes).forEach(M=>{document.documentElement.setAttribute(M.name,M.value)}),o||(this.animationEngine.isStreaming=g,this.animationEngine.disableAnimations=r)}renderBody(e,o){this.prevBodyHtml=o,this.animationEngine.cursorMoved=!1,this.animationEngine.syncNodes(e.body,document.body),this.animationEngine.fixBrokenIcons(),this.animationEngine.fixImages(),this.animationEngine.processNextImage(),setTimeout(()=>{window.__stitchReportDimensions?.("scrollbox")},50)}handleStreamEnd(){this.animationEngine.isStreaming=!1,this.animationEngine.fontsReady=!0;const e=document.getElementById("stitch-icon-hide");e&&e.remove();const o=this.animationEngine.agentCursor||document.getElementById("stitch-agent-cursor");o&&(o.style.display="none"),setTimeout(()=>{typeof window<"u"&&window.__stitchReportDimensions?.()},100)}handleHtmlFinalize(e){document.open(),document.write(e),document.close()}},Oe=typeof window<"u"?window:globalThis;Oe.goog||(Oe.goog={}),Oe.goog.getMsg||(Oe.goog.getMsg=(e,o)=>{let g=e;if(o)for(const[r,a]of Object.entries(o))g=g.replaceAll(`{$${r}}`,()=>a);return g}),RegExp.prototype.toJSON=RegExp.prototype.toString;var je;(function(e){e.DISCONNECTED="disconnected",e.RECONNECTING="reconnecting",e.BUSY="busy",e.CONNECTED="connected",e.DONE="done",e.ERROR="error"})(je||(je={}));var Je;(function(e){e[e.EXPORT_CLICK_UNSPECIFIED=0]="EXPORT_CLICK_UNSPECIFIED",e[e.EXPORT_CLICK_FIGMA=1]="EXPORT_CLICK_FIGMA",e[e.EXPORT_CLICK_CODE=2]="EXPORT_CLICK_CODE",e[e.EXPORT_CLICK_DOWNLOAD=3]="EXPORT_CLICK_DOWNLOAD",e[e.EXPORT_CLICK_FIREBASE=4]="EXPORT_CLICK_FIREBASE",e[e.EXPORT_CLICK_AIS=5]="EXPORT_CLICK_AIS",e[e.EXPORT_CLICK_JULES=6]="EXPORT_CLICK_JULES",e[e.EXPORT_CLICK_LOVABLE=7]="EXPORT_CLICK_LOVABLE",e[e.EXPORT_CLICK_BOLT=8]="EXPORT_CLICK_BOLT"})(Je||(Je={}));var et;(function(e){e[e.THREAD_FILTER_UNSPECIFIED=0]="THREAD_FILTER_UNSPECIFIED",e[e.ACTIVE=1]="ACTIVE",e[e.RESOLVED=2]="RESOLVED",e[e.ALL=3]="ALL"})(et||(et={}));var tt;(function(e){e.STATE_UNSPECIFIED="STATE_UNSPECIFIED",e.ACTIVE="ACTIVE",e.IDLE="IDLE",e.ARCHIVED="ARCHIVED"})(tt||(tt={}));var ot;(function(e){e.SENDER_UNSPECIFIED="SENDER_UNSPECIFIED",e.USER="USER",e.AGENT="AGENT",e.SYSTEM="SYSTEM"})(ot||(ot={}));var gt;(function(e){e.STATE_UNSPECIFIED="STATE_UNSPECIFIED",e.SYNCHRONIZED="SYNCHRONIZED",e.RUNNING="RUNNING",e.RECONCILED="RECONCILED"})(gt||(gt={}));var Z;(function(e){e.SOURCE_TYPE_UNSPECIFIED="SOURCE_TYPE_UNSPECIFIED",e.SCREEN="SCREEN",e.DOCUMENT="DOCUMENT",e.IMAGE="IMAGE",e.TEXT="TEXT",e.HTML="HTML"})(Z||(Z={}));var rt;(function(e){e[e.CAN_ACCESS_STITCH=0]="CAN_ACCESS_STITCH",e[e.DEFAULT_MODEL=8]="DEFAULT_MODEL",e[e.RELEASE_STAGE_TAG=9]="RELEASE_STAGE_TAG",e[e.STITCH_OUTAGE=10]="STITCH_OUTAGE",e[e.GENERATE_PRD=25]="GENERATE_PRD",e[e.GENERATE_PITCH_DECK=26]="GENERATE_PITCH_DECK",e[e.ANNOTATIONS_AS_TEXT=30]="ANNOTATIONS_AS_TEXT",e[e.INFO_PANEL=31]="INFO_PANEL",e[e.ASSISTANT_TOOLS=34]="ASSISTANT_TOOLS",e[e.DIRECT_EDIT_HTML=36]="DIRECT_EDIT_HTML",e[e.ANNOTATION_MOVE_TOOL=41]="ANNOTATION_MOVE_TOOL",e[e.ASSISTANT_PLATFORM_AGNOSTIC=44]="ASSISTANT_PLATFORM_AGNOSTIC",e[e.COPY_SCREENS=45]="COPY_SCREENS",e[e.IS_INTERNAL_TESTER=47]="IS_INTERNAL_TESTER",e[e.CANCEL_SESSIONS=49]="CANCEL_SESSIONS",e[e.UPLOAD_TEXT_FILES=54]="UPLOAD_TEXT_FILES",e[e.LIVE_MODE=55]="LIVE_MODE",e[e.CORGI_MODE=56]="CORGI_MODE",e[e.DIVRIOTS_FIGMA_EXPORT=58]="DIVRIOTS_FIGMA_EXPORT",e[e.GLOBAL_EXPORT_BUTTON=60]="GLOBAL_EXPORT_BUTTON",e[e.SHOW_CHAT_WHEN_LOADING=61]="SHOW_CHAT_WHEN_LOADING",e[e.ENABLE_AUTO_URL_DETECTION=65]="ENABLE_AUTO_URL_DETECTION",e[e.IMAGE_TO_CODE_UGC=66]="IMAGE_TO_CODE_UGC",e[e.STICKY_NOTES=67]="STICKY_NOTES",e[e.DESIGN_SYSTEM=68]="DESIGN_SYSTEM",e[e.DEPRECATE_LEGACY_AGENT=69]="DEPRECATE_LEGACY_AGENT",e[e.GENIE=70]="GENIE",e[e.FAVOURITES=71]="FAVOURITES",e[e.STUDIO=72]="STUDIO",e[e.EXPORT_MCP=73]="EXPORT_MCP",e[e.HTML_SANITIZATION=74]="HTML_SANITIZATION",e[e.IFRAME_CSP_HEADERS=75]="IFRAME_CSP_HEADERS",e[e.LIVE_MODE_SCREEN_SHARE=76]="LIVE_MODE_SCREEN_SHARE",e[e.ENABLE_PROTOTYPES_V2=77]="ENABLE_PROTOTYPES_V2",e[e.PROMPT_REWRITER=78]="PROMPT_REWRITER",e[e.DESIGN_SUGGESTIONS=79]="DESIGN_SUGGESTIONS",e[e.STYLE_TUNER=81]="STYLE_TUNER",e[e.VARIANT_SUGGESTIONS=82]="VARIANT_SUGGESTIONS",e[e.FIGMA_IMPORT_URL=83]="FIGMA_IMPORT_URL",e[e.ENABLE_PROTOTYPE_ZERO_STATE=84]="ENABLE_PROTOTYPE_ZERO_STATE",e[e.LIVE_MODE_MODEL=86]="LIVE_MODE_MODEL",e[e.ENABLE_RESET_EMAIL_SETTINGS=87]="ENABLE_RESET_EMAIL_SETTINGS",e[e.ENABLE_NEW_EXAMPLES=88]="ENABLE_NEW_EXAMPLES",e[e.PHOTOS_IMPORT=89]="PHOTOS_IMPORT",e[e.DESIGN_FOCUS_TIMER=91]="DESIGN_FOCUS_TIMER",e[e.UPLOAD_PDF_FILES=92]="UPLOAD_PDF_FILES",e[e.DRIVE_IMPORT=93]="DRIVE_IMPORT",e[e.STREAMING_SESSION=94]="STREAMING_SESSION",e[e.AIS_EXPORT_API=95]="AIS_EXPORT_API",e[e.PUNCTUAL_INTEGRATION=97]="PUNCTUAL_INTEGRATION",e[e.FIRST_PARTY_PRESETS=98]="FIRST_PARTY_PRESETS",e[e.CANVAS_RENDER_FIDELITY=99]="CANVAS_RENDER_FIDELITY",e[e.ENABLE_INPLACE_SCREEN_EDITING=100]="ENABLE_INPLACE_SCREEN_EDITING",e[e.CANVAS_LIVE_BY_DEFAULT=101]="CANVAS_LIVE_BY_DEFAULT",e[e.NEW_FONTS=102]="NEW_FONTS",e[e.DESIGN_SYSTEM_V2=103]="DESIGN_SYSTEM_V2",e[e.STREAMING_ANIMATION=104]="STREAMING_ANIMATION",e[e.EXPORT_NETLIFY=105]="EXPORT_NETLIFY",e[e.SKIP_FIG_PARSING=106]="SKIP_FIG_PARSING",e[e.FIG_UPLOAD=107]="FIG_UPLOAD",e[e.DIRECT_EDIT_2_0=108]="DIRECT_EDIT_2_0",e[e.PASTE_FROM_FIGMA=109]="PASTE_FROM_FIGMA",e[e.DS_FROM_GITHUB=110]="DS_FROM_GITHUB",e[e.IDEATE_SKILL=111]="IDEATE_SKILL",e[e.AUTO_PAN_TO_NEW_SCREENS=112]="AUTO_PAN_TO_NEW_SCREENS",e[e.TEXT_NODE=113]="TEXT_NODE",e[e.ENABLE_RELOAD_ON_AUTH_FAILURE=114]="ENABLE_RELOAD_ON_AUTH_FAILURE",e[e.REMOVE_DEVICE_TYPE_TOGGLE=115]="REMOVE_DEVICE_TYPE_TOGGLE",e[e.SYNC_EXTERNAL_INSTANCES=116]="SYNC_EXTERNAL_INSTANCES",e[e.COMMENTS_V1=117]="COMMENTS_V1",e[e.ENABLE_BLANK_CANVAS=118]="ENABLE_BLANK_CANVAS",e[e.DIRECT_EDIT_TOOLS=119]="DIRECT_EDIT_TOOLS",e[e.DIRECT_EDIT_FLOW_LAYOUT=120]="DIRECT_EDIT_FLOW_LAYOUT",e[e.SPEED_BALANCED_MODE=121]="SPEED_BALANCED_MODE",e[e.YJS_LIVE_CANVAS=122]="YJS_LIVE_CANVAS",e[e.ENABLE_PROJECT_PERMISSIONS=123]="ENABLE_PROJECT_PERMISSIONS",e[e.CLI_DOCS=124]="CLI_DOCS"})(rt||(rt={}));var at;(function(e){e.ADDED="ADDED",e.REMOVED="REMOVED"})(at||(at={}));var st;(function(e){e.PRESENCE="PRESENCE",e.COMMENT="COMMENT",e.SCREEN="SCREEN"})(st||(st={}));var _t;(function(e){e.CREATED="CREATED",e.UPDATED="UPDATED",e.DELETED="DELETED",e.RESOLVED="RESOLVED",e.UNDELETED="UNDELETED",e.THREAD_CREATED="THREAD_CREATED",e.THREAD_UPDATED="THREAD_UPDATED",e.THREAD_DELETED="THREAD_DELETED",e.THREAD_UNDELETED="THREAD_UNDELETED"})(_t||(_t={}));var it;(function(e){e.UPSERTED="UPSERTED",e.DELETED="DELETED"})(it||(it={}));var Et;(function(e){e[e.CLIENT_CAPABILITY_UNSPECIFIED=0]="CLIENT_CAPABILITY_UNSPECIFIED",e[e.CLIENT_CAPABILITY_YJS=1]="CLIENT_CAPABILITY_YJS"})(Et||(Et={}));var nt;(function(e){e[e.OPERATION_UNSPECIFIED=0]="OPERATION_UNSPECIFIED",e[e.ADDED=1]="ADDED",e[e.UPDATED=2]="UPDATED",e[e.DELETED=3]="DELETED"})(nt||(nt={}));var St;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.POSITIVE=1]="POSITIVE",e[e.NEGATIVE=2]="NEGATIVE",e[e.FAVOURITE=3]="FAVOURITE"})(St||(St={}));var Mt;(function(e){e[e.DESIGN_FEEDBACK_REASON_UNSPECIFIED=0]="DESIGN_FEEDBACK_REASON_UNSPECIFIED",e[e.DESIGN_DOESNT_MATCH_PROMPT=1]="DESIGN_DOESNT_MATCH_PROMPT",e[e.EDIT_DOESNT_MATCH_PROMPT=2]="EDIT_DOESNT_MATCH_PROMPT",e[e.DESCRIPTION_DOESNT_MATCH=3]="DESCRIPTION_DOESNT_MATCH",e[e.COMPONENT_ISSUE=4]="COMPONENT_ISSUE",e[e.INCORRECT_THEME=5]="INCORRECT_THEME",e[e.FIGMA_EXPORT_FAILED=6]="FIGMA_EXPORT_FAILED",e[e.OTHER=7]="OTHER"})(Mt||(Mt={}));var Tt;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.TEXT_TO_UI=1]="TEXT_TO_UI",e[e.IMAGE_TO_UI=2]="IMAGE_TO_UI",e[e.IMAGE_TO_UI_PRO=5]="IMAGE_TO_UI_PRO",e[e.TEXT_TO_APP=3]="TEXT_TO_APP",e[e.TEXT_TO_UI_PRO=4]="TEXT_TO_UI_PRO",e[e.TEXT_TO_UI_PRO_IMAGE_SPACE=6]="TEXT_TO_UI_PRO_IMAGE_SPACE",e[e.DESIGN=7]="DESIGN",e[e.DESIGN_V2=8]="DESIGN_V2"})(Tt||(Tt={}));var ct;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.PUBLIC=1]="PUBLIC",e[e.PRIVATE=2]="PRIVATE"})(ct||(ct={}));var It;(function(e){e[e.ORIGIN_UNSPECIFIED=0]="ORIGIN_UNSPECIFIED",e[e.STITCH=1]="STITCH",e[e.IMPORTED_FROM_GALILEO=2]="IMPORTED_FROM_GALILEO"})(It||(It={}));var At;(function(e){e[e.ROLE_UNSPECIFIED=0]="ROLE_UNSPECIFIED",e[e.OWNER=1]="OWNER",e[e.READER=2]="READER"})(At||(At={}));var lt;(function(e){e.UNSPECIFIED="UNSPECIFIED",e.SCREEN_INSTANCE="SCREEN_INSTANCE",e.DESIGN_SYSTEM_INSTANCE="DESIGN_SYSTEM_INSTANCE",e.GROUP_INSTANCE="GROUP_INSTANCE",e.TEXT_INSTANCE="TEXT_INSTANCE"})(lt||(lt={}));var dt;(function(e){e.UNSPECIFIED="unspecified",e.CHAT_MESSAGE="chat_message",e.EDIT_THEME="edit_theme",e.GENERATE_VARIANTS="generate_variants",e.REGENERATE_DESIGN="regenerate_design",e.ANNOTATE="annotate",e.GENERATE_PROTOTYPE="generate_prototype",e.EDIT_PROTOTYPE="edit_prototype",e.PREDICTIVE_HEATMAP="predictive_heatmap",e.GENERATE_PRD="generate_prd",e.IMAGE_TO_CODE="image_to_code",e.GENERATE_SLIDES="generate_slides",e.APPLY_DESIGN_SYSTEM="apply_design_system",e.APP_STORE_ASSETS="app_store_assets",e.MARKETING_KIT="marketing_kit",e.ACCESSIBILITY_AUDIT="accessibility_audit",e.MISSING_STATES="missing_states",e.DEV_HANDOFF="dev_handoff",e.WEB_ASSETS="web_assets",e.GENERATE_PROTOTYPE_V2="generate_prototype_v2",e.EDIT_PROTOTYPE_V2="edit_prototype_v2",e.PROTOTYPE_V2_SESSION="prototype_v2_session",e.EXTRACT_DESIGN_SYSTEM="extract_design_system",e.UPDATE_DESIGN_SYSTEM="update_design_system",e.UX_CRITIQUE="ux_critique",e.DIRECT_EDIT_AI="direct_edit_ai",e.UPLOAD_FILE="upload_file"})(dt||(dt={}));var Ot;(function(e){e.UNSPECIFIED="unspecified",e.TURBO_AGENT="turbo_agent",e.PRO_AGENT="pro_agent",e.IMAGE_AGENT="image_agent",e.IMAGE_PRO_AGENT="image_pro_agent",e.GENIE_AGENT="genie_agent",e.HATTER_AGENT="hatter_agent",e.GEMINI_3_AGENT="gemini_3_agent"})(Ot||(Ot={}));var Nt;(function(e){e.UNSPECIFIED="unspecified",e.NEW="new",e.RUNNING="running",e.DONE="done",e.CANCELLED="cancelled",e.FAILED="failed",e.WAITING_FOR_RESOURCE="waiting_for_resource"})(Nt||(Nt={}));var Gt;(function(e){e[e.GENIE_STATE_UNSPECIFIED=0]="GENIE_STATE_UNSPECIFIED",e[e.GENIE_STATE_DONE=1]="GENIE_STATE_DONE"})(Gt||(Gt={}));var Q;(function(e){e.UNSPECIFIED="unspecified",e.MOBILE="mobile",e.DESKTOP="desktop",e.TABLET="tablet",e.AGNOSTIC="agnostic"})(Q||(Q={}));var ut;(function(e){e.UNSPECIFIED="unspecified",e.LIGHT="light",e.DARK="dark"})(ut||(ut={}));var Dt;(function(e){e.UNSPECIFIED="Unspecified",e.BE_VIETNAM_PRO="Be Vietnam Pro",e.EPILOGUE="Epilogue",e.INTER="Inter",e.LEXEND="Lexend",e.MANROPE="Manrope",e.NEWSREADER="Newsreader",e.NOTO_SERIF="Noto Serif",e.PLUS_JAKARTA_SANS="Plus Jakarta Sans",e.PUBLIC_SANS="Public Sans",e.SPACE_GROTESK="Space Grotesk",e.SPLINE_SANS="Spline Sans",e.WORK_SANS="Work Sans",e.DOMINE="Domine",e.LIBRE_CASLON_TEXT="Libre Caslon Text",e.EB_GARAMOND="EB Garamond",e.LITERATA="Literata",e.SOURCE_SERIF_FOUR="Source Serif 4",e.MONTSERRAT="Montserrat",e.METROPOLIS="Metropolis",e.SOURCE_SANS_THREE="Source Sans 3",e.NUNITO_SANS="Nunito Sans",e.ARIMO="Arimo",e.HANKEN_GROTESK="Hanken Grotesk",e.RUBIK="Rubik",e.GEIST="Geist",e.DM_SANS="DM Sans",e.IBM_PLEX_SANS="IBM Plex Sans",e.SORA="Sora",e.ANYBODY="Anybody",e.ANTON="Anton",e.ARCHIVO_NARROW="Archivo Narrow",e.ATKINSON_HYPERLEGIBLE_NEXT="Atkinson Hyperlegible Next",e.BARLOW_CONDENSED="Barlow Condensed",e.BEBAS_NEUE="Bebas Neue",e.BODONI_MODA="Bodoni Moda",e.BRICOLAGE_GROTESQUE="Bricolage Grotesque",e.CHIVO="Chivo",e.CLIMATE_CRISIS="Climate Crisis",e.COMFORTAA="Comfortaa",e.COURIER_PRIME="Courier Prime",e.FIRA_SANS="Fira Sans",e.GOOGLE_SANS="Google Sans",e.GOOGLE_SANS_CODE="Google Sans Code",e.GOOGLE_SANS_FLEX="Google Sans Flex",e.GOOGLE_SANS_MONO="Google Sans Mono",e.GOOGLE_SANS_TEXT="Google Sans Text",e.IBM_PLEX_SERIF="IBM Plex Serif",e.JETBRAINS_MONO="JetBrains Mono",e.KARLA="Karla",e.LIBRE_FRANKLIN="Libre Franklin",e.MERRIWEATHER="Merriweather",e.NOTO_SANS="Noto Sans",e.OPEN_SANS="Open Sans",e.OSWALD="Oswald",e.OUTFIT="Outfit",e.PLAYFAIR_DISPLAY="Playfair Display",e.POIRET_ONE="Poiret One",e.QUESTRIAL="Questrial",e.QUICKSAND="Quicksand",e.RALEWAY="Raleway",e.ROBOTO_FLEX="Roboto Flex",e.SPACE_MONO="Space Mono",e.SYNE="Syne",e.VOLLKORN="Vollkorn"})(Dt||(Dt={}));var Rt;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.ROUND_FOUR=1]="ROUND_FOUR",e[e.ROUND_EIGHT=2]="ROUND_EIGHT",e[e.ROUND_TWELVE=3]="ROUND_TWELVE",e[e.ROUND_FULL=4]="ROUND_FULL"})(Rt||(Rt={}));var vt;(function(e){e[e.UNSPECIFIED=0]="UNSPECIFIED",e[e.LEVEL_1=1]="LEVEL_1",e[e.LEVEL_2=2]="LEVEL_2",e[e.LEVEL_3=3]="LEVEL_3",e[e.LEVEL_4=4]="LEVEL_4"})(vt||(vt={}));var Lt;(function(e){e.UNSPECIFIED="unspecified",e.MONOCHROME="monochrome",e.NEUTRAL="neutral",e.TONAL_SPOT="tonal_spot",e.VIBRANT="vibrant",e.EXPRESSIVE="expressive",e.FIDELITY="fidelity",e.CONTENT="content",e.RAINBOW="rainbow",e.FRUIT_SALAD="fruit_salad"})(Lt||(Lt={}));var Ct;(function(e){e.COMPONENT_TYPE_UNSPECIFIED="component_type_unspecified",e.IMAGE="image",e.TEXT="text",e.BUTTON="button",e.INPUT="input",e.CONTAINER="container"})(Ct||(Ct={}));var Pt;(function(e){e.UNSPECIFIED="screen_status_unspecified",e.IN_PROGRESS="in_progress",e.COMPLETE="complete",e.FAILED="failed"})(Pt||(Pt={}));var ht;(function(e){e.UNSPECIFIED="display_mode_unspecified",e.SCREENSHOT="screenshot",e.HTML="html",e.CODE="code",e.MARKDOWN="markdown",e.STICKY_NOTE="sticky_note",e.SVG="svg",e.TABLE="table",e.MERMAID="mermaid",e.SHADER="shader",e.CHECKLIST="checklist",e.CHART="chart",e.PDF="pdf",e.FIGMA="figma"})(ht||(ht={}));var mt;(function(e){e.UNSPECIFIED="unspecified",e.FREEFORM_TEXT="freeform_text",e.MULTIPLE_CHOICE="multiple_choice",e.SINGLE_CHOICE="single_choice",e.YES_NO="yes_no",e.RATING_SCALE="rating_scale"})(mt||(mt={}));var ft;(function(e){e.UNSPECIFIED="unspecified",e.DESIGN="design",e.IMAGE="image",e.PROTOTYPE="prototype",e.DOCUMENT="document",e.PROTOTYPE_V2="prototype_v2",e.VIDEO="video"})(ft||(ft={}));var pt;(function(e){e.UNSPECIFIED="status_unspecified",e.STARTED="started",e.COMPLETED="completed",e.FAILED="failed"})(pt||(pt={}));var yt;(function(e){e[e.PROJECT_IMPORT_STATE_UNSPECIFIED=0]="PROJECT_IMPORT_STATE_UNSPECIFIED",e[e.NEVER_IMPORTED=2]="NEVER_IMPORTED",e[e.IMPORT_FAILED=3]="IMPORT_FAILED",e[e.IMPORT_SUCCESS=4]="IMPORT_SUCCESS",e[e.IMPORT_PENDING=5]="IMPORT_PENDING"})(yt||(yt={}));var bt;(function(e){e.REPLACE_CONTENT="replace_content",e.REPLACE_ELEMENT="replace_element",e.APPEND_CHILD="append_child",e.PREPEND_CHILD="prepend_child",e.INSERT_BEFORE="insert_before",e.INSERT_AFTER="insert_after",e.SET_ATTRIBUTE="set_attribute",e.REMOVE_ATTRIBUTE="remove_attribute",e.ADD_CLASS="add_class",e.REMOVE_CLASS="remove_class",e.REMOVE_ELEMENT="remove_element",e.SET_STYLE="set_style"})(bt||(bt={}));var m="Stitch",se="Gemini",f="Figma",Tg=16,ye="Nano Banana",cg=goog.getMsg("Product name, {$stitchProductName} (beta)",{stitchProductName:m}),Ig=goog.getMsg("{$stitchProductName} avatar",{stitchProductName:m}),Ag=goog.getMsg("{$stitchProductName} Privacy Notice",{stitchProductName:m}),lg=goog.getMsg("{$stitchProductName} Subprocessors",{stitchProductName:m}),dg=goog.getMsg(`*Last modified: September 9, 2026*
+
+Google and its affiliates engage the third-party entities in the table below to perform limited activities in connection with Stitch. The table shows what activity each entity performs.
+
+### Third-Party Subprocessors
+
+| Entity Name | Activity | Country where processing is performed | Website |
+| :--- | :--- | :--- | :--- |
+| **Composio, Inc.** | Third-party tool and API integrations on the user’s behalf | *United States of America* | [composio.dev](https://composio.dev) |`),Og=goog.getMsg(`*Last modified: September 9, 2026*
+
+Google and its affiliates engage the third-party entities in the table below to perform limited activities in connection with Stitch. The table shows what activity each entity performs.
+
+### Third-Party Subprocessors
+
+| Entity Name | Activity | Country where processing is performed | Website |
+| :--- | :--- | :--- | :--- |
+| **Sampark Inc, (dba Composio)** | Third-party tool and API integrations on the user’s behalf | *United States of America* | [composio.dev](https://composio.dev) |`),Ng=goog.getMsg("Subprocessors"),Gg=goog.getMsg("Additional Terms of Service for {$stitchProductName}",{stitchProductName:m}),ug=goog.getMsg(`**You’re the Driver.** Stitch outputs are not always guaranteed to be accurate. You can use Stitch workspaces, projects and canvases to collaborate with other users on your team and are responsible for ensuring your team’s use of Stitch aligns with your organization’s internal policies and legal obligations.
+
+* **Review your work:** You are responsible for supervising Stitch. You must independently verify all AI-generated suggestions—including code commits and repository changes—before taking action.
+* **Autonomous Actions:** If you authorize the product to act autonomously, you assume all responsibility for the impact on your project or production systems.
+* **Notice:** You agree to notify all team members whose data may be processed by Stitch about these Terms and the [Privacy Notice](https://stitch.withgoogle.com/terms/privacy).
+
+**Connected Third Party Services.** Stitch may connect to your external development environments or tools (like GitHub) at your direction. By connecting an external service, you authorize Google to access and share data with that service on your behalf to perform tasks like suggested bug fixes. You confirm that you have the authority to connect these services and that your use complies with those third-party terms.`),Dg=goog.getMsg("Terms of Service"),Rg=goog.getMsg("By continuing, you (1) acknowledge the [Stitch Privacy Notice](https://stitch.withgoogle.com/terms/privacy) and the [Google Privacy Policy](https://policies.google.com/privacy), and (2) agree to the [Stitch Additional Terms of Service](https://stitch.withgoogle.com/terms) and the [Google Terms of Service](https://policies.google.com/terms)."),vg=goog.getMsg("Failed to accept Terms of Service. Please try again."),Lg=goog.getMsg("Continue"),Cg=goog.getMsg("Continuing..."),Pg=goog.getMsg("Go Back"),hg=goog.getMsg("Privacy for {$stitchProductName}",{stitchProductName:m}),mg=goog.getMsg(`**Last updated: September 30, 2026**
+
+This notice and the [Google Privacy Policy](https://policies.google.com/privacy) describe how Stitch handles your data.
+
+### Your Control Over AI Training
+
+You are in control of whether your data is used to train Google’s generative AI models:
+
+* **Your Data is Protected:** Google does not train our generative AI models on your full connected codebase or other 3P integrations or the full data within your connected development environments (like GitHub or Render).
+If you opt in to training, we only learn from the specific interactions you have with Stitch or feedback you submit.
+* **Training & Opt In:** By default, we will not train on any of your data.
+If you opt in to training, we may train our generative AI models on activity traces within Stitch and feedback provided. Activity traces may include your interactions with Stitch, including context fragments (such as relevant code or data), your specific prompts, Stitch’s suggestions and outputs, and how you interact with those suggestions.
+
+### How we use your data
+
+When you use Stitch, we process your data in line with our [Privacy Policy](https://policies.google.com/privacy) and this Privacy Notice to provide, improve, and develop Google products and services. For example:
+
+* **Product Improvement:** We may use this data to improve Stitch generally. In line with our commitment above, we won’t train our generative AI models on your data unless you’ve opted in to training.
+* **Quality Review:** A sample of your data may also be reviewed by trained human reviewers to ensure quality.
+* **Feedback:** When you share thumbs up or thumbs down feedback, we’ll also collect the associated content – like your prompts, conversations, uploads, and the outputs received (e.g., chats, generated designs, etc.) – so we can understand the issue. This data is handled in line with our [Google Privacy Policy](https://policies.google.com/privacy) and is used to help us improve the product for everyone.`),fg=goog.getMsg("Website URL"),pg=goog.getMsg("{$figmaProductName} selection link",{figmaProductName:f}),yg=goog.getMsg("Add from Drive"),bg=goog.getMsg("Import from Photos"),Ug=goog.getMsg("Failed to connect to {$figmaProductName}. Please try again.",{figmaProductName:f}),Bg=goog.getMsg("Failed to open Google Drive. Please try again."),Hg=goog.getMsg("Failed to open Google Photos. Please try again."),wg=goog.getMsg("Paste {$figmaProductName} selection link...",{figmaProductName:f}),Yg=goog.getMsg("Explore creative directions with {$nanoBananaProductName} image model.",{nanoBananaProductName:ye}),Vg=goog.getMsg("Explore creative directions with our most advanced image model."),Fg=goog.getMsg("Design fast with {$geminiModel}. Export designs to code or {$figmaProductName}.",{geminiModel:`${se} Flash`,figmaProductName:f}),kg=goog.getMsg("High-quality designs in HTML with {$geminiModel}. Export to coding agents.",{geminiModel:`${se} 3 Flash`}),Wg=goog.getMsg("Uses {$geminiModel}. Prioritizes maximum quality and reasoning over speed.",{geminiModel:`${se} 3.1 Pro`}),Xg=goog.getMsg("Redesign existing apps or sites with {$nanoBananaProProductName}. Attach a screenshot.",{nanoBananaProProductName:`${ye} Pro`}),Kg=goog.getMsg("Bring a problem to solve and see solutions."),xg=goog.getMsg("{$geminiModel} for rapid collaboration, still good quality.",{geminiModel:`${se} 3.5 Flash-Lite`}),$g=goog.getMsg("{$geminiModel} for a balance between speed and high quality.",{geminiModel:`${se} 3.8 Flash`}),qg=goog.getMsg("Speed"),Zg=goog.getMsg("Balanced"),Qg=goog.getMsg("Bring a problem to solve and see solutions."),zg=goog.getMsg("Mode switching is locked during ideation"),jg=goog.getMsg("New"),Jg=goog.getMsg("Create high-quality designs with the Hatter agent."),er=goog.getMsg("{$stitchName} Settings",{stitchName:m}),tr=goog.getMsg("Manage Account"),or=goog.getMsg("Switch Account"),gr=goog.getMsg("Sign out"),rr=goog.getMsg("Sign In"),ar=goog.getMsg("Terms & Privacy"),sr=goog.getMsg("Third Party Notices"),_r=goog.getMsg("Account Menu"),ir=goog.getMsg("FAQ"),Er=goog.getMsg("Forum"),nr=goog.getMsg("Prompt Guide"),Sr=goog.getMsg("Send Feedback"),Mr=goog.getMsg("Privacy Notice"),Tr=goog.getMsg("Rename Project"),cr=goog.getMsg("Share"),Ir=goog.getMsg("Standard Mode"),Ar=goog.getMsg("Share Project"),lr=goog.getMsg("Enable sharing & remixing"),dr=goog.getMsg("Anyone with the link can access this project"),Or=goog.getMsg("Only you can access this project"),Nr=goog.getMsg("By making your project public, you allow anyone with the link to view and remix its generated designs and code. You can revoke public access at any time, but this will not remove already remixed designs."),Gr=goog.getMsg("Copy link"),ur=goog.getMsg("Copy link to prototype"),Dr=goog.getMsg("Link copied to clipboard!"),Rr=goog.getMsg("This is an example project"),vr=goog.getMsg("This content was created by another person. It may be inaccurate or unsafe."),Lr=goog.getMsg("This content was generated by a {$stitchProductName} user. Do not enter sensitive information as it may be seen by the owner.",{stitchProductName:m}),Cr=goog.getMsg("Design history"),Pr=goog.getMsg("Recent"),hr=goog.getMsg("Yesterday"),mr=goog.getMsg("Last 7 days"),fr=goog.getMsg("Last 30 days"),pr=goog.getMsg("This Year"),yr=goog.getMsg("Last Year"),br=goog.getMsg("Project Brief"),Ur=goog.getMsg("Generate a product requirements document for your project."),Br=goog.getMsg("Generating..."),Hr=goog.getMsg("Failed to generate Project Brief"),wr=goog.getMsg("Examples"),Yr=goog.getMsg("Failed to load projects"),Vr=goog.getMsg("Need inspiration?"),Fr=goog.getMsg("Explore"),kr=goog.getMsg("Previous examples"),Wr=goog.getMsg("Next examples"),Xr=goog.getMsg("Create new"),Kr=goog.getMsg("New Project"),xr=goog.getMsg("Start a new design"),$r=goog.getMsg("Start a new"),qr=goog.getMsg("design"),Zr=goog.getMsg("Welcome to {$stitchProductName}..",{stitchProductName:m}),Qr=goog.getMsg("App"),zr=goog.getMsg("Web"),jr=goog.getMsg("Desktop"),Jr=goog.getMsg("Device"),ea=goog.getMsg("Generate designs"),ta=goog.getMsg("Try these prompts"),oa=goog.getMsg("Describe your design"),ga=goog.getMsg("What native mobile app shall we design?"),ra=goog.getMsg("Drop files to upload them for your designs"),aa=goog.getMsg("What responsive web experience shall we design?"),sa=goog.getMsg("Describe your redesign or edit. Select or attach a screenshot for best results."),_a=goog.getMsg("The file size must be 5MB or smaller"),ia=goog.getMsg("{$figmaProductName} files must be 200MB or smaller",{figmaProductName:f}),Ea=goog.getMsg("Failed to process Figma file {$fileName}",{fileName:"{fileName}"}),na=goog.getMsg("No design tokens found in {$fileName}. The file may not contain published styles.",{fileName:"{fileName}"}),Sa=goog.getMsg("Processing Figma files..."),Ma=goog.getMsg("Figma File"),Ta=goog.getMsg("Imported {$count} screen(s) from Figma.",{count:"{count}"}),ca=goog.getMsg("No screens found for the Figma link."),Ia=goog.getMsg("Failed to import Figma selection."),Aa=goog.getMsg("Imported {$count} screen(s) from Figma clipboard.",{count:"{count}"}),la=goog.getMsg("Failed to import from Figma clipboard."),da=goog.getMsg("Failed to upload files. Please try again later."),Oa=goog.getMsg("Importing from Figma clipboard…"),Na=goog.getMsg("Figma paste"),Ga=goog.getMsg("Project has reached the limit of 50 uploaded images."),ua=goog.getMsg("Only JPG and PNG are supported"),Da=goog.getMsg("Uploading image..."),Ra=goog.getMsg("File not allowed. Please try a different one."),va=goog.getMsg("Only image (JPG, PNG) and text (html, txt, md) files are supported"),La=goog.getMsg("Please enter a valid URL (e.g., https://example.com)"),Ca=goog.getMsg("Please enter a valid GitHub repository URL (e.g., https://github.com/owner/repo)"),Pa=goog.getMsg("Dark"),ha=goog.getMsg("Light"),ma=goog.getMsg("System"),fa=goog.getMsg("Theme updated!"),pa=goog.getMsg("Appearance"),ya=goog.getMsg("Color"),ba=goog.getMsg("Custom"),Ua=goog.getMsg("Corner radius"),Ba=goog.getMsg("Font"),Ha=goog.getMsg("Search fonts..."),wa=goog.getMsg("Recommended"),Ya=goog.getMsg("Google Fonts"),Va=goog.getMsg("No fonts found"),Fa=goog.getMsg("Apply theme"),ka=goog.getMsg("DESIGN.md"),Wa=goog.getMsg("Start with your design"),Xa=goog.getMsg("Blank project"),Ka=goog.getMsg("DESIGN.md is a design system document that describes the desired look and feel of your product."),xa=goog.getMsg("Upload a DESIGN.md"),$a=goog.getMsg("Drag in a DESIGN.md file from your computer"),qa=goog.getMsg("Paste a DESIGN.md"),Za=goog.getMsg("Paste DESIGN.md markdown and save"),Qa=goog.getMsg("Generate from codebase"),za=goog.getMsg("Copy a prompt for your coding agent"),ja=goog.getMsg("From the web"),Ja=goog.getMsg("Browse popular DESIGN.md repositories"),es=goog.getMsg("Import from Figma"),ts=goog.getMsg("Upload a .fig file or connect account"),os=goog.getMsg("Drop a DESIGN.md file here, or browse to upload from your computer. Files up to 10 MB."),gs=goog.getMsg("Paste the contents of a DESIGN.md file below, then save to continue."),rs=goog.getMsg("Copy this prompt into your coding agent. It will analyze your codebase and produce a DESIGN.md file at the project root."),as=goog.getMsg("Browse popular DESIGN.md repositories. These repositories are maintained by 3rd parties and are not endorsed or affiliated with Stitch and Google. Review all content and paste with care."),ss=goog.getMsg(`# DESIGN.md
+
+## Overview
+Describe the product, users, and goals…
+
+## Screens
+- Home
+- Details
+- Settings
+
+## Components
+…`),_s=goog.getMsg("Save"),is=goog.getMsg("Prompt copied to clipboard"),Es=goog.getMsg("Back"),ns=goog.getMsg("Browse"),Ss=goog.getMsg("Clear"),Ms=goog.getMsg("Copy prompt"),Ts=goog.getMsg("Copied!"),cs=goog.getMsg("Drop your .fig file here"),Is=goog.getMsg("Drop your DESIGN.md file here"),As=goog.getMsg("Open docs"),ls=goog.getMsg("or"),ds=goog.getMsg("File size exceeds 10 MB limit"),Os=goog.getMsg(`Analyze the design system of this codebase with the goal of creating a DESIGN.md file in the project root and giving the user a file for easy copy & pasting.
+
+Reference material:
+  Overview : https://stitch.withgoogle.com/docs/design-md/overview/
+  Format   : https://stitch.withgoogle.com/docs/design-md/format/
+  Spec     : https://github.com/google-labs-code/design.md
+
+Examples from the spec repo:
+  https://github.com/google-labs-code/design.md/blob/main/examples/atmospheric-glass/DESIGN.md
+  https://github.com/google-labs-code/design.md/blob/main/examples/paws-and-paths/DESIGN.md
+
+Requirements:
+- Begin with YAML frontmatter containing all structured design tokens
+  (colors, typography, spacing, elevation, motion, radii, shadows, etc.)
+- Follow with free-form Markdown that describes the look & feel and
+  captures design intent that token values alone cannot convey
+- The file must be entirely self-contained — do not reference any
+  files, variables, or paths from the codebase
+- All token values must use valid YAML design token format
+
+If you have access to a running local server or screenshots of the
+product, compare your DESIGN.md against the rendered UI. Revise until
+both the YAML tokens and the written description faithfully capture
+the product's visual identity.`),Ns=goog.getMsg("Delete"),Gs=goog.getMsg("Edit Element"),us=goog.getMsg("Edit Text"),Ds=goog.getMsg("Edit With AI"),Rs=goog.getMsg("Edit Image"),vs=goog.getMsg("Enter URL"),Ls=goog.getMsg("Paste URL..."),Cs=goog.getMsg("Please enter a valid image URL"),Ps=goog.getMsg("Annotate image"),hs=goog.getMsg("Save annotation"),ms=goog.getMsg("Annotate"),fs=goog.getMsg("Draft will be discarded"),ps=goog.getMsg("You have annotations that will be lost if you exit. Are you sure want to exit?"),ys=goog.getMsg("You are getting a preview of Annotation Editing, powered by {$nanoBananaProductName} 🍌.",{nanoBananaProductName:ye}),bs=goog.getMsg("Please let us know what you think"),Us=goog.getMsg("Note: During the preview period, the resulting screen will not exportable to code"),Bs=goog.getMsg("Okay, got it!"),Hs=goog.getMsg("Preparing the canvas..."),ws=goog.getMsg("Failed to load screen for annotations. Please try again later."),Ys=goog.getMsg("Example user"),Vs=goog.getMsg("Stitch user"),Fs=goog.getMsg("You"),ks=goog.getMsg("Delete Project"),Ws=goog.getMsg("Are you sure you want to permanently delete this design? This action cannot be undone."),Xs=goog.getMsg("Delete"),Ks=goog.getMsg("Deleting..."),xs=goog.getMsg("What would you like to change or create?"),$s=goog.getMsg("Want to ask Stitch to do something?"),qs=goog.getMsg("{$remixLink} to make your own updates!",{remixLink:"[RemixLink]"}),Zs=goog.getMsg("Remix this project"),Qs=goog.getMsg("Click to create a copy of this project that's just for you!"),zs=goog.getMsg("{$stitchProductName} can make mistakes. Please check its work.",{stitchProductName:m}),js=goog.getMsg("Web Search"),Js=goog.getMsg("Show more"),e_=goog.getMsg("Show less"),t_=goog.getMsg("Generate variations"),o_=goog.getMsg("Click to generate multiple variations"),g_=goog.getMsg("Generate variations ✅"),r_=goog.getMsg("Number of options"),a_=goog.getMsg("Creative range"),s_=goog.getMsg("Refine"),__=goog.getMsg("Explore"),i_=goog.getMsg("Reimagine"),E_=goog.getMsg("Offer options with more subtle changes"),n_=goog.getMsg("Be creative, but nothing crazy"),S_=goog.getMsg("Open your mind to very varied options"),M_=goog.getMsg("Custom instructions"),T_=goog.getMsg("Aspects to vary"),c_=goog.getMsg("Failed to create variants. Please try again later."),I_=goog.getMsg("Failed to create. Please try again later."),A_=goog.getMsg("Prompt"),l_=goog.getMsg("Design"),d_=goog.getMsg("Code"),O_=goog.getMsg("Copy code"),N_=goog.getMsg("Expanded image"),G_=goog.getMsg('Design copied to clipboard. Press "{$macPasteShortcut}" or "{$otherPasteShortcut}" in {$figmaProductName} to paste.',{macPasteShortcut:"Cmd+V",otherPasteShortcut:"Ctrl+V",figmaProductName:f}),u_=goog.getMsg("Settings"),D_=goog.getMsg("Save changes"),R_=goog.getMsg("API key"),v_=goog.getMsg("Create key"),L_=goog.getMsg("Abuse auto-detection on"),C_=goog.getMsg("For your protection, we automatically disable any API keys found to be publicly exposed to prevent abuse."),P_=goog.getMsg("API key"),h_=goog.getMsg("Created at"),m_=goog.getMsg("Last used"),f_=goog.getMsg("No keys to display"),p_=goog.getMsg("Remember to use your API keys securely. Don't share or embed them in public code."),y_=goog.getMsg("Your use of the Stitch API is governed by the Google Terms and Use Policy, and the Google APIs Terms, and your Stitch settings. The Stitch [Privacy Notice](/privacy) describes how your data is handled"),b_=goog.getMsg("Learn more"),U_=goog.getMsg("Delete API key"),B_=goog.getMsg("Delete API key"),H_=goog.getMsg("Are you sure you want to delete this API key?"),w_=goog.getMsg("Cutting your key"),Y_=goog.getMsg("API key created successfully!"),V_=goog.getMsg("API key deleted successfully!"),F_=goog.getMsg("Failed to create API key"),k_=goog.getMsg("Failed to delete API key"),W_=goog.getMsg("You have reached the maximum number of API keys."),X_=goog.getMsg("Copied to clipboard"),K_=goog.getMsg("Failed to copy"),x_=goog.getMsg("Failed to get API keys"),$_=goog.getMsg("Copy key"),q_=goog.getMsg("Never"),Z_=goog.getMsg("Email Preferences"),Q_=goog.getMsg("Receive emails for model updates, offers, useful tips and news about Stitch."),z_=goog.getMsg("Receive invitations for future research studies from Stitch and Google Labs"),j_=goog.getMsg("Receive emails for model updates, offers, useful tips and news about Stitch"),J_=goog.getMsg("Receive invitations for future research studies from Stitch and Google Labs"),ei=goog.getMsg("Receive notification, sharing and other project specific emails"),ti=goog.getMsg("View Code"),oi=goog.getMsg("Copy to {$figmaProductName}",{figmaProductName:f}),gi=goog.getMsg("Theme editing is disabled for read-only projects"),ri=goog.getMsg("Theme controls only available in Standard Mode"),ai=goog.getMsg("Theme controls not available for images"),si=goog.getMsg("Theme Controls not available yet with the upload image feature"),_i=goog.getMsg("{$figmaProductName} Export not available for imported projects",{figmaProductName:f}),ii=goog.getMsg("{$figmaProductName} Export not available yet with the upload image feature",{figmaProductName:f}),Ei=goog.getMsg("{$figmaProductName} export only available in Standard Mode",{figmaProductName:f}),ni=goog.getMsg("Do not include any sensitive or personal information."),Si=goog.getMsg("Example projects cannot be edited"),Mi=goog.getMsg("Variant designs cannot be edited"),Ti=goog.getMsg("Please wait until designs have loaded"),ci=goog.getMsg("Attach a screenshot, sketch or visual inspiration"),Ii=goog.getMsg("Seed Image"),Ai=goog.getMsg("Create an interactive Prototype by selecting more than one screen"),li=goog.getMsg("Good result"),di=goog.getMsg("Bad result"),Oi=goog.getMsg("Remixing will create a new Project with all the screens in the current Project"),Ni=goog.getMsg("Read our documentation"),Gi=goog.getMsg("Join us on Discord!"),ui=goog.getMsg("See our latest posts"),Di=goog.getMsg("What's new?"),Ri=goog.getMsg("Design for desktop Web"),vi=goog.getMsg("Design for a native mobile App"),Li=goog.getMsg("Sending..."),Ci=goog.getMsg("Thanks for your feedback!"),Pi=goog.getMsg("What needs to be improved?"),hi=goog.getMsg("Provide feedback on the generated variants"),mi=goog.getMsg("Help us improve these designs"),fi=goog.getMsg("What did you like or dislike about these variants? (e.g. text, layout, colors)"),pi=goog.getMsg("How are the variants that I generated? Feedback helps improve this feature."),yi=goog.getMsg("Rate the designs"),bi=goog.getMsg("Generating React App..."),Ui=goog.getMsg("Analyzing screen layout and hierarchy..."),Bi=goog.getMsg("Identifying interactive elements..."),Hi=goog.getMsg("Connecting navigation flows..."),wi=goog.getMsg("Synthesizing interaction logic..."),Yi=goog.getMsg("Optimizing transition physics..."),Vi=goog.getMsg("Finalizing prototype assembly..."),Fi=goog.getMsg("Detecting clickable regions..."),ki=goog.getMsg("Mapping navigation hotspots..."),Wi=goog.getMsg("Inferring component states..."),Xi=goog.getMsg("Constructing interaction graph..."),Ki=goog.getMsg("Simulating user flows..."),xi=goog.getMsg("Applying physics engine..."),$i=goog.getMsg("Refining gesture recognition..."),qi=goog.getMsg("Linking visual states..."),Zi=goog.getMsg("Generating micro-interactions..."),Qi=goog.getMsg("Compiling preview assets..."),zi=goog.getMsg("Failed to load screen"),ji=goog.getMsg("Creating Prototype"),Ji=goog.getMsg("Prototype Created"),eE=goog.getMsg("View"),tE=goog.getMsg("Error creating the Prototype"),oE=goog.getMsg("Editing your Prototype"),gE=goog.getMsg("Your Prototype is ready"),rE=goog.getMsg("Error editing your Prototype"),aE=goog.getMsg("Creating React App"),sE=goog.getMsg("React App Created"),_E=goog.getMsg("Error creating the React App"),iE=goog.getMsg("Editing your React App"),EE=goog.getMsg("Your React App is ready"),nE=goog.getMsg("Error editing your React App"),SE=goog.getMsg("Prototype editor"),ME=goog.getMsg("Try selecting an element on the screen below to edit, connect, or imagine a new connected screen"),TE=goog.getMsg("Tip:"),cE=goog.getMsg("Edit this screen with AI"),IE=goog.getMsg("Edit screen with AI · Click an element for more options"),AE=goog.getMsg("Edit text"),lE=goog.getMsg("Edit image"),dE=goog.getMsg("Imagine a new screen"),OE=goog.getMsg("Loading new screen ideas..."),NE=goog.getMsg("Build this screen"),GE=goog.getMsg("Imagine Screen"),uE=goog.getMsg("Screen generation failed"),DE=goog.getMsg("Failed to create new screen"),RE=goog.getMsg("Failed to create screen"),vE=goog.getMsg("Failed to layout the generated screen."),LE=goog.getMsg("Updates in progress"),CE=goog.getMsg("Prototype updates are still being processed. If you exit now, the updates may be lost."),PE=goog.getMsg("Exit anyway"),hE=goog.getMsg("Back to canvas"),mE=goog.getMsg("Remove screen"),fE=goog.getMsg("Are you sure you want to remove this screen from the prototype? Any connections to this screen will also be removed."),pE=goog.getMsg("Remove"),yE=goog.getMsg("Remove Screen"),bE=goog.getMsg("Hold tight! I'm connecting your screens"),UE=goog.getMsg("Saving connections"),BE=goog.getMsg("Screens in prototype"),HE=goog.getMsg("Your screen is being created. Once ready, it will be automatically linked to the prototype. You can work on other screens in the meantime."),wE=goog.getMsg("Your screen is being updated. The changes will appear automatically once they are ready."),YE=goog.getMsg("Your new screen is being generated. Once ready, it will be automatically linked to the prototype. You can work on other screens in the meantime."),VE=goog.getMsg("Creating your Screen"),FE=goog.getMsg("Editing your Screen"),kE=goog.getMsg("Imagining your new screen"),WE=goog.getMsg("Edit Screen"),XE=goog.getMsg("Edit Element"),KE=goog.getMsg("Selected Element"),xE=goog.getMsg("Describe how you want to change this screen..."),$E=goog.getMsg("Describe how you want to change this element..."),qE=goog.getMsg("How do you want to change this screen?"),ZE=goog.getMsg("How do you want to change this element?"),QE=goog.getMsg("Creating Instant Prototype..."),zE=goog.getMsg("Instant Prototype Created"),jE=goog.getMsg("Failed to save Prototype"),JE=goog.getMsg("Remove this screen from the prototype"),en=goog.getMsg("Build Instant Prototypes"),tn=goog.getMsg("Prototypes let you connect screens together to create interactive prototypes. Add your first screen to get started."),on=goog.getMsg("Instant Prototype"),gn=goog.getMsg("Instant Prototype"),rn=goog.getMsg("Generate Instant Prototype"),an=goog.getMsg("Instant Prototypes"),sn=goog.getMsg("Create Instant Prototype"),_n=goog.getMsg("The quickest way to connect your screens into an interactive flow and share it."),En=goog.getMsg("Stitch React App"),nn=goog.getMsg("Create React App"),Sn=goog.getMsg("Generate a fully interactive React app from your selected screens."),Mn=goog.getMsg("Add to Chat"),Tn=goog.getMsg("Edit Prototype"),cn=goog.getMsg("Edit React App"),In=goog.getMsg("Edit"),An=goog.getMsg("Prototype"),ln=goog.getMsg("React App"),dn=goog.getMsg("Pitchdeck"),On=goog.getMsg("Regenerate"),Nn=goog.getMsg("Code version"),Gn=goog.getMsg("Design System"),un=goog.getMsg("DESIGN.md"),Dn=goog.getMsg("Update to Latest Design System"),Rn=goog.getMsg("Predictive Heatmap"),vn=goog.getMsg("Missing States"),Ln=goog.getMsg("Generate Missing States"),Cn=goog.getMsg("Missing states are ready"),Pn=goog.getMsg("Animate"),hn=goog.getMsg("Animate screen"),mn=goog.getMsg("Animated screen is ready"),fn=goog.getMsg("Accessibility Audit"),pn=goog.getMsg("Generate Accessibility Audit"),yn=goog.getMsg("Accessibility audit is ready"),bn=goog.getMsg("Switch to Light Mode"),Un=goog.getMsg("Switch to Dark Mode"),Bn=goog.getMsg("Show Offscreen Indicators"),Hn=goog.getMsg("Hide Offscreen Indicators"),wn=goog.getMsg("1 screen"),Yn=goog.getMsg("{$count} screens",{count:"{count}"}),Vn=goog.getMsg("1 document"),Fn=goog.getMsg("{$count} documents",{count:"{count}"}),kn=goog.getMsg("1 design system"),Wn=goog.getMsg("{$count} design systems",{count:"{count}"}),Xn=goog.getMsg("1 text"),Kn=goog.getMsg("{$count} texts",{count:"{count}"}),xn=goog.getMsg("1 item"),$n=goog.getMsg("{$count} items",{count:"{count}"}),qn=goog.getMsg("Format: {$presetName}",{presetName:"{presetName}"}),Zn=goog.getMsg("Save Format Preset"),Qn=goog.getMsg("Define how your screens should be arranged using natural language."),zn=goog.getMsg("Preset Name"),jn=goog.getMsg("e.g. My Flow Layout"),Jn=goog.getMsg("Layout Description"),eS=goog.getMsg('e.g. "Design systems on the left vertically. All screens horizontally. Variations below each screen."'),tS=goog.getMsg("Please enter a preset name"),oS=goog.getMsg("Please describe how to arrange your screens"),gS=goog.getMsg('Could not parse any layout rules. Try using keywords like "left", "right", "top", "bottom", "horizontal", "vertical" with category names like "screens", "images", "design systems", "variations".'),rS=goog.getMsg("Save Preset"),aS=goog.getMsg("Desktop Web Version"),sS=goog.getMsg("Desktop Web Versions"),_S=goog.getMsg("Mobile App Version"),iS=goog.getMsg("Mobile App Versions"),ES=goog.getMsg("Generate Desktop Web Version"),nS=goog.getMsg("Generate Desktop Web Versions"),SS=goog.getMsg("Generate Mobile App Version"),MS=goog.getMsg("Generate Mobile App Versions"),TS=goog.getMsg("Normalize Width"),cS=goog.getMsg("Normalize Height"),IS=goog.getMsg("Desktop version is ready"),AS=goog.getMsg("Desktop versions are ready"),lS=goog.getMsg("New screens are ready"),dS=goog.getMsg("Mobile app version is ready"),OS=goog.getMsg("Mobile app versions are ready"),NS=goog.getMsg("Add to Presets"),GS=goog.getMsg("Added to Presets"),uS=goog.getMsg("Updated Preset"),DS=goog.getMsg("Failed to upload design file."),RS=goog.getMsg("Design system successfully imported."),vS=goog.getMsg("DESIGN.md successfully imported."),LS=goog.getMsg("Failed to import design system."),CS=goog.getMsg("Failed to import DESIGN.md."),PS=goog.getMsg("Failed to delete design system."),hS=goog.getMsg("Failed to delete DESIGN.md."),mS=goog.getMsg("Design system not found"),fS=goog.getMsg("DESIGN.md not found"),pS=goog.getMsg("Stitch will auto-select based on your prompt unless a specific Design System is picked."),yS=goog.getMsg("My Design System"),bS=goog.getMsg("Untitled Design System"),US=goog.getMsg("Enter a name for your design system"),BS=goog.getMsg("DESIGN.md"),HS=goog.getMsg("User Presets"),wS=goog.getMsg("Stitch Presets"),YS=goog.getMsg("Use DESIGN.md"),VS=goog.getMsg("Edit DESIGN.md"),FS=goog.getMsg("Use DESIGN.md"),kS=goog.getMsg("Back to DESIGN.md list"),WS=goog.getMsg("Start with your design"),XS=goog.getMsg("Start with your design"),KS=goog.getMsg("DESIGN.md is an open-source standard document that describes the desired look and feel of your product."),xS=goog.getMsg("Learn more"),$S=goog.getMsg("Paste existing DESIGN.md"),qS=goog.getMsg("Paste a DESIGN.md file here…"),ZS=goog.getMsg("Drag and drop files"),QS=goog.getMsg("Upload a DESIGN.md file"),zS=goog.getMsg("Upload code, images, fonts and logos"),jS=goog.getMsg("Drop .fig or {$selectFileLink}",{selectFileLink:"{selectFileLink}"}),JS=goog.getMsg("Upload a .fig file"),eM=goog.getMsg("To get a .fig file, open your Figma project and use File > Save local copy."),tM=goog.getMsg("Learn more"),oM=goog.getMsg("Public GitHub repository"),gM=goog.getMsg("Or {$getInstructionsLink} to generate a DESIGN.md from your private repo with your coding agent",{getInstructionsLink:"{getInstructionsLink}"}),rM=goog.getMsg("get instructions"),aM=goog.getMsg("https://github.com/owner/repo"),sM=goog.getMsg("Add website"),_M=goog.getMsg("https://example.com"),iM=goog.getMsg("Additional instructions"),EM=goog.getMsg("e.g., Favor dark mode examples from the design files. The attached image is an example of the brand logo."),nM=goog.getMsg("Continue"),SM=goog.getMsg("Back"),MM=goog.getMsg("Failed to create DESIGN.md. Please try again."),TM=goog.getMsg("UX Flow Critique"),cM=goog.getMsg("Critique Consistency"),IM=goog.getMsg("Connecting your screens"),AM=goog.getMsg("Building your interactive prototype..."),lM=goog.getMsg("Creating your screen"),dM=goog.getMsg("AI is generating your design..."),OM=goog.getMsg("Generate screen"),NM=goog.getMsg("Dashboard"),GM=goog.getMsg("Try now"),uM=goog.getMsg("Easy edits"),DM=goog.getMsg("Iterate and tweak designs to build an interface that works best for you."),RM=goog.getMsg("Export code"),vM=goog.getMsg("Export static HTML code that matches the design and Figma export."),LM=goog.getMsg("Build with Gemini"),CM=goog.getMsg("Leverage some of the latest AI models from Google DeepMind to generate designs."),PM=goog.getMsg("You can own your design"),hM=goog.getMsg("Use your original generations as you see fit. Export designs to Figma to fiddle further or copy the code to use how you’d like."),mM=goog.getMsg("Swirly grainy gradient of pink, blues, purples, and black"),fM=goog.getMsg("Stack of UI designs in perspective"),pM=goog.getMsg("Scrolling through generated screens"),yM=goog.getMsg("Closeup of mouse pointer adjusting a design"),bM=goog.getMsg("Gemini spark"),UM=goog.getMsg("Design at the speed of AI"),BM=goog.getMsg("Transform ideas into UI designs for mobile and web applications."),HM=goog.getMsg("AI for your UI"),wM=goog.getMsg("Write a few words, attach an image and watch your UI come to life"),YM=goog.getMsg("Available now"),VM=goog.getMsg("Free of charge"),FM=goog.getMsg("Stitch makes UI creation incredibly simple. No matter your background or expertise, Stitch will help you bring your ideas to life."),kM=goog.getMsg("Start designing"),WM=goog.getMsg("*Available to 18+ users in select countries and territories."),XM=goog.getMsg("Personal Google Account required."),KM=goog.getMsg("Questions?"),xM=goog.getMsg("What is Stitch?"),$M=goog.getMsg("Stitch is an AI-powered tool to help application builders generate high-quality user interfaces for mobile and web apps, and easily export them to Figma, or directly access the frontend code.  It uses some of the latest AI models from Google DeepMind."),qM=goog.getMsg("Where is Stitch available?"),ZM=goog.getMsg("We’re working to bring our tools to as many people as possible. The site is currently available in English only to 18+ users in 212 countries."),QM=goog.getMsg("Can I use designs generated from Stitch for commercial purposes?"),zM=goog.getMsg('Google does not claim ownership over original designs or code that you generate with Stitch, as detailed in the <a rel="noopener noreferrer" target="_blank" href="https://policies.google.com/terms#toc-content">Google Terms of Service</a>: "Some of our services allow you to generate original content. Google won’t claim ownership over that content." You are responsible for fully reviewing and complying with the terms.'),jM=goog.getMsg("Can I import data from Galileo AI?"),JM=goog.getMsg("Yes, if you are a former Galileo AI user, you can upload your conversation history via the settings page. This will allow you to access and view your past conversations with Galileo. Please note that you will not be able to continue these imported conversations within Stitch."),eT=goog.getMsg("I want to get in touch with the Stitch team, how can I reach out?"),tT=goog.getMsg('For any inquiry, contact us on X at <a rel="noopener noreferrer" target="_blank" href="https://x.com/stitchbygoogle">@stitchbygoogle</a>'),oT=goog.getMsg("Reimagine your site for different audiences"),gT=goog.getMsg("Redesigned site for a younger audience"),rT=goog.getMsg("Redesign this page for a younger audience "),aT=goog.getMsg("Generate new pages, on brand"),sT=goog.getMsg("Create the next page"),_T=goog.getMsg("Create the page that people see when they click “Tech that connects”"),iT=goog.getMsg("Magically edit your app"),ET=goog.getMsg("Add a section."),nT=goog.getMsg("Add a section that asks “what are you hungry for?” Use emojis for responses :) "),ST=goog.getMsg("Solve business problems"),MT=goog.getMsg("Improve the number of conversions"),TT=goog.getMsg("Improve the number of users who add to cart  "),cT=goog.getMsg("New feature! Export to **Google AI Studio**"),IT=goog.getMsg("Before"),AT=goog.getMsg("After"),lT=goog.getMsg("See it for yourself"),dT=goog.getMsg("New in Stitch"),OT=goog.getMsg("Introducing"),NT=goog.getMsg("Redesign Agent"),GT=goog.getMsg("Redesign and edit your app with a screenshot or URL"),uT=goog.getMsg("With a little help from 🍌 Pro"),DT=goog.getMsg("Watch a demo"),RT=goog.getMsg("Oops! Page Not Found."),vT=goog.getMsg("This page doesn't exist or isn't shared with you."),LT=goog.getMsg("Go to Homepage"),CT=goog.getMsg("Reload"),PT=goog.getMsg("Sorry, we hit a snag."),hT=goog.getMsg("Send Feedback"),mT=goog.getMsg("Sorry, Stitch is unavailable."),fT=goog.getMsg("Could not copy the design. Please try again later."),pT=goog.getMsg("Could not copy the code. Please try again later."),yT=goog.getMsg("Could not copy the code. Please grant clipboard permission in your browser settings and try again."),bT=goog.getMsg("Please allow Stitch clipboard access, or use Ctrl-V or Command-V."),UT=goog.getMsg("Preparing"),BT=goog.getMsg("Trying to paste a file? Use Ctrl-V or Command-V."),HT=goog.getMsg("Something unexpected happened, and Stitch couldn't complete your generation. Please try again in a moment."),wT=goog.getMsg("We're currently experiencing high demand, please try again later."),YT=goog.getMsg("Save"),VT=goog.getMsg("Screens"),FT=goog.getMsg("Close"),kT=goog.getMsg("Preview"),WT=goog.getMsg("State"),XT=goog.getMsg("Save & Apply"),KT=goog.getMsg("Select state"),xT=goog.getMsg("Back"),$T=goog.getMsg("Forward"),qT=goog.getMsg("Refresh"),ZT=goog.getMsg("Click to copy"),QT=goog.getMsg("Details"),zT=goog.getMsg("Exit Zen Mode"),jT=goog.getMsg("Pick custom color"),JT=goog.getMsg("Style Tuner"),ec=goog.getMsg("Shortcut Keys"),tc=goog.getMsg("Debug"),oc=goog.getMsg("Enable 3P Cookies"),gc=goog.getMsg("General"),rc=goog.getMsg("Edit"),ac=goog.getMsg("Tools"),sc=goog.getMsg("View"),_c=goog.getMsg("Navigation"),ic=goog.getMsg("Cut"),Ec=goog.getMsg("Download selected"),nc=goog.getMsg("Select All"),Sc=goog.getMsg("Nudge selected"),Mc=goog.getMsg("Align selected"),Tc=goog.getMsg("Format"),cc=goog.getMsg("Select Tool"),Ic=goog.getMsg("Pan Tool"),Ac=goog.getMsg("Zoom Tool (hold)"),lc=goog.getMsg("Pan (hold)"),dc=goog.getMsg("Zoom In"),Oc=goog.getMsg("Zoom Out"),Nc=goog.getMsg("Zoom to 100%"),Gc=goog.getMsg("Zoom to Fit"),uc=goog.getMsg("Zoom to Selection"),Dc=goog.getMsg("Focus on Selection"),Rc=goog.getMsg("Next Screen"),vc=goog.getMsg("Previous Screen"),Lc=goog.getMsg("Screen Above"),Cc=goog.getMsg("Screen Below"),Pc=goog.getMsg("X-Ray: see connections to and from your selected canvas item"),hc=goog.getMsg("Failed to create project, Please try again later."),mc=goog.getMsg("Failed to update theme, Please try again later."),fc=goog.getMsg("We ran into an issue while submitting feedback, please try again soon"),pc=goog.getMsg("Feedback sent"),yc=goog.getMsg("You don't have permission to edit this project."),bc=goog.getMsg("Unable to update settings, please try again later"),Uc=goog.getMsg("You've hit your max concurrent generations, please wait for generations to finish."),Bc=goog.getMsg("Please wait for current generations to finish for this project."),Hc=goog.getMsg("You've reached your Redesign quota for today. This is a temporary quota during the launch period. You may still use the Turbo and Pro."),wc=goog.getMsg("You've reached your daily limit of {LIMIT} generated screens. Your limit will reset tomorrow."),Yc=goog.getMsg("Generation limited, check your credits in settings"),Vc=goog.getMsg("You have {REMAINING} Redesign screens remaining today! Have fun!"),Fc=goog.getMsg("Switching voice…"),kc=goog.getMsg("Switching to {$voice}…",{voice:"{voice}"}),Wc=goog.getMsg("Takes effect on next session"),Xc=goog.getMsg("Adding a splash of color..."),Kc=goog.getMsg("Adjusting spacing..."),xc=goog.getMsg("Assembling components..."),$c=goog.getMsg("Bringing your vision to life..."),qc=goog.getMsg("Coloring outside the lines..."),Zc=goog.getMsg("Composing the screen..."),Qc=goog.getMsg("Crafting..."),zc=goog.getMsg("Creating..."),jc=goog.getMsg("Designing..."),Jc=goog.getMsg("Doodling..."),eI=goog.getMsg("Forging final design..."),tI=goog.getMsg("Generating..."),oI=goog.getMsg("Generating Screen"),gI=goog.getMsg("Generating Image"),rI=goog.getMsg("Generating Video"),aI=goog.getMsg("Generating Shader"),sI=goog.getMsg("Generating Document"),_I=goog.getMsg("Imagining..."),iI=goog.getMsg("Iterating on your design..."),EI=goog.getMsg("Laying out..."),nI=goog.getMsg("Making the pixels dance..."),SI=goog.getMsg("Mocking up..."),MI=goog.getMsg("Perfecting the details..."),TI=goog.getMsg("Polishing the pixels..."),cI=goog.getMsg("Rendering the view..."),II=goog.getMsg("Shading..."),AI=goog.getMsg("Sketching..."),lI=goog.getMsg("Stitching..."),dI=goog.getMsg("Structuring the elements..."),OI=goog.getMsg("Styling..."),NI=goog.getMsg("Loading..."),GI=goog.getMsg("Unleashing creativity..."),uI=goog.getMsg("Researching design patterns..."),DI=goog.getMsg("Exploring styles..."),RI=goog.getMsg("Crafting components..."),vI=goog.getMsg("Ensuring consistency..."),LI=goog.getMsg("Applying design taste..."),CI=goog.getMsg("Curating the color palette..."),PI=goog.getMsg("Balancing the elements..."),hI=goog.getMsg("Organizing the hierarchy..."),mI=goog.getMsg("Choosing typography..."),fI=goog.getMsg("Adding finishing touches..."),pI=goog.getMsg("Vibe designing..."),yI=goog.getMsg("almost there..."),bI=goog.getMsg("any second now..."),UI=goog.getMsg("just a moment more..."),BI=goog.getMsg("really soon..."),HI=goog.getMsg("wrapping up..."),wI=goog.getMsg("Starting the engine..."),YI=goog.getMsg("Warming up..."),VI=goog.getMsg("Initializing the canvas..."),FI=goog.getMsg("Preparing the tools..."),kI=goog.getMsg("Collecting the crayons..."),WI=goog.getMsg("Gathering inspiration..."),XI=goog.getMsg("Sharpening the pencils..."),KI=goog.getMsg("Mixing the paints..."),xI=goog.getMsg("Setting up the workspace..."),$I=goog.getMsg("Loading the creative assets..."),qI=goog.getMsg("Your design has been deleted"),ZI=goog.getMsg("Deleted"),QI=goog.getMsg("Deleted task"),zI=goog.getMsg("Go to all projects"),jI=goog.getMsg("Download"),JI=goog.getMsg("Download Project"),eA=goog.getMsg("Saving..."),tA=goog.getMsg("Edit"),oA=goog.getMsg("Apply"),gA=goog.getMsg("Undo"),rA=goog.getMsg("Changes saved"),aA=goog.getMsg("Error saving"),sA=goog.getMsg("Saving..."),_A=goog.getMsg("Design has unsaved changes"),iA=goog.getMsg("You have unsaved changes in the current tab"),EA=goog.getMsg("Reset"),nA=goog.getMsg("Redo"),SA=goog.getMsg("Copy"),MA=goog.getMsg("Copy Content"),TA=goog.getMsg("Content copied to clipboard"),cA=goog.getMsg("Failed to copy content"),IA=goog.getMsg("Paste"),AA=goog.getMsg("Help"),lA=goog.getMsg("Helpful Links"),dA=goog.getMsg("Docs"),OA=goog.getMsg("Discord"),NA=goog.getMsg("Dismiss"),GA=goog.getMsg("Usage Today"),uA=goog.getMsg("Daily Credits"),DA=goog.getMsg("Image Screens"),RA=goog.getMsg("Cancel"),vA=goog.getMsg("Exit"),LA=goog.getMsg("Remix"),CA=goog.getMsg("Remixing this project."),PA=goog.getMsg("Finished creating your Remix!"),hA=goog.getMsg("Sorry, something went wrong. Please try again in a few seconds."),mA=goog.getMsg("Open"),fA=goog.getMsg("Please remix this project."),pA=goog.getMsg("I have remixed your project and it is ready for further design."),yA=goog.getMsg("Duplicate"),bA=goog.getMsg("Duplicate Project"),UA=goog.getMsg("Command menu"),BA=goog.getMsg("What's New"),HA=goog.getMsg("What's new"),wA=goog.getMsg("Google I/O: 5 Major Upgrades"),YA=goog.getMsg("Streaming, start with your existing design, in-place AI edits, motion on canvas, and more export options"),VA=goog.getMsg("Meet the new Stitch"),FA=goog.getMsg("AI-native canvas, smarter design agent, voice, instant prototypes, design systems, DESIGN.md, and more"),kA=goog.getMsg("Gemini 3.1"),WA=goog.getMsg("When you need the ultimate in reasoning, quality, and attention to detail, 3.1 Pro is for you"),XA=goog.getMsg("Direct Edits"),KA=goog.getMsg("Edit text and images directly on your canvas"),xA=goog.getMsg("Figma Export"),$A=goog.getMsg("Export designs to Figma as editable layers"),qA=goog.getMsg("Loading prototype..."),ZA=goog.getMsg("Duplicating this project."),QA=goog.getMsg("This will create a new project with all the screens and content from the current project. Are you sure you want to continue?"),zA=goog.getMsg("Shhh, the pixels are sleeping! Stitch is taking a quick power nap and is currently unavailable. We'll be back online once we're refreshed and ready to create."),jA=goog.getMsg("We're pushing pixels at maximum speed! The studio is processing a high volume of new designs, which may slow things down. Your request is safe in the queue."),JA=goog.getMsg("Delete this request"),el=goog.getMsg("Code failed to generate"),tl=goog.getMsg("Select a font"),ol=goog.getMsg("Shared"),gl=goog.getMsg("Shared with others"),rl=goog.getMsg("Private to only me"),al=goog.getMsg("Export"),sl=goog.getMsg("Code to Clipboard"),_l=goog.getMsg("Code copied to clipboard"),il=goog.getMsg("Copy"),El=goog.getMsg("Copying..."),nl=goog.getMsg("Failed to copy HTML. Please try again."),Sl=goog.getMsg("Live Mode (Preview) is temporarily unavailable, please try again later"),Ml=goog.getMsg("Build me an app with screens that look like this."),Tl=goog.getMsg(" You can hotlink images from the html"),cl=goog.getMsg("Export"),Il=goog.getMsg("Create Task"),Al=goog.getMsg("Build with AI Studio"),ll=goog.getMsg("AI studio will open and html and image files will download in the background. It may take a minute or two to export many screens."),dl=goog.getMsg("You are about to export your Stitch data to Google AI Studio. Once in AI Studio, your content will be governed by the [AI Studio Terms of Service](https://ai.google.dev/terms) and [Generative AI Prohibited Use Policy](https://policies.google.com/terms/generative-ai/use-policy)."),Ol=goog.getMsg("MCP"),Nl=goog.getMsg("Select your IDE or CLI"),Gl=goog.getMsg("Select an API key"),ul=goog.getMsg("No API keys found"),Dl=goog.getMsg("Create API key"),Rl=goog.getMsg("MCP configuration copied to clipboard"),vl=goog.getMsg("Cursor"),Ll=goog.getMsg("Antigravity"),Cl=goog.getMsg("VS Code"),Pl=goog.getMsg("Claude Code"),hl=goog.getMsg("Gemini CLI"),ml=goog.getMsg("Codex"),fl=goog.getMsg("OpenCode"),pl=goog.getMsg("Step 1: Install the Stitch extension"),yl=goog.getMsg("Step 2: The extension will prompt for your API key on first use"),bl=goog.getMsg("Connect your IDE or CLI to Stitch via the Model Context Protocol (MCP)."),Ul=goog.getMsg("Client"),Bl=goog.getMsg("API Key"),Hl=goog.getMsg("Configuration"),wl=goog.getMsg("Prompt"),Yl=goog.getMsg("Prompt copied!"),Vl=goog.getMsg("Setup MCP"),Fl=goog.getMsg("Need to connect your client?"),kl=goog.getMsg("Copy Prompt"),Wl=goog.getMsg("Netlify"),Xl=goog.getMsg("Deploy"),Kl=goog.getMsg("Deploying…"),xl=goog.getMsg("Deployed to Netlify"),$l=goog.getMsg("Failed to deploy to Netlify"),ql=goog.getMsg("Claim URL"),Zl=goog.getMsg("Deploy a single screen as a live website on Netlify. After deploying, claim the URL to manage it."),Ql=goog.getMsg("Select a single screen to deploy to Netlify"),zl=goog.getMsg("You are about to deploy your Stitch data to Netlify. Once on Netlify, your content will be governed by the [Netlify Terms of Use](https://www.netlify.com/legal/terms-of-use/)."),jl=goog.getMsg("Lovable"),Jl=goog.getMsg("Build with Lovable"),ed=goog.getMsg("Lovable will open with your screen designs and HTML. Use it to build a full working app from your designs."),td=goog.getMsg("You are about to export your Stitch data to Lovable. Once in Lovable, your content will be governed by the [Lovable Terms of Service](https://lovable.dev/terms)."),od=goog.getMsg("Bolt"),gd=goog.getMsg("Build with Bolt"),rd=goog.getMsg("Bolt will open with your screen designs and HTML. Use it to build a full working app from your designs."),ad=goog.getMsg("You are about to export your Stitch data to Bolt. Once in Bolt, your content will be governed by the [Bolt Terms of Service](https://bolt.new/legal/terms)."),sd=goog.getMsg("App Store Assets"),_d=goog.getMsg("Ready-to-use marketing visuals & screenshots"),id=goog.getMsg("Adds app icon, store screenshots, feature graphic, and a store description to the canvas."),Ed=goog.getMsg("Web Assets"),nd=goog.getMsg("Favicons, touch icons & web manifest"),Sd=goog.getMsg("Generates favicons, Apple touch icons, and a web manifest JSON file for your web app."),Md=goog.getMsg("Marketing Kit"),Td=goog.getMsg("Social media templates & brand assets"),cd=goog.getMsg("Places social media cards, banner ads, and email header images on the canvas."),Id=goog.getMsg("Predictive Heatmap"),Ad=goog.getMsg("AI-powered attention analysis & flows"),ld=goog.getMsg("Generates a heatmap overlay on each selected screen showing predicted user attention areas."),dd=goog.getMsg("UX Critique"),Od=goog.getMsg("Expert review of usability & interaction"),Nd=goog.getMsg("Produces an annotated critique document on the canvas with actionable improvement suggestions."),Gd=goog.getMsg("Accessibility Audit"),ud=goog.getMsg("Automated WCAG contrast & compliance"),Dd=goog.getMsg("Creates a WCAG compliance report and a visual overlay with contrast ratios and alt-text suggestions on the canvas."),Rd=goog.getMsg("Missing States"),vd=goog.getMsg("Generate loading, empty & error states"),Ld=goog.getMsg("Adds empty, error, and loading state screens next to each selected screen on the canvas."),Cd=goog.getMsg("Dev Handoff Kit"),Pd=goog.getMsg("React Prototype"),hd=goog.getMsg("Slides"),md=goog.getMsg("Animate"),fd=goog.getMsg("Design specs & token definitions"),pd=goog.getMsg("Generates a design spec sheet with spacing, typography, and color tokens on the canvas."),yd=goog.getMsg("Generating…"),bd=goog.getMsg("Generate Selected"),Ud=goog.getMsg("Select screens on the canvas first"),Bd=goog.getMsg("Click to generate"),Hd=goog.getMsg("Creating..."),wd=goog.getMsg("Building..."),Yd=goog.getMsg("Make this real."),Vd=goog.getMsg("Help me build these screens"),Fd=goog.getMsg("Use the design system from this website: {WEBSITE_URL}"),kd=goog.getMsg("Use the design system from this design.md file"),Wd=goog.getMsg("Use the design system from this .fig file"),Xd=goog.getMsg("the GitHub repository at {URL}"),Kd=goog.getMsg("the website at {URL}"),xd=goog.getMsg("Create a design system using {SOURCES}."),$d=goog.getMsg("AI Studio"),qd=goog.getMsg("Build this multi-screen app with the following navigation flow."),Zd=goog.getMsg("Figma"),Qd=goog.getMsg("Your HTML will be sent to code.to.design and processed according to their [Terms of Service](https://divriots.com/legal/code.to.design/terms) and [Privacy Policy](https://divriots.com/legal/code.to.design/privacy)"),zd=goog.getMsg("Upload .fig file"),jd=goog.getMsg("Convert"),Jd=goog.getMsg("Converting..."),eO=goog.getMsg("Export is limited to {$maxScreens} screens. Please deselect some screens to continue.",{maxScreens:String(16)}),tO=goog.getMsg(".zip"),oO=goog.getMsg("No result"),gO=goog.getMsg("PREVIEW"),rO=goog.getMsg("Upload Images"),aO=goog.getMsg("Upload Image"),sO=goog.getMsg("Uploaded images generate stable public URLs to support HTML exports, take care with highly confidential or private assets"),_O=goog.getMsg("Upload Files"),iO=goog.getMsg("Sending..."),EO=goog.getMsg("Copy"),nO=goog.getMsg("Paste"),SO=goog.getMsg("Add Note"),MO=goog.getMsg("Add Text"),TO=goog.getMsg("Upload file"),cO=goog.getMsg("Add"),IO=goog.getMsg("Show Connections"),AO=goog.getMsg("Format"),lO=goog.getMsg("Duplicate"),dO=goog.getMsg("Delete"),OO=goog.getMsg("Edit Theme"),NO=goog.getMsg("Make changes"),GO=goog.getMsg("You're interacting!"),uO=goog.getMsg("Prototype"),DO=goog.getMsg("Connect and Preview with Instant Prototypes"),RO=goog.getMsg("Waiting for screens to finish generating"),vO=goog.getMsg("No compatible screens to connect and preview"),LO=goog.getMsg("Select some screens to connect and preview"),CO=goog.getMsg("Make change"),PO=goog.getMsg("Select elements"),hO=goog.getMsg("Click elements to select"),mO=goog.getMsg("Describe your changes..."),fO=goog.getMsg("Double click to open"),pO=goog.getMsg("Prototype (select >1 screens)"),yO=goog.getMsg("Download"),bO=goog.getMsg("Reload"),UO=goog.getMsg("Variations"),BO=goog.getMsg("Copied"),HO=goog.getMsg("Copied color"),wO=goog.getMsg("Failed to copy"),YO=goog.getMsg("Duplicated"),VO=goog.getMsg("Screen duplicated. Edits will affect all linked copies."),FO=goog.getMsg("Copied as PNG"),kO=goog.getMsg("Copied link"),WO=goog.getMsg("Copied as code"),XO=goog.getMsg("No image available to copy"),KO=goog.getMsg("Failed to copy PNG"),xO=goog.getMsg("Failed to copy link"),$O=goog.getMsg("Failed to copy code"),qO=goog.getMsg("Unable to load"),ZO=goog.getMsg("Unable to load — showing preview"),QO=goog.getMsg("Retry"),zO=goog.getMsg("No selection available"),jO=goog.getMsg("No code available to copy"),JO=goog.getMsg("Uploaded"),eN=goog.getMsg("My Projects"),tN=goog.getMsg("Shared with me"),oN=goog.getMsg("Search projects"),gN=goog.getMsg("Mobile"),rN=goog.getMsg("Tablet"),aN=goog.getMsg("Desktop"),sN=goog.getMsg("Open Direct link"),_N=goog.getMsg("Show QR Code"),iN=goog.getMsg("Scan QR Code"),EN=goog.getMsg("Scan this code with your mobile device to view the preview."),nN=goog.getMsg("For information about how to use the API, see the [API documentation](/docs/mcp/setup)."),SN=goog.getMsg("Open Editor"),MN=goog.getMsg("Preview screen not found / or was deleted"),TN=goog.getMsg("Hold SHIFT while dragging to snap screens to equal spacing between neighbors"),cN=goog.getMsg("Select 3+ screens and use Arrange to evenly space them horizontally or vertically"),IN=goog.getMsg("Right-click and use Copy As for quick access to PNG, Code, or Link formats"),AN=goog.getMsg("Click Edit Prototype to add interactive hotspots and build click-through demos"),lN=goog.getMsg("Use the Align menu to snap multiple screens to Left, Right, Top, Bottom, or Center"),dN=goog.getMsg("Multi-select screens and apply commands like Align, Copy, or Duplicate in one action"),ON=goog.getMsg("Use the command palette to discover all available actions for your selection"),NN=goog.getMsg("Right-click any screen and choose Variants to explore Layout, Color, or Font variations"),GN=goog.getMsg("Select a screen and hit X to see connections"),uN=goog.getMsg("Use the Format menu to quickly arrange your screens on the canvas"),DN=goog.getMsg("Format considers your favorited screens to organize the canvas ✨"),RN=goog.getMsg("Try Align by Width or Align by Height in the Arrange menu to normalize screen sizes"),vN=goog.getMsg("Use the Distribute menu to evenly space your screens on the canvas"),LN=goog.getMsg("Duplicate works on multi-selections too - great for creating screen families"),CN=goog.getMsg("Download multiple screens at once by selecting them all first"),PN=goog.getMsg("Check out the Export Panel for full control over format and quality"),hN=goog.getMsg("Adding screens to chat gives Stitch the context it needs for better edits"),mN=goog.getMsg("Select multiple screens to quickly align them to edges or centers"),fN=goog.getMsg("Evenly space 3+ selected screens horizontally or vertically"),pN=goog.getMsg("Arrange"),yN=goog.getMsg("Distribute Horizontal Space"),bN=goog.getMsg("Distribute Vertical Space"),UN=goog.getMsg("Tidy Horizontal Space"),BN=goog.getMsg("Tidy Vertical Space"),HN=goog.getMsg("Tip:"),wN=goog.getMsg("No Preview"),YN=goog.getMsg("Add to favourites"),VN=goog.getMsg("Agent log"),FN=goog.getMsg("Loading…"),kN=goog.getMsg("Copy prompt"),WN=goog.getMsg("Copied!"),XN=goog.getMsg("Edit prompt"),KN=goog.getMsg("Drag to canvas or click to select"),xN=goog.getMsg("Questions from Stitch"),$N=goog.getMsg("Submit answers"),qN=goog.getMsg("Answers submitted"),ZN=goog.getMsg("Answer questions"),QN=goog.getMsg("Remove from favourites"),zN=goog.getMsg("Enhance prompt"),jN=goog.getMsg("Enhancing…"),JN=goog.getMsg("Add Screen to Prototype"),eG=goog.getMsg("Add Screen"),tG=goog.getMsg("All screens added."),oG=goog.getMsg("Connect Element"),gG=goog.getMsg("No HTML screens available."),rG=goog.getMsg("No available screens to choose from."),aG=goog.getMsg("Replace Screen"),sG=goog.getMsg('Replace "{screenName}"'),_G=goog.getMsg("Select a new screen to replace the current screen. All existing links will be preserved."),iG=goog.getMsg("Replace Screen"),EG=goog.getMsg("Replace this screen with another"),nG=goog.getMsg("Select Initial Screen"),SG=goog.getMsg("Set as Initial Screen"),MG=goog.getMsg("Prototype Settings"),TG=goog.getMsg("Instant Prototypes"),cG=goog.getMsg("Connect your screens into an interactive, click-through prototype. Add screens, define transitions, and preview your flow — all in one place."),IG=goog.getMsg("Create a new prototype"),AG=goog.getMsg("Welcome to the Prototype editor"),lG=goog.getMsg("Your screens are connected and ready to preview on the device frame. Add, replace or imagine new screens from the left panel. All changes sync back to the canvas automatically."),dG=goog.getMsg("Let's go!"),OG=goog.getMsg("Welcome to the prototype editor! Your screens are connected and ready to interact. Add, edit, and connect more screens to create an interactive app experience."),NG=goog.getMsg("This screen was edited or deleted on the canvas. Replace it with another screen?"),GG=goog.getMsg("Replace Screen"),uG=goog.getMsg("Cancel"),DG=goog.getMsg("Agent messages"),RG=goog.getMsg("No updates from the agent"),vG=goog.getMsg("Untitled Screen"),LG=goog.getMsg("Select Prototype"),CG=goog.getMsg("Prototype"),PG=goog.getMsg("{count} screens"),hG=goog.getMsg("Saving in progress…"),mG=goog.getMsg("Additional instructions..."),fG=goog.getMsg("Generate variants with the selected configuration"),pG=goog.getMsg("No screens selected"),yG=goog.getMsg("Multiple screens selected"),bG=goog.getMsg("Select screens on the canvas to see export options."),UG=goog.getMsg("Quick Tips"),BG=goog.getMsg("Select All"),HG=goog.getMsg("Press"),wG=goog.getMsg("Design Focus Timer"),YG=goog.getMsg("Start"),VG=goog.getMsg("Pause"),FG=goog.getMsg("Reset Timer"),kG=goog.getMsg("Generate {LABEL}"),WG=goog.getMsg("Grid layout"),XG=goog.getMsg("Masonry layout"),KG=goog.getMsg("on a selected screen"),xG=goog.getMsg("Favourites"),$G=goog.getMsg("Press"),qG=goog.getMsg("Quick Tips"),ZG=goog.getMsg("Toggle favourite"),QG=goog.getMsg("Star your best screens to collect them here."),zG=goog.getMsg("No favourites yet"),jG=goog.getMsg("Canvas mode"),JG=goog.getMsg("Edit"),eu=goog.getMsg("Edit mode (inspect & style components) [E]"),tu=goog.getMsg("Interact"),ou=goog.getMsg("Interact mode (preview & test app)"),gu=goog.getMsg("Couldn't load your canvas. Try reloading the page."),ru=goog.getMsg("Inspect"),au=goog.getMsg("locked"),su=goog.getMsg("keyless"),_u=goog.getMsg("Device"),iu=goog.getMsg("Preview not available yet"),Eu=goog.getMsg("Size"),nu=goog.getMsg("Source"),Su=goog.getMsg("Type"),Mu=goog.getMsg("Untitled"),Tu=goog.getMsg("Unable to save your changes, please try again."),cu=goog.getMsg("Working"),Iu=goog.getMsg("Thinking"),Au=goog.getMsg("Editing Theme"),lu=goog.getMsg("Generating Variants"),du=goog.getMsg("Building Prototype"),Ou=goog.getMsg("Regenerating Design"),Nu=goog.getMsg("Annotating"),Gu=goog.getMsg("Generating Prototype"),uu=goog.getMsg("Editing Prototype"),Du=goog.getMsg("Editing Image"),Ru=goog.getMsg("Generating Heatmap"),vu=goog.getMsg("Generating PRD"),Lu=goog.getMsg("Converting Image to Code"),Cu=goog.getMsg("Generating Slides"),Pu=goog.getMsg("Critiquing Design"),hu=goog.getMsg("Applying Design System"),mu=goog.getMsg("Generating App Store Assets"),fu=goog.getMsg("Creating Marketing Kit"),pu=goog.getMsg("Running Accessibility Audit"),yu=goog.getMsg("Finding Missing States"),bu=goog.getMsg("Preparing Dev Handoff"),Uu=goog.getMsg("Generating Web Assets"),Bu=goog.getMsg("Extracting Design System"),Hu=goog.getMsg("Updating Design System"),wu=goog.getMsg("Running UX Critique"),Yu=goog.getMsg("Editing Element"),Vu=goog.getMsg("Task"),Fu=goog.getMsg("Chat Message"),ku=goog.getMsg("Edit Theme"),Wu=goog.getMsg("Generate Variants"),Xu=goog.getMsg("Regenerate Design"),Ku=goog.getMsg("Annotate"),xu=goog.getMsg("Generate Prototype"),$u=goog.getMsg("Edit Prototype"),qu=goog.getMsg("Image Edit"),Zu=goog.getMsg("Predictive Heatmap"),Qu=goog.getMsg("Generate PRD"),zu=goog.getMsg("Image to Code"),ju=goog.getMsg("Generate Slides"),Ju=goog.getMsg("Critique Design"),eD=goog.getMsg("Apply Design System"),tD=goog.getMsg("App Store Assets"),oD=goog.getMsg("Marketing Kit"),gD=goog.getMsg("Accessibility Audit"),rD=goog.getMsg("Missing States"),aD=goog.getMsg("Dev Handoff"),sD=goog.getMsg("Web Assets"),_D=goog.getMsg("Prototype Session"),iD=goog.getMsg("Extract Design System"),ED=goog.getMsg("Update Design System"),nD=goog.getMsg("UX Critique"),SD=goog.getMsg("Edit Element"),MD=goog.getMsg("Comment - C"),TD=goog.getMsg("Add a comment"),cD=goog.getMsg("Send comment"),ID=goog.getMsg("Resolve comment"),AD=goog.getMsg("Edit"),lD=goog.getMsg("Cancel"),dD=goog.getMsg("Save"),OD=goog.getMsg("Delete thread"),ND=goog.getMsg("Delete reply"),GD=goog.getMsg("Close"),uD=goog.getMsg("Reply..."),DD=goog.getMsg("Send reply"),RD=goog.getMsg("Loading replies..."),vD=goog.getMsg("Failed to post"),LD=goog.getMsg("Retry"),CD=goog.getMsg("Failed to post ({$count})",{count:"{count}"}),PD=goog.getMsg("Retry all"),hD=goog.getMsg("Dismiss"),mD=goog.getMsg("Delete"),fD=goog.getMsg("Comments"),pD=goog.getMsg("Resolved comments"),yD=goog.getMsg("No comments yet"),bD=goog.getMsg("No resolved comments yet"),UD=goog.getMsg("Resolve"),BD=goog.getMsg("Re-open"),HD=goog.getMsg("More options"),wD=goog.getMsg("Active comments"),YD=goog.getMsg("Resolved comments"),VD=goog.getMsg("Back to active comments"),FD=goog.getMsg("1 reply"),kD=goog.getMsg("{$count} replies",{count:"{count}"}),WD=goog.getMsg("Back"),Mo={[Q.MOBILE]:{width:390,height:884},[Q.TABLET]:{width:768,height:1024},[Q.DESKTOP]:{width:1280,height:1024}},XD=Mo[Q.MOBILE],KD={[Z.DOCUMENT]:{width:800,height:1e3},[Z.IMAGE]:{width:512,height:512},[Z.TEXT]:{width:400,height:120},[Z.HTML]:{width:800,height:600}};function To(e){const o=Array.from(e.querySelectorAll(h.VH));e.hasAttribute&&e.hasAttribute(n.VH)&&o.push(e),o.forEach(g=>{let r=g.getAttribute("class")||"";(g.getAttribute(n.VH)||"").split("|||").forEach(a=>{const i=a.split("===");i.length===2&&(r=r.split(/\s+/).map(_=>_===i[0]?i[1]:_).join(" "))}),g.setAttribute("class",r),g.removeAttribute(n.VH)}),Array.from(e.querySelectorAll(`style[${n.CSS_VH}]`)).forEach(g=>{const r=g.getAttribute(n.CSS_VH);r&&(/<\/style\s*>/i.test(r)||(g.textContent=r),g.removeAttribute(n.CSS_VH))})}function co(){window.__Stitch=window.__Stitch||{},window.__Stitch.cleanups=window.__Stitch.cleanups||[],window.__Stitch.registerCleanup=window.__Stitch.registerCleanup||(e=>{window.__Stitch.cleanups.push(e)}),window.__Stitch.getCleanHtml=window.__Stitch.getCleanHtml||(()=>{const e=document.documentElement.cloneNode(!0);e.querySelectorAll(`${h.INJECTED}, ${h.SCROLL_LOCK}, ${h.CURSOR}, [data-stream], #stitch-icon-reveal`).forEach(g=>g.remove());const o=e.querySelector("head");return o&&o.querySelectorAll("style").forEach(g=>{if(g.hasAttribute(n.INJECTED)||g.hasAttribute(n.CSS_VH)||g.id||g.className)return;const r=g.textContent||"";(r.includes("/*! tailwindcss v")||r.includes("/* ! tailwindcss v"))&&g.remove()}),e.querySelectorAll(h.PENDING_SRC).forEach(g=>{g.setAttribute("src",g.getAttribute(n.PENDING_SRC)),g.removeAttribute(n.PENDING_SRC)}),window.__Stitch.cleanups.forEach(g=>{try{g(e)}catch(r){C("Error in cleanup function",r,{errorSource:"direct_edit"})}}),e.querySelectorAll("[style]").forEach(g=>{(g.getAttribute("style")?.trim()===""||g.getAttribute("style")===null)&&g.removeAttribute("style")}),"<!DOCTYPE html>"+e.outerHTML})}function Io(){window.__Stitch&&window.__Stitch.registerCleanup&&window.__Stitch.registerCleanup(e=>{e.querySelectorAll(ze).forEach(o=>{if(o.hasAttribute("contenteditable")){o.removeAttribute("contenteditable"),o.removeAttribute("spellcheck");const g=o.getAttribute(n.ADDED_CLASSES);g&&(o.classList.remove(...g.split(" ")),o.removeAttribute(n.ADDED_CLASSES))}if(o.hasAttribute(n.EDITABLE_IDX)&&o.removeAttribute(n.EDITABLE_IDX),o.hasAttribute(n.SWAPPABLE)&&(o.removeAttribute(n.SWAPPABLE),o.removeAttribute(n.SWAP_KIND),o.removeAttribute("tabindex"),o.removeAttribute("role"),o.removeAttribute("aria-label"),o.removeAttribute(n.SWAP_ACTIVE),o.removeAttribute(n.SWAP_HOVER)),(o.classList.contains("stitch-scan-entry")||o.classList.contains("stitch-scan-entry-img"))&&(o.classList.remove(x,$),o.style.animationDelay=""),o.hasAttribute(n.ANIM_OPACITY)){o.removeAttribute(n.ANIM_OPACITY);const g=o.getAttribute(n.ORIG_OPACITY);o.style.opacity=g||"",o.removeAttribute(n.ORIG_OPACITY),o.classList.remove(w)}else o.classList.contains("stitch-anim-fade-in")&&o.classList.remove(w);(o.classList.contains("stitch-anim-img-dimming")||o.classList.contains("stitch-anim-img-revealing"))&&o.classList.remove(le,de)}),To(e)})}var P="150%",U="125%",O={caption:{letterSpacing:"0.015em",fontWeight:"500"},label:{letterSpacing:"0.015em",fontWeight:"700"},body:{fontWeight:"400"},subtitle:{fontWeight:"500"},title:{fontWeight:"700"},headline:{fontWeight:"700",letterSpacing:"-0.025em"},display:{fontWeight:"700",letterSpacing:"-0.033em"}},xD={"caption-sm":["11px",{...O.caption,lineHeight:P,fontWeight:"400"}],caption:["12px",{...O.caption,lineHeight:P}],"label-sm":["13px",{...O.label,lineHeight:P}],"label-md":["14px",{...O.label,lineHeight:P}],"label-lg":["16px",{...O.label,lineHeight:P}],"body-sm":["13px",{...O.body,lineHeight:P}],"body-md":["14px",{...O.body,lineHeight:P}],"body-lg":["16px",{...O.body,lineHeight:P}],"subtitle-sm":["13px",{...O.subtitle,lineHeight:P}],"subtitle-md":["14px",{...O.subtitle,lineHeight:P}],"subtitle-lg":["16px",{...O.subtitle,lineHeight:P,fontWeight:"600"}],"title-sm":["16px",{...O.title,lineHeight:U}],"title-md":["18px",{...O.title,lineHeight:U}],"title-lg":["22px",{...O.title,lineHeight:U,letterSpacing:"-0.015em"}],"headline-sm":["24px",{...O.headline,lineHeight:U}],"headline-md":["28px",{...O.headline,lineHeight:U}],"headline-lg":["32px",{...O.headline,lineHeight:U}],"display-sm":["36px",{...O.display,lineHeight:U}],"display-md":["48px",{...O.display,lineHeight:U}],"display-lg":["64px",{...O.display,lineHeight:U,fontWeight:"900"}]},Ao={100:"rgba(255, 255, 255, 1.0)",90:"rgba(255, 255, 255, 0.9)",75:"rgba(255, 255, 255, 0.75)",50:"rgba(255, 255, 255, 0.5)",25:"rgba(255, 255, 255, 0.25)",15:"rgba(255, 255, 255, 0.15)",10:"rgba(255, 255, 255, 0.10)","05":"rgba(255, 255, 255, 0.05)"},l=(function(e){return e.Greyscale="Greyscale",e.Blue="Blue",e.Red="Red",e.Gold="Gold",e.Green="Green",e.Pink="Pink",e.Purple="Purple",e.Brown="Brown",e.Yellow="Yellow",e.Teal="Teal",e.Blurple="Blurple",e.Orange="Orange",e})({}),Ne=(function(e){return e.Light="Light",e.Dark="Dark",e})({}),lo={50:"#f8f9fa",100:"#f1f3f4",200:"#e8eaed",300:"#dadce0",400:"#bdc1c6",500:"#9aa0a6",600:"#80868b",700:"#5f6368",800:"#3c4043",900:"#202124",White:"#ffffff",Black:"#000000"},z={5:"rgba(218, 220, 224, 0.05)",10:"rgba(218, 220, 224, 0.1)",15:"rgba(218, 220, 224, 0.15)",25:"rgba(218, 220, 224, 0.25)",50:"rgba(218, 220, 224, 0.5)",75:"rgba(218, 220, 224, 0.75)",90:"rgba(218, 220, 224, 0.9)"},Ge={5:"rgba(22, 23, 24, 0.05)",10:"rgba(22, 23, 24, 0.1)",15:"rgba(22, 23, 24, 0.15)",25:"rgba(22, 23, 24, 0.25)",50:"rgba(22, 23, 24, 0.5)",75:"rgba(22, 23, 24, 0.75)",90:"rgba(22, 23, 24, 0.9)"},R=(e,o)=>({Neutral:lo,Color:e,State:{White:z,Grey:Ge,Color:{5:`${o}0D`,15:`${o}26`,25:`${o}40`,50:`${o}80`,75:`${o}BF`,90:`${o}E6`}}}),B={[l.Greyscale]:R({100:"#f1f3f4",200:"#e8eaed",300:"#dadce0",500:"#80868b",600:"#3c4043",700:"#202124","400 (Base)":"#9aa0a6"},"#9aa0a6"),[l.Blue]:R({100:"#cfe1ff",200:"#9abffd",300:"#6ba0f8",500:"#2b6ad2",600:"#1855b8",700:"#0b1a34","400 (Base)":"#4285f4"},"#4285f4"),[l.Red]:R({100:"#ffd2cd",200:"#fe6e6e",300:"#e9493c",500:"#b22f25",600:"#aa1a0f",700:"#330f0c","400 (Base)":"#e94235"},"#e94235"),[l.Gold]:R({100:"#faecc0",200:"#f8da82",300:"#f6c024",500:"#a67b00",600:"#7b5d06",700:"#413103","400 (Base)":"#fabb05"},"#fabb05"),[l.Green]:R({100:"#bee1c7",200:"#78d390",300:"#5acb78",500:"#269443",600:"#207737",700:"#0a2d13","400 (Base)":"#34a853"},"#34a853"),[l.Pink]:R({100:"#ffd7fc",200:"#fab2f4",300:"#f793ef",500:"#db48cf",600:"#93308b",700:"#461842","400 (Base)":"#f468e9"},"#f468e9"),[l.Purple]:R({100:"#e9d9ff",200:"#d0b3fa",300:"#ba8bfc",500:"#7c3cd5",600:"#6429b9",700:"#34185b","400 (Base)":"#9154e7"},"#9154e7"),[l.Brown]:R({100:"#f3e1d1",200:"#d4baa2",300:"#ae9075",500:"#644a33",600:"#533c28",700:"#281c13","400 (Base)":"#755940"},"#755940"),[l.Yellow]:R({100:"#e8ecb1",200:"#d7de6d",300:"#d0dc30",500:"#909b06",600:"#676f02",700:"#2a2e01","400 (Base)":"#d0dd1e"},"#d0dd1e"),[l.Teal]:R({100:"#c7efea",200:"#a7ece3",300:"#56e2d0",500:"#1f7e72",600:"#165950",700:"#112e2a","400 (Base)":"#40d9c6"},"#40d9c6"),[l.Blurple]:R({100:"#d3d4ff",200:"#989aff",300:"#7168f6",500:"#4f44e1",600:"#322b96",700:"#19182f","400 (Base)":"#6056f0"},"#6056f0"),[l.Orange]:R({100:"#ffded3",200:"#ffbba5",300:"#ff906c",500:"#a14629",600:"#8d3114",700:"#401f14","400 (Base)":"#d4633e"},"#d4633e")},Ut={[Ne.Light]:{Foreground:{Color:{100:"Color.700",200:"Color.600",300:"Color.500"},Neutral:{100:"Neutral.900",200:"Neutral.800",300:"Neutral.700",400:"Neutral.600",0:"Neutral.Black"},State:{5:"State.Grey.5",10:"State.Grey.10",15:"State.Grey.15",25:"State.Grey.25",50:"State.Grey.50",75:"State.Grey.75",90:"State.Grey.90"}},Background:{Color:{100:"Color.100",200:"Color.200",300:"Color.300"},Neutral:{100:"Neutral.100",200:"Neutral.200",300:"Neutral.300",400:"Neutral.400",0:"Neutral.White"},State:{5:"State.White.5",10:"State.White.10",15:"State.White.15",25:"State.White.25",50:"State.White.50",75:"State.White.75",90:"State.White.90"}},Shadow:{Color:{Soft:"rgba(0, 0, 0, 0.25)",Harsh:"rgba(0, 0, 0, 0.4)"}}},[Ne.Dark]:{Foreground:{Color:{100:"Color.100",200:"Color.200",300:"Color.300"},Neutral:{100:"Neutral.100",200:"Neutral.200",300:"Neutral.300",400:"Neutral.400",0:"Neutral.White"},State:{5:"State.White.5",10:"State.White.10",15:"State.White.15",25:"State.White.25",50:"State.White.50",75:"State.White.75",90:"State.White.90"}},Background:{Color:{100:"Color.700",200:"Color.600",300:"Color.500"},Neutral:{100:"Neutral.900",200:"Neutral.800",300:"Neutral.700",400:"Neutral.600",0:"Neutral.Black"},State:{5:"State.Grey.5",10:"State.Grey.10",15:"State.Grey.15",25:"State.Grey.25",50:"State.Grey.50",75:"State.Grey.75",90:"State.Grey.90"}},Shadow:{Color:{Soft:"rgba(0, 0, 0, 0.5)",Harsh:"rgba(0, 0, 0, 0.5)"}}}};function Bt(e){const o=e.match(/rgba?\(\s*(\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\s*\)/);if(o)return{r:parseInt(o[1]),g:parseInt(o[2]),b:parseInt(o[3]),a:o[4]!==void 0?parseFloat(o[4]):1};const g=e.replace("#","");return{r:parseInt(g.substring(0,2),16),g:parseInt(g.substring(2,4),16),b:parseInt(g.substring(4,6),16),a:g.length>6?parseInt(g.substring(6,8),16)/255:1}}function j(e,o){const g=Bt(e),r=Bt(o),a=r.a+g.a*(1-r.a);return a===0?"rgba(0, 0, 0, 0)":`rgba(${Math.round((r.r*r.a+g.r*g.a*(1-r.a))/a)}, ${Math.round((r.g*r.a+g.g*g.a*(1-r.a))/a)}, ${Math.round((r.b*r.a+g.b*g.a*(1-r.a))/a)}, ${Math.round(a*1e3)/1e3})`}function Oo(e){const o=B[e];function g(_){const t=_.split(".");let s=o;for(const E of t)s=s[E];return s}function r(_){return Object.fromEntries(Object.entries(_).map(([t,s])=>[t,g(s)]))}const a=Ut[Ne.Light],i=Ut[Ne.Dark];return{color:{blurple:{400:B[l.Blurple].Color["400 (Base)"],300:B[l.Blurple].Color[300]}},foreground:{color:{light:r(a.Foreground.Color),dark:r(i.Foreground.Color)},neutral:{light:r(a.Foreground.Neutral),dark:r(i.Foreground.Neutral)},state:{light:r(a.Foreground.State),dark:r(i.Foreground.State)}},background:{color:{light:r(a.Background.Color),dark:r(i.Background.Color)},neutral:{light:r(a.Background.Neutral),dark:r(i.Background.Neutral)},state:{light:r(a.Background.State),dark:r(i.Background.State)},accent:{light:B[l.Blurple].Color["400 (Base)"],dark:B[l.Blurple].Color[300]},stateColor:{light:{enabled:j(z[50],z[15]),hover:j(z[50],z[50]),pressed:j(z[5],o.State.Color[75])},dark:{enabled:j(Ge[50],o.State.Color[15]),hover:j(Ge[50],o.State.Color[50]),pressed:j(Ge[5],o.State.Color[75])}},white:Ao},shadow:{light:a.Shadow.Color,dark:i.Shadow.Color}}}var $D=Oo(l.Greyscale);function be(e,o){return`rgba(${parseInt(e.slice(1,3),16)}, ${parseInt(e.slice(3,5),16)}, ${parseInt(e.slice(5,7),16)}, ${o})`}var Ht=B[l.Blurple].Color[200],qD=B[l.Blurple].Color[300],_e=B[l.Blurple].Color["400 (Base)"],ZD=B[l.Blurple].Color[500],wt=be(_e,.3),ue=be(_e,.9),Yt=be(_e,0),ie=null,Ee=null;function Ue(e){ie&&(ie.textContent=e?'*{cursor:crosshair!important}[contenteditable="true"]:focus,.cursor-text:focus{cursor:text!important}':"")}function Be(e){Ee&&(Ee.textContent=e?"html,body{overflow:hidden!important}":"")}function No(){ie=document.createElement("style"),ie.setAttribute(n.CURSOR,""),document.head.appendChild(ie),Ee=document.createElement("style"),Ee.setAttribute(n.SCROLL_LOCK,""),document.head.appendChild(Ee);const e=document.createElement("style");e.setAttribute(n.INJECTED,""),e.textContent=["*:focus,*:focus-visible{outline:none!important;box-shadow:none!important}",`::selection{background-color:${wt}!important;color:inherit!important}`,`::-moz-selection{background-color:${wt}!important;color:inherit!important}`,"*{user-select:none!important;-webkit-user-select:none!important}","img{-webkit-user-drag:none!important;user-drag:none!important}","@keyframes stitch-scan-flash{",`0%{outline:3px solid ${ue};outline-offset:-1px}`,`60%{outline:3px solid ${ue};outline-offset:-1px}`,`100%{outline:3px solid ${Yt};outline-offset:4px}}`,"@keyframes stitch-scan-flash-img{",`0%{outline:3px solid ${ue};outline-offset:-1px}`,`60%{outline:3px solid ${ue};outline-offset:-1px}`,`100%{outline:3px solid ${Yt};outline-offset:4px}}`,`.${x}{animation:stitch-scan-flash 1.5s ease-out forwards}`,`.${$}{animation:stitch-scan-flash-img 1.5s ease-out forwards}`].join(""),document.head.appendChild(e)}function Vt(e){return e.matches(".material-icons,.material-icons-outlined,.material-icons-round,.material-icons-sharp,.material-icons-two-tone,.material-symbols-outlined,.material-symbols-rounded,.material-symbols-sharp")||e.closest(".material-icons,.material-icons-outlined,.material-icons-round,.material-icons-sharp,.material-icons-two-tone,.material-symbols-outlined,.material-symbols-rounded,.material-symbols-sharp")!==null}function Ft(e){return!Array.from(e.childNodes).some(o=>o.nodeType===Node.TEXT_NODE?(o.textContent||"").trim().length>0:o.nodeType===Node.ELEMENT_NODE?Vt(o)?!1:!Ft(o):!1)}function kt(e){if(!e||e===document.body)return!1;for(const o of e.childNodes)if(o.nodeType===3&&o.textContent?.trim())return!0;return!1}function ne(){window.doDirectEditSetup=ne;let e=0,o=0;document.querySelectorAll("h1,h2,h3,h4,h5,h6,p,span,div,button,a,label,li,td,th,blockquote").forEach(r=>{if(Vt(r)){r.setAttribute("contenteditable","false");return}if(Ft(r))return;const a=kt(r),i=r.tagName;(i==="BUTTON"||i==="A"||i==="DIV"||i==="LABEL")&&!a&&r.children.length>0||(r.setAttribute("contenteditable","true"),r.setAttribute("spellcheck","false"),r.setAttribute(n.EDITABLE_IDX,String(e++)),r.classList.contains("cursor-text")||(r.classList.add(qe),r.setAttribute(n.ADDED_CLASSES,qe)))}),document.querySelectorAll("input[placeholder],textarea[placeholder]").forEach(r=>{r.hasAttribute(n.EDITABLE_IDX)||r.setAttribute(n.EDITABLE_IDX,String(e++))});function g(r,a){r.setAttribute(n.SWAPPABLE,String(o++)),r.setAttribute(n.SWAP_KIND,a),r.setAttribute("tabindex","0"),r.setAttribute("role","button"),r.setAttribute("aria-label","Replace image")}document.querySelectorAll("img").forEach(r=>{r.naturalWidth>0&&r.naturalWidth<24||r.naturalHeight>0&&r.naturalHeight<24||g(r,"img")}),document.querySelectorAll('[style*="background-image"]').forEach(r=>{if(!r.style.backgroundImage?.includes("url("))return;const a=r.getBoundingClientRect();a.width<24||a.height<24||r.hasAttribute(n.SWAPPABLE)||g(r,"bg")})}function Go(e){const g=[];let r=e;for(;r&&r!==document.documentElement;){const a=r.tagName.toLowerCase();if(a==="body"){g.unshift("body");break}const i=new Map,_=r.getAttribute(n.VH);_&&_.split("|||").forEach(E=>{const T=E.indexOf("===");T>0&&i.set(E.slice(0,T),E.slice(T+3))});let t=a+Array.from(r.classList).filter(E=>!E.startsWith("stitch-")&&E!=="cursor-text"&&E!=="stitch-scan-entry"&&E!=="stitch-scan-entry-img").map(E=>i.get(E)??E).slice(0,3).map(E=>`.${CSS.escape(E)}`).join("");const s=r.parentElement;if(s){const E=Array.from(s.children).filter(T=>T.tagName===r.tagName);if(E.length>1){const T=E.indexOf(r)+1;t+=`:nth-of-type(${T})`}}g.unshift(t),r=r.parentElement}return g.join(" > ")}function uo(){const e=new Map;return document.querySelectorAll(h.VH).forEach(o=>{const g=o.getAttribute(n.VH);g&&g.split("|||").forEach(r=>{const a=r.indexOf("===");if(a>0){const i=r.slice(0,a),_=r.slice(a+3);e.set(i,_)}})}),e}function Do(){const e={};document.querySelectorAll(D).forEach(o=>{const g=Number(o.getAttribute(n.SWAPPABLE)),r=o.getBoundingClientRect();r.width<=0||r.height<=0||(e[g]={x:r.x,y:r.y,width:r.width,height:r.height})}),I(S.EDIT.IMAGE_RECTS,{rects:e})}function Ro(){return window.__Stitch?.getCleanHtml?.()??document.documentElement.outerHTML}function k(e,o){I(S.EDIT.TEXT_CHANGED,{html:Ro(),height:window.__stitchMeasureContentHeight?.()??document.documentElement.scrollHeight,...e!=null&&{eventId:e},...o!=null&&{isRollback:o}})}var vo=new Set(["replace_content","replace_element","insert_before","insert_after","append_child","prepend_child","remove_element","set_attribute","remove_attribute","set_style","add_class","remove_class"]),Wt=["nth-last-of-type","nth-last-child","placeholder-shown","nth-of-type","focus-visible","first-of-type","last-of-type","only-of-type","focus-within","indeterminate","nth-child","first-child","last-child","only-child","out-of-range","read-write","read-only","any-link","in-range","required","optional","disabled","default","checked","enabled","invalid","visited","target","active","hover","focus","empty","valid","where","link","lang","root","not","has","dir","is"].map(e=>e.replace(/[-/]/g,"\\$&")).join("|"),Lo=/(?:^#([0-9][a-zA-Z0-9_-]*)|(?<=[\s>+~,\w.\])(])#([0-9][a-zA-Z0-9_-]*))/g,Co=/\\\[([^\]]*=[^\]]*)\\\]/g,Po=/(?<=\d)(?<!\\)\.(?=\d)/g,ho=/(?:(?<=[\w\]])(?<!\\)\/(?=\d)|(?:(?<=group)|(?<=peer))(?<!\\)\/(?=[a-zA-Z]))/g,mo=new RegExp(`(?<=\\.)([a-zA-Z0-9_-]+(?:\\\\[:\\[/\\\\\\].][a-zA-Z0-9_-]*)*)(?<!\\\\):(?!(?:${Wt})(?:[^a-zA-Z0-9_-]|$))`,"g"),fo=new RegExp(`(?<=\\\\:)([a-zA-Z0-9_-]+)(?<!\\\\):(?!(?:${Wt})(?:[^a-zA-Z0-9_-]|$))(?=[a-zA-Z])`,"g"),po=/(?<=\.)([a-zA-Z0-9_:-]+-)(?<!\\)\[([^\]]*)\]/g,yo=/\\\[([^\]]*)\\\]/g,bo=/(?<=[\\.:a-zA-Z0-9_-])(?<!\\)!(?=[a-zA-Z])/g;function Uo(e,o){let g=o;return g=g.replace(/\\"/g,'"').replace(/\\'/g,"'"),g=g.replace(/\\:/g,":").replace(/\\\//g,"/").replace(/\\#/g,"#").replace(/\\%/g,"%"),`[${g}]`}function Bo(e,o){let g=o;return g=g.replace(/(?<!\\)%/g,"\\%"),g=g.replace(/(?<!\\)#/g,"\\#"),g=g.replace(/(?<!\\)\(/g,"\\("),g=g.replace(/(?<!\\)\)/g,"\\)"),g=g.replace(/(?<!\\),/g,"\\,"),g=g.replace(/(?<!\\)'/g,"\\'"),g=g.replace(/(?<!\\)"/g,'\\"'),`\\[${g}\\]`}function Se(e,o,g){try{let r=e;r=r.replace(Lo,(i,_,t)=>`[id="${_||t}"]`),r=r.replace(Co,Uo),r=r.replace(po,"$1\\[$2\\]"),r=r.replace(ho,"\\/"),r=r.replace(mo,"$1\\:"),r=r.replace(fo,"$1\\:"),r=r.replace(Po,"\\."),r=r.replace(yo,Bo),r=r.replace(bo,"\\!");const a=uo();if(a.size>0){const i=[];a.forEach((_,t)=>{i.push([_,t])}),i.sort((_,t)=>t[0].length-_[0].length);for(const[_,t]of i){const s=CSS.escape(_),E=CSS.escape(t),T=s.replace(/[.*+?^${}()|[\]\\]/g,"\\$&"),M=new RegExp("(?<=\\.)"+T+"(?=[.#\\[\\s>+~,:]|$)","g");r=r.replace(M,E)}}return r!==e&&I(S.EDIT.SELECTOR_SANITIZED,{original:e,sanitized:r,source:o,action:g}),r}catch(r){return C(`makeSelectorSafe threw on: ${e}`,r,{errorType:"SelectorEscapeFailure",selector:e,source:o,action:g,errorSource:"selector_escape"}),e}}function De(e,o,g,r){C(o,r,{errorType:e,errorMessage:o,selector:g.cssSelector,action:g.action,operation:JSON.stringify(g),errorSource:"session_event"})}function Ho(e,o,g){o.cursorMoved=!1,o.clearAnimationCounts();let r=!1,a="";e?.forEach(i=>{if(!vo.has(i.action)){const t=`Unsupported action: ${i.action}`;De("UnsupportedAction",t,i),a||(a=t),r=!0;return}let _;try{const t=Se(i.cssSelector,"dom_operation",i.action);_=document.querySelectorAll(t)}catch(t){const s=t instanceof Error?t.name:"Error",E=t instanceof Error?t.message:String(t);De(s,E,i,t),a||(a=`${s}: ${E}`),r=!0;return}if(_.length===0){const t=`No elements found for selector: ${i.cssSelector}`;De("NoElementsFound",t,i),a||(a=t),r=!0;return}_.forEach(t=>{try{o.applyOperationToElement(t,i.action,i.content,i.attrName,i.attrValue,!0)}catch(s){const E=`applyOperationToElement failed for ${i.action}: ${s instanceof Error?s.message:String(s)}`;De("ApplyFailed",E,i,s),a||(a=E),r=!0}})}),ne(),u(),Do(),o.processNextImage(),r?g&&I(S.EDIT.EVENT_FAILED,{eventId:g,errorMessage:a||"Unknown error occurred."}):k(g)}var W=1,QD=2,zD=4,p=document.createElement("div");p.setAttribute(n.INJECTED,""),p.style.cssText="position:fixed;inset:0;z-index:2147483647;pointer-events:none;overflow:hidden;display:none;",document.documentElement.appendChild(p);var Xt=!1;function Kt(e){Xt=e,!e&&!He()?J(!1):e&&J(!0)}function He(){return p.querySelectorAll(".stitch-active-indicator").length>0}function J(e){!e&&He()||(p.style.display=e?"":"none")}var N=null,ee=null,v=null,Y=null,V=null;function we(e){N=e}function Ye(e){ee=e}function wo(e){v=e}function xt(e){Y=e}function $t(e){V=e}function Yo(e){return V===e}function Re(){return V}function Vo(){return Y}function Fo(){return W}function ve(e,o){const g=document.createElement("div");return g.style.cssText=`position:absolute;pointer-events:none;display:none;box-sizing:border-box;border-style:solid;border-color:${e};z-index:${o};border-radius:4px;`,p.appendChild(g),g}var Ve=ve(Ht,1),Fe=ve(_e,2),qt=ve(Ht,1),Le=ve(_e,2);function L(e,o,g=0){if(!o){e.style.display="none";return}const r=o.getBoundingClientRect();if(!r||r.width<=0||r.height<=0){e.style.display="none";return}const a=2/W,i=g/W,_=document.documentElement.clientWidth,t=document.documentElement.clientHeight;let s=r.left-a-i,E=r.top-a-i,T=r.right+a+i,M=r.bottom+a+i;s=Math.max(0,s),E=Math.max(0,E),T=Math.min(_,T),M=Math.min(t,M);const c=T-s,d=M-E;if(c<=0||d<=0){e.style.display="none";return}e.style.borderWidth=`${a}px`,e.style.left=`${s}px`,e.style.top=`${E}px`,e.style.width=`${c}px`,e.style.height=`${d}px`,e.style.display="block"}function Me(e,...o){if(!e)return!1;for(const g of o)if(g&&g!==e&&e.contains(g))return!0;return!1}function ko(e,o,g,r){const a=e.getBoundingClientRect(),i=g.getBoundingClientRect();if(!a||!i)return!1;const _=2/W,t=o/W,s=r/W;return!(a.right+_+t<i.left-_-s||a.left-_-t>i.right+_+s||a.bottom+_+t<i.top-_-s||a.top-_-t>i.bottom+_+s)}function Wo(){const e=ee??V,o=N&&N===V&&!ee,g=v&&v===Y,r=N&&!o&&!Me(N,e),a=v&&!g&&!r&&!Me(v,N,e);return r?{kind:"text",element:N}:a?{kind:"image",element:v}:null}function u(){const e=ee??V,o=N&&N===V&&!ee,g=v&&v===Y,r=N&&!o&&!Me(N,e),a=v&&!g&&!r&&!Me(v,N,e),i=Y&&!Me(Y,N,e),_=r&&N&&e&&N!==e&&ko(N,4,e,4);Ve.style.zIndex=_?"2":"1",Fe.style.opacity=_?"0.3":"1",L(Ve,r?N:null,4),L(Fe,e,4),L(qt,a?v:null,0),L(Le,i?Y:null,0),p.querySelectorAll(".stitch-active-indicator").forEach(t=>{const s=t.getAttribute(n.INDICATOR_SELECTOR);let E=null;if(s)try{E=document.querySelector(s)}catch(T){C(`Invalid indicator selector: "${s}"`,T,{errorSource:"selector_escape",selector:s})}L(t,E,4),E&&(t.style.pointerEvents="auto")})}function Xo(e){const o=Se(e,"show_indicator");let g=null;try{g=document.querySelector(o)}catch(a){C(`Invalid indicator selector: "${o}" (original: "${e}")`,a,{errorSource:"selector_escape",selector:e})}if(!g)return;const r=document.createElement("div");r.className="stitch-active-indicator",r.setAttribute(n.INDICATOR,"pending"),r.setAttribute(n.INDICATOR_SELECTOR,o),p.appendChild(r),L(r,g,4),r.style.pointerEvents="auto",J(!0)}function Ko(e,o="pending"){const g=p.querySelectorAll(`[${n.INDICATOR}="${CSS.escape(o)}"]`);g.forEach(r=>r.setAttribute(n.INDICATOR,e)),g.length>0&&J(!0)}function xo(e){p.querySelectorAll(`[${n.INDICATOR}="${CSS.escape(e)}"]`).forEach(o=>o.remove()),!He()&&!Xt&&J(!1)}function $o(e){W=e,u()}function Zt(){N=null,ee=null,v=null,Y=null,V=null,L(Ve,null),L(Fe,null),L(qt,null),L(Le,null)}var ke=!1;function Qt(){ke=!1}function zt(){if(ke)return;ke=!0;const e=document.querySelectorAll(`${q},${Qe}`),o=document.querySelectorAll(D);e.forEach(g=>{g.classList.add(x);const r=Math.round(Math.max(0,g.getBoundingClientRect().top)/3);g.style.animationDelay=`${r}ms`}),o.forEach(g=>{g.classList.add($);const r=Math.round(Math.max(0,g.getBoundingClientRect().top)/3);g.style.animationDelay=`${r}ms`}),setTimeout(()=>{document.querySelectorAll(`.${x},.${$}`).forEach(g=>{g.classList.remove(x,$),g.style.animationDelay=""})},2500)}var te="view",Ce=!1;function We(e){if(te===e)return;const o=te;te=e,o==="directEdit"&&jo(),e==="directEdit"?zo():(Ue(!1),J(!1),Be(!1))}function F(){return te}function y(){return te==="directEdit"}function qo(){te="view",Ce=!1}function Zo(){Ce=!0}function Qo(){return Ce}function zo(){Ue(!0),Be(!0),Kt(!0),ne()}function jo(){document.activeElement instanceof HTMLElement&&document.activeElement.blur(),window.getSelection()?.removeAllRanges(),Jo(),Zt(),Kt(!1),Ue(!1),Be(!1),Ce=!1,typeof Qt=="function"&&Qt()}function Jo(){document.querySelectorAll(ze).forEach(e=>{if(e.hasAttribute("contenteditable")){e.removeAttribute("contenteditable"),e.removeAttribute("spellcheck");const o=e.getAttribute(n.ADDED_CLASSES);o&&(e.classList.remove(...o.split(" ")),e.removeAttribute(n.ADDED_CLASSES))}e.hasAttribute(n.EDITABLE_IDX)&&e.removeAttribute(n.EDITABLE_IDX),e.hasAttribute(n.SWAPPABLE)&&(e.removeAttribute(n.SWAPPABLE),e.removeAttribute(n.SWAP_KIND),e.removeAttribute("tabindex"),e.removeAttribute("role"),e.removeAttribute("aria-label"),e.removeAttribute(n.SWAP_ACTIVE),e.removeAttribute(n.SWAP_HOVER))})}var oe=null,Pe=null,Xe=null,ge=0,jt=0,re=0,Te=!1,X=!1,Ke=new WeakSet,Jt=5,G=null,ce=!1;function eg(e,o,g){const r=Math.abs(o)>Math.abs(g)?"horizontal":"vertical";let a=e instanceof Element?e:null;for(;a;){const _=window.getComputedStyle(a),t=_.overflowY,s=_.overflowX;if(r==="vertical"&&g!==0&&(t==="auto"||t==="scroll")){const E=a.scrollHeight-a.clientHeight;if(E>1){const T=a.scrollTop<=0&&g<0,M=a.scrollTop>=E-1&&g>0;if(!T&&!M)return!0}}if(r==="horizontal"&&o!==0&&(s==="auto"||s==="scroll")){const E=a.scrollWidth-a.clientWidth;if(E>1){const T=a.scrollLeft<=0&&o<0,M=a.scrollLeft>=E-1&&o>0;if(!T&&!M)return!0}}a=a.parentElement}const i=document.scrollingElement||document.documentElement;if(r==="vertical"&&g!==0){const _=i.scrollHeight-i.clientHeight;if(_>1){const t=i.scrollTop<=0&&g<0,s=i.scrollTop>=_-1&&g>0;if(!t&&!s)return!0}}if(r==="horizontal"&&o!==0){const _=i.scrollWidth-i.clientWidth;if(_>1){const t=i.scrollLeft<=0&&o<0,s=i.scrollLeft>=_-1&&o>0;if(!t&&!s)return!0}}return!1}function xe(){window.getSelection()?.removeAllRanges()}function tg(){document.activeElement instanceof HTMLElement&&document.activeElement.blur(),xe(),oe=null,Zt(),I(S.EDIT.ESCAPE)}function K(){const e=document.querySelector(h.SWAP_ACTIVE);e&&e.removeAttribute(n.SWAP_ACTIVE),xt(null),L(Le,null)}function og(e,o){xe(),$t(e),o&&Ye(null),u()}function Ie(){$t(null),u()}function eo(e){const o=e;if(e instanceof HTMLInputElement||e instanceof HTMLTextAreaElement)o.focus(),!e.value&&e.placeholder&&(e.value=e.placeholder),e.select();else{o.focus();const g=window.getSelection(),r=document.createRange();r.selectNodeContents(e),g?.removeAllRanges(),g?.addRange(r)}}function to(e){K(),e.setAttribute(n.SWAP_ACTIVE,""),xt(e),L(Le,e)}function he(e,o,g,r,a){e==="image"?to(o):og(o,a);const i=Number(o.getAttribute(e==="image"?n.SWAPPABLE:n.EDITABLE_IDX)),_=o.getBoundingClientRect(),t=Go(o),s=o.tagName.toLowerCase();let E;if(e==="image")if(o.getAttribute(n.SWAP_KIND)==="bg"){const T=o.style.backgroundImage?.match(/url\(["']?(.+?)["']?\)/);T&&(E=T[1])}else o instanceof HTMLImageElement&&(E=o.src);I(S.EDIT.ELEMENT_CLICKED,{kind:e,index:i,clickX:g,clickY:r,rect:{x:_.x,y:_.y,width:_.width,height:_.height},selector:t,tagName:s,...E!=null&&{src:E},...e==="text"&&{innerHTML:o instanceof HTMLInputElement||o instanceof HTMLTextAreaElement?o.placeholder||"":o.innerHTML},...a&&{readonly:!0}})}function oo(e,o){for(const g of document.elementsFromPoint(e,o)){const r=g.closest(D);if(r)return r}return null}function go(e,o){const g=document.caretRangeFromPoint?.(e,o)??(()=>{const r=document.caretPositionFromPoint?.(e,o);if(!r)return null;const a=document.createRange();return a.setStart(r.offsetNode,r.offset),a.collapse(!0),a})();if(g){const r=window.getSelection();r?.removeAllRanges(),r?.addRange(g)}}function gg(e,o,g,r){if(e==="image"){K();const a=document.querySelector(`${D}[${n.SWAPPABLE}="${o}"]`);a instanceof HTMLElement&&a.focus()}else{const a=document.querySelector(`[${n.EDITABLE_IDX}="${o}"]`);if(!a)return;g!=null&&r!=null?(a.focus(),go(g,r)):eo(a)}}function ro(e,o,g,r){const a=o.getBoundingClientRect(),i=Fo(),_=e==="image"?2/i+2:6/i+2;I(S.EDIT.ENTRY_FOCUS,{kind:e,rect:{x:a.x-_,y:a.y-_,width:a.width+_*2,height:a.height+_*2}}),e==="image"&&to(o),setTimeout(()=>he(e,o,g,r),500)}function rg(e,o){const g=document.elementFromPoint(e,o);let r=g?.closest(D)??null;const a=g?.closest(q);if(r||(r=oo(e,o)),r&&(!a||a.contains(r)))ro("image",r,e,o);else if(a)ro("text",a,e,o);else{const i=document.querySelector(q);i instanceof HTMLElement&&i.focus()}}function ag(e,o,g){let r=null;if(g)try{const a=Se(g,"replace_element");r=document.querySelector(a)}catch(a){C("Invalid selector in replaceElement",a,{selector:g,errorSource:"direct_edit"})}r||(r=document.querySelector(`${D}[${n.SWAPPABLE}="${e}"]`)),r&&(r.getAttribute(n.SWAP_KIND)==="bg"?r.style.backgroundImage=`url("${o.replace(/"/g,'\\"')}")`:r.src=o,k(),setTimeout(ae,100))}function sg(e){if(typeof e!="string")return;let o=null;try{const g=Se(e,"query_selector");o=document.querySelector(g)}catch(g){C("Invalid query selector",g,{selector:e,errorSource:"direct_edit"})}I(S.EDIT.QUERY_RESULT,{selector:e,innerHTML:o?.innerHTML??""})}function H(e){if(!e||!(e instanceof Element)||Eo.has(e.tagName))return null;if($e(e))return e;const o=e.closest(q);if(o){const g=e.closest(Qe);return g&&o.contains(g)&&g!==o?g:o}return kt(e)||e.textContent?.trim()||e.matches("img, svg, input, textarea, select")||e.querySelector("img, svg")||e.querySelector("input, textarea, select")?e:null}function $e(e){if(!e||!(e instanceof Element))return!1;const o=e.tagName;return o==="INPUT"||o==="TEXTAREA"||o==="SELECT"}function ae(){const e={};document.querySelectorAll(D).forEach(o=>{const g=Number(o.getAttribute(n.SWAPPABLE)),r=o.getBoundingClientRect();r.width<=0||r.height<=0||(e[g]={x:r.x,y:r.y,width:r.width,height:r.height})}),I(S.EDIT.IMAGE_RECTS,{rects:e})}function _g(e=!1){re||(re=requestAnimationFrame(()=>{re=0,ae(),u(),e&&(Vo()||Re())&&(K(),Ie(),I(S.EDIT.PANEL_DISMISS))}))}function ig(){const e=Re();if(!e)return;const o=e.getBoundingClientRect();o.width<=0&&o.height<=0||I(S.EDIT.SELECTED_RECT,{rect:{x:o.x,y:o.y,width:o.width,height:o.height}})}function Eg(e,o){window.addEventListener("message",t=>{if(!_o(t))return;t.data?.screenId&&so(t.data.screenId);const s=t.data?.type;if(s)switch(s){case S.EDIT.APPLY_DOM_OPERATIONS:Ho(t.data.operations,e,t.data.eventId);break;case S.EDIT.ACTIVATE:We("directEdit");break;case S.EDIT.DELETE_ELEMENT:{const E=t.data.select[Truncated]

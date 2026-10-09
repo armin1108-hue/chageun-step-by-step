@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><title>차근차근: 나의 하루 배움 도우미</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:ital,wght@0,400..800;1,400..800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"on-surface-variant":"#40484c","secondary-fixed":"#ffdbca","on-primary-container":"#93d3ef","surface-container-low":"#f5f3ef","on-secondary-container":"#682c00","surface-variant":"#e4e2de","inverse-surface":"#30312e","inverse-on-surface":"#f2f0ed","on-background":"#1b1c1a","surface-container":"#efeeea","on-secondary":"#ffffff","primary":"#004357","on-secondary-fixed":"#331200","on-tertiary-fixed":"#002116","on-primary-fixed":"#001f2a","on-surface":"#1b1c1a","surface":"#fbf9f5","on-error-container":"#93000a","on-tertiary":"#ffffff","surface-bright":"#fbf9f5","primary-fixed":"#bde9ff","inverse-primary":"#90cfec","on-primary":"#ffffff","secondary-fixed-dim":"#ffb68e","primary-container":"#0d5c75","secondary-container":"#fd8a42","on-tertiary-container":"#90d9ba","on-error":"#ffffff","surface-container-lowest":"#ffffff","primary-fixed-dim":"#90cfec","surface-container-high":"#eae8e4","background":"#fbf9f5","on-tertiary-fixed-variant":"#00513b","tertiary-fixed-dim":"#8cd5b7","surface-dim":"#dbdad6","tertiary-fixed":"#a7f2d2","on-secondary-fixed-variant":"#763300","tertiary-container":"#0e6149","error":"#ba1a1a","outline-variant":"#bfc8cd","surface-tint":"#1e667f","outline":"#70787d","error-container":"#ffdad6","tertiary":"#004734","surface-container-highest":"#e4e2de","on-primary-fixed-variant":"#004d64","secondary":"#9b4500"},"borderRadius":{"DEFAULT":"1rem","lg":"2rem","xl":"3rem","full":"9999px"},"spacing":{"space-xs":"0.5rem","space-lg":"1.5rem","space-md":"1rem","margin":"1.25rem","gutter":"1rem","space-xl":"2.25rem","space-sm":"0.75rem"},"fontFamily":{"body-md":["Atkinson Hyperlegible Next"],"label-sm":["Plus Jakarta Sans"],"body-lg":["Atkinson Hyperlegible Next"],"label-md":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"headline-xl-mobile":["Plus Jakarta Sans"],"label-lg":["Plus Jakarta Sans"],"body-xl":["Atkinson Hyperlegible Next"],"headline-xl":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"]},"fontSize":{"body-md":["16px",{"lineHeight":"26px","letterSpacing":"0.01em","fontWeight":"500"}],"label-sm":["14px",{"lineHeight":"20px","fontWeight":"700"}],"body-lg":["18px",{"lineHeight":"30px","letterSpacing":"0.01em","fontWeight":"500"}],"label-md":["16px",{"lineHeight":"22px","fontWeight":"700"}],"headline-md":["20px",{"lineHeight":"30px","fontWeight":"700"}],"headline-xl-mobile":["26px",{"lineHeight":"36px","letterSpacing":"-0.01em","fontWeight":"800"}],"label-lg":["18px",{"lineHeight":"24px","fontWeight":"700"}],"body-xl":["20px",{"lineHeight":"32px","letterSpacing":"0.01em","fontWeight":"600"}],"headline-xl":["32px",{"lineHeight":"42px","letterSpacing":"-0.02em","fontWeight":"800"}],"headline-lg":["24px",{"lineHeight":"34px","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-lg-mobile":["22px",{"lineHeight":"32px","fontWeight":"700"}]}}}};</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.skip-nav:focus{position:fixed;top:1rem;left:1rem;z-index:100;background-color:#0d5c75;color:#ffffff;padding:0.75rem 1.25rem;border-radius:9999px;font-weight:700;box-shadow:0 10px 25px -5px rgba(0,0,0,0.3);}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-secondary-fixed selection:text-on-secondary-fixed"><a class="sr-only skip-nav" href="#main-content">본문 내용으로 바로 가기</a><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.03)]"><div class="h-28 px-margin flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">spa</span><h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight truncate">차근차근</h1><span class="hidden sm:inline-block font-label-sm text-label-sm text-primary-container bg-primary-fixed/60 px-space-xs py-0.5 rounded-full">하루 배움 도우미</span></div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">10월 6일 화요일</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="font-body-md text-body-md text-secondary font-bold truncate">Daily Routine</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="자동 소리 읽기 켜짐" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform" title="자동 읽기" type="button"><span class="material-symbols-outlined text-[24px]">volume_up</span></button><button aria-label="화면 글자 및 대비 맞춤 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="화면 설정" type="button"><span class="material-symbols-outlined text-[24px]">contrast</span></button><button aria-label="선생님 및 보호자 관리 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="선생님 설정" type="button"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-40 px-margin bg-surface max-w-[480px] mx-auto" id="main-content"><div class="flex flex-col w-full space-y-space-lg">
+<!-- Top Action & Classroom Context -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-full bg-surface-container-high text-primary hover:bg-surface-container-highest transition-colors active:scale-95 shadow-sm" onclick="history.back()" type="button">
+<span class="material-symbols-outlined text-[20px]">arrow_back</span>
+<span class="font-label-sm text-label-sm">학생 모드로 돌아가기</span>
+</button>
+<div class="flex items-center gap-2 px-space-md py-1.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+<span>햇살반 모니터링 실시간</span>
+</div>
+</div>
+<div class="flex items-baseline justify-between mt-1 px-1">
+<div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">선생님 안심 대시보드</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">햇살반 학생 3명의 하루 활동 및 정서 기록</p>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold bg-secondary-fixed/50 px-2.5 py-1 rounded-full">10월 6일 화요일</span>
+</div>
+</div>
+<!-- Section: Emergency SOS Alert Banner -->
+<div class="relative overflow-hidden bg-error-container text-on-error-container p-space-md rounded-lg shadow-md transition-all" id="urgentAlertCard">
+<div class="flex items-start gap-space-sm">
+<div class="w-12 h-12 rounded-full bg-error text-on-error flex items-center justify-center shrink-0 shadow-sm animate-bounce">
+<span class="material-symbols-outlined text-[28px]" style="font-variation-settings: 'FILL' 1;">notifications_active</span>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-error text-on-error uppercase font-extrabold tracking-wide">긴급 호출</span>
+<span class="font-label-sm text-label-sm opacity-80">1분 전 접수</span>
+</div>
+<p class="font-body-xl text-body-xl text-on-error-container mt-1 font-bold">
+          박서윤 학생이 <span class="underline underline-offset-2">"선생님 도와주세요!"</span>를 요청했습니다.
+        </p>
+<p class="font-body-md text-body-md opacity-90 mt-0.5">
+          교실 뒤편 배움터 테이블 3번 · 감정: 곤란/도움필요
+        </p>
+<div class="flex items-center gap-space-xs mt-3">
+<button class="flex-1 py-2.5 px-space-md rounded-full bg-error text-on-error font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-transform" onclick="handleAcknowledgeAlert()" type="button">
+<span class="material-symbols-outlined text-[20px]">directions_walk</span>
+<span>확인 및 교실로 가기</span>
+</button>
+<button class="py-2.5 px-space-sm rounded-full bg-surface-container-lowest/80 text-on-error-container font-label-sm text-label-sm hover:bg-surface-container-lowest active:scale-95 transition-transform" onclick="dismissUrgentAlert()" title="알림 닫기" type="button">
+            닫기
+          </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 1: Overview Stats Cards -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-headline-md text-headline-md text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[22px]">analytics</span>
+<span>오늘의 학급 현황 요약</span>
+</h3>
+<span class="font-label-sm text-label-sm text-outline">실시간 연동됨</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs">
+<!-- Metric 1 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">출석 / 활동 학생</span>
+<span class="material-symbols-outlined text-[22px] text-primary">groups</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-xl-mobile text-headline-xl-mobile text-primary font-black">3<span class="font-body-lg text-body-lg text-on-surface-variant font-medium">/3명</span></div>
+<span class="inline-block mt-1 font-label-sm text-label-sm text-tertiary bg-tertiary-fixed/60 px-2 py-0.5 rounded-full">전원 활동 중</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">일과 달성률</span>
+<span class="material-symbols-outlined text-[22px] text-secondary">task_alt</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-xl-mobile text-headline-xl-mobile text-secondary font-black">60<span class="font-body-lg text-body-lg text-on-surface-variant font-medium">%</span></div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full mt-2 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 60%"></div>
+</div>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">주된 감정 분포</span>
+<span class="material-symbols-outlined text-[22px] text-primary-container">sentiment_satisfied</span>
+</div>
+<div class="mt-2">
+<div class="flex items-center gap-1 font-headline-md text-headline-md text-on-surface font-extrabold">
+<span>😄1</span>
+<span class="text-outline-variant">·</span>
+<span>😟1</span>
+<span class="text-outline-variant">·</span>
+<span class="text-error">🙋1</span>
+</div>
+<span class="inline-block mt-1 font-label-sm text-label-sm text-on-surface-variant">기쁨 · 불안 · 도움필요</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex flex-col justify-between shadow-sm">
+<div class="flex items-center justify-between text-on-surface-variant">
+<span class="font-label-sm text-label-sm">쉼터 및 AAC 소통</span>
+<span class="material-symbols-outlined text-[22px] text-tertiary">record_voice_over</span>
+</div>
+<div class="mt-2">
+<div class="font-headline-md text-headline-md text-tertiary font-bold">쉼터 1회 <span class="font-body-md text-body-md text-on-surface-variant">/ AAC 12회</span></div>
+<span class="inline-block mt-1 font-label-sm text-label-sm text-primary bg-primary-fixed/50 px-2 py-0.5 rounded-full">의사표현 활발함</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Section 2: Student Activity Status Cards -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<h3 class="font-headline-md text-headline-md text-primary flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[22px]">assignment_ind</span>
+<span>학생별 실시간 체크 현황</span>
+</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">총 3명</span>
+</div>
+<!-- Student 1: 김민우 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-primary-fixed text-primary flex items-center justify-center font-bold text-headline-md">
+            민
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold">김민우</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">STU_01</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">최근 갱신: 오후 12:20</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+          교실 활동 중 (양호)
+        </span>
+</div>
+<!-- Routine Progress Visual -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">일과 진행 (4/5 완료)</span>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">80% 완료</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-tertiary h-full rounded-full" style="width: 80%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm pt-1 gap-1 text-on-surface-variant">
+<span class="bg-surface-container-lowest px-2 py-1 rounded-md text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>가방
+          </span>
+<span class="bg-surface-container-lowest px-2 py-1 rounded-md text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>인사
+          </span>
+<span class="bg-surface-container-lowest px-2 py-1 rounded-md text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>배움
+          </span>
+<span class="bg-surface-container-lowest px-2 py-1 rounded-md text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>점심
+          </span>
+<span class="bg-surface-container px-2 py-1 rounded-md text-outline">
+            하교
+          </span>
+</div>
+</div>
+<!-- Mood & AAC record -->
+<div class="grid grid-cols-2 gap-space-xs text-body-md font-body-md">
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="block font-label-sm text-label-sm text-on-surface-variant mb-1">최근 감정 상태</span>
+<span class="text-on-surface font-bold">기뻐요 / 신나요 😆</span>
+<span class="block text-label-sm font-label-sm text-outline mt-0.5">12:15 식사 후 등록</span>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg">
+<span class="block font-label-sm text-label-sm text-on-surface-variant mb-1">AAC 및 소통 로그</span>
+<span class="text-primary font-bold">AAC 3회 기록</span>
+<span class="block text-label-sm font-label-sm text-outline mt-0.5">"더 주세요", "재밌어요"</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 py-3 rounded-full bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high active:scale-95 transition-transform" onclick="showToast('김민우 학생 활동 상세로 이동합니다')" type="button">
+          활동 상세 보기
+        </button>
+<button class="flex-1 py-3 rounded-full bg-secondary text-on-secondary font-label-md text-label-md text-center shadow-sm active:scale-95 transition-transform flex items-center justify-center gap-1" onclick="sendPraiseSticker('김민우')" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_awesome</span>
+          칭찬 도장 보내기
+        </button>
+</div>
+</div>
+<!-- Student 2: 이지호 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm relative">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-tertiary-fixed text-tertiary flex items-center justify-center font-bold text-headline-md">
+            지
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold">이지호</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">STU_02</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant">최근 갱신: 오후 12:22</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">self_improvement</span>
+          쉬어가기 쉼터 (8분 경과)
+        </span>
+</div>
+<!-- Routine Progress Visual -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">일과 진행 (2/5 완료)</span>
+<span class="font-label-sm text-label-sm text-secondary font-bold">40% 완료</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 40%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm pt-1 gap-1 text-on-surface-variant">
+<span class="bg-surface-container-lowest px-2 py-1 rounded-md text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>가방
+          </span>
+<span class="bg-surface-container-lowest px-2 py-1 rounded-md text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>인사
+          </span>
+<span class="bg-surface-container-high px-2 py-1 rounded-md text-on-surface font-bold">
+            배움(보류)
+          </span>
+<span class="bg-surface-container px-2 py-1 rounded-md text-outline">
+            점심
+          </span>
+<span class="bg-surface-container px-2 py-1 rounded-md text-outline">
+            하교
+          </span>
+</div>
+</div>
+<!-- Calm-Down Status -->
+<div class="p-space-sm rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="text-on-surface-variant">정서 상태:</span>
+<span class="font-bold text-on-surface">불안해요 😟 (10:45 접수)</span>
+</div>
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="text-on-surface-variant">심신 안정 루틴:</span>
+<span class="text-tertiary font-bold">풍선 호흡 2회 완료 🎈</span>
+</div>
+<div class="flex items-center gap-2 mt-1 text-label-sm font-label-sm bg-surface-container-lowest p-2 rounded-md text-primary">
+<span class="material-symbols-outlined text-[18px]">headphones</span>
+<span>현재 청각 자극 조절: "따뜻한 빗소리" 재생 중</span>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 py-3 rounded-full bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high active:scale-95 transition-transform" onclick="showToast('이지호 학생 쉼터 원격 확인 중')" type="button">
+          쉼터 현황 확인
+        </button>
+<button class="flex-1 py-3 rounded-full bg-primary-container text-on-primary font-label-md text-label-md text-center shadow-sm active:scale-95 transition-transform flex items-center justify-center gap-1" onclick="showToast('지호 학생에게 편안한 시간 5분 추가 연장')" type="button">
+<span class="material-symbols-outlined text-[18px]">more_time</span>
+          편안한 시간 더 주기
+        </button>
+</div>
+</div>
+<!-- Student 3: 박서윤 (Alert State) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm relative border-l-4 border-error">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-12 h-12 rounded-full bg-error-container text-on-error-container flex items-center justify-center font-bold text-headline-md">
+            서
+          </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-extrabold">박서윤</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant bg-surface-container px-2 py-0.5 rounded-full">STU_03</span>
+</div>
+<p class="font-label-sm text-label-sm text-error font-bold">도움 요청 접수됨 (1분 전)</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-error text-on-error font-label-sm text-label-sm animate-pulse">
+<span class="material-symbols-outlined text-[16px]">priority_high</span>
+          지원 요청
+        </span>
+</div>
+<!-- Routine Progress Visual -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">일과 진행 (1/5 완료)</span>
+<span class="font-label-sm text-label-sm text-error font-bold">20% 진행</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 20%"></div>
+</div>
+<div class="flex items-center justify-between text-label-sm font-label-sm pt-1 gap-1 text-on-surface-variant">
+<span class="bg-surface-container-lowest px-2 py-1 rounded-md text-tertiary font-bold flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">check</span>가방
+          </span>
+<span class="bg-surface-container-high px-2 py-1 rounded-md text-error font-bold">
+            인사(멈춤)
+          </span>
+<span class="bg-surface-container px-2 py-1 rounded-md text-outline">
+            배움
+          </span>
+<span class="bg-surface-container px-2 py-1 rounded-md text-outline">
+            점심
+          </span>
+<span class="bg-surface-container px-2 py-1 rounded-md text-outline">
+            하교
+          </span>
+</div>
+</div>
+<!-- Mood & Emergency Card Log -->
+<div class="p-space-sm rounded-lg bg-error-container/40 text-on-error-container flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-body-md font-body-md">
+<span class="font-medium">현재 정서 표출:</span>
+<span class="font-bold text-error">도움 필요 / 화나요 😣 (11:02)</span>
+</div>
+<div class="flex items-start gap-2 bg-surface-container-lowest p-2 rounded-md mt-1">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">campaign</span>
+<div>
+<span class="font-label-sm text-label-sm text-on-surface font-bold block">선택한 AAC 카드 음성:</span>
+<p class="font-body-md text-body-md text-primary font-bold">"선생님 도와주세요! 소리가 너무 커요."</p>
+</div>
+</div>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-space-xs pt-1">
+<button class="flex-1 py-3 rounded-full bg-primary text-on-primary font-label-md text-label-md text-center shadow-sm active:scale-95 transition-transform flex items-center justify-center gap-1" onclick="resolveSupport('박서윤')" type="button">
+<span class="material-symbols-outlined text-[18px]">done_all</span>
+          지원 완료 처리
+        </button>
+<button class="flex-1 py-3 rounded-full bg-surface-container text-on-surface font-label-md text-label-md text-center hover:bg-surface-container-high active:scale-95 transition-transform flex items-center justify-center gap-1" onclick="showTeacherQuickReplyModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+          선생님 응답 보내기
+        </button>
+</div>
+</div>
+</div>
+<!-- Section 3: Data Management & Export (Local Classroom DB) -->
+<div class="bg-surface-container-low p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[26px]">database</span>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">활동 기록 데이터 관리 (DB 연동)</h3>
+<p class="font-label-sm text-label-sm text-on-surface-variant">교실 전용 로컬 암호화 저장소 동기화 완료</p>
+</div>
+</div>
+<!-- Export Action Buttons -->
+<div class="flex flex-col gap-2 mt-1">
+<button class="w-full py-3 px-space-md rounded-full bg-surface-container-lowest text-primary hover:bg-surface-container flex items-center justify-between font-label-md text-label-md shadow-sm active:scale-[0.99] transition-all" onclick="exportData('csv')" type="button">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">table_view</span>
+<span>오늘의 일과 기록 엑셀 / CSV 내보내기</span>
+</span>
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+<button class="w-full py-3 px-space-md rounded-full bg-surface-container-lowest text-primary hover:bg-surface-container flex items-center justify-between font-label-md text-label-md shadow-sm active:scale-[0.99] transition-all" onclick="exportData('iep')" type="button">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">summarize</span>
+<span>개별화교육(IEP) 관찰일지 자동 요약</span>
+</span>
+<span class="material-symbols-outlined text-[20px]">magic_button</span>
+</button>
+<button class="w-full py-2.5 px-space-md rounded-full bg-surface-container text-on-surface-variant hover:text-error hover:bg-error-container/30 flex items-center justify-between font-label-sm text-label-sm active:scale-[0.99] transition-all" onclick="confirmResetDay()" type="button">
+<span class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">lock_reset</span>
+<span>오늘 기록 마감 및 초기화 (교사 2차 비밀번호)</span>
+</span>
+<span class="material-symbols-outlined text-[18px]">lock</span>
+</button>
+</div>
+<!-- Security & Privacy Reassurance Notice -->
+<div class="bg-surface-container-high/60 p-space-sm rounded-lg flex items-start gap-2.5 mt-1">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">verified_user</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant leading-relaxed">
+        모든 학생의 감정 표출과 음성 AAC 데이터는 교실 전용 보안 로컬 DB에 안전하게 암호화 보관되며, 외부 상업 서버로 무단 전송되지 않습니다.
+      </p>
+</div>
+</div>
+<!-- Section 4: Interface & Routine Customization -->
+<div class="bg-surface-container-lowest p-space-lg rounded-lg shadow-sm flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[24px]">tune</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">학생 맞춤 환경 제어</h3>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">일괄 적용</span>
+</div>
+<div class="flex flex-col divide-y divide-surface-container">
+<!-- Setting 1: High Contrast -->
+<div class="flex items-center justify-between py-3">
+<div>
+<span class="font-label-md text-label-md text-on-surface block">고대비 모드 지원</span>
+<span class="font-body-md text-body-md text-on-surface-variant">시각적 변별이 쉬운 색채와 두꺼운 윤곽선</span>
+</div>
+<button aria-checked="false" class="w-14 h-8 bg-surface-container-highest rounded-full p-1 transition-colors duration-200 ease-in-out relative" onclick="toggleSetting(this)" role="switch" type="button">
+<div class="w-6 h-6 bg-surface-container-lowest rounded-full shadow-md transform transition-transform duration-200"></div>
+</button>
+</div>
+<!-- Setting 2: Speech Speed -->
+<div class="flex flex-col py-3 gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface">TTS 읽어주기 속도 조절</span>
+<span class="font-label-sm text-label-sm text-primary font-bold" id="ttsSpeedLabel">0.85x (천천히 또박또박)</span>
+</div>
+<input class="w-full accent-primary h-2 bg-surface-container rounded-lg cursor-pointer" max="1.2" min="0.5" oninput="updateTtsSpeed(this.value)" step="0.05" type="range" value="0.85"/>
+<div class="flex justify-between text-label-sm font-label-sm text-outline">
+<span>아주 천천히 (0.5x)</span>
+<span>보통 (1.0x)</span>
+<span>빠름 (1.2x)</span>
+</div>
+</div>
+<!-- Setting 3: Add Routine Step -->
+<div class="pt-3 flex items-center justify-between">
+<div>
+<span class="font-label-md text-label-md text-on-surface block">오늘의 특별 활동 추가</span>
+<span class="font-body-md text-body-md text-on-surface-variant">학급 전체 일과에 '소방대피훈련' 등 삽입</span>
+</div>
+<button class="px-space-md py-2.5 rounded-full bg-primary-fixed text-primary font-label-sm text-label-sm hover:bg-primary-fixed/80 active:scale-95 transition-transform flex items-center gap-1 shadow-sm" onclick="showAddRoutineModal()" type="button">
+<span class="material-symbols-outlined text-[18px]">add</span>
+          단계 추가
+        </button>
+</div>
+</div>
+</div>
+<!-- Reassuring Teacher Support Note -->
+<div class="bg-surface-container-low p-space-md rounded-lg flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[24px]">favorite</span>
+<p class="font-body-md text-body-md flex-1">
+      선생님의 따뜻한 지원 덕분에 아이들이 오늘도 한 걸음씩 스스로 자라납니다.
+    </p>
+</div>
+<!-- Quick Toast Notification Element (Hidden by default) -->
+<div class="fixed bottom-24 left-1/2 -translate-x-1/2 max-w-[400px] w-[90%] bg-inverse-surface text-inverse-on-surface px-space-md py-3 rounded-full text-center font-label-md text-label-md shadow-xl opacity-0 pointer-events-none transition-opacity duration-300 z-50 flex items-center justify-center gap-2" id="toastMessage">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">info</span>
+<span id="toastText">처리되었습니다.</span>
+</div>
+</div>
+<script>
+  function showToast(message) {
+    const toast = document.getElementById('toastMessage');
+    const toastText = document.getElementById('toastText');
+    if (!toast || !toastText) return;
+    toastText.textContent = message;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2400);
+  }
+
+  function handleAcknowledgeAlert() {
+    showToast("박서윤 학생 자리로 이동 알림을 기록했습니다. 즉시 지원 중으로 전환합니다.");
+    const alertCard = document.getElementById('urgentAlertCard');
+    if (alertCard) {
+      alertCard.classList.add('opacity-60');
+    }
+  }
+
+  function dismissUrgentAlert() {
+    const alertCard = document.getElementById('urgentAlertCard');
+    if (alertCard) {
+      alertCard.style.display = 'none';
+      showToast("긴급 알림이 숨김 처리되었습니다.");
+    }
+  }
+
+  function resolveSupport(studentName) {
+    showToast(`${studentName} 학생의 '도움 요청'이 지원 완료로 기록되었습니다.`);
+  }
+
+  function sendPraiseSticker(studentName) {
+    showToast(`${studentName} 학생 화면으로 '참 잘했어요! 🌟' 칭찬 스티커를 발송했습니다.`);
+  }
+
+  function showTeacherQuickReplyModal() {
+    const reply = prompt("학생 기기에 보낼 짧은 안심 음성 메시지를 입력하세요:", "선생님이 지금 바로 서윤이에게 가고 있어요, 조금만 기다려줘요!");
+    if (reply) {
+      showToast("박서윤 학생 기기에 안심 음성 카드가 전달되었습니다.");
+    }
+  }
+
+  function exportData(type) {
+    if (type === 'csv') {
+      showToast("오늘의 학급 일과 데이터 CSV 파일 저장을 시작합니다.");
+    } else if (type === 'iep') {
+      showToast("IEP 관찰일지 요약 보고서 생성이 완료되었습니다.");
+    }
+  }
+
+  function confirmResetDay() {
+    const code = prompt("오늘 일과 기록을 마감하고 초기화하려면 교사 비밀번호 4자리를 입력하세요:", "1234");
+    if (code) {
+      showToast("오늘의 배움 기록이 안전하게 아카이브되었습니다.");
+    }
+  }
+
+  function toggleSetting(btn) {
+    const isChecked = btn.getAttribute('aria-checked') === 'true';
+    btn.setAttribute('aria-checked', !isChecked);
+    const circle = btn.querySelector('div');
+    if (!isChecked) {
+      btn.classList.remove('bg-surface-container-highest');
+      btn.classList.add('bg-primary');
+      circle.classList.add('translate-x-6');
+      showToast("고대비 모드가 활성화되었습니다.");
+    } else {
+      btn.classList.add('bg-surface-container-highest');
+      btn.classList.remove('bg-primary');
+      circle.classList.remove('translate-x-6');
+      showToast("고대비 모드가 기본값으로 복원되었습니다.");
+    }
+  }
+
+  function updateTtsSpeed(val) {
+    const label = document.getElementById('ttsSpeedLabel');
+    if (label) {
+      if (val < 0.8) {
+        label.textContent = `${val}x (매우 천천히)`;
+      } else if (val <= 0.95) {
+        label.textContent = `${val}x (천천히 또박또박)`;
+      } else {
+        label.textContent = `${val}x (표준 속도)`;
+      }
+    }
+  }
+
+  function showAddRoutineModal() {
+    const routine = prompt("새로운 학급 공통 활동 이름을 입력하세요:", "오후 안전교육 및 양치질");
+    if (routine) {
+      showToast(`'${routine}' 일과가 학생 체크리스트에 추가되었습니다.`);
+    }
+  }
+</script></main><nav aria-label="내가 고르는 배움 메뉴" class="fixed bottom-0 w-full z-50 pb-safe bg-surface/95 backdrop-blur-xl shadow-[0_-4px_16px_rgba(0,0,0,0.04)]" data-active-classes="text-primary font-bold bg-primary-fixed/40"><div class="max-w-[480px] mx-auto h-24 px-space-xs flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="intro" href="#"><span class="material-symbols-outlined text-[26px]">home</span><span class="font-label-sm text-label-sm mt-0.5">처음</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="daily-routine" href="#"><span class="material-symbols-outlined text-[26px]">event_available</span><span class="font-label-sm text-label-sm mt-0.5">나의 하루</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="express-feelings" href="#"><span class="material-symbols-outlined text-[26px]">mood</span><span class="font-label-sm text-label-sm mt-0.5">마음 전하기</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="voice-communication" href="#"><span class="material-symbols-outlined text-[26px]">record_voice_over</span><span class="font-label-sm text-label-sm mt-0.5">말로 전하기</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="daily-skills" href="#"><span class="material-symbols-outlined text-[26px]">checklist</span><span class="font-label-sm text-label-sm mt-0.5">생활 연습</span></a><a class="flex flex-col items-center justify-center min-w-[54px] min-h-[58px] p-1.5 rounded-2xl text-on-surface-variant hover:text-on-surface transition-all active:scale-95" data-path="rest-and-play" href="#"><span class="material-symbols-outlined text-[26px]">self_improvement</span><span class="font-label-sm text-label-sm mt-0.5">쉬어 가기</span></a></div></nav>
+</body></html>
