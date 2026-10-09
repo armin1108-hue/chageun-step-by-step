@@ -27,6 +27,8 @@
   const banner=document.createElement('div');banner.className='demo-banner';
   banner.innerHTML='<span>수업용 데모 · 기록은 이 브라우저에 저장됩니다. 실제 학생정보를 입력하지 마세요.</span><a href="teacher.html">시연 기록 보기</a>';
   document.body.prepend(banner);
+  const menuRoutes = {intro:'index.html','daily-routine':'routine.html','express-feelings':'emotion.html','voice-communication':'aac.html','daily-skills':'daily-skills.html','rest-and-play':'rest-space.html'};
+  document.querySelectorAll('nav a[data-path]').forEach(a=>{if(menuRoutes[a.dataset.path])a.href=menuRoutes[a.dataset.path];});
   if (!store.available()) toast('저장공간을 사용할 수 없어 새로고침 후 기록이 사라질 수 있습니다.');
   document.body.classList.toggle('demo-contrast',store.get().contrast);
   document.querySelectorAll('button[aria-label*="처음 화면"],button[onclick*="history.back"]').forEach(b=>b.onclick=()=>location.href='index.html');
