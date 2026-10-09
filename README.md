@@ -2,6 +2,10 @@
 
 KERI(한국교육연구소)의 AI활용교육전문가 6기 1급 4일차 수업용 웹앱입니다. 기존 **Google Stitch 디자인 → 기능 보완 → GitHub 공유 → Netlify 배포**를 시연하기 위해 준비했습니다.
 
+공개 웹앱: https://chageun-step-by-step.netlify.app/
+
+GitHub 저장소: https://github.com/armin1108-hue/chageun-step-by-step
+
 원본 Stitch 프로젝트: https://stitch.withgoogle.com/projects/11878761854160808095?pli=1
 
 ## 실행 가능한 기능
@@ -62,4 +66,4 @@ python -m http.server 8000 --directory dist
 
 ## 현재 검증
 
-정적 빌드와 JavaScript 구문 검사, 브라우저 저장·손상 복구·CSV·초기화 자동 검사를 통과했습니다. 실제 Netlify 배포 후 브라우저 확인은 아직 수행하지 않았습니다.
+정적 빌드와 JavaScript 구문 검사, 브라우저 저장·손상 복구·CSV·초기화 자동 검사를 통과했습니다. 2026-10-09 공개 Netlify에서 화면 이동, 일과 2개 체크 후 새로고침 유지, 감정 선택·크게 보기·다시 선택, AAC 2개 카드 조합·한 카드 삭제, 생활 연습 기록, 호흡 시작·멈춤, 합성 소리 재생 상태·음량, 시연 기록 반영과 CSV 다운로드를 확인했습니다. 한국어 음성 품질은 기기별 별도 확인이 필요합니다. GitHub 커밋 뒤 Netlify 자동 재배포도 확인했습니다.
