@@ -49,19 +49,19 @@
     const choices=$('section[aria-label="오늘의 배움 영역 바로가기"]');choices.className='home-choices';
     choices.firstElementChild.className='choices-heading';choices.querySelector('h3').textContent='무엇을 해볼까요?';choices.firstElementChild.lastElementChild.textContent='그림을 눌러 시작해요';
     const grid=make('div','activity-grid');
-    choices.querySelectorAll(':scope > a').forEach(a=>{const name=(a.getAttribute('href')||'').replace('.html','');if(!paths[name])return;const [title,desc]=paths[name];a.className=`activity-choice activity-${name}`;a.setAttribute('aria-label',title);a.innerHTML=art(name)+`<span class="activity-title">${title}</span><span class="activity-desc">${desc}</span><span class="activity-arrow">${icon('arrow_forward')}</span>`;grid.append(a);});choices.append(grid);
+    choices.querySelectorAll(':scope > a').forEach(a=>{const name=(new URL(a.href,location.href).pathname.split('/').filter(Boolean).pop()||'index').replace(/\.html$/,'');if(!paths[name])return;const [title,desc]=paths[name];a.className=`activity-choice activity-${name}`;a.setAttribute('aria-label',title);a.innerHTML=art(name)+`<span class="activity-title">${title}</span><span class="activity-desc">${desc}</span><span class="activity-arrow">${icon('arrow_forward')}</span>`;grid.append(a);});choices.append(grid);
     const help=$('section[aria-label="빠른 도움 및 진정 쉼터"]');help.className='home-help';choices.after(help);
     help.firstElementChild.remove();const ask=$('#btn-call-teacher');ask.innerHTML=icon('front_hand')+'<span><strong>도움이 필요해요</strong><small>선생님께 이 화면을 보여주세요</small></span>'+icon('north_east');
     const rest=help.querySelector('a');rest.innerHTML=icon('spa')+'<span><strong>잠깐 쉬고 싶어요</strong><small>편안하게 쉬어 가요</small></span>'+icon('arrow_forward');
     $('section[aria-label="오늘의 응원"]')?.remove();
-    const footer=$('section[aria-label="기관 및 보호자 안내"]');if(footer){footer.className='student-footer';footer.textContent='KERI · 한국교육연구소';}
+    const footer=$('[aria-label="기관 및 보호자 안내"]');if(footer){footer.className='student-footer';footer.textContent='KERI · 한국교육연구소';}
   }
   if(route==='routine'){
     const cards=$$('.task-card');const deck=$('section[aria-label="오늘의 순서 카드 목록"]');deck.classList.add('routine-grid');
     cards.forEach(card=>{const image=card.querySelector('img');image?.parentElement.classList.add('routine-picture');const title=card.querySelector('.task-name');title.classList.add('routine-title');if(image&&!image.hidden)image.alt='';});
     function update(){let currentFound=false;cards.forEach(card=>{const done=card.dataset.completed==='true';const current=!done&&!currentFound;if(current)currentFound=true;card.classList.toggle('is-next-task',current);const label=card.querySelector('.status-pill span:last-child');if(label)label.textContent=done?'표시했어요':current?'지금 할 일':'이따가 해요';card.querySelector('.btn-text').textContent=done?'했어요 · 다시 누르면 취소':'했어요';});}
     cards.forEach(card=>card.querySelector('.complete-btn').addEventListener('click',update));$('#reset-tasks-btn').addEventListener('click',update);update();
-    const intro=$('section[aria-label="나의 하루"]');intro?.classList.add('page-intro','routine-intro');
+    const intro=$('section[aria-labelledby="sub-banner-title"]');intro?.classList.add('page-intro','routine-intro');
     const comfort=$('section[aria-labelledby="comfort-heading"]');if(comfort){comfort.className='quiet-note';comfort.innerHTML=icon('favorite')+'<p>도움을 받아도 괜찮아요. 나의 속도로 해봐요.</p>';}
     const done=$('#all-done-banner');if(done){done.classList.remove('animate-bounce');done.querySelector('.font-headline-lg-mobile').textContent='오늘의 일과를 모두 표시했어요.';done.querySelector('p').textContent='함께한 하루, 수고했어요.';}
     $$('main footer').forEach(e=>e.remove());
@@ -76,7 +76,7 @@
   if(route==='emotion'){
     $('div[role="radiogroup"]').classList.add('feeling-grid');
     $$('.emotion-card').forEach(card=>{card.classList.add('feeling-card');card.querySelector('p').hidden=true;const subtitle=card.querySelector(':scope > .font-label-sm');if(subtitle)subtitle.hidden=true;const voice=card.querySelector(':scope > .mt-space-sm');if(voice)voice.hidden=true;});
-    const intro=$('h2').closest('.bg-primary-container');intro?.classList.add('page-intro','feeling-intro');
+    const intro=$('h2').closest('.bg-primary-container');intro?.classList.add('page-intro','feeling-intro');if(intro){intro.querySelector('p').textContent='어떤 마음이든 괜찮아요. 내 마음을 골라요.';const skip=$('.skip-feeling');if(skip)intro.append(skip);}
     const preview=$('#preview-box').parentElement;preview.classList.add('feeling-preview');
     $('#show-big-btn span:last-child').textContent='이 마음 크게 보여주기';$('#speak-btn span:last-child').textContent='내 마음 소리로 듣기';
     const selected=$('#selected-badge');const update=()=>{const chosen=$('.emotion-card[aria-checked="true"]');$('#show-big-btn').disabled=!chosen;$('#speak-btn').disabled=!chosen;selected.textContent=chosen?'내가 고른 마음':'아직 고르지 않았어요';};
@@ -89,8 +89,8 @@
     const content=main.querySelector(':scope > div');content.classList.add('practice-content');
     $('div[role="tablist"]')?.parentElement.remove();$('section[aria-label="다른 생활 연습 추천"]')?.remove();
     const activity=$('section[aria-label="지금 진행 중인 핵심 연습"]');activity.classList.add('practice-activity');
-    const h=$('h2');h.textContent='하나씩, 해봐요';const intro=h.closest('.relative');intro?.classList.add('page-intro');const p=intro?.querySelector('p');if(p)p.textContent='그림을 보고 내 속도로 따라 해요.';
-    if(intro){const labels=[...intro.querySelectorAll('span')];labels.forEach(s=>{if(s.textContent.trim()==='칭찬 도장 🌟')s.remove();if(s.textContent.trim()==='스스로 할 수 있어요')s.textContent='도움을 받아도 괜찮아요';});}
+    const h=$('h2');h.textContent='하나씩, 해봐요';const intro=h.closest('div.relative.overflow-hidden');intro?.classList.add('page-intro','practice-intro');const p=intro?.querySelector('p');if(p)p.textContent='그림을 보고 내 속도로 따라 해요.';
+    if(intro){const badge=h.previousElementSibling;if(badge)badge.textContent='도움을 받아도 괜찮아요';const labels=[...intro.querySelectorAll('span')];labels.forEach(s=>{if(s.textContent.trim()==='칭찬 도장 🌟')s.remove();if(s.textContent.trim()==='스스로 할 수 있어요')s.textContent='도움을 받아도 괜찮아요';});}
     const header=activity.querySelector('h3').closest('div').parentElement.parentElement;header.classList.add('practice-title-row');
     activity.querySelector('h3').textContent=window.ChageunSettings.get().practice.title;
     const complete=$('#completePracticeBtn');complete.innerHTML=icon('check_circle')+'<span>여기까지 해봤어요</span>';
