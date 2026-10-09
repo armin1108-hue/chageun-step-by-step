@@ -235,3 +235,51 @@ body.student-app>header{position:sticky;top:0;z-index:50;background:#f7f6f0f5;bo
 .student-app :is(#full-modal,#restModal){z-index:100}
 .student-app .page-intro .material-symbols-outlined{color:inherit}
 @media(max-width:760px){.student-app .practice-intro{flex-direction:column;align-items:flex-start;gap:14px}.student-app .practice-intro>div:last-child{align-self:flex-end;font-size:12px}.student-app .feeling-intro .skip-feeling{position:static;display:inline-block;padding:10px 0 0;min-height:40px;font-size:13px}}
+
+/* Keep the activity itself within reach on a phone. */
+.page-daily-skills .practice-count{justify-content:center;margin:6px 0 0;padding:0;font-size:13px;color:#5e6d56}
+.page-daily-skills .practice-count .material-symbols-outlined{font-size:19px}
+.page-aac .composer-reset{min-width:44px;min-height:44px;flex-shrink:0;background:#edf1e5;color:#516d47}
+@media(max-width:520px){
+  .page-daily-skills main,.page-aac main{padding-top:14px}
+  .page-daily-skills .practice-toolbar,.page-aac .aac-toolbar{display:none}
+  .page-daily-skills .practice-content{gap:12px}
+  .page-daily-skills .practice-intro{padding:10px 14px;margin:0;border-radius:18px;gap:0}
+  .page-daily-skills .practice-intro>div:last-child{align-self:stretch}
+  .page-daily-skills .practice-intro h2{font-size:25px;line-height:1.25}
+  .page-daily-skills .practice-intro p{font-size:14px;line-height:1.5;margin-top:3px}
+  .page-daily-skills .practice-intro>div:first-child>div:last-child>div{display:none}
+  .page-daily-skills .practice-activity>div{padding:14px;gap:12px;border-radius:20px}
+  .page-daily-skills .practice-title-row{margin:-14px -14px 0;padding:12px 14px;border-radius:20px 20px 0 0;gap:8px}
+  .page-daily-skills .practice-title-row h3{font-size:21px;line-height:1.4;margin:0}
+  .page-daily-skills .practice-title-row>div>div:first-child,
+  .page-daily-skills .practice-title-row>div>div:last-child>div,
+  .page-daily-skills #masterTtsBtn,.page-daily-skills #stepVoiceBtn,.page-daily-skills .practice-tip{display:none}
+  .page-daily-skills #stepListContainer{gap:10px}
+  .page-daily-skills .step-focus{display:grid;grid-template-columns:100px minmax(0,1fr);grid-template-rows:auto auto auto;align-items:center;column-gap:14px;row-gap:7px;min-height:190px;padding:14px;text-align:left;border-radius:18px}
+  .page-daily-skills .step-visual{grid-row:1/3;width:100px;height:100px;box-shadow:inset 0 0 0 8px #f6f8ee}
+  .page-daily-skills .step-visual .material-symbols-outlined{font-size:59px}
+  .page-daily-skills .step-focus>p:first-of-type{align-self:end;font-size:13px;line-height:1.3;margin:0;padding:0}
+  .page-daily-skills .step-focus h4{font-size:23px;line-height:1.45;align-self:start;letter-spacing:-.5px}
+  .page-daily-skills .step-focus>p:last-child{grid-column:1/-1;align-self:center;text-align:center;font-size:13px;line-height:1.5;padding:0}
+  .page-daily-skills #stepListContainer>.extension-controls button{min-height:54px;font-size:15px;line-height:1.4;padding:9px 5px}
+  .page-daily-skills .step-overview-wrap{padding-top:5px;margin-top:0}
+  .page-daily-skills .step-overview-wrap summary{min-height:44px;padding:9px 0}
+  .page-daily-skills #completePracticeBtn{min-height:56px;height:auto;padding:12px;font-size:18px}
+  .page-aac .aac-intro{padding:11px 14px;margin-bottom:12px;border-radius:18px}
+  .page-aac .aac-intro>div:first-child{display:none}
+  .page-aac .aac-intro h2{font-size:26px;line-height:1.25}
+  .page-aac .aac-intro p{font-size:14px;line-height:1.5;margin-top:3px}
+  .page-aac .sentence-composer{padding:10px 12px;gap:7px;margin-bottom:12px;border-radius:18px;top:83px}
+  .page-aac .composer-heading{gap:8px;min-height:44px}
+  .page-aac .composer-heading>span:first-child{display:none}
+  .page-aac #speech-status-hint{font-size:13px}
+  .page-aac #sentence-chips{min-height:44px;padding:7px 8px;border-radius:12px}
+  .page-aac #empty-chip-placeholder{font-size:14px;padding:0;line-height:1.5}
+  .page-aac #speak-btn,.page-aac #clear-sentence-btn{min-height:52px}
+  .page-aac div[role=tablist]{margin-bottom:12px;padding-bottom:0}
+  .page-aac .cat-pill{min-height:44px;padding:8px 13px}
+  .page-aac .communication-card{min-height:168px;padding:15px 10px;gap:10px}
+  .page-aac .communication-card>div:first-child>span{width:60px;height:60px;border-radius:20px}
+  .page-aac .communication-card .font-headline-md{font-size:20px;line-height:1.4}
+}

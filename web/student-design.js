@@ -67,10 +67,13 @@
     $$('main footer').forEach(e=>e.remove());
   }
   if(route==='aac'){
+    main.querySelector(':scope > div > div:first-child')?.classList.add('aac-toolbar');
     $('#aac-grid').classList.add('communication-grid');
     $$('.aac-card').forEach(card=>{card.classList.add('communication-card');const badge=card.querySelector('.rounded-full.bg-secondary');badge?.remove();card.querySelector('.mt-3 .font-label-sm')?.remove();card.querySelectorAll('.material-symbols-outlined').forEach((node,i)=>{if(i>0)node.remove();});});
     const composer=$('section[aria-label="문장 만들기 상자"]');composer.classList.add('sentence-composer');
-    const intro=$('h2').closest('div.bg-surface-container-low');intro?.classList.add('page-intro');
+    const intro=$('h2').closest('div.bg-surface-container-low');intro?.classList.add('page-intro','aac-intro');if(intro)intro.querySelector('p').textContent='그림을 고르고 소리로 들려줘요.';
+    const composerHeading=composer.firstElementChild;composerHeading.classList.add('composer-heading');
+    const reset=$('#reset-all-btn');reset.classList.add('composer-reset');composerHeading.append(reset);
     $('#empty-chip-placeholder').textContent='아래 그림을 누르면 말이 모여요.';
   }
   if(route==='emotion'){
@@ -87,13 +90,16 @@
   }
   if(route==='daily-skills'){
     const content=main.querySelector(':scope > div');content.classList.add('practice-content');
+    $('#ttsPlayAllBtn')?.parentElement.classList.add('practice-toolbar');
     $('div[role="tablist"]')?.parentElement.remove();$('section[aria-label="다른 생활 연습 추천"]')?.remove();
     const activity=$('section[aria-label="지금 진행 중인 핵심 연습"]');activity.classList.add('practice-activity');
     const h=$('h2');h.textContent='하나씩, 해봐요';const intro=h.closest('div.relative.overflow-hidden');intro?.classList.add('page-intro','practice-intro');const p=intro?.querySelector('p');if(p)p.textContent='그림을 보고 내 속도로 따라 해요.';
     if(intro){const badge=h.previousElementSibling;if(badge)badge.textContent='도움을 받아도 괜찮아요';const labels=[...intro.querySelectorAll('span')];labels.forEach(s=>{if(s.textContent.trim()==='칭찬 도장 🌟')s.remove();if(s.textContent.trim()==='스스로 할 수 있어요')s.textContent='도움을 받아도 괜찮아요';});}
     const header=activity.querySelector('h3').closest('div').parentElement.parentElement;header.classList.add('practice-title-row');
+    header.nextElementSibling?.classList.add('practice-tip');
     activity.querySelector('h3').textContent=window.ChageunSettings.get().practice.title;
     const complete=$('#completePracticeBtn');complete.innerHTML=icon('check_circle')+'<span>여기까지 해봤어요</span>';
+    const count=intro?.lastElementChild;if(count&&count.contains($('#completedCounter'))){count.classList.add('practice-count');complete.parentElement.append(count);}
   }
   if(route==='rest-space'){
     const content=main.querySelector(':scope > div');content.classList.add('rest-content');
@@ -105,6 +111,10 @@
     $('#rest-card-heading').textContent='쉬는 중이라고 보여줄까요?';$('#openRestCardBtn span:last-child').textContent='쉬는 중이에요';
     const image=content.querySelector('img');if(image)image.closest('div.w-full').classList.add('rest-landscape');
   }
+  // Student footers describe the current demonstration accurately and briefly.
+  $$('main p').filter(p=>/^한국(?:교육연구소|특수교육)/.test(p.textContent.trim())).forEach(p=>{
+    const footer=p.parentElement;footer.className='student-footer';footer.textContent='가상자료로 연습하는 공간 · KERI';
+  });
   // Decorative glyph names should not be read as English instructions.
   $$('.material-symbols-outlined').forEach(e=>e.setAttribute('aria-hidden','true'));
 })();

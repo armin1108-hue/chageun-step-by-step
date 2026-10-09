@@ -95,7 +95,7 @@
       audio=audio||new Audio();audio.resume();const buffer=audio.createBuffer(1,audio.sampleRate*3,audio.sampleRate);const data=buffer.getChannelData(0);for(let i=0;i<data.length;i++)data[i]=(Math.random()*2-1)*0.3;
       source=audio.createBufferSource();source.buffer=buffer;source.loop=true;const filter=audio.createBiquadFilter();filter.type='lowpass';filter.frequency.value={rain:1600,birds:900,wave:400,fire:700}[type]||800;
       gain=audio.createGain();gain.gain.value=Number(document.getElementById('soundVolume')?.value||30)/300;source.connect(filter).connect(gain).connect(audio.destination);source.start();current=type;
-      const selected=document.querySelector('.timer-chip.bg-primary');const mins=Number(selected?.textContent.match(/\d+/)?.[0]||3);endTimer=setTimeout(()=>{stop();document.getElementById('soundPlayingBadge')?.classList.add('hidden');toast('휴식 소리가 끝났어요.');},mins*60000);
+      const selected=document.querySelector('.timer-chip.bg-primary');const mins=Number(selected?.textContent.match(/\d+/)?.[0]||3);endTimer=setTimeout(()=>{window.dispatchEvent(new Event('chageun:stop-sounds'));toast('휴식 소리가 끝났어요.');},mins*60000);
       store.log('휴식 소리','브라우저 합성 소리 재생');
     }));
     document.getElementById('soundVolume')?.addEventListener('input',e=>{if(gain)gain.gain.value=Number(e.target.value)/300;});
