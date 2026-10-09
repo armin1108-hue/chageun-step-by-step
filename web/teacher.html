@@ -1,1 +1,34 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>차근차근 · 시연 기록</title><link rel="stylesheet" href="app.css"><script defer src="storage.js"></script><script defer src="app.js"></script></head><body class="teacher"><main><p>KERI · 한국교육연구소</p><h1>차근차근 시연 기록</h1><p>학생용 화면에서 직접 실행한 결과입니다. 다른 기기의 교사에게 전송되는 기능과 로그인은 구현되어 있지 않습니다. 동일한 브라우저에서 수업용 가상 활동만 기록하세요.</p><div class="cards"><article><h2>나의 하루</h2><p class="value" id="routine-value">0/5</p></article><article><h2>최근 선택한 마음</h2><p id="emotion-value">선택 전</p></article><article><h2>생활 연습</h2><p class="value" id="practice-value">0회</p></article></div><p><a class="button" href="index.html">학생용 처음 화면</a><button id="refresh">기록 새로 보기</button><button id="download-csv">CSV 내려받기</button><button id="clear-record">시연 기록 초기화</button></p><h2>활동 기록</h2><p id="empty-record">학생용 화면에서 활동을 해보세요. 이곳에 시연 기록이 표시됩니다.</p><div class="table-wrap"><table><thead><tr><th>시간</th><th>활동</th><th>내용</th></tr></thead><tbody id="event-rows"></tbody></table></div><p>자동 IEP 평가, 학교 DB 연동, 보안 인증, 데이터 암호화는 제공하지 않습니다.</p></main></body></html>
+<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>차근차근 · 교사 도우미</title><link rel="stylesheet" href="app.css"><script defer src="storage.js"></script><script defer src="settings.js"></script><script defer src="app.js"></script><script defer src="additions.js"></script><script defer src="teacher.js"></script></head><body class="teacher"><main><p>KERI · 한국교육연구소</p><h1>차근차근 교사 도우미</h1><p class="teacher-lead">기존 학생 화면에 일과·카드·활동 설정을 붙이고, 가상 관찰 문서를 검토해요.</p><nav class="teacher-links" aria-label="교사 업무 메뉴"><a href="#class-settings">수업 화면 편집</a><a href="#manual-draft">관찰·목표 시연</a><a href="#event-rows">기존 시연 기록</a></nav><p>학생용 화면에서 직접 실행한 결과입니다. 다른 기기의 교사에게 전송되는 기능과 로그인은 구현되어 있지 않습니다. 동일한 브라우저에서 수업용 가상 활동만 기록하세요.</p><div class="cards"><article><h2>나의 하루</h2><p class="value" id="routine-value">0/5</p></article><article><h2>최근 선택한 마음</h2><p id="emotion-value">선택 전</p></article><article><h2>생활 연습</h2><p class="value" id="practice-value">0회</p></article></div><p><a class="button" href="index.html">학생용 처음 화면</a><button id="refresh">기록 새로 보기</button><button id="download-csv">CSV 내려받기</button><button id="clear-record">시연 기록 초기화</button></p><h2>활동 기록</h2><p id="empty-record">학생용 화면에서 활동을 해보세요. 이곳에 시연 기록이 표시됩니다.</p><div class="table-wrap"><table><thead><tr><th>시간</th><th>활동</th><th>내용</th></tr></thead><tbody id="event-rows"></tbody></table></div><p>자동 IEP 평가, 학교 DB 연동, 보안 인증, 데이터 암호화는 제공하지 않습니다.</p>
+<section id="class-settings" class="teacher-section">
+<p class="eyebrow">수업 화면 편집</p><h2>우리 수업에 맞게 바꾸기</h2>
+<p>가상 수업의 공통 안내만 입력하세요. 설정은 이 브라우저에 저장되며 다른 기기에는 전달되지 않습니다. 사진 업로드와 실제 학생별 설정은 제공하지 않습니다.</p>
+<details open><summary>일과 5개 · 지금과 다음</summary><form id="routine-form"><div id="routine-editor"></div><label>일과 변경 안내<textarea id="change-note" maxlength="200" rows="2" placeholder="예: 오늘은 함께 배우기 전에 산책해요."></textarea></label><p>순서를 바꾸거나 이름을 변경하면 기존 일과 체크를 초기화합니다.</p><button type="submit">일과 설정 저장</button></form></details>
+<details><summary>AAC 8개 · 문구와 그림 기호</summary><form id="aac-form"><p>카드 자리는 자동으로 바뀌지 않습니다. 각 자리의 문구·그림 기호·분류를 편집하세요.</p><div id="aac-editor"></div><button type="submit">AAC 설정 저장</button></form></details>
+<details><summary>생활 연습 · 단계별 안내</summary><form id="practice-form"><label>활동 이름<input id="practice-title" maxlength="60" required></label><div id="practice-editor"></div><label>도움을 주는 방법<textarea id="practice-support" maxlength="200" rows="2" required></textarea></label><button type="submit">활동 단계 저장</button></form></details>
+<details><summary>화면 움직임</summary><form id="motion-form"><label class="check-label"><input id="reduced-motion" type="checkbox">화면 움직임 줄이기</label><button type="submit">화면 설정 저장</button></form></details>
+<p id="settings-status" class="form-status" role="status" aria-live="polite"></p>
+<p class="preview-links"><a class="button" href="routine.html" target="_blank" rel="noopener">일과 화면 열기</a><a class="button" href="aac.html" target="_blank" rel="noopener">AAC 화면 열기</a><a class="button" href="daily-skills.html" target="_blank" rel="noopener">활동 화면 열기</a></p>
+</section>
+<section id="manual-draft" class="teacher-section">
+<p class="eyebrow">관찰·목표 시연</p><h2>직접 관찰한 내용으로 초안 만들기</h2>
+<p class="memory-notice"><strong>시험용 · 가상 데이터</strong><br>이 초안은 현재 탭 메모리에만 있습니다. 새로고침하거나 닫으면 사라집니다. 실제 학생정보는 입력하지 마세요. 서버 저장·로그인·학교 승인 전에는 실제 기록에 사용할 수 없습니다.</p>
+<form id="observation-form">
+<div class="field-grid"><label>시연 대상<select id="subject"><option>가상 학생 A</option><option>가상 학생 B</option></select></label><label>관찰 날짜<input id="observation-date" type="date" required></label></div>
+<label>현재 수행 · 관찰 근거<textarea id="baseline" maxlength="500" rows="3" required placeholder="가상 관찰에서 직접 확인한 수행과 도움을 적어요."></textarea></label>
+<label>교육 목표<textarea id="goal" maxlength="500" rows="3" required placeholder="교사가 정한 목표를 적어요. 자동 성취 판단은 하지 않습니다."></textarea></label>
+<div class="field-grid"><label>확인 방법<input id="measure" maxlength="300" required placeholder="예: 교사가 활동 중 직접 관찰"></label><label>목표 검토일<input id="review-date" type="date" required></label></div>
+<label>관찰 활동<input id="activity" maxlength="150" required></label>
+<label>직접 관찰한 행동<textarea id="observation" maxlength="2000" rows="4" required placeholder="활동 클릭 횟수 대신 실제로 보고 들은 행동을 적어요."></textarea></label>
+<div class="field-grid"><label>제공한 도움<input id="support" maxlength="300" required placeholder="도움이 없었으면 '도움 없음'"></label><label>상황·환경<input id="context" maxlength="500" required></label></div>
+<label>시연 관찰자<select id="observer"><option>가상 교사 A</option><option>가상 교사 B</option></select></label>
+<button type="submit">입력 내용으로 시연 초안 만들기</button>
+</form>
+<p id="draft-status" class="form-status" role="status" aria-live="polite"></p>
+<article id="document-preview" class="document-preview" hidden></article>
+<div id="review-controls" hidden>
+<label class="check-label"><input id="reviewed" type="checkbox">관찰 근거와 목표를 직접 검토했습니다.</label>
+<button id="confirm-draft" type="button">검토한 시연 초안 확정</button><button id="print-draft" type="button" disabled>확정한 시연 문서 인쇄</button><button id="clear-draft" class="secondary-button" type="button">시연 초안 지우기</button>
+</div>
+<p>관찰하지 않은 성취를 생성하지 않습니다. 생활기록부와 공식 IEP 자동 작성·평가 기능은 제공하지 않습니다.</p>
+</section>
+</main></body></html>

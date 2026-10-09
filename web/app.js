@@ -1,6 +1,11 @@
 (function () {
   'use strict';
   const store = window.ChageunStore;
+  const config = window.ChageunSettings;
+  const routineConfig = JSON.stringify(config.get().routine);
+  const oldRoutineConfig = store.get().routineConfig || JSON.stringify(config.defaults().routine);
+  if (routineConfig !== oldRoutineConfig) store.patch({routine:[],routineConfig});
+  else if (!store.get().routineConfig) store.patch({routineConfig});
   const route = location.pathname.split('/').filter(Boolean).pop() || 'index';
   const page = route.endsWith('.html') ? route : `${route}.html`;
   const today = new Date().toLocaleDateString('ko-KR', {month:'long',day:'numeric',weekday:'long'});
