@@ -13,7 +13,7 @@
     '별도의 비밀번호 없이 학생이 안심하고 터치하며 스스로 배울 수 있는 안전 모드입니다.': '로그인 없이 체험하는 수업용 화면입니다. 실제 학생정보를 입력하지 마세요.'
   };
   document.querySelectorAll('span,p').forEach(el=>{
-    if(el.childElementCount===0 && demoText[el.textContent.trim()]) el.textContent=demoText[el.textContent.trim()];
+    if(demoText[el.textContent.trim()]) el.textContent=demoText[el.textContent.trim()];
   });
   function toast(message) {
     document.querySelector('.demo-toast')?.remove();
