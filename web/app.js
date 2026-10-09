@@ -1,7 +1,19 @@
 (function () {
   'use strict';
   const store = window.ChageunStore;
-  const page = location.pathname.split('/').pop() || 'index.html';
+  const route = location.pathname.split('/').filter(Boolean).pop() || 'index';
+  const page = route.endsWith('.html') ? route : `${route}.html`;
+  const today = new Date().toLocaleDateString('ko-KR', {month:'long',day:'numeric',weekday:'long'});
+  const demoText = {
+    '10월 6일 화요일': today,
+    '안심 모드 작동 중': '수업용 데모',
+    '햇살반 3명 활동 중': '교실 디자인 예시',
+    '한국교육연구소 KERI · 특수교육 디지털 교육과정 표준 지원 v1.0': '한국교육연구소 KERI · 앱 만들기 수업용 데모 v1.0',
+    '별도의 비밀번호 없이 학생이 안심하고 터치하며 스스로 배울 수 있는 안전 모드입니다.': '로그인 없이 체험하는 수업용 화면입니다. 실제 학생정보를 입력하지 마세요.'
+  };
+  document.querySelectorAll('span,p').forEach(el=>{
+    if(el.childElementCount===0 && demoText[el.textContent.trim()]) el.textContent=demoText[el.textContent.trim()];
+  });
   function toast(message) {
     document.querySelector('.demo-toast')?.remove();
     const el = document.createElement('div'); el.className='demo-toast'; el.setAttribute('role','status'); el.textContent=message;
