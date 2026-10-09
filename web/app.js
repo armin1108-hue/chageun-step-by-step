@@ -8,6 +8,7 @@
     '10월 6일 화요일': today,
     '안심 모드 작동 중': '수업용 데모',
     '햇살반 3명 활동 중': '교실 디자인 예시',
+    '한국교육연구소 KERI v1.0 · 특수교육 디지털 교육과정 표준 지원': '한국교육연구소 KERI · 앱 만들기 수업용 데모 v1.0',
     '한국교육연구소 KERI · 특수교육 디지털 교육과정 표준 지원 v1.0': '한국교육연구소 KERI · 앱 만들기 수업용 데모 v1.0',
     '별도의 비밀번호 없이 학생이 안심하고 터치하며 스스로 배울 수 있는 안전 모드입니다.': '로그인 없이 체험하는 수업용 화면입니다. 실제 학생정보를 입력하지 마세요.'
   };
@@ -71,7 +72,9 @@
     document.getElementById('speak-btn')?.addEventListener('click',()=>store.log('AAC 음성','사용자가 문장 읽기 버튼을 누름'));
   }
   if(page==='daily-skills.html'){
-    document.getElementById('completePracticeBtn')?.addEventListener('click',()=>{store.patch({practice:store.get().practice+1});store.log('생활 연습','손 씻기 연습 완료 표시');});
+    const counter=document.getElementById('completedCounter');
+    if(counter)counter.textContent=`${store.get().practice}회`;
+    document.getElementById('completePracticeBtn')?.addEventListener('click',()=>{store.patch({practice:store.get().practice+1});store.log('생활 연습','손 씻기 연습 완료 표시');if(counter)counter.textContent=`${store.get().practice}회`;});
     document.querySelectorAll('button').forEach(b=>{if(['양치하기','옷 입기','자리 정리'].some(t=>b.textContent.includes(t)))b.addEventListener('click',()=>toast('이 탭은 디자인 예시입니다. 손 씻기 연습을 이용해주세요.'));});
   }
   if(page==='rest-space.html'){
