@@ -18,7 +18,7 @@
       const row=el('fieldset'),legend=el('legend',`${i+1}번째 일과`);row.append(legend);
       field(row,'일과 이름',`routine-title-${i}`,item.title,60);field(row,'짧은 안내',`routine-note-${i}`,item.note,120);
       options(row,'그림 기호',`routine-icon-${i}`,config.icons,item.icon);
-      const actions=el('div');
+      const actions=el('div');actions.className='routine-reorder';
       for(const [name,delta] of [['위로',-1],['아래로',1]]){
         const button=el('button',name);button.type='button';button.className='secondary-button';button.disabled=i+delta<0||i+delta>=5;
         button.setAttribute('aria-label',`${i+1}번째 일과 ${name}`);
@@ -39,18 +39,22 @@
     $('change-note').value=state.changeNote;$('practice-title').value=state.practice.title;$('practice-support').value=state.practice.support;$('reduced-motion').checked=state.reducedMotion;
   }
   const readRoutine=()=>Array.from({length:5},(_,i)=>({title:$(`routine-title-${i}`).value,note:$(`routine-note-${i}`).value,icon:$(`routine-icon-${i}`).value}));
-  function saveSettings(patch){
+  function saveSettings(patch,form){
     const result=config.save({...config.get(),...patch});
     $('settings-status').textContent=result.ok?'수업 설정을 이 브라우저에 저장했습니다. 학생 화면을 새로 열거나 새로고침하면 적용됩니다.':`저장 실패: ${result.error} 입력은 유지되어 다시 시도할 수 있습니다.`;
     $('settings-status').classList.toggle('failure',!result.ok);
+    if(form){let feedback=form.querySelector('.inline-save-status');if(!feedback){feedback=el('p');feedback.className='inline-save-status';form.append(feedback);}feedback.textContent=$('settings-status').textContent;feedback.classList.toggle('failure',!result.ok);}
     if(result.ok)document.body.classList.toggle('reduce-motion',config.get().reducedMotion);
   }
+  for(const link of document.querySelectorAll('.teacher-links a'))link.addEventListener('click',()=>{
+    for(const item of document.querySelectorAll('.teacher-links a')){item.classList.toggle('is-current',item===link);if(item===link)item.setAttribute('aria-current','location');else item.removeAttribute('aria-current');}
+  });
   renderSettings();
   if(config.loadError())$('settings-status').textContent='기존 설정을 읽지 못해 기본 설정으로 표시했습니다. 저장할 수 있는지 확인해주세요.';
-  $('routine-form').onsubmit=event=>{event.preventDefault();saveSettings({routine:readRoutine(),changeNote:$('change-note').value});};
-  $('aac-form').onsubmit=event=>{event.preventDefault();saveSettings({aac:Array.from({length:8},(_,i)=>({phrase:$(`aac-phrase-${i}`).value,icon:$(`aac-icon-${i}`).value,category:$(`aac-category-${i}`).value}))});};
-  $('practice-form').onsubmit=event=>{event.preventDefault();saveSettings({practice:{title:$('practice-title').value,steps:Array.from({length:5},(_,i)=>$(`practice-step-${i}`).value),support:$('practice-support').value}});};
-  $('motion-form').onsubmit=event=>{event.preventDefault();saveSettings({reducedMotion:$('reduced-motion').checked});};
+  $('routine-form').onsubmit=event=>{event.preventDefault();saveSettings({routine:readRoutine(),changeNote:$('change-note').value},event.currentTarget);};
+  $('aac-form').onsubmit=event=>{event.preventDefault();saveSettings({aac:Array.from({length:8},(_,i)=>({phrase:$(`aac-phrase-${i}`).value,icon:$(`aac-icon-${i}`).value,category:$(`aac-category-${i}`).value}))},event.currentTarget);};
+  $('practice-form').onsubmit=event=>{event.preventDefault();saveSettings({practice:{title:$('practice-title').value,steps:Array.from({length:5},(_,i)=>$(`practice-step-${i}`).value),support:$('practice-support').value}},event.currentTarget);};
+  $('motion-form').onsubmit=event=>{event.preventDefault();saveSettings({reducedMotion:$('reduced-motion').checked},event.currentTarget);};
 
   const date=new Date().toLocaleDateString('en-CA',{timeZone:'Asia/Seoul'});$('observation-date').value=date;$('review-date').value=date;
   const fields={subject:'subject',date:'observation-date',baseline:'baseline',goal:'goal',measure:'measure',reviewDate:'review-date',activity:'activity',observation:'observation',support:'support',context:'context',observer:'observer'};

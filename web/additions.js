@@ -13,7 +13,7 @@
   }
   document.querySelectorAll('img:not([alt])').forEach(img=>img.alt='');
   const main=document.querySelector('main');
-  const stop=()=>window.speechSynthesis?.cancel();
+  const stop=()=>{window.speechSynthesis?.cancel();window.dispatchEvent(new Event('chageun:stop-sounds'));};
   function speak(text){
     if(window.ChageunStore.get().speech===false || !window.speechSynthesis) return;
     stop();const utter=new SpeechSynthesisUtterance(text);utter.lang='ko-KR';utter.rate=.85;window.speechSynthesis.speak(utter);
@@ -75,15 +75,24 @@
     oldList.replaceChildren();
     let current=0;
     const row=el('article',undefined,'step-focus');row.setAttribute('aria-live','polite');
-    const counter=el('p'),text=el('h4'),support=el('p',settings.practice.support);row.append(counter,text,support);
+    const visual=el('div',undefined,'step-visual'),symbol=el('span',undefined,'material-symbols-outlined');
+    visual.setAttribute('aria-hidden','true');visual.append(symbol);
+    const counter=el('p'),text=el('h4'),support=el('p',settings.practice.support);row.append(visual,counter,text,support);
     const nav=el('div',undefined,'extension-controls');
     const previous=el('button','이전'),read=el('button','이 단계 듣기'),next=el('button','다음');
     const overview=el('ol',undefined,'step-overview');
     settings.practice.steps.forEach(value=>overview.append(el('li',value)));
-    function render(){counter.textContent=`${current+1} / ${settings.practice.steps.length}단계`;text.textContent=settings.practice.steps[current];previous.disabled=current===0;next.disabled=current===settings.practice.steps.length-1;stop();}
+    function render(){
+      counter.textContent=`${current+1} / ${settings.practice.steps.length}단계`;text.textContent=settings.practice.steps[current];
+      const defaultStep=window.ChageunSettings.defaults().practice.steps[current];
+      symbol.textContent=settings.practice.steps[current]===defaultStep?['soap','back_hand','front_hand','water_drop','dry'][current]:'format_list_numbered';
+      previous.disabled=current===0;next.disabled=current===settings.practice.steps.length-1;
+      [...overview.children].forEach((li,i)=>{li.classList.toggle('is-current-step',i===current);if(i===current)li.setAttribute('aria-current','step');else li.removeAttribute('aria-current');});stop();
+    }
     previous.onclick=()=>{current--;render();};next.onclick=()=>{current++;render();};read.onclick=()=>speak(settings.practice.steps[current]);
     for(const btn of [previous,read,next]){btn.type='button';nav.append(btn);}
-    oldList.append(row,nav,overview);render();
+    const allSteps=el('details',undefined,'step-overview-wrap');allSteps.append(el('summary','전체 순서 보기'),overview);
+    oldList.append(row,nav,allSteps);render();
     for(const id of ['masterTtsBtn','stepVoiceBtn']){
       const old=document.getElementById(id),btn=old?.cloneNode(true);if(!btn)continue;old.replaceWith(btn);
       btn.setAttribute('aria-label','지금 단계 듣기');btn.addEventListener('click',()=>speak(settings.practice.steps[current]));

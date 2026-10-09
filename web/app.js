@@ -42,7 +42,7 @@
   document.querySelectorAll('button[aria-label*="자동 소리 읽기"]').forEach(b=>{
     b.setAttribute('aria-label',store.get().speech?'자동 소리 읽기 켜짐':'자동 소리 읽기 꺼짐');
     b.addEventListener('click',()=>{
-      const enabled=!store.get().speech;store.patch({speech:enabled});if(!enabled)window.speechSynthesis?.cancel();b.setAttribute('aria-label',enabled?'자동 소리 읽기 켜짐':'자동 소리 읽기 꺼짐');toast(enabled?'음성 안내를 켰어요.':'음성 안내를 껐어요.');
+      const enabled=!store.get().speech;store.patch({speech:enabled});if(!enabled){window.speechSynthesis?.cancel();window.dispatchEvent(new Event('chageun:stop-sounds'));}b.setAttribute('aria-label',enabled?'자동 소리 읽기 켜짐':'자동 소리 읽기 꺼짐');toast(enabled?'음성 안내를 켰어요.':'음성 안내를 껐어요.');
     });
   });
   document.querySelectorAll('button[aria-label*="대비 맞춤"]').forEach(b=>b.addEventListener('click',()=>{
@@ -88,6 +88,7 @@
   if(page==='rest-space.html'){
     let audio,source,gain,endTimer,current=null;
     function stop(){source?.stop();source=null;current=null;clearTimeout(endTimer);}
+    window.addEventListener('chageun:stop-sounds',stop);
     document.querySelectorAll('.sound-card').forEach(card=>card.addEventListener('click',()=>{
       const type=card.dataset.sound;if(type===current){stop();return;}stop();
       const Audio=window.AudioContext||window.webkitAudioContext;if(!Audio){toast('이 브라우저는 합성 소리를 지원하지 않습니다.');return;}
