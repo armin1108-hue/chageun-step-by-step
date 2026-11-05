@@ -13,7 +13,7 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  <link rel="stylesheet" href="app.css"><script defer src="storage.js"></script><script defer src="app.js"></script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-secondary-fixed selection:text-on-secondary-fixed"><a class="sr-only skip-nav" href="#main-content">본문 내용으로 바로 가기</a><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.03)]"><div class="h-28 px-margin flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">spa</span><h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight truncate">차근차근</h1><span class="hidden sm:inline-block font-label-sm text-label-sm text-primary-container bg-primary-fixed/60 px-space-xs py-0.5 rounded-full">하루 배움 도우미</span></div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">10월 6일 화요일</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="font-body-md text-body-md text-secondary font-bold truncate">쉬어 가기</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="자동 소리 읽기 켜짐" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform" title="자동 읽기" type="button"><span class="material-symbols-outlined text-[24px]">volume_up</span></button><button aria-label="화면 글자 및 대비 맞춤 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="화면 설정" type="button"><span class="material-symbols-outlined text-[24px]">contrast</span></button><button aria-label="선생님 및 보호자 관리 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="선생님 설정" type="button"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-40 px-margin bg-surface max-w-[480px] mx-auto" id="main-content"><div class="flex flex-col w-full gap-space-lg select-none">
+  <link rel="stylesheet" href="app.css"><link rel="stylesheet" href="student-design.css"><script defer src="storage.js"></script><script defer src="settings.js"></script><script defer src="app.js"></script><script defer src="additions.js"></script><script defer src="student-design.js"></script></head><body class="bg-surface text-on-surface font-body-md text-body-md min-h-screen flex flex-col selection:bg-secondary-fixed selection:text-on-secondary-fixed"><a class="sr-only skip-nav" href="#main-content">본문 내용으로 바로 가기</a><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_2px_12px_rgba(0,0,0,0.03)]"><div class="h-28 px-margin flex items-center justify-between gap-space-sm"><div class="flex flex-col justify-center min-w-0 flex-1"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-[28px]">spa</span><h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight truncate">차근차근</h1><span class="hidden sm:inline-block font-label-sm text-label-sm text-primary-container bg-primary-fixed/60 px-space-xs py-0.5 rounded-full">하루 배움 도우미</span></div><div class="flex items-center gap-space-xs mt-0.5"><span class="font-label-sm text-label-sm text-on-surface-variant font-medium">10월 6일 화요일</span><span class="w-1 h-1 rounded-full bg-outline-variant"></span><span class="font-body-md text-body-md text-secondary font-bold truncate">쉬어 가기</span></div></div><div class="flex items-center gap-space-xs shrink-0"><button aria-label="자동 소리 읽기 켜짐" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform" title="자동 읽기" type="button"><span class="material-symbols-outlined text-[24px]">volume_up</span></button><button aria-label="화면 글자 및 대비 맞춤 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="화면 설정" type="button"><span class="material-symbols-outlined text-[24px]">contrast</span></button><button aria-label="선생님 및 보호자 관리 설정" class="w-12 h-12 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface active:scale-95 transition-transform" title="선생님 설정" type="button"><span class="material-symbols-outlined text-[24px]">admin_panel_settings</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ml-1"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-28 pb-40 px-margin bg-surface max-w-[480px] mx-auto" id="main-content"><div class="flex flex-col w-full gap-space-lg select-none">
 <!-- 상단 컨트롤 내비게이션 바 -->
 <div class="flex items-center justify-between gap-space-xs">
 <button aria-label="이전 화면으로 돌아가기" class="flex items-center gap-space-xs px-space-md py-space-xs rounded-full bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-transform" onclick="location.href='index.html'" type="button">
@@ -93,27 +93,27 @@
 <span class="hidden font-label-sm text-label-sm px-space-xs py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed" id="soundPlayingBadge">재생 중</span>
 </div>
 <!-- 소리 선택 2x2 카드 그리드 -->
-<div aria-label="자연 소리 선택" class="grid grid-cols-2 gap-space-sm" role="radiogroup">
+<div aria-label="자연 소리 선택" class="grid grid-cols-2 gap-space-sm" role="group">
 <!-- 빗소리 -->
-<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="rain" type="button">
+<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="rain" aria-pressed="false" type="button">
 <span class="text-3xl mb-1">🌧️</span>
 <span class="font-headline-md text-headline-md">합성 빗소리</span>
 <span class="font-label-sm text-label-sm text-on-surface-variant">토닥토닥 빗방울</span>
 </button>
 <!-- 새소리 -->
-<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="birds" type="button">
+<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="birds" aria-pressed="false" type="button">
 <span class="text-3xl mb-1">🌿</span>
 <span class="font-headline-md text-headline-md">합성 숲 소리</span>
 <span class="font-label-sm text-label-sm text-on-surface-variant">초록빛 바람과 새</span>
 </button>
 <!-- 파도소리 -->
-<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="wave" type="button">
+<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="wave" aria-pressed="false" type="button">
 <span class="text-3xl mb-1">🌊</span>
 <span class="font-headline-md text-headline-md">합성 파도 소리</span>
 <span class="font-label-sm text-label-sm text-on-surface-variant">밀려오는 잔잔한 물결</span>
 </button>
 <!-- 장작소리 -->
-<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="fire" type="button">
+<button class="sound-card flex flex-col items-center justify-center p-space-md rounded-DEFAULT bg-surface-container-low text-on-surface hover:bg-surface-container active:scale-95 transition-all text-center min-h-[96px]" data-sound="fire" aria-pressed="false" type="button">
 <span class="text-3xl mb-1">🔥</span>
 <span class="font-headline-md text-headline-md">합성 장작 소리</span>
 <span class="font-label-sm text-label-sm text-on-surface-variant">포근하고 따뜻한 불씨</span>
@@ -302,8 +302,8 @@
         breathBtn.classList.replace('bg-tertiary', 'bg-primary-container');
         breathBtnLabel.textContent = "호흡 시작하기";
         breathCircle.style.transform = "scale(1.0)";
-        breathStateText.textContent = "휴식 완료";
-        breathStepText.textContent = "참 잘했어요. 몸과 마음이 한결 가벼워졌어요.";
+        breathStateText.textContent = "잠시 멈췄어요";
+        breathStepText.textContent = "내 속도로 쉬어도 좋아요.";
         resetStepsUI();
       }
     });
@@ -319,6 +319,16 @@
 
     let currentSound = null;
 
+    window.addEventListener('chageun:stop-sounds', () => {
+      currentSound = null;
+      badge.classList.add('hidden');
+      soundCards.forEach(card => {
+        card.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-bold');
+        card.classList.add('bg-surface-container-low', 'text-on-surface');
+        card.setAttribute('aria-pressed', 'false');
+      });
+    });
+
     soundCards.forEach(card => {
       card.addEventListener('click', () => {
         const soundType = card.getAttribute('data-sound');
@@ -327,6 +337,7 @@
           // 토글 해제
           card.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-bold');
           card.classList.add('bg-surface-container-low', 'text-on-surface');
+          card.setAttribute('aria-pressed', 'false');
           currentSound = null;
           badge.classList.add('hidden');
         } else {
@@ -334,9 +345,11 @@
           soundCards.forEach(c => {
             c.classList.remove('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-bold');
             c.classList.add('bg-surface-container-low', 'text-on-surface');
+            c.setAttribute('aria-pressed', 'false');
           });
           card.classList.remove('bg-surface-container-low', 'text-on-surface');
           card.classList.add('bg-secondary-fixed', 'text-on-secondary-fixed', 'font-bold');
+          card.setAttribute('aria-pressed', 'true');
           currentSound = soundType;
           badge.classList.remove('hidden');
         }

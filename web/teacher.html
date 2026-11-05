@@ -1,1 +1,79 @@
-<!doctype html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>차근차근 · 시연 기록</title><link rel="stylesheet" href="app.css"><script defer src="storage.js"></script><script defer src="app.js"></script></head><body class="teacher"><main><p>KERI · 한국교육연구소</p><h1>차근차근 시연 기록</h1><p>학생용 화면에서 직접 실행한 결과입니다. 다른 기기의 교사에게 전송되는 기능과 로그인은 구현되어 있지 않습니다. 동일한 브라우저에서 수업용 가상 활동만 기록하세요.</p><div class="cards"><article><h2>나의 하루</h2><p class="value" id="routine-value">0/5</p></article><article><h2>최근 선택한 마음</h2><p id="emotion-value">선택 전</p></article><article><h2>생활 연습</h2><p class="value" id="practice-value">0회</p></article></div><p><a class="button" href="index.html">학생용 처음 화면</a><button id="refresh">기록 새로 보기</button><button id="download-csv">CSV 내려받기</button><button id="clear-record">시연 기록 초기화</button></p><h2>활동 기록</h2><p id="empty-record">학생용 화면에서 활동을 해보세요. 이곳에 시연 기록이 표시됩니다.</p><div class="table-wrap"><table><thead><tr><th>시간</th><th>활동</th><th>내용</th></tr></thead><tbody id="event-rows"></tbody></table></div><p>자동 IEP 평가, 학교 DB 연동, 보안 인증, 데이터 암호화는 제공하지 않습니다.</p></main></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#f7f7f2">
+  <title>차근차근 · 교사 도우미</title>
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="teacher-design.css">
+  <script defer src="storage.js"></script>
+  <script defer src="settings.js"></script>
+  <script defer src="app.js"></script>
+  <script defer src="additions.js"></script>
+  <script defer src="teacher.js"></script>
+</head>
+<body class="teacher">
+  <a class="skip-content" href="#teacher-home">본문으로 이동</a>
+  <aside class="teacher-sidebar" aria-label="교사 공간">
+    <a class="teacher-brand" href="index.html" aria-label="차근차근 학생 처음 화면">
+      <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true"><rect x="2" y="2" width="44" height="44" rx="15" fill="#18584d"/><path d="M13 29h8v-7h8v-7h7" fill="none" stroke="#f0e9a5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="14" cy="14" r="3" fill="#e9a67e"/></svg>
+      <span>차근차근<small>선생님과 함께하는 배움</small></span>
+    </a>
+    <p class="sidebar-label">TEACHER SPACE</p>
+    <nav class="teacher-links" aria-label="교사 업무 메뉴">
+      <a href="#teacher-home" class="is-current"><span class="nav-symbol" aria-hidden="true">⌂</span>오늘의 흐름</a>
+      <a href="#class-settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M9 4v6M16 14v6"/></svg>수업 화면 편집</a>
+      <a href="#manual-draft"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6Z M14 3v6h6M8 13h8M8 17h5"/></svg>관찰·목표 초안</a>
+      <a href="#activity-record"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20h15M7 16v-5M12 16V5M17 16V9"/></svg>시연 활동 기록</a>
+    </nav>
+    <div class="sidebar-note"><span class="small-leaf" aria-hidden="true">✦</span><p>작은 선택이 모여<br><strong>스스로 하는 하루로.</strong></p><span>학생마다 다른 속도를<br>함께 기다려 주세요.</span></div>
+    <div class="sidebar-bottom"><a href="index.html"><span aria-hidden="true">↗</span> 학생 화면으로 이동</a><p>KERI · 한국교육연구소</p></div>
+  </aside>
+
+  <main id="teacher-home">
+    <header class="teacher-topbar"><div><span class="space-label">교사 도우미</span><span class="topbar-divider" aria-hidden="true"></span><span>홍예진 선생님</span></div><span class="demo-pill"><span aria-hidden="true"></span>가상자료 시연</span></header>
+    <section class="teacher-hero" aria-labelledby="greeting-title">
+      <div class="hero-copy"><p class="eyebrow">함께 준비하는 배움의 시간</p><h1 id="greeting-title">선생님, 오늘도<br>한 걸음씩 함께해요.</h1><p class="teacher-lead">수업을 준비하고, 작은 변화를 기록하세요.<br>학생의 속도에 맞춘 하루가 여기서 시작됩니다.</p><a class="button hero-button" href="index.html">학생 화면 열기 <span aria-hidden="true">↗</span></a></div>
+      <div class="hero-scene" aria-hidden="true"><span class="scene-sun"></span><span class="scene-caption">우리의 오늘</span><div class="scene-step step-one"><span class="scene-icon">✓</span><span>준비하고</span></div><div class="scene-step step-two"><span class="scene-icon">✦</span><span>함께 배우고</span></div><div class="scene-step step-three"><span class="scene-icon">♡</span><span>편안히 쉬어요</span></div><svg viewBox="0 0 120 80" class="scene-leaf"><path d="M60 78V28M60 57C25 62 14 40 10 24c32-5 50 8 50 33ZM60 40C84 44 104 21 107 6 78 3 58 15 60 40Z"/></svg></div>
+    </section>
+
+    <section class="overview-section" aria-labelledby="overview-heading"><div class="compact-heading"><h2 id="overview-heading">이 브라우저의 시연 활동</h2><span>학생 화면에서 직접 선택한 결과</span></div><div class="cards">
+      <article class="metric-card"><div class="metric-icon mint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14v15H5zM8 3v4M16 3v4M5 10h14M9 15l2 2 4-4"/></svg></div><div><h3>나의 하루</h3><p class="value" id="routine-value">0/5</p></div><a href="routine.html" aria-label="나의 하루 학생 화면 열기">↗</a></article>
+      <article class="metric-card"><div class="metric-icon peach" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M8 14c2 3 6 3 8 0M9 9h.01M15 9h.01"/></svg></div><div><h3>최근 선택한 마음</h3><p id="emotion-value">선택 전</p></div><a href="emotion.html" aria-label="마음 전하기 학생 화면 열기">↗</a></article>
+      <article class="metric-card"><div class="metric-icon lavender" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 7 2 2 3-4M12 7h8M4 15l2 2 3-4M12 15h8"/></svg></div><div><h3>생활 연습</h3><p class="value" id="practice-value">0회</p></div><a href="daily-skills.html" aria-label="생활 연습 학생 화면 열기">↗</a></article>
+    </div></section>
+
+    <section id="class-settings" class="teacher-section">
+      <div class="section-heading"><div><p class="eyebrow">01 · 수업 준비</p><h2>우리 수업에 맞게 바꾸기</h2><p>짧고 익숙한 말로, 학생이 쉽게 고를 수 있게.</p></div><span class="section-tag">이 브라우저에 저장</span></div>
+      <p class="subtle-notice">가상 수업의 공통 안내만 입력하세요. 다른 기기에는 전달되지 않으며 실제 학생정보와 사진은 사용하지 않습니다.</p>
+      <p id="settings-status" class="form-status" role="status" aria-live="polite"></p>
+      <div class="settings-panels">
+        <details class="settings-panel" open><summary><span class="panel-icon mint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 5h14v15H5zM8 3v4M16 3v4M5 10h14M9 15l2 2 4-4"/></svg></span><span class="panel-title">오늘의 일과<small>지금 할 일과 다음 할 일을 알려 주세요</small></span><span class="panel-count">5개 일과</span><span class="panel-chevron" aria-hidden="true">⌄</span></summary><form id="routine-form"><div id="routine-editor"></div><label>일과가 바뀌었을 때 알려줄 말<textarea id="change-note" maxlength="200" rows="2" placeholder="예: 오늘은 함께 배우기 전에 산책해요."></textarea></label><div class="form-actions"><p>순서나 이름을 바꾸면 기존 일과 체크가 초기화됩니다.</p><button type="submit">일과 설정 저장 <span aria-hidden="true">✓</span></button></div></form></details>
+        <details class="settings-panel"><summary><span class="panel-icon peach" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 1-8 8H5l-3 3V11a9 9 0 0 1 18 0ZM7 9h8M7 13h5"/></svg></span><span class="panel-title">말로 전하기 · AAC<small>필요한 말을 찾기 쉬운 자리에 놓아 주세요</small></span><span class="panel-count">8개 카드</span><span class="panel-chevron" aria-hidden="true">⌄</span></summary><form id="aac-form"><p class="form-help">카드 자리는 그대로 유지됩니다. 각 자리의 문구, 그림 기호, 분류를 바꿔 주세요.</p><div id="aac-editor"></div><div class="form-actions"><p>짧고 친숙한 문구를 권해요.</p><button type="submit">AAC 설정 저장 <span aria-hidden="true">✓</span></button></div></form></details>
+        <details class="settings-panel"><summary><span class="panel-icon lavender" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m4 7 2 2 3-4M12 7h8M4 15l2 2 3-4M12 15h8"/></svg></span><span class="panel-title">생활 연습<small>한 번에 한 단계씩, 스스로 해보는 활동</small></span><span class="panel-count">5개 단계</span><span class="panel-chevron" aria-hidden="true">⌄</span></summary><form id="practice-form"><label>활동 이름<input id="practice-title" maxlength="60" required></label><div id="practice-editor"></div><label>도움을 주는 방법<textarea id="practice-support" maxlength="200" rows="2" required></textarea></label><div class="form-actions"><p>한 단계에 한 가지 행동을 적어 주세요.</p><button type="submit">활동 단계 저장 <span aria-hidden="true">✓</span></button></div></form></details>
+        <details class="settings-panel"><summary><span class="panel-icon pale" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 17h16M9 4v6M16 14v6"/></svg></span><span class="panel-title">편안한 화면<small>화면의 움직임을 조절해요</small></span><span class="panel-chevron" aria-hidden="true">⌄</span></summary><form id="motion-form"><label class="check-label"><input id="reduced-motion" type="checkbox"><span>화면 움직임 줄이기<small>깜빡임과 움직이는 효과를 줄입니다.</small></span></label><div class="form-actions"><p>학생이 편안한 방식을 선택해 주세요.</p><button type="submit">화면 설정 저장 <span aria-hidden="true">✓</span></button></div></form></details>
+      </div>
+      <div class="student-preview-row"><span>저장한 화면 살펴보기</span><div class="preview-links"><a href="routine.html" target="_blank" rel="noopener">나의 하루 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a><a href="aac.html" target="_blank" rel="noopener">말로 전하기 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a><a href="daily-skills.html" target="_blank" rel="noopener">생활 연습 <span aria-hidden="true">↗</span><span class="sr-only"> (새 탭)</span></a></div></div>
+    </section>
+
+    <section id="manual-draft" class="teacher-section">
+      <div class="section-heading"><div><p class="eyebrow">02 · 관찰과 기록</p><h2>작은 변화를 기록해요</h2><p>직접 본 행동을 적고, 다음 배움의 목표를 준비하세요.</p></div><span class="section-tag warm">현재 탭에서만 유지</span></div>
+      <div class="memory-notice"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 10v6M12 7h.01"/></svg><p><strong>가상자료로만 시연해 주세요.</strong> 초안은 새로고침하거나 탭을 닫으면 사라집니다. 로그인·서버 저장·학교 승인 전에는 실제 학생 기록에 사용할 수 없습니다.</p></div>
+      <form id="observation-form">
+        <fieldset class="observation-group"><legend><span>1</span> 기본 정보</legend><div class="field-grid three-fields"><label>시연 대상<select id="subject"><option>가상 학생 A</option><option>가상 학생 B</option></select></label><label>관찰 날짜<input id="observation-date" type="date" required></label><label>시연 관찰자<select id="observer"><option>가상 교사 A</option><option>가상 교사 B</option></select></label></div></fieldset>
+        <fieldset class="observation-group"><legend><span>2</span> 직접 관찰한 내용</legend><label>어떤 활동이었나요?<input id="activity" maxlength="150" required placeholder="예: 가상 교실에서 책 정리하기"></label><label>보고 들은 행동<textarea id="observation" maxlength="2000" rows="4" required placeholder="평가보다 실제 행동을 적어 주세요. 예: 책 한 권을 집어 책꽂이에 놓았다."></textarea></label><div class="field-grid"><label>제공한 도움<input id="support" maxlength="300" required placeholder="도움이 없었으면 '도움 없음'"></label><label>상황·환경<input id="context" maxlength="500" required placeholder="예: 조용한 교실, 정리 시간"></label></div><label>현재 수행 · 관찰 근거<textarea id="baseline" maxlength="500" rows="2" required placeholder="직접 확인한 수행 수준과 필요한 도움을 적어 주세요."></textarea></label></fieldset>
+        <fieldset class="observation-group"><legend><span>3</span> 다음 배움의 목표</legend><label>교육 목표<textarea id="goal" maxlength="500" rows="2" required placeholder="교사가 정한 구체적인 목표를 적어 주세요."></textarea></label><div class="field-grid"><label>확인 방법<input id="measure" maxlength="300" required placeholder="예: 활동 중 직접 관찰하고 도움의 정도 기록"></label><label>목표 검토일<input id="review-date" type="date" required></label></div></fieldset>
+        <div class="form-actions draft-actions"><p>입력한 내용으로 초안을 만든 뒤 직접 검토합니다.</p><button type="submit">입력 내용으로 시연 초안 만들기 <span aria-hidden="true">→</span></button></div>
+      </form>
+      <p id="draft-status" class="form-status" role="status" aria-live="polite"></p>
+      <article id="document-preview" class="document-preview" hidden></article>
+      <div id="review-controls" hidden><label class="check-label"><input id="reviewed" type="checkbox">관찰 근거와 목표를 직접 검토했습니다.</label><div class="review-buttons"><button id="confirm-draft" type="button">검토한 시연 초안 확정</button><button id="print-draft" type="button" disabled>확정한 시연 문서 인쇄</button><button id="clear-draft" class="secondary-button" type="button">시연 초안 지우기</button></div></div>
+      <p class="section-footnote">관찰하지 않은 성취를 생성하지 않습니다. 생활기록부·공식 IEP 자동 작성과 평가는 제공하지 않습니다.</p>
+    </section>
+
+    <section id="activity-record" class="teacher-section record-section"><div class="section-heading"><div><p class="eyebrow">03 · 시연 돌아보기</p><h2>활동의 발자국</h2><p>이 브라우저의 학생 화면에서 실행한 활동입니다.</p></div><div class="record-actions"><button id="refresh" class="secondary-button" type="button">새로 보기</button><button id="download-csv" type="button">CSV 내려받기 <span aria-hidden="true">↓</span></button></div></div><p id="empty-record" class="empty-record"><span aria-hidden="true">✧</span>아직 기록된 활동이 없어요.<small>학생 화면에서 활동하면 이곳에 시연 기록이 표시됩니다.</small></p><div class="table-wrap"><table><thead><tr><th scope="col">시간</th><th scope="col">활동</th><th scope="col">내용</th></tr></thead><tbody id="event-rows"></tbody></table></div><div class="record-footer"><p>로그인, 기기 간 전송, 학교 DB 연동은 제공하지 않습니다.</p><button id="clear-record" type="button" class="text-button">시연 기록 초기화</button></div></section>
+    <footer class="teacher-footer"><a href="index.html">차근차근 <span>학생의 속도로, 함께</span></a><p>KERI · 한국교육연구소</p></footer>
+  </main>
+</body>
+</html>
