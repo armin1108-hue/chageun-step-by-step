@@ -1,4 +1,4 @@
-/* 차근차근: a calm, picture-led learning space. */
+/* 차츰차츰: a calm, picture-led learning space. */
 :root{--learning-ink:#243f36;--learning-green:#315f50;--learning-muted:#68776e;--learning-paper:#f7f6f0;--learning-line:#dce3d9;--learning-shadow:0 8px 28px #304b3810}
 html:has(.student-app){width:100%;scroll-padding-top:110px}
 body.student-app{width:100%;min-height:100dvh;background:var(--learning-paper);color:var(--learning-ink);font-family:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',sans-serif;font-size:18px;line-height:1.6;overscroll-behavior:auto}
