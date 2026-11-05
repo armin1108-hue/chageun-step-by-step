@@ -2,7 +2,15 @@
 
 KERI(한국교육연구소)의 AI활용교육전문가 6기 1급 4일차 수업용 웹앱입니다. 기존 **Google Stitch 디자인 → 기능 보완 → GitHub 공유 → Netlify 배포**를 시연하기 위해 준비했습니다.
 
-공개 웹앱: https://chageun-step-by-step.netlify.app/
+## 현재 사용 안내 (2026-11-06)
+
+- 기준 코드는 이 저장소의 `main` 브랜치입니다. 학생 화면 개선과 교사 편집 기능을 포함한 PR #1을 반영했습니다.
+- 로컬 검증: JavaScript 문법 검사, 자동 검사 9개, 정적 빌드 통과.
+- 온라인 주소는 Netlify 사용량 한도 때문에 현재 일시 중지되어 있습니다. GitHub 코드 검사 통과와 온라인 접속 가능 여부는 별도로 확인해야 합니다.
+- 지금 시연하려면 아래 「로컬 확인」 절차를 사용하세요. 외부 그림·글꼴·스타일에는 인터넷 연결이 필요합니다.
+- 디지털배지 발급과 세듀넷 연동은 아직 구현되어 있지 않습니다.
+
+공개 웹앱 주소(현재 일시 중지): https://chageun-step-by-step.netlify.app/
 
 GitHub 저장소: https://github.com/armin1108-hue/chageun-step-by-step
 
@@ -82,7 +90,7 @@ python -m http.server 8000 --directory dist
 
 추가 기능 시연 주소: https://deploy-preview-1--chageun-step-by-step.netlify.app/teacher.html
 
-이 주소는 **공개 가상자료 시연 주소**입니다. 접근 보호가 된 학교 시험 주소나 운영 주소가 아닙니다. 기존 공개 앱은 `main` 배포를 사용하며 추가 기능은 PR #1에서 따로 검토합니다.
+이 주소는 **공개 가상자료 시연 주소**입니다. 접근 보호가 된 학교 시험 주소나 운영 주소가 아닙니다. 추가 기능을 담은 PR #1은 2026-11-06에 `main`에 반영했습니다. 이 주소는 과거 PR 미리보기 주소이며, 현재 Netlify 사용량 한도로 중지 상태입니다. 시연 기준 코드는 `main`입니다.
 
 실제 학생자료를 사용하려면 승인된 계정·비공개 저장소·초대 로그인·서버 저장·교사별 권한·백업·배포 승인 절차가 필요합니다. 구현·검수 현황과 D01~D12는 `docs/additions-deployment-report.md`를 확인하세요.
 
