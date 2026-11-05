@@ -283,3 +283,5 @@ body.student-app>header{position:sticky;top:0;z-index:50;background:#f7f6f0f5;bo
   .page-aac .communication-card>div:first-child>span{width:60px;height:60px;border-radius:20px}
   .page-aac .communication-card .font-headline-md{font-size:20px;line-height:1.4}
 }
+
+.classroom-badge-link{display:inline-block;background:#18584d;color:#fff;padding:10px 16px;border-radius:12px;margin:8px 12px;font-size:16px;text-decoration:none;white-space:nowrap;min-height:44px}.classroom-badge-link:focus-visible{outline:3px solid #9a6027;outline-offset:3px}
