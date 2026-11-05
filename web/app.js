@@ -106,7 +106,7 @@
       const list=document.getElementById('event-rows');list.replaceChildren();[...s.events].reverse().forEach(event=>{const tr=document.createElement('tr');[new Date(event.time).toLocaleString('ko-KR'),event.type,event.detail].forEach(v=>{const td=document.createElement('td');td.textContent=v;tr.append(td);});list.append(tr);});document.getElementById('empty-record').hidden=s.events.length>0;
     }render();
     document.getElementById('refresh').onclick=render;
-    document.getElementById('download-csv').onclick=()=>{const url=URL.createObjectURL(new Blob([store.csv()],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='차근차근_시연기록.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
+    document.getElementById('download-csv').onclick=()=>{const url=URL.createObjectURL(new Blob([store.csv()],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='차츰차츰_시연기록.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
     document.getElementById('clear-record').onclick=()=>{if(confirm('이 브라우저의 시연 기록을 초기화할까요?')){store.clear();render();}};
   }
 })();

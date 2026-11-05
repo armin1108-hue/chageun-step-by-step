@@ -15,8 +15,8 @@
   const contrast=header.querySelector('button[aria-label*="대비 맞춤"]');
   const teacher=header.querySelector('button[aria-label*="선생님 및 보호자"]');
   const stop=$('main > .extension-controls button');
-  const brand=make('a','student-brand');brand.href='index.html';brand.setAttribute('aria-label','차근차근 처음으로');
-  brand.innerHTML=`<span class="brand-mark">${icon('eco')}</span><span><strong>차근차근</strong><small>나의 속도로, 한 걸음씩</small></span>`;
+  const brand=make('a','student-brand');brand.href='index.html';brand.setAttribute('aria-label','차츰차츰 처음으로');
+  brand.innerHTML=`<span class="brand-mark">${icon('eco')}</span><span><strong>차츰차츰</strong><small>나의 속도로, 한 걸음씩</small></span>`;
   const actions=make('div','student-tools');
   if(voice){voice.className='tool-button';const sync=()=>{const on=window.ChageunStore.get().speech;voice.innerHTML=icon(on?'volume_up':'volume_off')+`<span>소리 ${on?'켬':'끔'}</span>`;voice.setAttribute('aria-pressed',String(on));};sync();voice.addEventListener('click',sync);actions.append(voice);}
   if(stop){const parent=stop.parentElement;stop.className='tool-button stop-sound';stop.innerHTML=icon('stop_circle')+'<span>소리 멈춤</span>';stop.setAttribute('aria-label','모든 소리 멈추기');actions.append(stop);parent.remove();}
