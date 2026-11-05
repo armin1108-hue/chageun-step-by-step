@@ -111,6 +111,7 @@
     $('#rest-card-heading').textContent='쉬는 중이라고 보여줄까요?';$('#openRestCardBtn span:last-child').textContent='쉬는 중이에요';
     const image=content.querySelector('img');if(image)image.closest('div.w-full').classList.add('rest-landscape');
   }
+  const badgeLink=document.createElement('a');badgeLink.href='badges.html';badgeLink.textContent='나의 성장 배지';badgeLink.className='classroom-badge-link';document.querySelector('header')?.append(badgeLink);
   // Student footers describe the current demonstration accurately and briefly.
   $$('main p').filter(p=>/^한국(?:교육연구소|특수교육)/.test(p.textContent.trim())).forEach(p=>{
     const footer=p.parentElement;footer.className='student-footer';footer.textContent='가상자료로 연습하는 공간 · KERI';
